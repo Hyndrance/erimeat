@@ -5,12 +5,12 @@ include_once("../config/function.php");
 $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
 switch ($view) {
-	
-	case 'register' :
-		$content 	= 'register.php';
+
+	case 'home' :
+		$content 	= 'home.php';
 		$template	= '../include/template.php';
 		break;
-			
+
 	default :
 		$content 	= 'home.php';
 		$template	= '../include/template.php';
@@ -19,8 +19,3 @@ switch ($view) {
 require_once $template;
 
 ?>
-
-
-
-
-
