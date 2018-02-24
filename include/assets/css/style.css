@@ -4894,6 +4894,7 @@ h3.timeline-title {
   position: relative;
   max-width: 460px;
   margin: 20px auto;
+  margin-right: 0;
   background-color: #ffffff;
   border-radius: 5px; }
   .account-box .account-content {
@@ -4905,6 +4906,31 @@ h3.timeline-title {
 
 .account-logo-box {
   padding: 30px 30px 0 30px; }
+
+.login-logo {
+  width: 138px;
+  height: 84px;
+  margin: 0 auto; }
+
+.login-font {
+  font-size: 15px;
+  color: #656565; }
+
+.login-left-box {
+  width: 500px;
+  height: 300px;
+  float:left;
+  margin-top: 10%;
+}
+
+.login-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff; }
+
+.login-description {
+  font-size: 22px;
+  color: #fff; }
 
 .text-error {
   color: #4489e4;
@@ -5460,3 +5486,8 @@ ul.sitemap-icon ul li a {
     margin-left: 0; } }
 
 /*# sourceMappingURL=style.css.map */
+
+/** Login Background Image **/
+  .login-img{
+    width:1199px;
+    height: 710px; }

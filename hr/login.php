@@ -36,10 +36,21 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
                         <div class="wrapper-page">
 
                             <div class="account-pages">
+                              <div class="login-left-box">
+                                <div class="login-title">Teamire</div>
+                                <div class="login-description">
+                                  Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor
+                                  lorem ipsum
+                                </div>
+                                <button type="button" class="btn btn-warning waves-effect w-md waves-light">Read More</button>
+                              </div>
                                 <div class="account-box">
                                     <div class="account-logo-box">
+                                      <div class="login-logo">
+                                        <img src="../include/assets/images/teamire-logo.png">
+                                      </div>
                                         <h2 class="text-uppercase text-center">
-                                            <a href="index.html" class="text-success">
+                                            <a href="index.html" class="login-font">
                                                 <span>Hr login</span>
                                             </a>
                                         </h2>
