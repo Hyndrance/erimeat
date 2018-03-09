@@ -1,0 +1,7 @@
+RewriteEngine on
+# not rewrite css, js and images
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+RewriteRule ^user/([^/d]+)/?$ user/index.php?view=$1 [L]
+
+# rewrite css, js and images, from root
+RewriteRule ^abc/[^/]+/[^/]+/(.+)$ $1  [L]
