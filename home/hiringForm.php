@@ -6,10 +6,11 @@ $ptList = position_type()->list();
 
 <div class="row m-b-30">
     <div class="col-md-12">
-      <div class="hiring-form-header center-page">
-      <h2 class="text-center m-t-30 m-b-30 text-white">Talent Request</h2>
-      <p class="text-center text-white">We will help you build the workforce you desire – quickly</p>
-    </div>
+      <div class="text-center" style="position:relative;">
+        <h2 style="position: absolute;top: 23%; left: 42%;" class="text-white"> Talent Request </h2>
+        <p class="text-center text-white" style="position:absolute; top: 55%; left: 35%;">We will help you build the workforce you desire – quickly</p>
+        <img style="top:0;" src="../include/assets/images/submit-header.png">
+      </div>
      <form  action="process.php?action=create" method="POST" id="default-wizard" data-parsley-validate="">
       <div class="jumbotron center-page container" style="width: 84.5%;">
 
