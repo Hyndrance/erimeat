@@ -102,7 +102,7 @@ function get_time_difference($record)
                       </div><!-- /.modal -->
 
 
-                      <!-- dispute modal content -->
+                      <!-- dispute modal for viewing the message -->
                       <div id="dispute-message-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
                           <div class="modal-dialog">
                               <div class="modal-content">

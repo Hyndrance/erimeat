@@ -22,15 +22,6 @@ $job = job()->get("Id=$Id");
       <div class="text-center card-box">
 
         <!--  This button only shows if job is approved -->
-        <?php if($job->isApproved==0) {?>
-          <button type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
-          <button type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
-          <button type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
-        <?php } ?>
-        <?php if($job->isApproved==-1) {?>
-          <button type="button">Waiting for the updated info</button>
-        <?php } ?>
-        <br>
 
         <?php if($job->isApproved==1) {?>
           <h4>Detail</h4>
