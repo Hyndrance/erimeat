@@ -57,14 +57,14 @@ function get_time_difference($record)
                         <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button> -->
 
                         <?php if($ts->status==0) { ?>
-                          <button> Waiting to be verified </button>
+                          <button class="btn btn-sm btn-default"> <i>Waiting to be verified</i> </button>
                         <?php } ?>
                         <?php if($ts->status==1) { ?>
-                          <button onclick="location.href='process.php?action=approveTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
-                          <button type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
+                          <button class="btn btn-sm btn-primary" onclick="location.href='process.php?action=approveTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
+                          <button class="btn btn-sm btn-danger" type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
                         <?php } ?>
                         <?php if($ts->status==2) { ?>
-                          <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
+                          <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
                         <?php } ?>
 
                           </div>
