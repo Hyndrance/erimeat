@@ -51,11 +51,10 @@ function get_time_difference($record)
 
                             </tbody>
                         </table>
-                        <!-- <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Verify</button>
-                        <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
-                        <button type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
-                        <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button> -->
 
+                        <?php if($ts->status==2) { ?>
+                          <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
+                        <?php } ?>
                           </div>
                       </div>
 
@@ -111,8 +110,7 @@ function get_time_difference($record)
                                         <div class="form-group">
                                             <label>Reason of dispute</label>
                                             <div>
-                                                <textarea required="" name="reason" class="form-control" disabled>
-                                                    <?=$dispute->reason;?>
+                                                <textarea required="" name="reason" class="form-control" disabled><?=$dispute->reason;?>
                                                 </textarea>
                                             </div>
                                         </div>

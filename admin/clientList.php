@@ -1,20 +1,4 @@
-<?php
-// $username = $_SESSION['company_session'];
-// $company = company()->get("username='$username'");
-//
-// function getJobFunction($Id){
-//   $jf = job_function()->get("Id='$Id'");
-//   return $jf->option;
-// }
-//
-// function getCount($Id){
-//   $employee = employee()->count("jobId='$Id'");
-//   return $employee;
-// }
-?>
 <div class="row">
-
-
 <?php foreach (company()->list() as $row) {
 ?>
 

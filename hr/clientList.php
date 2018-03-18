@@ -1,20 +1,4 @@
-<?php
-// $username = $_SESSION['company_session'];
-// $company = company()->get("username='$username'");
-//
-// function getJobFunction($Id){
-//   $jf = job_function()->get("Id='$Id'");
-//   return $jf->option;
-// }
-//
-// function getCount($Id){
-//   $employee = employee()->count("jobId='$Id'");
-//   return $employee;
-// }
-?>
 <div class="row">
-
-
 <?php foreach (company()->list() as $row) {
 ?>
 
@@ -32,14 +16,14 @@
               </p>
 
               <h4>Jobs</h4>
-              <button onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=1'">
+              <button style="width: 140px;" class="btn btn-sm btn-success" onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=1'">
                 Ongoing:<br> <?=job()->count("abn=$row->abn and isApproved=1")?>
               </button>
-              <button onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=0'">
+              <button style="width: 140px;" class="btn btn-sm btn-warning" onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=0'">
                 Requests:<br> <?=job()->count("abn=$row->abn and isApproved!=1")?>
               </button>
               <br><br>
-              <button onclick="location.href='?view=clientDetail&Id=<?=$row->Id;?>'">View Detail</button>
+              <button class="btn btn-blue" style="width: 285px;" onclick="location.href='?view=clientDetail&Id=<?=$row->Id;?>'">View Detail</button>
           </div>
       </div>
   </div> <!-- end col -->

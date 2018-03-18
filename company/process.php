@@ -126,7 +126,7 @@ function verifyTimesheet()
 	$ts->obj['status'] = "1";
 	$ts->update("Id=$Id");
 
-	header('Location: index.php');
+	header('Location: index.php?view=timesheetDetail&success=You have verified this timesheet&tsId=' . $Id);
 }
 
 function disputeTimesheet()
@@ -141,7 +141,7 @@ function disputeTimesheet()
 	$td->obj['reason'] = $_POST['reason'];
 	$td->create();
 
-	header('Location: index.php');
+		header('Location: index.php?view=timesheetDetail&success=You have disputed this timesheet&tsId=' . $Id);
 }
 
 function logout()
