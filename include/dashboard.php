@@ -10,7 +10,7 @@ if(!$currentSession)
         <?php include $headScript; ?>
     </head>
 
-    <body>
+    <body style="height: auto;">
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -204,14 +204,14 @@ if(!$currentSession)
                         <div class="row">
                                <?php include $content;?>
                         </div>
-                        
+
 
 
 
                     </div> <!-- container -->
 
                 </div> <!-- content -->
-                
+
                 <footer class="footer text-right">
                     2018 © Teamire
                 </footer>
