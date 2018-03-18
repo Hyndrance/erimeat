@@ -10,6 +10,11 @@ function getJobFunction($Id){
   $jf = job_function()->get("Id='$Id'");
   echo $jf->option;
 }
+
+function getCity($Id){
+  $city = city_option()->get("Id='$Id'");
+  echo $city->city;
+}
 ?>
 
 <div style="position: relative;">
@@ -86,7 +91,7 @@ function getJobFunction($Id){
       </div>
       <!-- Experience -->
       <div class="col-md-4 m-b-10">
-        <i class="fa fa-globe"></i> <?=$row->city;?>&nbsp;<?=$row->state;?>&nbsp;<?=$row->zipCode;?>
+        <i class="fa fa-globe"></i> <?=getCity($row->city);?>&nbsp;<?=$row->state;?>&nbsp;<?=$row->zipCode;?>
       </div>
 
       <span ><?=$row->coverLetter;?></span>
