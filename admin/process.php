@@ -19,6 +19,14 @@ switch ($action) {
 		addAccount();
 		break;
 
+	case 'addCountry' :
+		addCountry();
+		break;
+
+	case 'addCity' :
+		addCity();
+		break;
+
 	case 'addProject' :
 		addProject();
 		break;
@@ -61,6 +69,14 @@ switch ($action) {
 
 	case 'removeAccounts' :
 		removeAccounts();
+		break;
+
+	case 'removeCountry' :
+		removeCountry();
+		break;
+
+	case 'removeCity' :
+		removeCity();
 		break;
 
 	case 'removeJobFunction' :
@@ -123,6 +139,23 @@ function updateInformation()
 	$job->update("Id=$Id");
 
 	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
+}
+
+function addCountry(){
+	$country = country_option();
+	$country->obj['country'] = $_POST['country'];
+	$country->create();
+
+	header('Location: ../admin/?view=countries&message=You have successfully added a country.');
+}
+
+function addCity(){
+	$city = city_option();
+	$city->obj['countryId'] = $_POST['countryId'];
+	$city->obj['city'] = $_POST['city'];
+	$city->create();
+
+	header('Location: ../admin/?view=cities&message=You have successfully added a city.');
 }
 
 function addAccount()
@@ -530,6 +563,26 @@ function removeDownloads()
 	$downloads->update("Id='$Id'");
 
 	header('Location: ../admin/?view=downloads&message=Succesfully Deleted');
+}
+
+function removeCountry()
+{
+	$Id = $_GET['Id'];
+	$country = country_option();
+	$country->obj['isDeleted'] = "1";
+	$country->update("Id='$Id'");
+
+	header('Location: ../admin/?view=countries&message=Succesfully Deleted');
+}
+
+function removeCity()
+{
+	$Id = $_GET['Id'];
+	$city = city_option();
+	$city->obj['isDeleted'] = "1";
+	$city->update("Id='$Id'");
+
+	header('Location: ../admin/?view=cities&message=Succesfully Deleted');
 }
 
 /* ======================== Email Messages ==============================*/

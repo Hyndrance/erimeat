@@ -114,6 +114,18 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
+	case 'countries' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'countries.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'cities' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'cities.php';
+		$template	= '../include/dashboard.php';
+		break;
+
 	case 'clientList' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'clientList.php';

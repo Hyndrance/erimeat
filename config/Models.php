@@ -104,6 +104,12 @@ function timesheet_dispute() {
 	return $crud;
 }
 
+function country_option() {
+	$crud = new CRUD;
+	$crud->table = "country_option";
+	return $crud;
+}
+
 function city_option() {
 	$crud = new CRUD;
 	$crud->table = "city_option";

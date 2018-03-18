@@ -141,7 +141,7 @@
 
             <div style="padding: 30px 0; margin-top: 0; bottom: 0; background-color: #394249; flex: 0 0 100%; max-width: 100%;">
                 <p style="font-size: 40px;" class="text-center"><a href="#" class="text-white">
-                  IT'S TIME WE ALL WORK HAPPY.
+                  LET US BE YOUR STRENGTH
                 </a></p>
             </div>
         </footer>

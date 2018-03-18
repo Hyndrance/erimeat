@@ -40,7 +40,7 @@ function getPositionName($Id){
     <div>
       <button class="btn-primary btn-candidate-contact">
         <i class="fa fa-phone fa-3x"></i><br>
-        <span class="text-center font-13">Call +61452 364 793</span>
+        <span class="text-center font-13">Call +61 452 364 793</span>
       </button>
 
       <button class="btn-primary btn-candidate-contact" onclick="location.href='../home/?view=inquiryForm'">

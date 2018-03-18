@@ -39,12 +39,12 @@ $jfList = job_function()->list();
         <div class="col-12 col-lg-5">
           <p class="text-center">For Employers</p>
           <p class="text-center"><a href="#">hr@teamire.com</a></p>
-          <p class=" text-center">or <a href="#">+61452 364 793</a></p>
+          <p class=" text-center">or <a href="#">+61 452 364 793</a></p>
         </div>
         <div class="col-12 col-lg-5">
           <p class="text-center">For Job Seekers</p>
           <p class="text-center"><a href="#">payroll@teamire.com</a></p>
-          <p class=" text-center">or <a href="#">+61452 364 793</a></p>
+          <p class=" text-center">or <a href="#">+61 452 364 793</a></p>
         </div>
         <div class="col-lg-1">&nbsp;</div>
       </div>
