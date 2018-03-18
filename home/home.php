@@ -19,8 +19,8 @@ function getPositionName($Id){
         <div class="main-text hidden-xs">
                 <div class="col-md-12 text-center">
                     <p class="carousel-title m-t-10 center-page" style="font-size: 40px; width: 100%; color: #fff; text-shadow: 2px 2px 2px #000000;">
-                      Ask Us How To Go Remote And Hire The Most Qualified Supply
-                      Chain Team Member For Your Business In Unpredicted Ways
+                      Ask us how to go virtual and hire the most qualified
+                      Supply Chain Professional for your business in unpredicted ways
                     </p>
                     <div class="row m-b-20" style="margin-top: 100px;">
                       <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
