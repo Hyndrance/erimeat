@@ -103,10 +103,8 @@ function getCity($Id){
 
 <!-- End of Static Data -->
 
-  <h4>Search Results: 1 - 10 of 100</h4>
 <?php foreach($resumeList as $row) {?>
-
-    <div class="form-container container m-t-30 m-b-30">
+  <div class="form-container container m-t-30 m-b-30">
   <div class="row m-t-10">
     <div style="width: 100%; padding: 10px; padding-left: 25px;">
       <!-- Start Job List -->
@@ -139,52 +137,9 @@ function getCity($Id){
     </div>
     <hr>
   </div>
-   <!-- End Job List -->
-
-    <!-- Start Pages -->
-    <ul class="pull-left pagination pagination-split">
-      <li class="disabled">
-          <a href="#"><i class="fa fa-angle-left"></i></a>
-      </li>
-      <li class="active">
-          <a href="#">1</a>
-      </li>
-      <li>
-          <a href="#">2</a>
-      </li>
-      <li>
-          <a href="#">3</a>
-      </li>
-      <li>
-          <a href="#">4</a>
-      </li>
-      <li>
-          <a href="#">5</a>
-      </li>
-      <li>
-          <a href="#"><i class="fa fa-angle-right"></i></a>
-      </li>
-    </ul>
 </div>
 <?php } ?>
 </div>
 </div>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-          panel.style.display = "none";
-      } else {
-          panel.style.display = "block";
-      }
-  });
-}
-</script>
 </div>
 </div>

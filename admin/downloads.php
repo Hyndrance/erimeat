@@ -126,6 +126,7 @@ $downloadList = downloads()->list();
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label>File Upload</label>
+                      <input type="text" class="form-control" id="getFileUpload" disabled>
                       <input type="file" class="form-control" name="upload_file" id="getFileUpload" accept=".pdf">
                       <span class="help-block"><small>Supported File: .pdf</small></span>
                     </div>
