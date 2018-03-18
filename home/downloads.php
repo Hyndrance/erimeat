@@ -6,10 +6,14 @@ $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 $downloadList = downloads()->list();
 
 ?>
+<div style="position: relative; height: auto; height: 300px;">
+  <img style="position: absolute; top:0; right:0; height: 300px;" src="../include/assets/images/homepage-bg-1.png">
+  <div class="container-fluid">
 <div class="container-80 center-page m-b-30">
-  <h2 class="text-center m-t-30 m-b-30">Downloads</h2>
+  <h2 class="text-center m-b-30">Downloads</h2>
       <div class="clearfix"></div>
       <!--Start 2 panels -->
+      <h4 class="text-center text-muted"> <i class="fa fa-folder-open-o fa-5x"></i><br> No Download Available </h4>
       <div class="row">
         <?php foreach($downloadList as $row) {
           if ($row->isDeleted==0){
@@ -41,4 +45,6 @@ $downloadList = downloads()->list();
       }
         ?>
       </div>
+    </div>
+</div>
 </div>

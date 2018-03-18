@@ -16,7 +16,7 @@ function getApplicantCount($Id){
 ?>
 
 <div class="container-fluid m-t-30">
-  <div class="row center-page container-80">
+  <div class="row center-page container">
   <!-- Start Job Detail -->
   <div class="col-md-9">
     <h1><?=$job->position;?></h1>
@@ -29,7 +29,7 @@ function getApplicantCount($Id){
       <h2>60</h2>
       <p>Views</p>
     </div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 25%;">APPLY NOW</button>
+    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
     <hr>
     <!-- Job Information -->
     <div class="row cleafix">
@@ -67,7 +67,7 @@ function getApplicantCount($Id){
       <p>Views</p>
     </div>
     <div class="clearfix"></div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 25%;">APPLY NOW</button>
+    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
     <hr>
     <div class="m-b-30">
     <h3><?=$job->address;?></h3>

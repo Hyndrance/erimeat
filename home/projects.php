@@ -12,8 +12,11 @@ function formatDate($val){
   return date_format($date, "F d, Y g:i A");
 }
 ?>
-<div class="m-t-30 container-80 container-fluid m-b-30">
 
+<div style="position: relative;height: 300px;">
+  <img style="position: absolute; top:0; right:0; height: 300px;" src="../include/assets/images/homepage-bg-1.png">
+<div class="container-80 container-fluid m-b-30">
+<h2 class="m-t-20 text-center">Supply Chain Projects</h2>
   <!-- Start About Us Content -->
   <div class="center-page container-80">
   <?php
@@ -41,31 +44,28 @@ function formatDate($val){
 
   <hr class="m-b-30 m-t-30" width="100%">
 <?php }}?>
-
-
-
 </div>
 </div>
 
 <div class="container-fluid m-b-30">
-<div class="row">
     <div class="container-80 center-page">
         <div class="col-md-10 center-page p-b-30">
                 <form class="form-inline" method="GET">
                 <div class="form-group">
                   <input type="hidden" name="view" value="searchJob">
-                  <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:350px;">
-                  <select name="c" class="form-control" style="height: 67px; width:300;" required>
+                  <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:450px;">
+                  <select name="c" class="form-control" style="height: 67px; width:200px;" required>
                     <option value="">Select Category</option>
                     <?php foreach($jobFunctionList as $row){ ?>
                       <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                     <?php } ?>
                   </select>
-                      <button type="submit" class="btn waves-effect waves-light btn-primary" style="margin-top: -1px;"><i class="fa fa-search m-r-5"></i>Search</button>
+                      <button type="submit" class="btn waves-effect waves-light btn-primary" style="margin-top: -1px;">Search</button>
 
                 </div>
               </form>
               </div>
           </div>
-      </div>
+            <div class="clearfix"></div>
+</div>
 </div>
