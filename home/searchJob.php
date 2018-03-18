@@ -11,6 +11,8 @@ function getPositionName($Id){
 }
 ?>
 
+<div style="position: relative;">
+  <img style="position: absolute; top:0; right:0; height: 100%;" src="../include/assets/images/homepage-bg-1.png">
 <div class="container-fluid">
   <div class="container-80 center-page">
   <div class="col-md-10 center-page p-b-30">
@@ -110,3 +112,4 @@ function getPositionName($Id){
 <?php }?>
 </div>
 <br>
+</div>

@@ -5,8 +5,10 @@ $jfList = job_function()->list();
 
 <div class="row m-b-30">
     <div class="col-md-12">
-      <h2 class="text-center m-t-30 m-b-30">Employer Registration Form</h2>
-      <br>
+      <div class="text-center" style="position:relative;">
+        <h2 style="position: absolute;top: 25%; left: 36%;" class="text-white"> Employer Registration Form </h2>
+        <img style="top:0;" src="../include/assets/images/submit-header.png">
+      </div>
       <div class="jumbotron center-page container" style="width: 84.5%;">
             <form id="default-wizard" action="process.php?action=clientRequest" method="POST" data-parsley-validate="">
                     <div class="row m-t-20">
