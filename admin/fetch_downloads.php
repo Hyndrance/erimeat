@@ -5,7 +5,7 @@ $action = $_POST['action'];
 switch($action){
 	case 'getDownload':
 	$id = $_POST['id'];
-	$downloads = downloads()->filter("Id=".$id);
+	$downloads = downloads()->list("Id=".$id);
 foreach($downloads as $row) {
 ?>
 <?php $data = array('Id'=>$row->Id,'fileName'=>$row->fileName,'uploadedFile'=>$row->uploadedFile);?>

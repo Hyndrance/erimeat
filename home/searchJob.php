@@ -1,9 +1,9 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 $c = (isset($_GET['c']) && $_GET['c'] != '') ? $_GET['c'] : '';
-$jobList = job()->filter("position like '%$s%' and jobFunctionId=$c");
+$jobList = job()->list("position like '%$s%' and jobFunctionId=$c");
 
-$jobFunctionList = job_function()->filter("isDeleted=0");
+$jobFunctionList = job_function()->list("isDeleted=0");
 
 function getPositionName($Id){
   $job = position_type()->get("Id='$Id'");

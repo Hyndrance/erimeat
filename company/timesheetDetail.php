@@ -1,6 +1,6 @@
 <?php
 $timesheetId = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
-$dtrList = dtr()->filter("timesheetId='$timesheetId'");
+$dtrList = dtr()->list("timesheetId='$timesheetId'");
 
 // Get timesheet record
 $ts = timesheet()->get("Id='$timesheetId'");

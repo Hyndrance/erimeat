@@ -2,7 +2,7 @@
 $isApproved = $_GET['isApproved'];
 $abn = $_GET['abn'];
 
-$jobList = job()->filter("abn='$abn' and isApproved='$isApproved'");
+$jobList = job()->list("abn='$abn' and isApproved='$isApproved'");
 $company = company()->get("abn='$abn'");
 
 ?>

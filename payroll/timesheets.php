@@ -2,7 +2,7 @@
 $jobId = $_GET['jobId'];
 $emp = employee()->get("jobId='$jobId'");
 
-$timesheets = timesheet()->filter("employee='$emp->username'");
+$timesheets = timesheet()->list("employee='$emp->username'");
 ?>
 <div class="col-sm-12">
   <div class="card-box table-responsive">

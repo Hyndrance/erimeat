@@ -3,7 +3,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 
-$faqList = faq()->all();
+$faqList = faq()->list();
 
 ?>
   <div class="row">

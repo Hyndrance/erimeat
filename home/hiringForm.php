@@ -1,10 +1,10 @@
 <?php
-$jfList = job_function()->filter("isDeleted='0'");
-$ptList = position_type()->all();
+$jfList = job_function()->list("isDeleted='0'");
+$ptList = position_type()->list();
 ?>
 
 
-<div class="row">
+<div class="row m-b-30">
     <div class="col-md-12">
       <div class="hiring-form-header center-page">
       <h2 class="text-center m-t-30 m-b-30 text-white">Talent Request</h2>
@@ -140,7 +140,7 @@ $ptList = position_type()->all();
                       <button type="submit" class="btn btn-primary stepy-finish"> SEND REQUEST </button>
                   </div>
                   <div class="text-center m-t-30">
-                    <p style="color: #000000;">Or call us at <strong style="color: #4489e4;">+61452 364 793</strong></p>
+                    <p style="color: #000000;">Or call us at <strong class="text-blue">+61452 364 793</strong></p>
                   </div>
             </form>
           </div>

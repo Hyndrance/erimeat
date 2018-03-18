@@ -1,5 +1,5 @@
 <?php
-$jfList = job_function()->all();
+$jfList = job_function()->list();
 ?>
 
 <div class="row">

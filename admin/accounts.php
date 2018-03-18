@@ -3,8 +3,8 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 
-$adminList = admin()->all();
-$jfList = job_function()->filter("isDeleted='0'");
+$adminList = admin()->list();
+$jfList = job_function()->list("isDeleted='0'");
 
 ?>
 

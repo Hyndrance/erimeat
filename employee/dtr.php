@@ -1,7 +1,7 @@
 <?php
 /*$s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';*/
 $user = $_SESSION['employee_session'];
-$dtrList = dtr()->filter("owner='$user'");
+$dtrList = dtr()->list("owner='$user'");
 
 function get_time_difference($record)
 {

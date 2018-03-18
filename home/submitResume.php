@@ -1,12 +1,16 @@
 <?php
-$jfList = job_function()->filter("isDeleted='0'");
-$ptList = position_type()->all();
+$jfList = job_function()->list("isDeleted='0'");
+$ptList = position_type()->list();
 ?>
-<br>
+
+
+
 <div class="row">
     <div class="col-md-12">
-      <h2 class="text-center m-t-30 m-b-30">Submit Resume</h2>
-      <br>
+      <div class="text-center" style="position:relative;">
+        <h2 style="position: absolute;top: 25%; left: 42%;" class="text-white"> Submit Resume </h2>
+        <img style="top:0;" src="../include/assets/images/submit-header.png">
+      </div>
       <div class="jumbotron center-page jumbotron-w container" style="width: 84.5%;">
             <form id="default-wizard" action="process.php?action=submitResume" method="POST" enctype="multipart/form-data" data-parsley-validate="">
                     <div class="row m-t-20">

@@ -2,7 +2,7 @@
 $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$jobFunc = job_function()->all();
+$jobFunc = job_function()->list();
 ?>
 
   <div class="row">

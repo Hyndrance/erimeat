@@ -36,18 +36,6 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'applicants' :
-		$currentSession = isset($_SESSION["admin_session"]);
-		$content 	= 'applicants.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'applicantDetail' :
-		$currentSession = isset($_SESSION["admin_session"]);
-		$content 	= 'applicantDetail.php';
-		$template	= '../include/dashboard.php';
-		break;
-
 	case 'scheduleInterview' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'scheduleInterview.php';
@@ -60,9 +48,9 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'timesheets' :
+	case 'timesheetList' :
 		$currentSession = isset($_SESSION["admin_session"]);
-		$content 	= 'timesheets.php';
+		$content 	= 'timesheetList.php';
 		$template	= '../include/dashboard.php';
 		break;
 
@@ -87,6 +75,30 @@ switch ($view) {
 	case 'jobDetail' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'jobDetail.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'employeeList' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'employeeList.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'employeeDetail' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'employeeDetail.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'resumeList' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'resumeList.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'resumeDetail' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'resumeDetail.php';
 		$template	= '../include/dashboard.php';
 		break;
 

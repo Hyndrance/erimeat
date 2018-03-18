@@ -1,7 +1,7 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 
-$jobList = job()->all();
+$jobList = job()->list();
 
 function getJobFunction($Id){
   $jobFunc = job_function()->get("Id='$Id'");

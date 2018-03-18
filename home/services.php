@@ -1,5 +1,5 @@
 <?php
-$jobFunctionList = job_function()->filter("isDeleted=0");
+$jobFunctionList = job_function()->list("isDeleted=0");
 
 function getPositionName($Id){
   $job = position_type()->get("Id='$Id'");
@@ -7,135 +7,109 @@ function getPositionName($Id){
 }
 ?>
 
-<div class="container-fluid m-t-30 m-b-30">
-  <div class="container-80 text-center center-page">
-    <h2>
-      Our Services Extend to All Areas<br>
-      of Supply Chain Management
-    </h2>
-    <br>
-  </div>
-
-  <div class="p-t-5 container-80 center-page">
-      <div class="row">
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=dem"><img src="../include/assets/images/demandPlanning.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=dem'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Demand Planning</button>
-              </div>
-          </div>
-
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=sup"><img src="../include/assets/images/supplyPlanning.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=sup'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Supply Planning</button>
-                </div>
-          </div>
-
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=ord"><img src="../include/assets/images/orderFulfilment.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=ord'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Order Fulfillment</button>
-                </div>
-          </div>
-      </div>
-      <!-- end row -->
-
-      <div class="row">
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=log"><img src="../include/assets/images/logistics.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=log'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Logistics</button>
-              </div>
-          </div>
-
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=man"><img src="../include/assets/images/manufacturing.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=man'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Manufacturing</button>
-                </div>
-          </div>
-
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=tran"><img src="../include/assets/images/transportation.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=tran'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Transportation</button>
-                </div>
-          </div>
-      </div>
-      <!-- end row -->
-      <div class="row">
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=pro"><img src="../include/assets/images/procurement.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=pro'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Procurement</button>
-              </div>
-          </div>
-
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=tra"><img src="../include/assets/images/certificate.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=tra'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Training Certification</button>
-              </div>
-          </div>
-
-          <div class="col-sm-4">
-              <div class="about-features-box text-center">
-                  <div>
-                      <a href="../home?view=servicesDetail&code=war"><img src="../include/assets/images/warehousing.png"></a>
-                  </div>
-                  <button  onclick="location.href='../home?view=servicesDetail&code=war'"  style="width: 50%;"
-                  class="btn btn-sm btn-block btn-default m-t-10 waves-effect waves-light " type="submit">Warehousing</button>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="container-fluid m-t-30">
+  <div class="container-fluid m-t-30">
+    <div class="container-80 text-center center-page">
+      <h2>
+        Our Supply Chain Services
+      </h2>
+      <div class="center-page" style="height: 2px; width: 20%; background-color: #3a3a3a;"></div>
+      <br>
+    </div>
   <div class="row">
-  <div class="container-80 center-page"><br>
-      <div class="col-md-10 center-page p-b-30">
-        <form class="form-inline" method="GET">
-        <div class="form-group">
-          <input type="hidden" name="view" value="searchJob">
-          <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:400px;">
-          <select name="c" class="form-control" style="height: 67px; width:249px;" required>
-            <option value="">Select Category</option>
-            <?php foreach($jobFunctionList as $row){ ?>
-              <option value="<?=$row->Id;?>"><?=$row->option;?></option>
-            <?php } ?>
-          </select>
-              <button type="submit" class="btn waves-effect waves-light btn-primary" style="margin-top: -1px;"><i class="fa fa-search m-r-5"></i>Search</button>
-
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=dem">
+        <div class="icons icons-container text-center">
+        <img src="../include/assets/images/demandPlanning.png">
+          <p class="text-white"><b>Demand Planning</b></p>
         </div>
-      </form>
-      </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=sup">
+        <div class="icons icons-container text-center">
+        <img src="../include/assets/images/supplyPlanning.png">
+          <p class="text-white"><b>Supply Planning</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=ord">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/orderFulfilment.png">
+          <p class="text-white"><b>Order Fulfillment</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=log">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/logistics.png">
+          <p class="text-white"><b>Logistics</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=man">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/manufacturing.png">
+          <p class="text-white"><b>Manufacturing</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-1"></div>
   </div>
-</div>
+
+  <div class="row m-t-20">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=tran">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/transportation.png">
+          <p class="text-white"><b>Transportation</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=pro">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/procurement.png">
+          <p class="text-white"><b>Procurement</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=tra">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/certificate.png">
+          <p class="text-white"><b>Training Certification</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="../home?view=servicesDetail&code=war">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/warehousing.png">
+          <p class="text-white"><b>Warehousing</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-2">
+      <a href="#">
+        <div class="icons icons-container text-center">
+          <img src="../include/assets/images/others.png">
+          <p class="text-white"><b>Others</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+
+  </div> <!-- container -->
 </div>
   <hr class="m-b-30 m-t-30" width="75%">
+  <div class="m-b-30">
   <div class="col-md-8 center-page text-center">
   <h3 class="m-b-30 m-t-30">More from Teamire</h3>
   </div>
@@ -148,10 +122,13 @@ function getPositionName($Id){
         About Us
       </a>
     </h3>
-    <p>
-			Find out how we can help you with your hiring and job search needs, learn more about us and what we can offer to your needs.
+    <div class="truncate" style="height: 100px;">
+      <p>
+        Find out how we can help you with your hiring and job search needs, learn more about us and what we can offer to your needs.
 
-    </p>
+      </p>
+    </div>
+
     <p class="rh-promos-view-block__read-more">
       <a href="../home/?view=aboutUs" target="_self">
                   Read More
@@ -167,9 +144,11 @@ function getPositionName($Id){
         Projects
       </a>
     </h3>
-    <p>
+    <div class="truncate" style="height: 100px;">
+      <p>
       Look into our featured projects that we have finished.
     </p>
+  </div>
     <p class="rh-promos-view-block__read-more">
       <a href="../home/?view=projects" target="_self">
                   Read More
@@ -185,10 +164,12 @@ function getPositionName($Id){
         Contact Us
       </a>
     </h3>
+    <div class="truncate" style="height: 100px;">
     <p>
       Message our team regarding your needs and we will attend to it and contact you personally.
 
     </p>
+  </div>
     <p class="rh-promos-view-block__read-more">
       <a href="../home/?view=contactUs" target="_self">
                   Message us
@@ -196,8 +177,5 @@ function getPositionName($Id){
     </p>
   </div>
   </div>
-
 </div>
-
-
 </div>

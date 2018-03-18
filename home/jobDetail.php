@@ -2,7 +2,7 @@
 $Id = $_GET['id'];
 $job = job()->get("Id='$Id'");
 
-$jobFunctionList = job_function()->filter("isDeleted=0");
+$jobFunctionList = job_function()->list("isDeleted=0");
 
 function getPositionName($Id){
   $job = position_type()->get("Id='$Id'");

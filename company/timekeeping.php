@@ -1,7 +1,7 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 
-$jobList = job()->all();
+$jobList = job()->list();
 
 $username = $_SESSION['company_session'];
 $company = company()->get("username='$username'");

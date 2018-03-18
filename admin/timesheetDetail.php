@@ -1,6 +1,6 @@
 <?php
-$timesheetId = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
-$dtrList = dtr()->filter("timesheetId='$timesheetId'");
+$timesheetId = (isset($_GET['tsId']) && $_GET['tsId'] != '') ? $_GET['tsId'] : '';
+$dtrList = dtr()->list("timesheetId='$timesheetId'");
 
 // Get timesheet record
 $ts = timesheet()->get("Id='$timesheetId'");
@@ -51,17 +51,11 @@ function get_time_difference($record)
 
                             </tbody>
                         </table>
-                        <?php if($ts->status=="0"){?>
-                        <button class="btn btn-default stepy-finish">Waiting to be verified by the client</button>
-                      <?php } ?>
+                        <!-- <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Verify</button>
+                        <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
+                        <button type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
+                        <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button> -->
 
-                      <?php if($ts->status=="1"){?>
-                      <button class="btn btn-primary stepy-finish" onclick="location.href='process.php?action=approveTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
-                    <?php } ?>
-
-                      <?php if($ts->status=="2"){?>
-                      <button type="button" class="btn btn-danger waves-effect waves-light" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
-                    <?php } ?>
                           </div>
                       </div>
 

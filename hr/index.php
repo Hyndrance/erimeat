@@ -21,45 +21,15 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'jobDetail' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'jobDetail.php';
-		$template	= '../include/dashboard.php';
-		break;
-
 	case 'clientRequest' :
 		$currentSession = isset($_SESSION["hr_session"]);
 		$content 	= 'clientRequest.php';
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'clientDetail' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'clientDetail.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'timekeepingCompanyList' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'timekeepingCompanyList.php';
-		$template	= '../include/dashboard.php';
-		break;
-
 	case 'timekeepingCompanyDetail' :
 		$currentSession = isset($_SESSION["hr_session"]);
 		$content 	= 'timekeepingCompanyDetail.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'applicants' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'applicants.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'applicantDetail' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'applicantDetail.php';
 		$template	= '../include/dashboard.php';
 		break;
 
@@ -94,29 +64,55 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'timesheets' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'timesheets.php';
-		$template	= '../include/dashboard.php';
-		break;
+// clients detail
 
-	case 'timesheetDetail' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'timesheetDetail.php';
-		$template	= '../include/dashboard.php';
-		break;
+  case 'clientList' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'clientList.php';
+    $template	= '../include/dashboard.php';
+    break;
 
-	case 'companyList' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'companyList.php';
-		$template	= '../include/dashboard.php';
-		break;
+  case 'clientDetail' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'clientDetail.php';
+    $template	= '../include/dashboard.php';
+    break;
 
-	case 'employeeList' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'employeeList.php';
-		$template	= '../include/dashboard.php';
-		break;
+  case 'jobList' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'jobList.php';
+    $template	= '../include/dashboard.php';
+    break;
+
+  case 'jobDetail' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'jobDetail.php';
+    $template	= '../include/dashboard.php';
+    break;
+
+  case 'employeeList' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'employeeList.php';
+    $template	= '../include/dashboard.php';
+    break;
+
+  case 'employeeDetail' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'employeeDetail.php';
+    $template	= '../include/dashboard.php';
+    break;
+
+  case 'timesheetList' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'timesheetList.php';
+    $template	= '../include/dashboard.php';
+    break;
+
+  case 'timesheetDetail' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'timesheetDetail.php';
+    $template	= '../include/dashboard.php';
+    break;
 
 	default :
 		$currentSession = isset($_SESSION["hr_session"]);

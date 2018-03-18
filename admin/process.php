@@ -7,6 +7,10 @@ $action = $_GET['action'];
 
 switch ($action) {
 
+	case 'updateInformation' :
+		updateInformation();
+		break;
+
 	case 'jobRequest' :
 		jobRequest();
 		break;
@@ -108,6 +112,17 @@ switch ($action) {
 		break;
 
 	default :
+}
+
+function updateInformation()
+{
+	$Id = $_GET['Id'];
+
+	$job = job();
+	$job->obj['comment'] = $_POST['comment'];
+	$job->update("Id=$Id");
+
+	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
 }
 
 function addAccount()
@@ -314,13 +329,14 @@ function jobRequest()
 		// Send email
 		$content = __approvedJobRequestEmailMessage();
 		sendEmail($job->workEmail, $content);
+			header('Location: index.php?view=jobDetail&success=You have approved this request&Id=' . $Id);
 	}else{
 		// Send email
 		$content = __moreInfoEmailMessage();
 		sendEmail($job->workEmail, $content);
+			header('Location: index.php?view=jobDetail&success=Request has been sent&Id=' . $Id);
 	}
 
-	header('Location: index.php?view=talentRequest');
 }
 
 function setInterviewDate()
@@ -347,7 +363,7 @@ function setInterviewDate()
 							Teamire";
 	sendEmail($email, $content);
 
-	header('Location: index.php?view=applicants');
+	header('Location: index.php?view=resumeDetail&You have scheduled an interview for this applicant&Id=' . $Id);
 }
 
 function hireApplicant()
@@ -415,7 +431,7 @@ function denyResume()
 	$content = __moreInfoEmailMessage();
 	sendEmail($resume->email, $content);
 
-	header('Location: index.php?view=applicants');
+	header('Location: index.php?view=resumeList&isApproved=0&jobId=' . $resume->jobId);
 }
 
 function removeCompany()

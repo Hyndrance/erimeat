@@ -1,7 +1,7 @@
 <?php
 $Id = $_GET['id'];
 $job = job()->get("Id='$Id'");
-$resumeList = resume()->filter("jobId='$Id'");
+$resumeList = resume()->list("jobId='$Id'");
 
 function getJobClassification($Id){
   $job = job()->get("Id='$Id'");

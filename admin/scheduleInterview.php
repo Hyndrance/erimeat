@@ -1,6 +1,6 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$resume = resume()->all();
+$resume = resume()->list();
 
 function getJobName($Id){
   $job = job()->get("Id='$Id'");
@@ -45,7 +45,7 @@ function getInterviewTime($Id){
                     <td><?=getInterviewDate($row->Id); ?></td>
                     <td><?=getInterviewTime($row->Id); ?></td>
                     <td>
-                        <a href="?view=hiringApplicant&Id=<?=$row->Id;?>&jobId=<?=$row->jobId;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> View Applicant </a>
+                        <a href="?view=resumeDetail&Id=<?=$row->Id;?>&jobId=<?=$row->jobId;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> View Applicant </a>
                     </td>
                 </tr>
 

@@ -5,7 +5,7 @@ $action = $_POST['action'];
 switch($action){
 	case 'getAccount':
 	$id = $_POST['id'];
-	$admin = admin()->filter("Id=".$id);
+	$admin = admin()->list("Id=".$id);
 foreach($admin as $row) {
 ?>
 <?php $data = array('Id'=>$row->Id,'username'=>$row->username,'firstName'=>$row->firstName,'lastName'=>$row->lastName,'level'=>$row->level);?>

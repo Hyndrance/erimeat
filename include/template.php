@@ -3,7 +3,7 @@
     <head>
         <?php
           include_once($headScript);
-          $jfList = job_function()->filter("isDeleted='0'");
+          $jfList = job_function()->list("isDeleted='0'");
         ?>
     </head>
     <body>

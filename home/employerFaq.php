@@ -1,5 +1,5 @@
 <?php
-$faqList = faq()->filter("level='employer'");
+$faqList = faq()->list("level='employer'");
 ?>
 
   <h2 class="text-center m-t-30 m-b-30">Employer FAQs</h2>

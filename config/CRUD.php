@@ -20,18 +20,11 @@ class CRUD {
 	    return implode( ', ', $query_array );
 	}
 
-	function all(){
-		$db = Database::connect();
-		$pdo = $db->prepare("select * from $this->table");
-		$pdo->execute();
-		$result = $pdo->fetchAll(PDO::FETCH_OBJ);
-		Database::disconnect();
-		return $result;
-	}
+	function list($query=""){
+		$query = $query ? "where " . $query: "";
 
-	function filter($query){
 		$db = Database::connect();
-		$pdo = $db->prepare("select * from $this->table where $query");
+		$pdo = $db->prepare("select * from $this->table $query");
 		$pdo->execute();
 		$result = $pdo->fetchAll(PDO::FETCH_OBJ);
 		Database::disconnect();
@@ -39,9 +32,7 @@ class CRUD {
 	}
 
 	function count($query=""){
-		if ($query){
-			$query = "where " . $query;
-		}
+		$query = $query ? "where " . $query: "";
 
 		$db = Database::connect();
 		$pdo = $db->prepare("select * from $this->table $query");

@@ -1,7 +1,7 @@
 <?php
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$companyList = company()->all();
+$companyList = company()->list();
 ?>
 
 

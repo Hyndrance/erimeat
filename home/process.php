@@ -77,35 +77,40 @@ function clientRequest()
 	*/
 
 	$abn = $_POST['abn'];
+	$checkAbn = company()->get("abn='$abn'");
 
-	$comp = company();
-	$comp->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$comp->obj['department'] = $_POST['department'];
-	$comp->obj['name'] = $_POST['name'];
-	$comp->obj['abn'] = $_POST['abn'];
-	$comp->obj['contactPerson'] = $_POST['contactPerson'];
-	$comp->obj['email'] = $_POST['email'];
-	$comp->obj['address'] = $_POST['address'];
-	$comp->obj['phoneNumber'] = $_POST['phoneNumber'];
-	$comp->obj['mobileNumber'] = $_POST['mobileNumber'];
-	$comp->obj['description '] = $_POST['description'];
-	$comp->obj['isApproved '] = "1";
-	$comp->create();
+	if($checkAbn){
+		header('Location: ../home?view=clientForm&error=ABN already exist!');
+	}else{
+		$comp = company();
+		$comp->obj['jobFunctionId'] = $_POST['jobFunctionId'];
+		$comp->obj['department'] = $_POST['department'];
+		$comp->obj['name'] = $_POST['name'];
+		$comp->obj['abn'] = $_POST['abn'];
+		$comp->obj['contactPerson'] = $_POST['contactPerson'];
+		$comp->obj['email'] = $_POST['email'];
+		$comp->obj['address'] = $_POST['address'];
+		$comp->obj['phoneNumber'] = $_POST['phoneNumber'];
+		$comp->obj['mobileNumber'] = $_POST['mobileNumber'];
+		$comp->obj['description '] = $_POST['description'];
+		$comp->obj['isApproved '] = "1";
+		$comp->create();
 
-	$company = company()->get("abn='$abn'");
+		$company = company()->get("abn='$abn'");
 
-	__createClientLogin($company->Id);
+		__createClientLogin($company->Id);
 
-	// Send email
-	$hrmessage = __hrEmailMessage();
-	$adminmessage = __adminEmailMessage();
+		// Send email
+		$hrmessage = __hrEmailMessage();
+		$adminmessage = __adminEmailMessage();
 
-	//for HR
-	sendEmail('rgmak12@gmail.com',$hrmessage);
-	//for admin
-	sendEmail('torredale1014@gmail.com',$adminmessage);
+		//for HR
+		sendEmail('rgmak12@gmail.com',$hrmessage);
+		//for admin
+		sendEmail('torredale1014@gmail.com',$adminmessage);
 
-	header('Location: ../home/?view=success&Id='.$company->Id);
+		header('Location: ../home/?view=success&Id='.$company->Id);
+	}
 }
 
 function __createClientLogin($Id){
@@ -140,6 +145,7 @@ function __createClientLogin($Id){
 function submitResume(){
 
 		$abn = $_POST["abn"];
+		$jobFunctionId = $_POST['jobFunctionId'];
 
 		$upload = uploadFile($_FILES['upload_file']);
 		if ($upload)
@@ -169,6 +175,8 @@ function submitResume(){
 
 			$resume = resume()->get("abn='$abn'");
 
+			$hr = hr()->get("jobFunctionId='$jobFunctionId'");
+
 			// Send email
 			$content = __submitResumeEmailMessage();
 			$hrmessage = __hrEmailMessage();
@@ -177,7 +185,7 @@ function submitResume(){
 			//for candidate
 			sendEmail($res->obj['email'] , $content);
 			//for HR
-			sendEmail('rgmak12@gmail.com',$hrmessage);
+			sendEmail($hr->email,$hrmessage);
 			//for admin
 			sendEmail('torredale1014@gmail.com',$adminmessage);
 

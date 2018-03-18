@@ -1,7 +1,7 @@
 <?php
 $timesheetId = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
 $user = $_SESSION['employee_session'];
-$dtrList = dtr()->filter("owner='$user'");
+$dtrList = dtr()->list("owner='$user'");
 
 // Get timesheet record
 $ts = timesheet()->get("Id='$timesheetId'");

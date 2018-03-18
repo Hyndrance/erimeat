@@ -1,6 +1,6 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$job = job()->all();
+$job = job()->list();
 ?>
 <div class="row">
     <div class="col-xs-12">

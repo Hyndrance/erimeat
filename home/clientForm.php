@@ -1,8 +1,9 @@
 <?php
-$jfList = job_function()->all();
+$error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
+$jfList = job_function()->list();
 ?>
 
-<div class="row">
+<div class="row m-b-30">
     <div class="col-md-12">
       <h2 class="text-center m-t-30 m-b-30">Employer Registration Form</h2>
       <br>
@@ -10,7 +11,9 @@ $jfList = job_function()->all();
             <form id="default-wizard" action="process.php?action=clientRequest" method="POST" data-parsley-validate="">
                     <div class="row m-t-20">
                         <div class="col-sm-7 center-page">
-
+                            <p class="m-b-0">
+                              <?=$error?>
+                            </p>
                               <div class="form-group">
                                   <label for="firstname">Industry <span style="color: red;">*</span></label>
                                   <select class="form-control" name="jobFunctionId" required>

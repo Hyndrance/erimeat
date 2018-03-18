@@ -1,6 +1,6 @@
 <?php
 $user = (isset($_GET['user']) && $_GET['user'] != '') ? $_GET['user'] : '';
-$timeSheet = timesheet()->all();
+$timeSheet = timesheet()->list();
 ?>
 <div class="row">
     <div class="col-xs-12">

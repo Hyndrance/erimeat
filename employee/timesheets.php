@@ -1,7 +1,7 @@
 <?php
 $status = (isset($_GET['status']) && $_GET['status'] != '') ? $_GET['status'] : '';
 $user = $_SESSION['employee_session'];
-$timesheets = timesheet()->filter("employee='$user'");
+$timesheets = timesheet()->list("employee='$user'");
 ?>
 <div class="row">
     <div class="col-xs-12">

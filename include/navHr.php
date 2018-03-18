@@ -36,9 +36,8 @@
     </li>
 
     <li>
-        <a href="../hr/?view=companyList">
-            <i class="mdi mdi-clock"></i><span> Companies </span>
+        <a href="?view=clientList">
+            <i class="mdi mdi-account-plus"></i><span> Clients </span>
         </a>
     </li>
-
 </ul>

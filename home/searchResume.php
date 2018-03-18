@@ -2,9 +2,9 @@
 $j = (isset($_GET['j']) && $_GET['j'] != '') ? $_GET['j'] : '';
 $c = (isset($_GET['c']) && $_GET['c'] != '') ? $_GET['c'] : '';
 
-$cityList = city_option()->all();
-$resumeList = resume()->filter("jobFunctionId=$j and city=$c");
-$jobFunctionList = job_function()->filter("isDeleted=0");
+$cityList = city_option()->list();
+$resumeList = resume()->list("jobFunctionId=$j and city=$c");
+$jobFunctionList = job_function()->list("isDeleted=0");
 
 function getJobFunction($Id){
   $jf = job_function()->get("Id='$Id'");
@@ -20,13 +20,13 @@ function getJobFunction($Id){
     <form class="form-inline" method="GET">
     <div class="form-group">
       <input type="hidden" name="view" value="searchResume">
-      <select name="c" class="form-control" style="height: 67px; width:200px;">
+      <select name="c" class="form-control" style="height: 67px; width:350px;">
         <option>Select City</option>
         <?php foreach($cityList as $row){ ?>
           <option value="<?=$row->Id;?>"><?=$row->city;?></option>
         <?php } ?>
       </select>
-      <select name="j" class="form-control" style="height: 67px; width:200px;" required>
+      <select name="j" class="form-control" style="height: 67px; width:300px;" required>
         <option value="">Select Category</option>
         <?php foreach($jobFunctionList as $row){ ?>
           <option value="<?=$row->Id;?>"><?=$row->option;?></option>

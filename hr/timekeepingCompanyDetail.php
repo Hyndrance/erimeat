@@ -1,6 +1,6 @@
 <?php
 $jobId = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
-$employee = employee()->all();
+$employee = employee()->list();
 
 function get_fullname($username){
   $user = user()->get("username='$username'");

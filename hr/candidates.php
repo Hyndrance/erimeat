@@ -1,6 +1,6 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$resume = resume()->all();
+$resume = resume()->list();
 
 function getJobFunction($Id){
   $jobFunc = job_function()->get("Id='$Id'");

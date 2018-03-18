@@ -1,5 +1,5 @@
 <?php
-$jfList = job_function()->all();
+$jfList = job_function()->list();
 ?>
 
   <h2 class="text-center m-t-30 m-b-30">Contact Us</h2>
