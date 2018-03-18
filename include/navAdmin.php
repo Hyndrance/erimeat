@@ -41,6 +41,9 @@
           <ul class="nav-second-level" aria-expanded="false">
               <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=countries">Countries</a></li>
           </ul>
+          <ul class="nav-second-level" aria-expanded="false">
+              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=cities">Cities</a></li>
+          </ul>
       </li>
 
       <li>

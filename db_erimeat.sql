@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-18 16:01:00
+# Date: 2018-03-18 16:19:27
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -45,7 +45,7 @@ CREATE TABLE `city_option` (
 # Data for table "city_option"
 #
 
-INSERT INTO `city_option` VALUES (1,NULL,'Bacolod','0'),(2,NULL,'Bago','0'),(3,NULL,'Sipalay','0'),(4,NULL,'Talisay','0'),(5,NULL,'Silay','0'),(6,NULL,'Manapla','0'),(7,NULL,'Victorias','0');
+INSERT INTO `city_option` VALUES (1,'1','Bacolod','0'),(2,'1','Bago','0'),(3,'1','Sipalay','0'),(4,'1','Talisay','0'),(5,'1','Silay','1'),(6,'1','Manapla','0'),(7,'1','Victorias','0'),(9,'2','Sydney','0');
 
 #
 # Structure for table "company"

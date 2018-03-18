@@ -23,6 +23,10 @@ switch ($action) {
 		addCountry();
 		break;
 
+	case 'addCity' :
+		addCity();
+		break;
+
 	case 'addProject' :
 		addProject();
 		break;
@@ -69,6 +73,10 @@ switch ($action) {
 
 	case 'removeCountry' :
 		removeCountry();
+		break;
+
+	case 'removeCity' :
+		removeCity();
 		break;
 
 	case 'removeJobFunction' :
@@ -139,6 +147,15 @@ function addCountry(){
 	$country->create();
 
 	header('Location: ../admin/?view=countries&message=You have successfully added a country.');
+}
+
+function addCity(){
+	$city = city_option();
+	$city->obj['countryId'] = $_POST['countryId'];
+	$city->obj['city'] = $_POST['city'];
+	$city->create();
+
+	header('Location: ../admin/?view=cities&message=You have successfully added a city.');
 }
 
 function addAccount()
@@ -556,6 +573,16 @@ function removeCountry()
 	$country->update("Id='$Id'");
 
 	header('Location: ../admin/?view=countries&message=Succesfully Deleted');
+}
+
+function removeCity()
+{
+	$Id = $_GET['Id'];
+	$city = city_option();
+	$city->obj['isDeleted'] = "1";
+	$city->update("Id='$Id'");
+
+	header('Location: ../admin/?view=cities&message=Succesfully Deleted');
 }
 
 /* ======================== Email Messages ==============================*/
