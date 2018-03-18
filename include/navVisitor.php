@@ -70,7 +70,7 @@
             </ul>
 
       <div class="pull-right m-t-10" style="padding-right: 4%;">
-        <span class="text-white">+61 452-364-793 | </span>
+        <span class="text-white">+61 452 364 793 | </span>
         <img src="../include/assets/images/facebook.png">
         <img src="../include/assets/images/twitter.png">
         <img src="../include/assets/images/linkedin.png">
