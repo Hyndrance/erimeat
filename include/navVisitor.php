@@ -28,7 +28,7 @@
 <div class="row">
         <nav style="padding-left: 2%;">
 
-        <label for="drop" class="toggle">Menu</label>
+        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
         <input type="checkbox" id="drop" />
 
             <ul class="menu">
@@ -385,21 +385,27 @@ li > a:only-child:after { content: ''; }
 }
 #above-nav li {
     display: block;
+    width: 100%;
 
 
 }
 #above-nav a:hover, a:focus, a:active {
 
-    text-decoration: none;
-    background-color: transparent;
+   background-color: #000000;
+        color: #fff;
+
 
 }
 #above-nav a {
-    color: #337ab7;
-    text-decoration: none;
-    transition: color 0.1s, background-color 0.1s;
-        font-family: "Futura BT W01 Book",OpenSansRegular,"Open Sans Regular",sans-serif;
-         float: left;
+    display: block;
+        background-color: #eee;
+        padding:14px 20px;
+        color:#3399cc;
+        font-size:17px;
+        text-decoration:none;
+        border:none;
+        
+
 }
 #above-nav a {
     position: relative;
@@ -408,26 +414,7 @@ li > a:only-child:after { content: ''; }
     line-height: 16px;
     color: #337ab7;
 }
-#above-nav a::before {
-    content: '';
-    display: block;
-    position: inherit;
-    bottom: 0px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: #337ab7;
-    transform-origin: right top;
-    transform: scale(0, 0);
 
-}
-#above-nav a:active::before {
-    background-color: #337ab7;
-}
-#above-nav a:hover::before, a:focus::before {
-    transform-origin: left top;
-    transform: scale(1, 1);
-}
 }
 
 
