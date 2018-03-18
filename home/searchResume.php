@@ -111,7 +111,7 @@ function getCity($Id){
       <div class="row">
         <div class="col-md-10">
         <span style="font-size: 25px; font-weight: bold;" class="text-primary">
-          <a href="../home/?view=candidateDetail&Id=<?=$row->Id;?>'">
+          <a href="../home/?view=candidateDetail&Id=<?=$row->Id;?>">
             <u><?=getJobFunction($row->jobFunctionId); ?></u>
           </a>
         </span>
