@@ -40,7 +40,7 @@ function approveTimesheet()
 	$invoice->obj['owner'] = $ts->employee;
 	$invoice->create();
 
-	header('Location: index.php');
+		header('Location: index.php?view=timesheetDetail&success=You have approved this timesheet&tsId=' . $Id);
 }
 
 function disputeTimesheet()
