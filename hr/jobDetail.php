@@ -51,15 +51,14 @@ $job = job()->get("Id=$Id");
     <h3>Comment</h3>
     <?=$job->comment;?>
     <hr>
-
         <!--  This button only shows if job is approved -->
         <?php if($job->isApproved==0) {?>
-          <button type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
-          <button type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
-          <button type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
+          <button class="btn btn-blue" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
+          <button class="btn btn-warning" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
+          <button class="btn btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
         <?php } ?>
         <?php if($job->isApproved==-1) {?>
-          <button type="button">Waiting for the updated info</button>
+          <button class="btn btn-warning" type="button">Waiting for the updated info</button>
         <?php } ?>
         <br>
 
@@ -86,12 +85,12 @@ $job = job()->get("Id=$Id");
         <div class="clearfix"></div>
         <br>
         <br>
-
         <?php } ?>
-  </div>
-</div>
+        <br><br><br><br>
+      </div>
+
 <!-- all modals will be here -->
-<div class="clearfix"></div>
+
 <!-- dispute modal content -->
 <div id="update-information-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
