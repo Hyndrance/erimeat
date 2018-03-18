@@ -29,8 +29,8 @@ function __getName($username){
             ?>
             <tr>
               <td><a href="?view=employeeDetail&username=<?=$row->username;?>"><?=__getName($row->username);?></a></td>
-              <td><button class="btn-sm btn-success" onclick="location.href='?view=timesheetList&employee=<?=$row->username;?>'">View Timesheets</button></td>
-              <td><button class="btn-sm btn-danger">Terminate</button></td>
+              <td><button class="btn btn-sm btn-warning" onclick="location.href='?view=timesheetList&employee=<?=$row->username;?>'">View Timesheets</button></td>
+              <td><button class="btn btn-sm btn-danger" >Terminate</button></td>
             </tr>
               <?php
                 }
