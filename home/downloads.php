@@ -3,7 +3,7 @@
 $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 
-$downloadList = downloads()->list();
+$downloadList = downloads()->list("isDeleted='0'");
 
 ?>
 <div style="position: relative; height: auto; height: 300px;">
@@ -13,7 +13,9 @@ $downloadList = downloads()->list();
   <h2 class="text-center m-b-30">Downloads</h2>
       <div class="clearfix"></div>
       <!--Start 2 panels -->
-      <h4 class="text-center text-muted"> <i class="fa fa-folder-open-o fa-5x"></i><br> No Download Available </h4>
+      <?php if(!$downloadList){?>
+        <h4 class="text-center text-muted"> <i class="fa fa-folder-open-o fa-5x"></i><br> No Download Available </h4>
+      <?php }else{?>
       <div class="row">
         <?php foreach($downloadList as $row) {
           if ($row->isDeleted==0){
@@ -43,6 +45,7 @@ $downloadList = downloads()->list();
           }
         }
       }
+    }
         ?>
       </div>
     </div>
