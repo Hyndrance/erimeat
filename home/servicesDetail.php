@@ -10,7 +10,7 @@ $jobFunc = job_function()->get("code='$code'");
 <div class="m-b-30" style="position:relative;">
   <img src="../include/assets/images/teamire-aboutus-img.png" style="width: 100%;">
   <div class="homepage-top-text text-center m-t-50 container-fluid">
-    <h2 class="text-white"><marquee><?=$jobFunc->title;?></marquee></h2>
+    <h2 class="text-white"><?=$jobFunc->title;?></h2>
   </div>
 </div>
 <div class="container-fluid m-b-30">
