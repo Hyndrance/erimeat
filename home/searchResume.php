@@ -49,7 +49,7 @@ function getCity($Id){
   <!-- Display contact and email buttons -->
   <div align="center" class="m-t-30">
     <div>
-      <button class="btn-primary btn-candidate-contact">
+      <button class="btn-primary btn-candidate-contact" onclick="myFunction()">
         <i class="fa fa-phone fa-3x"></i><br>
         <span class="text-center font-13">Call +61 452 364 793</span>
       </button>
@@ -141,5 +141,33 @@ function getCity($Id){
 <?php } ?>
 </div>
 </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+          panel.style.display = "none";
+      } else {
+          panel.style.display = "block";
+      }
+  });
+}
+</script>
+<script>
+function myFunction() {
+    var txt;
+    if (confirm("Open Pick an app?")) {
+        OpenWith.exe;
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
 </div>
 </div>
