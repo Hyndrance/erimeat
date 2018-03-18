@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-17 22:47:18
+# Date: 2018-03-18 16:01:00
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -20,13 +20,13 @@ CREATE TABLE `admin` (
   `email` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (29,'admin','admin','admin','admin','admin','0','admin@admin.com','0'),(30,'trans','trans','hr','hr','hr','1','torredale1014@gmail.com','0'),(31,'pro','pro','hr','hr','hr','2','fredowinz23@gmail.com','0');
+INSERT INTO `admin` VALUES (29,'admin','admin','admin','admin','admin','0','torredale1014@gmail.com','0'),(30,'trans','trans','hr','hr','hr','1','torredale1014@gmail.com','0'),(31,'pro','pro','hr','hr','hr','2','fredowinz23@gmail.com','0'),(32,'payroll','payroll','payroll','payroll','payroll','0','payroll@payroll.com','0'),(33,'admin1','admin1','admin','admin','admin','0','fredowinz23@gmail.com','0');
 
 #
 # Structure for table "city_option"
@@ -35,7 +35,9 @@ INSERT INTO `admin` VALUES (29,'admin','admin','admin','admin','admin','0','admi
 DROP TABLE IF EXISTS `city_option`;
 CREATE TABLE `city_option` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `countryId` varchar(11) DEFAULT NULL,
   `city` varchar(150) DEFAULT NULL,
+  `isDeleted` varchar(1) DEFAULT '0' COMMENT '0: notDeleted, 1: Deleted',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
@@ -43,7 +45,7 @@ CREATE TABLE `city_option` (
 # Data for table "city_option"
 #
 
-INSERT INTO `city_option` VALUES (1,'Bacolod'),(2,'Bago'),(3,'Sipalay'),(4,'Talisay'),(5,'Silay'),(6,'Manapla'),(7,'Victorias');
+INSERT INTO `city_option` VALUES (1,NULL,'Bacolod','0'),(2,NULL,'Bago','0'),(3,NULL,'Sipalay','0'),(4,NULL,'Talisay','0'),(5,NULL,'Silay','0'),(6,NULL,'Manapla','0'),(7,NULL,'Victorias','0');
 
 #
 # Structure for table "company"
@@ -65,13 +67,31 @@ CREATE TABLE `company` (
   `jobFunctionId` varchar(11) DEFAULT NULL,
   `isApproved` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
 #
 
 INSERT INTO `company` VALUES (15,'C1521295130','villacar transit','11111111111','sadfsdfdsfdsfsdfdsfasdfdsf','torredale1014@gmail.com','dale torre','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','Domestic Transport','1','1');
+
+#
+# Structure for table "country_option"
+#
+
+DROP TABLE IF EXISTS `country_option`;
+CREATE TABLE `country_option` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `country` varchar(50) DEFAULT NULL,
+  `isDeleted` varchar(1) DEFAULT '0' COMMENT '0: notDeleted, 1: Deleted',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "country_option"
+#
+
+INSERT INTO `country_option` VALUES (1,'Philippines','0'),(2,'Australia','0'),(4,'India','0');
 
 #
 # Structure for table "downloads"
@@ -84,12 +104,13 @@ CREATE TABLE `downloads` (
   `uploadedFile` varchar(255) DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "downloads"
 #
 
+INSERT INTO `downloads` VALUES (3,'heheheh','1521310219.pdf','0');
 
 #
 # Structure for table "dtr"
@@ -111,7 +132,7 @@ CREATE TABLE `dtr` (
   `createDate` date DEFAULT NULL,
   `status` varchar(1) DEFAULT '0' COMMENT '0:login, 1:break, 2:break2, 3:lunch, 4:logout',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "dtr"
@@ -131,7 +152,7 @@ CREATE TABLE `employee` (
   `createDate` datetime DEFAULT NULL,
   `status` varchar(2) DEFAULT '1' COMMENT '1: Employed, 0: Unemployed',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "employee"
@@ -151,7 +172,7 @@ CREATE TABLE `faq` (
   `level` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "faq"
@@ -174,12 +195,13 @@ CREATE TABLE `inquiries` (
   `zipCode` varchar(4) DEFAULT NULL,
   `message` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "inquiries"
 #
 
+INSERT INTO `inquiries` VALUES (5,'asdfdsfsdfdsfsadf','asdfdsfdsf','(02) 1321-3213','a@a/.com','1','2131','asdfsdfdsfsdafasdfdsafdsfasdfsdf');
 
 #
 # Structure for table "interview_date"
@@ -192,7 +214,7 @@ CREATE TABLE `interview_date` (
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
@@ -210,12 +232,13 @@ CREATE TABLE `invoice` (
   `refNum` varchar(25) DEFAULT NULL,
   `owner` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "invoice"
 #
 
+INSERT INTO `invoice` VALUES (4,'1521299626','E1521295946');
 
 #
 # Structure for table "job"
@@ -241,13 +264,13 @@ CREATE TABLE `job` (
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
   `contactName` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (8,'1521295197',1,2,'Delivery Boy','villacar transit','11111111111','a@a.com','manager','(+61) 111-111-111','1111','asdfdsfdsfsdfsdf','1-3 Years','sdfdsfdsfsadfdsafdsfdsf',NULL,'1','dale Torre');
+INSERT INTO `job` VALUES (8,'1521295197',1,2,'Delivery Boy','villacar transit','58293819421','torredale1014@gmail.com','Operations Manager','(+61) 111-111-111','1111','Medel Encarnacion St., Brgy. Granada, Bacolod City Negros Occidental','1-3 Years','Robert Half Finance & Accounting is partnering with a Denver based manufacturing company to fill the role of an Accounting Clerk. The Accounting Clerk will be responsible for: •\tProcess accounts payable/receivable invoices •\tProvide...',NULL,'1','dale Torre');
 
 #
 # Structure for table "job_function"
@@ -301,7 +324,7 @@ CREATE TABLE `projects` (
   `createDate` datetime DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "projects"
@@ -341,13 +364,13 @@ CREATE TABLE `resume` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (21,8,1,'E1521295946','1521295405','mark','mendoza','11-11-1111','11111111111','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','Bacolod','Negros Occidental','6100','sadfsdfsadfasdfdsfsadfsdaf','1521295405.pdf','sadfdsfsdafsadfsdf','0','0',NULL,'1','1','0'),(22,8,1,NULL,'1521297937','asfsdfsfsdf','asdfsdfsf','11-11-1111','21111111111','','a@a.com','(+61) 123-213-123','csadfsdfdsfdsfdsfsdf','csadfsdfdsfdsfdsfsdf','csadfsdfdsfdsfdsfsdf','csadfsdfdsfdsfdsfsdf','1232','sdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdf','1521297937.pdf','sdfsafsfsdf','0','0',NULL,'0','0','0');
+INSERT INTO `resume` VALUES (21,8,1,'E1521295946','1521295405','mark','mendoza','11-11-1111','11111111111','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','Bacolod','Negros Occidental','6100','sadfsdfsadfasdfdsfsadfsdaf','1521295405.pdf','sadfdsfsdafsadfsdf','0','0',NULL,'1','1','0'),(22,0,2,NULL,'1521297937','Sun','Morning','10-18-1994','12203441283','123112','torredale1014@gmail.com','(+61) 123-213-123','Medel Encarnacion St., Brgy. Granada','Medel Encarnacion St., Brgy. Granada\n\t','1','Negros Occidental','6100','With ten years of experience, this job seeker is a candidate ready for anything. They most recently worked as an Accountant. In addition, they received their bachelor\'s degree.','1521297937.pdf','sdfsafsfsdf','0','0',NULL,'0','0','0'),(23,0,2,'','1521297937','Sun','Morning','10-18-1994','12203441283','123112','torredale1014@gmail.com','(+61) 123-213-123','Medel Encarnacion St., Brgy. Granada','Medel Encarnacion St., Brgy. Granada\n\t','1','Negros Occidental','6100','With ten years of experience, this job seeker is a candidate ready for anything. They most recently worked as an Accountant. In addition, they received their bachelor\'s degree.','1521297937.pdf','sdfsafsfsdf','0','0','1899-12-29 00:00:00','0','0','0');
 
 #
 # Structure for table "timesheet"
@@ -362,13 +385,13 @@ CREATE TABLE `timesheet` (
   `status` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:verified, 2:dispute, 3:approved',
   `createDate` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "timesheet"
 #
 
-INSERT INTO `timesheet` VALUES (12,8,'E1521295946','Timesheet as of 2018-03-17 15:43:49','0','2018-03-17 22:43:49');
+INSERT INTO `timesheet` VALUES (12,8,'E1521295946','Timesheet as of 2018-03-17 15:43:49','3','2018-03-17 22:43:49');
 
 #
 # Structure for table "timesheet_dispute"
@@ -400,7 +423,7 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
