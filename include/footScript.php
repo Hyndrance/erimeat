@@ -288,9 +288,6 @@ $( "#myBtnShowResume" ).click(function() {
 <script src="../include/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
 <script src="../include/plugins/autoNumeric/autoNumeric.js" type="text/javascript"></script>
 
-
-
-
  <!-- Counter js  -->
 <script src="../include/plugins/waypoints/jquery.waypoints.min.js"></script>
 <script src="../include/plugins/counterup/jquery.counterup.min.js"></script>
@@ -326,6 +323,12 @@ $( "#myBtnShowResume" ).click(function() {
         <!-- Init Js file -->
 
 <script type="text/javascript" src="../include/assets/pages/jquery.form-advanced.init.js"></script>
+
+
+
+<!-- Modal-Effect -->
+<script src="../include/plugins/custombox/js/custombox.min.js"></script>
+<script src="../include/plugins/custombox/js/legacy.min.js"></script>
 
 
 

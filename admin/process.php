@@ -7,6 +7,10 @@ $action = $_GET['action'];
 
 switch ($action) {
 
+	case 'terminateEmployee' :
+		terminateEmployee();
+		break;
+
 	case 'updateInformation' :
 		updateInformation();
 		break;
@@ -139,6 +143,16 @@ function updateInformation()
 	$job->update("Id=$Id");
 
 	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
+}
+
+function terminateEmployee()
+{
+	$username = $_GET['username'];
+
+	$emp = employee();
+	$emp->obj['status'] = "0";
+	$emp->update("username='$username'");
+	header('Location: index.php?view=employeeDetail&success=You have terminated an employee&username=' . $username);
 }
 
 function addCountry(){
