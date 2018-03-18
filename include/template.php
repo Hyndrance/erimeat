@@ -31,7 +31,7 @@
             <div class="container-fluid m-b-30 " style="padding: 30px 60px 10px 45px; color: #FFFFFF; background-color: #4a555c; bottom: 0;">
                 <div class="row center-page container">
                   <div class="container-fluid col-12 col-lg-2">
-                    <h4 class="text-white" style="padding-left: 30px;">ABOUT US</h4>
+                    <h4 class="text-white" style="padding-left: 40px;">ABOUT US</h4>
                     <ul style="list-style-type:none;">
                       <li><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></li>
                       <li><a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></li>
@@ -41,14 +41,14 @@
                     </ul>
                   </div>
                   <div class="container-fluid col-12 col-lg-2">
-                    <h4 class="text-white" style="padding-left: 30px;">RESOURCES</h4>
+                    <h4 class="text-white" style="padding-left: 40px;">RESOURCES</h4>
                     <ul style="list-style-type:none;">
                       <li><a style="color: white;" href="../home/?view=services">Our Services</a></li>
                       <li><a style="color: white;" href="../home/?view=projects">Projects</a></li>
                     </ul>
                   </div>
                   <div class="container-fluid col-12 col-lg-2">
-                    <h4 class="text-white" style="padding-left: 30px;">LEGAL</h4>
+                    <h4 class="text-white" style="padding-left: 40px;">LEGAL</h4>
                     <ul style="list-style-type:none;">
                     <li>Fraud Alert</li>
                     <li>Privacy Policy</li>
