@@ -127,33 +127,34 @@ function updateInformation()
 
 function addAccount()
 {
-
-
 	$username = $_POST['username'];
 	$level = $_POST['level'];
 	$checkUser = admin()->get("username='$username'");
 
-	if($checkUser){
-		header('Location: ../admin/?view=accounts&error=User already exist!');
-	}
-	else{
-		$admin = admin();
-		$admin->obj['firstName'] = $_POST['firstName'];
-		$admin->obj['lastName'] = $_POST['lastName'];
-		$admin->obj['username'] = $_POST['username'];
-		$admin->obj['password'] = $_POST['password'];
-		$admin->obj['level'] = $_POST['level'];
-		$admin->create();
-
-		if($level=='hr'){
-			$hr = hr();
-			$hr->obj['username'] = $_POST['username'];
-			$hr->obj['email'] = $_POST['email'];
-			$hr->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-			$hr->create();
+	if($checkUser != '1'){
+		if($level == 'hr'){
+			$admin = admin();
+			$admin->obj['firstName'] = $_POST['firstName'];
+			$admin->obj['lastName'] = $_POST['lastName'];
+			$admin->obj['username'] = $_POST['username'];
+			$admin->obj['password'] = $_POST['password'];
+			$admin->obj['level'] = $_POST['level'];
+			$admin->obj['jobFunctionId'] = $_POST['jobFunctionId'];
+			$admin->obj['email'] = $_POST['email'];
+			$admin->create();
+		}else{
+			$admin = admin();
+			$admin->obj['firstName'] = $_POST['firstName'];
+			$admin->obj['lastName'] = $_POST['lastName'];
+			$admin->obj['username'] = $_POST['username'];
+			$admin->obj['password'] = $_POST['password'];
+			$admin->obj['level'] = $_POST['level'];
+			$admin->obj['email'] = $_POST['email'];
+			$admin->create();
 		}
-
 		header('Location: ../admin/?view=accounts&message=You have successfully created an account.');
+	}else{
+		header('Location: ../admin/?view=accounts&error=User already exist!');
 	}
 }
 

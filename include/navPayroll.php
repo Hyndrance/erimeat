@@ -6,8 +6,8 @@
     </li>
 
     <li>
-        <a href="../payroll/?view=timekeeping">
-            <i class="mdi mdi-clock"></i><span> Timekeeping </span>
+        <a href="?view=clientList">
+            <i class="mdi mdi-account-plus"></i><span> Clients </span>
         </a>
     </li>
 

@@ -1,5 +1,5 @@
 <?php
-$timesheetId = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
+$timesheetId = (isset($_GET['tsId']) && $_GET['tsId'] != '') ? $_GET['tsId'] : '';
 $dtrList = dtr()->list("timesheetId='$timesheetId'");
 
 // Get timesheet record
@@ -16,12 +16,6 @@ function get_time_difference($record)
     $totalTime = $workTime - ($firstBreak + $secondBreak + $lunch);
 
     return number_format((float)$totalTime, 2, '.', '');
-}
-
-// Get time difference of break and lunch
-function time_rendered($timeIn, $timeOut){
-  $result = (strtotime("1/1/1980 $timeIn") - strtotime("1/1/1980 $timeOut")) / 3600;
-  return number_format((float)$result, 2, '.', '');
 }
 
 ?>
@@ -47,22 +41,9 @@ function time_rendered($timeIn, $timeOut){
                           <tr>
                             <td> <?=$row->createDate;?></td>
                             <td> <?=$row->checkIn;?></td>
-                            <td>
-                              <?=$row->breakOut;?> - <?=$row->breakIn;?><br>
-                              <?php if ($row->breakIn) {?>
-                                Duration: <b><?=time_rendered($row->breakIn, $row->breakOut);?></b>
-                              <?php } ?>
-                            </td>
-                            <td> <?=$row->breakOut2;?> - <?=$row->breakIn2;?><br>
-                              <?php if ($row->breakIn2) {?>
-                                Duration: <b><?=time_rendered($row->breakIn2, $row->breakOut2);?></b>
-                              <?php } ?>
-                            </td>
-                            <td> <?=$row->lunchOut;?> - <?=$row->lunchIn;?><br>
-                              <?php if ($row->lunchIn) {?>
-                                Duration: <b><?=time_rendered($row->lunchIn, $row->lunchOut);?></b>
-                              <?php } ?>
-                            </td>
+                            <td> <?=$row->breakOut;?> - <?=$row->breakIn;?></td>
+                            <td> <?=$row->breakOut2;?> - <?=$row->breakIn2;?></td>
+                            <td> <?=$row->lunchOut;?> - <?=$row->lunchIn;?></td>
                             <td> <?=$row->checkOut;?></td>
                             <td> <?=get_time_difference($row)?></td>
                          </tr>
@@ -70,17 +51,22 @@ function time_rendered($timeIn, $timeOut){
 
                             </tbody>
                         </table>
-                        <?php if($ts->status=="0"){?>
-                        <button class="btn btn-default stepy-finish">Waiting to be verified by the client</button>
-                      <?php } ?>
+                        <!-- <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Verify</button>
+                        <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
+                        <button type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
+                        <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button> -->
 
-                      <?php if($ts->status=="1"){?>
-                      <button class="btn btn-primary stepy-finish" onclick="location.href='process.php?action=approveTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
-                    <?php } ?>
+                        <?php if($ts->status==0) { ?>
+                          <button> Waiting to be verified </button>
+                        <?php } ?>
+                        <?php if($ts->status==1) { ?>
+                          <button onclick="location.href='process.php?action=approveTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
+                          <button type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
+                        <?php } ?>
+                        <?php if($ts->status==2) { ?>
+                          <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
+                        <?php } ?>
 
-                      <?php if($ts->status=="2"){?>
-                      <button type="button" class="btn btn-danger waves-effect waves-light" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
-                    <?php } ?>
                           </div>
                       </div>
 
@@ -97,7 +83,7 @@ function time_rendered($timeIn, $timeOut){
                                           </a>
                                       </h2>
 
-                                      <form class="form-horizontal" action="process.php?action=timesheetDispute&Id=<?=$timesheetId;?>" method="post">
+                                      <form class="form-horizontal" action="process.php?action=disputeTimesheet&Id=<?=$timesheetId;?>" method="post">
                                         <div class="form-group">
                                             <label>Reason to despute</label>
                                             <div>
@@ -136,9 +122,7 @@ function time_rendered($timeIn, $timeOut){
                                         <div class="form-group">
                                             <label>Reason of dispute</label>
                                             <div>
-                                                <textarea required="" name="reason" class="form-control" disabled>
-                                                    <?=$dispute->reason;?>
-                                                </textarea>
+                                                <textarea required="" name="reason" class="form-control" disabled><?=$dispute->reason;?></textarea>
                                             </div>
                                         </div>
 

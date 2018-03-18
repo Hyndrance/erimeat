@@ -97,11 +97,11 @@ function denyResume()
 
 	$resume = resume()->get("Id='$Id'");
 
-	// Send email
+	// Send email to ask more information
 	$content = __moreInfoEmailMessage();
 	sendEmail($resume->email, $content);
 
-	header('Location: index.php?view=applicants');
+	header('Location: index.php?view=resumeList&isApproved=0&jobId=' . $resume->jobId);
 }
 
 function approveTimesheet()

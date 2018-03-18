@@ -30,13 +30,6 @@ function employee() {
 }
 
 // User Models
-function hr() {
-	$crud = new CRUD;
-	$crud->table = "hr";
-	return $crud;
-}
-
-// User Models
 function inquiries() {
 	$crud = new CRUD;
 	$crud->table = "inquiries";

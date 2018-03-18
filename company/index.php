@@ -27,9 +27,15 @@ switch ($view) {
 		$template	= '../include/template_login.php';
 		break;
 
-	case 'postedJobs' :
+	case 'reports' :
 		$currentSession = isset($_SESSION["company_session"]);
-		$content 	= 'postedJobs.php';
+		$content 	= 'reports.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'jobList' :
+		$currentSession = isset($_SESSION["company_session"]);
+		$content 	= 'jobList.php';
 		$template	= '../include/dashboard.php';
 		break;
 
@@ -39,33 +45,39 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'timesheets' :
+	case 'employeeList' :
 		$currentSession = isset($_SESSION["company_session"]);
-		$content 	= 'timesheets.php';
+		$content 	= 'employeeList.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'employeeDetail' :
+		$currentSession = isset($_SESSION["company_session"]);
+		$content 	= 'employeeDetail.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'resumeList' :
+		$currentSession = isset($_SESSION["company_session"]);
+		$content 	= 'jobList.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'resumeDetail' :
+		$currentSession = isset($_SESSION["company_session"]);
+		$content 	= 'resumeDetail.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'timesheetList' :
+		$currentSession = isset($_SESSION["company_session"]);
+		$content 	= 'timesheetList.php';
 		$template	= '../include/dashboard.php';
 		break;
 
 	case 'timesheetDetail' :
 		$currentSession = isset($_SESSION["company_session"]);
 		$content 	= 'timesheetDetail.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'ongoingProjects' :
-		$currentSession = isset($_SESSION["company_session"]);
-		$content 	= 'ongoingProjects.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'timekeeping' :
-		$currentSession = isset($_SESSION["company_session"]);
-		$content 	= 'timekeeping.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'reports' :
-		$currentSession = isset($_SESSION["company_session"]);
-		$content 	= 'reports.php';
 		$template	= '../include/dashboard.php';
 		break;
 

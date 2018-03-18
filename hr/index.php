@@ -27,17 +27,11 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'timekeepingCompanyDetail' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'timekeepingCompanyDetail.php';
-		$template	= '../include/dashboard.php';
-		break;
-
 	case 'candidates' :
 		$currentSession = isset($_SESSION["hr_session"]);
 		$content 	= 'candidates.php';
 		$template	= '../include/dashboard.php';
-		break;;
+		break;
 
 	case 'candidateDetail' :
 		$currentSession = isset($_SESSION["hr_session"]);
@@ -111,6 +105,18 @@ switch ($view) {
   case 'timesheetDetail' :
     $currentSession = isset($_SESSION["hr_session"]);
     $content 	= 'timesheetDetail.php';
+    $template	= '../include/dashboard.php';
+    break;
+
+  case 'resumeList' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'resumeList.php';
+    $template	= '../include/dashboard.php';
+    break;
+
+  case 'resumeDetail' :
+    $currentSession = isset($_SESSION["hr_session"]);
+    $content 	= 'resumeDetail.php';
     $template	= '../include/dashboard.php';
     break;
 

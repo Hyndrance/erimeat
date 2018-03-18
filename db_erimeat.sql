@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-17 17:44:03
+# Date: 2018-03-17 22:47:18
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -16,15 +16,17 @@ CREATE TABLE `admin` (
   `firstName` varchar(50) DEFAULT NULL,
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
+  `jobFunctionId` varchar(11) DEFAULT '0',
+  `email` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (15,'admin','admin','admin','admin','admin','0'),(20,'payroll','payroll','payroll','payroll','payroll','0'),(23,'hr','hr','hr','hr','hr','0');
+INSERT INTO `admin` VALUES (29,'admin','admin','admin','admin','admin','0','admin@admin.com','0'),(30,'trans','trans','hr','hr','hr','1','torredale1014@gmail.com','0'),(31,'pro','pro','hr','hr','hr','2','fredowinz23@gmail.com','0');
 
 #
 # Structure for table "city_option"
@@ -69,7 +71,7 @@ CREATE TABLE `company` (
 # Data for table "company"
 #
 
-INSERT INTO `company` VALUES (7,'C1521274882','Villacar Transit','12345678901','We are a domestic transport company that existed for more than a decade.','torredale1014@gmail.com','Dale Torre','(+61) 234-567-890','(+61) 123-213-131','Billboard, Billboard','Domestic Transport','1','1');
+INSERT INTO `company` VALUES (15,'C1521295130','villacar transit','11111111111','sadfsdfdsfdsfsdfdsfasdfdsf','torredale1014@gmail.com','dale torre','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','Domestic Transport','1','1');
 
 #
 # Structure for table "downloads"
@@ -115,7 +117,7 @@ CREATE TABLE `dtr` (
 # Data for table "dtr"
 #
 
-INSERT INTO `dtr` VALUES (83,10,'E1521275321','16:33:24','16:33:27','16:33:25','16:33:25','16:33:26','16:33:26','16:33:27','16:33:27','2018-03-16','4'),(84,10,'E1521275321','16:33:40','16:33:43','16:33:40','16:33:41','16:33:41','16:33:42','16:33:43','16:33:42','2018-03-15','4'),(85,0,'E1521275321','16:51:34','16:51:36',NULL,NULL,NULL,NULL,NULL,NULL,'2018-03-17','4');
+INSERT INTO `dtr` VALUES (89,12,'E1521295946','22:43:42','22:43:44',NULL,NULL,NULL,NULL,NULL,NULL,'2018-03-17','4');
 
 #
 # Structure for table "employee"
@@ -135,7 +137,7 @@ CREATE TABLE `employee` (
 # Data for table "employee"
 #
 
-INSERT INTO `employee` VALUES (6,7,'E1521275321','2018-03-17 16:28:41','1');
+INSERT INTO `employee` VALUES (7,8,'E1521295946','2018-03-17 22:12:26','1');
 
 #
 # Structure for table "faq"
@@ -155,26 +157,7 @@ CREATE TABLE `faq` (
 # Data for table "faq"
 #
 
-
-#
-# Structure for table "hr"
-#
-
-DROP TABLE IF EXISTS `hr`;
-CREATE TABLE `hr` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(15) DEFAULT NULL,
-  `jobFunctionId` char(11) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `isDeleted` varchar(2) DEFAULT '0',
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-#
-# Data for table "hr"
-#
-
-INSERT INTO `hr` VALUES (1,'hr','1','torredale1014@gmail.com','0');
+INSERT INTO `faq` VALUES (7,NULL,'',NULL,'0');
 
 #
 # Structure for table "inquiries"
@@ -215,7 +198,7 @@ CREATE TABLE `interview_date` (
 # Data for table "interview_date"
 #
 
-INSERT INTO `interview_date` VALUES (7,'17','2018-03-17','13:00:00');
+INSERT INTO `interview_date` VALUES (7,'17','2018-03-17','13:00:00'),(8,'21','2018-03-23','13:00:00');
 
 #
 # Structure for table "invoice"
@@ -233,7 +216,6 @@ CREATE TABLE `invoice` (
 # Data for table "invoice"
 #
 
-INSERT INTO `invoice` VALUES (3,'1521279029','E1521275321');
 
 #
 # Structure for table "job"
@@ -265,7 +247,7 @@ CREATE TABLE `job` (
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (7,'1521274799',1,2,'Bus Driver','Villacar Transit','12345678901','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','We are looking for an experience bus driver.',NULL,'1','Dale Torre');
+INSERT INTO `job` VALUES (8,'1521295197',1,2,'Delivery Boy','villacar transit','11111111111','a@a.com','manager','(+61) 111-111-111','1111','asdfdsfdsfsdfsdf','1-3 Years','sdfdsfdsfsadfdsafdsfdsf',NULL,'1','dale Torre');
 
 #
 # Structure for table "job_function"
@@ -365,7 +347,7 @@ CREATE TABLE `resume` (
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (17,7,1,'E1521275321','1521275243','Sam','Sedayon','12-32-1321','09876172312','123123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','Bacolod','Negros Occidental','6100','sdfdsfdsfsfsfsdfsdafdsfdsfdsf','1521275243.txt','wwwwwwww','0','0',NULL,'1','1','0');
+INSERT INTO `resume` VALUES (21,8,1,'E1521295946','1521295405','mark','mendoza','11-11-1111','11111111111','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','Bacolod','Negros Occidental','6100','sadfsdfsadfasdfdsfsadfsdaf','1521295405.pdf','sadfdsfsdafsadfsdf','0','0',NULL,'1','1','0'),(22,8,1,NULL,'1521297937','asfsdfsfsdf','asdfsdfsf','11-11-1111','21111111111','','a@a.com','(+61) 123-213-123','csadfsdfdsfdsfdsfsdf','csadfsdfdsfdsfdsfsdf','csadfsdfdsfdsfdsfsdf','csadfsdfdsfdsfdsfsdf','1232','sdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdfsdfsafsfsdf','1521297937.pdf','sdfsafsfsdf','0','0',NULL,'0','0','0');
 
 #
 # Structure for table "timesheet"
@@ -386,7 +368,7 @@ CREATE TABLE `timesheet` (
 # Data for table "timesheet"
 #
 
-INSERT INTO `timesheet` VALUES (10,7,'E1521275321','Timesheet as of 2018-03-17 09:33:58','3','2018-03-17 16:33:58');
+INSERT INTO `timesheet` VALUES (12,8,'E1521295946','Timesheet as of 2018-03-17 15:43:49','0','2018-03-17 22:43:49');
 
 #
 # Structure for table "timesheet_dispute"
@@ -424,4 +406,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (9,'C1521274882','12345','Dale Torre','Villacar Transit','company'),(10,'E1521275321','12345','Sam','Sedayon','employee');
+INSERT INTO `user` VALUES (18,'C1521295130','12345','dale torre','villacar transit','company'),(19,'E1521295946','12345','mark','mendoza','employee');

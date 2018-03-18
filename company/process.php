@@ -31,8 +31,8 @@ switch ($action) {
 		verifyTimesheet();
 		break;
 
-	case 'timesheetDispute' :
-		timesheetDispute();
+	case 'disputeTimesheet' :
+		disputeTimesheet();
 		break;
 
 	default :
@@ -129,17 +129,17 @@ function verifyTimesheet()
 	header('Location: index.php');
 }
 
-function timesheetDispute()
+function disputeTimesheet()
 {
 	$Id = $_GET['Id'];
-	$tsd = timesheet_dispute();
-	$tsd->obj['timesheetId'] = $Id;
-	$tsd->obj['reason'] = $_POST['reason'];
-	$tsd->create();
-
 	$ts = timesheet();
-	$ts->obj['status'] = "2";
+	$ts->obj['status'] = 2;
 	$ts->update("Id='$Id'");
+
+	$td = timesheet_dispute();
+	$td->obj['timesheetId'] = $Id;
+	$td->obj['reason'] = $_POST['reason'];
+	$td->create();
 
 	header('Location: index.php');
 }

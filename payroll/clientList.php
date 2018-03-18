@@ -33,13 +33,10 @@
 
               <h4>Jobs</h4>
               <button onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=1'">
-                Approved:<br> <?=job()->count("abn=$row->abn and isApproved=1")?>
-              </button>
-              <button onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=-1'">
-                Denied:<br> <?=job()->count("abn=$row->abn and isApproved=-1")?>
+                Ongoing:<br> <?=job()->count("abn=$row->abn and isApproved=1")?>
               </button>
               <button onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=0'">
-                Requests:<br> <?=job()->count("abn=$row->abn and isApproved=0")?>
+                Requests:<br> <?=job()->count("abn=$row->abn and isApproved!=1")?>
               </button>
               <br><br>
               <button onclick="location.href='?view=clientDetail&Id=<?=$row->Id;?>'">View Detail</button>

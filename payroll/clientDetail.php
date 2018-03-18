@@ -1,6 +1,6 @@
 <?php
-$user =$_SESSION["company_session"];
-$company = company()->get("username='$user'");
+$Id = $_GET['Id'];
+$company = company()->get("Id=$Id");
 ?>
 <div class="row">
   <div class="col-md-7">

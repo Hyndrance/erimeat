@@ -11,6 +11,10 @@ switch ($action) {
 		approveTimesheet();
 		break;
 
+	case 'disputeTimesheet' :
+		disputeTimesheet();
+		break;
+
 	case 'login' :
 		login();
 		break;
@@ -35,6 +39,21 @@ function approveTimesheet()
 	$invoice->obj['refNum'] = round(microtime(true));
 	$invoice->obj['owner'] = $ts->employee;
 	$invoice->create();
+
+	header('Location: index.php');
+}
+
+function disputeTimesheet()
+{
+	$Id = $_GET['Id'];
+	$ts = timesheet();
+	$ts->obj['status'] = 2;
+	$ts->update("Id='$Id'");
+
+	$td = timesheet_dispute();
+	$td->obj['timesheetId'] = $Id;
+	$td->obj['reason'] = $_POST['reason'];
+	$td->create();
 
 	header('Location: index.php');
 }

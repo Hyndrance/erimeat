@@ -206,6 +206,7 @@ function getAccount(id){
         $('#getUsername').val(data.username);
         $('#getFirstName').val(data.firstName);
         $('#getLastName').val(data.lastName);
+        $('#getEmail').val(data.email);
         $('#getLevel').val(data.level);
 
 
@@ -254,7 +255,7 @@ function getProjects(id){
       url: url,
       dataType: 'json',
       success:function (data){
-     
+
         $('#getId').val(data.Id);
         $('#getTitle').val(data.title);
         $('#getContent').html(data.content);

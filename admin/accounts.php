@@ -34,7 +34,8 @@ $jfList = job_function()->list("isDeleted='0'");
             <tr>
               <th>Name</th>
               <th>Username</th>
-              <th>Password</th>
+              <th>Job Category</th>
+              <th>Email</th>
               <th>Level</th>
               <th></th>
               <th></th>
@@ -50,7 +51,8 @@ $jfList = job_function()->list("isDeleted='0'");
               <tr>
                 <td><?=$row->firstName;?> <?=$row->lastName;?> </td>
                 <td><?=$row->username;?></td>
-                <td><?=$row->password;?></td>
+                <td><?=$row->jobFunctionId;?></td>
+                <td><?=$row->email;?></td>
                 <td><?=$row->level;?></td>
                 <td>
                   <?php
@@ -110,6 +112,11 @@ $jfList = job_function()->list("isDeleted='0'");
               </div>
 
               <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" name="email"  placeholder="">
+              </div>
+
+              <div class="form-group">
                 <label>Level</label>
                 <select id="level" class="form-control select2" name="level">
                   <option>Select Position</option>
@@ -122,11 +129,6 @@ $jfList = job_function()->list("isDeleted='0'");
               <!--HR-->
 
               <div id="hr" style='display:none;'>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="email" class="form-control" name="email"  placeholder="">
-                </div>
-
                 <div class="form-group">
                     <label>Job Category <span style="color: red;">*</span></label>
                     <select class="form-control" name="jobFunctionId" required="">
@@ -180,6 +182,11 @@ $jfList = job_function()->list("isDeleted='0'");
                       <div class="form-group">
                         <label>Last Name</label>
                         <input type="text" class="form-control" name="lastName" id="getLastName">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" name="email" id="getEmail">
                       </div>
 
                       <div class="form-group">
