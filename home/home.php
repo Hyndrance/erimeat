@@ -377,13 +377,6 @@ function getPositionName($Id){
             </div>
 
             <div class="col-md-6 col-lg-2">
-              <h3 class="text-center text-blue">BANGALORE</h3>
-              <div class="annex-img">
-              	<img src="../include/assets/images/home-img3.png" class="annex-img-layer_bottom">
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-2">
               <h3 class="text-center text-blue">SYDNEY HQ</h3>
               <div class="annex-img">
               	<img src="../include/assets/images/home-img4.png" class="annex-img-layer_bottom">
@@ -391,7 +384,14 @@ function getPositionName($Id){
             </div>
 
             <div class="col-md-6 col-lg-2">
-              <h3 class="text-center text-blue">RHODE ISLAND</h3>
+              <h3 class="text-center text-blue">BANGALORE</h3>
+              <div class="annex-img">
+              	<img src="../include/assets/images/home-img3.png" class="annex-img-layer_bottom">
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-2">
+              <h3 class="text-center text-blue">PROVIDENCE</h3>
               <div class="annex-img">
                 <img src="../include/assets/images/home-img5.png" class="annex-img-layer_bottom">
               </div>
