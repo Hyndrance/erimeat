@@ -37,10 +37,11 @@ function approveTimesheet()
 
 	$invoice = invoice();
 	$invoice->obj['refNum'] = round(microtime(true));
+	$invoice->obj['timesheetId'] = $ts->timesheetId;
 	$invoice->obj['owner'] = $ts->employee;
 	$invoice->create();
 
-		header('Location: index.php?view=timesheetDetail&success=You have approved this timesheet&tsId=' . $Id);
+	header('Location: index.php?view=timesheetDetail&success=You have approved this timesheet&tsId=' . $Id);
 }
 
 function disputeTimesheet()

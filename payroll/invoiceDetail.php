@@ -1,12 +1,12 @@
 <?php
-$owner = (isset($_GET['owner']) && $_GET['owner'] != '') ? $_GET['owner'] : '';
+$timesheetId = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
 
-$invoice = invoice()->get("owner='$owner'");
-$resume = resume()->get("username='$owner'");
-$timesheet = timesheet()->get("employee='$owner' and status='3'");
+$invoice = invoice()->get("timesheetId='$timesheetId'");
+$resume = resume()->get("username='$invoice->owner'");
+$timesheet = timesheet()->get("Id='$timesheetId'");
+
+$dtrList = dtr()->list("timesheetId='$timesheet->Id' and owner='$invoice->owner'");
 $job = job()->get("Id='$timesheet->jobId'");
-
-$dtrList = dtr()->list("timesheetId='$timesheet->Id' and owner='$owner'");
 
 function get_time_difference($record)
 {
@@ -21,43 +21,90 @@ function get_time_difference($record)
 }
 ?>
 
-Invoice Reference #: <?=$invoice->refNum;?>
-<br><br>
-Employee Reference #: <?=$resume->refNum;?>
-<br><br>
-Employee Name: <?=$resume->firstName;?> <?=$resume->lastName;?>
-<br><br>
-Employee ABN: <?=$resume->abn;?>
-<br><br>
-Company ABN: <?=$job->abn;?>
-<br><br>
-Job Classification: <?=$job->position;?>
-<br><br>
-Approved Timesheet:<br>
-<table class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Login</th>
-            <th>First Break</th>
-            <th>Second Break</th>
-            <th>Lunch</th>
-            <th>Logout</th>
-            <th>Total</th>
-        </tr>
-    </thead>
-    <tbody>
-     <?php foreach($dtrList as $row) {
-       ?>
-          <tr>
-            <td> <?=$row->createDate;?></td>
-            <td> <?=$row->checkIn;?></td>
-            <td> <?=$row->breakOut;?> - <?=$row->breakIn;?></td>
-            <td> <?=$row->breakOut2;?> - <?=$row->breakIn2;?></td>
-            <td> <?=$row->lunchOut;?> - <?=$row->lunchIn;?></td>
-            <td> <?=$row->checkOut;?></td>
-            <td> <?=get_time_difference($row)?></td>
-         </tr>
-  <?php } ?>
+<!-- Start content -->
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-box">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <img src="assets/images/logo_dark.png" alt="" height="30">
+                        </div>
+                        <div class="pull-right">
+                            <h3 class="m-0 hidden-print">Invoice</h3>
+                        </div>
+                    </div>
 
-            </tbody>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                        </div><!-- end col -->
+                        <div class="col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-2">
+                            <div class="m-t-30 pull-right">
+                                <p><small><strong>Invoice #: </strong></small><?=$invoice->refNum;?></p>
+                            </div>
+                        </div><!-- end col -->
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row m-t-30">
+                        <div class="col-xs-6">
+                            <h5>Employee Detail</h5>
+                            <address class="line-h-24">
+                                <?=$resume->refNum;?><br>
+                                <?=$resume->firstName;?> <?=$resume->lastName;?><br>
+                                <?=$resume->abn;?><br>
+                            </address>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <h5>Client Detail</h5>
+                            <address class="line-h-24">
+                                <?=$job->position;?><br>
+                                <?=$job->company;?><br>
+                                <?=$job->abn;?><br>
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table m-t-30">
+                                    <thead>
+                                    <tr><th>Date</th>
+                                        <th>Login</th>
+                                        <th>First Break</th>
+                                        <th>Second Break</th>
+                                        <th>Lunch</th>
+                                        <th>Logout</th>
+                                        <th class="text-right">Total</th>
+                                    </tr></thead>
+                                    <tbody>
+                                    <?php foreach($dtrList as $row) { ?>
+                                    <tr>
+                                        <td><?=$row->createDate;?></td>
+                                        <td><?=$row->checkIn;?></td>
+                                        <td><?=$row->breakOut;?> - <?=$row->breakIn;?></td>
+                                        <td><?=$row->breakOut2;?> - <?=$row->breakIn2;?></td>
+                                        <td><?=$row->lunchOut;?> - <?=$row->lunchIn;?></td>
+                                        <td><?=$row->checkOut;?></td>
+                                        <td class="text-right"><?=get_time_difference($row)?></td>
+                                    </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end row -->
+
+    </div> <!-- container -->
+
+</div> <!-- content -->

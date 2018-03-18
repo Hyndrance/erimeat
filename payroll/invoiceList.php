@@ -42,7 +42,7 @@ $invoiceList = invoice()->list();
               <tr>
                 <td><?=$row->owner?></td>
                 <td>
-                  <button class="btn btn-sm btn-success" onclick="location.href='?view=invoiceDetail&owner=<?=$row->owner;?>'">View Invoice</button>
+                  <button class="btn btn-sm btn-success" onclick="location.href='?view=invoiceDetail&Id=<?=$row->timesheetId;?>'">View Invoice</button>
                 </td>
               </tr>
           <?php
