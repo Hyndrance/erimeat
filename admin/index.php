@@ -5,6 +5,11 @@ include_once("../config/Models.php");
 
 $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 
+// Initial inclusion
+$headScript = 'headScript.php';
+$footScript = 'footScript.php';
+$navigation = '../include/navAdmin.php';
+
 switch ($view) {
 
 	case 'login' :
@@ -202,8 +207,5 @@ switch ($view) {
 		$content 	= 'main.php';
 		$template	= '../include/dashboard.php';
 }
-$headScript = 'headScript.php';
-$footScript = 'footScript.php';
-$navigation = '../include/navAdmin.php';
 require_once $template;
 ?>
