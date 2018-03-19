@@ -2,46 +2,91 @@
 $Id = $_GET['Id'];
 $job = job()->get("Id=$Id");
 ?>
-<div class="row">
-  <div class="col-md-7">
-      <div class="text-center card-box">
-          <div class="clearfix"></div>
-          <div class="member-card">
 
-              <?php
-              foreach ($job as $key => $value) {
-                echo $key . ": " . $value . "<br>";
-              }
-              ?>
-              <br>
+<div class="container container-fluid">
+  <div class="col-12 m-t-30 m-b-30">
+    <h2 class="text-blue"><?=$job->position;?></h2>
+        <p><label class="m-r-5">Required Experience: </label><?=$job->requiredExperience;?></p>
+        <p><label class="m-r-5">Company: </label><?=$job->company;?></p>
+        <p><label class="m-r-5">Address: </label><?=$job->address;?></p>
+        <p><label class="m-r-5">Zip Code: </label><?=$job->zipCode;?></p>
+        <div class="row">
+          <div class="col-lg-6">
+            <p><label class="m-r-5">Job Function ID: </label><?=$job->jobFunctionId;?></p>
           </div>
+          <div class="col-lg-6">
+            <p><label class="m-r-5">Position Type ID: </label><?=$job->positionTypeId;?></p>
+          </div>
+        </div>
+
+        <p class="text-muted">Created at: </label><?=$job->createDate;?></p>
+    <div class="col-12 m-t-30">
+      <div class="col-lg-4">
+        <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
+        <br>
+        <?=$job->jobTitle;?>
       </div>
-  </div> <!-- end col -->
-
-  <div class="col-md-5">
-      <div class="text-center card-box">
-
+      <div class="col-lg-4">
+        <i class="fa fa-envelope m-r-5"></i><?=$job->workEmail;?>
+        <br>
+        <i class="fa fa-phone m-r-5"></i><?=$job->businessPhone;?>
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-12 m-t-30">
+      <div class="col-lg-4">
+        ABN: <?=$job->abn;?>
+      </div>
+      <div class="col-lg-4">
+        ID: <?=$job->Id;?>
+      </div>
+      <div class="col-lg-4">
+        Reference Number: <?=$job->refNum;?>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <hr>
+    <h3>Comment</h3>
+    <?=$job->comment;?>
+    <hr>
         <!--  This button only shows if job is approved -->
-        <?php if($job->isApproved==-1) {?>
-            <button type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
+        <?php if($job->isApproved==0) {?>
+            <button class="btn btn-default" type="button"><i>Waiting to be approved</i></button>
         <?php } ?>
         <br>
-
+        <!--  This button only shows if job is approved -->
+        <?php if($job->isApproved==-1) {?>
+            <button class="btn btn-blue" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
+        <?php } ?>
+        <br>
         <?php if($job->isApproved==1) {?>
-          <h4>Detail</h4>
-          <button onclick="location.href='?view=employeeList&jobId=<?=$job->Id?>&status=1'">
+          <div class="center-page text-center">
+          <h3 class="m-b-30">Detail</h3>
+          <div class="row col-12">
+            <div class="col-lg-4">
+          <button class="btn btn-blue" onclick="location.href='?view=employeeList&jobId=<?=$job->Id?>&status=1'">
               View <?=employee()->count("jobId=$job->Id and status=1");?> employees
-          </button> <br>
-          <button onclick="location.href='?view=timesheetList&jobId=<?=$job->Id?>'">
+          </button>
+        </div>
+        <div class="col-lg-4">
+          <button class="btn btn-warning" onclick="location.href='?view=timesheetList&jobId=<?=$job->Id?>'">
               View <?=timesheet()->count("jobId=$job->Id");?> timesheets
-          </button> <br>
-          <button onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
+          </button>
+        </div>
+        <div class="col-lg-4">
+          <button class="btn btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
               View <?=resume()->count("jobId=$job->Id and isApproved=0");?> applicants
           </button>
+        </div>
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <br>
         <?php } ?>
+        <br><br><br><br>
       </div>
-  </div>
-</div>
 
 
 <!-- all modals will be here -->

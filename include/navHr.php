@@ -18,6 +18,12 @@
     </li>
 
     <li>
+        <a href="../hr/?view=invoiceList">
+            <i class="mdi mdi-note-text"></i><span> Invoice </span>
+        </a>
+    </li>
+
+    <li>
         <a href="../hr/?view=scheduleInterview">
             <i class="mdi mdi-alarm-check"></i><span> Schedule Interview </span>
         </a>

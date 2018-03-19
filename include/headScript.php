@@ -9,6 +9,8 @@
 <!-- App favicon -->
 <link rel="shortcut icon" href="../include/assets/images/favicon.ico">
 
+<!-- Custom box css -->
+<link href="../include/plugins/custombox/css/custombox.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="../include/plugins/morris/morris.css">
 <link href="//db.onlinewebfonts.com/c/31aefc600de86877c5f9f991836a7fbb?family=Futura+BT+W01+Book" rel="stylesheet" type="text/css"/>

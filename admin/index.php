@@ -108,6 +108,18 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
+	case 'invoiceList' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'invoiceList.php';
+		$template	= '../include/dashboard.php';
+		break;
+
+	case 'invoiceDetail' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'invoiceDetail.php';
+		$template	= '../include/dashboard.php';
+		break;
+
 	case 'accounts' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'accounts.php';
