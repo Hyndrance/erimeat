@@ -88,12 +88,14 @@
                 </li>
             </ul>
       <div class="pull-right m-t-10" style="padding-right: 4%;">
-        <span class="text-white">+61 452 364 793 | </span>
-        <img src="../include/assets/images/facebook.png">
-        <img src="../include/assets/images/twitter.png">
-        <img src="../include/assets/images/linkedin.png">
-        <img src="../include/assets/images/google.png">
-        <img src="../include/assets/images/youtube.png">
+        <span class="text-white pull-left m-r-5">+61 452 364 793 | </span>
+        <ul>
+        <li><a class="icons" href="https://www.facebook.com/" target="blank_"><img href="www.facebook.com" src="../include/assets/images/facebook.png"></a></li>
+        <li><a class="icons" href="https://www.twitter.com/" target="blank_"><img src="../include/assets/images/twitter.png"></a></li>
+        <li><a class="icons" href="https://www.linkedin.com/" target="blank_"><img src="../include/assets/images/linkedin.png"></a></li>
+        <li><a class="icons" href="https://www.google.com/" target="blank_"><img src="../include/assets/images/google.png"></a></li>
+        <li><a class="icons" href="https://www.youtube.com/" target="blank_"><img src="../include/assets/images/youtube.png"></a></li>
+      </ul>
       </div>
 
         </nav>
@@ -260,14 +262,15 @@ li > a:only-child:after { content: ''; }
         display: block;
         background-color: #eee;
         padding:14px 20px;
-        color:#3399cc;
+        color: #212121;
         font-size:17px;
         text-decoration:none;
         border:none;
     }
 
     .toggle:hover {
-        background-color: #000000;
+        background-color: #e2e2e2;
+        color: #212121;
     }
 
     /* Display Dropdown when clicked on Parent Lable */

@@ -8,61 +8,48 @@ function getJobFunction($Id){
 }
 ?>
 
-
-<div class="row">
-    <div class="col-md-12">
-        <!-- Personal-Information -->
-        <div class="card-box">
-            <h4 class="header-title mt-0 m-b-20">Candidate Detail</h4>
-            <div class="panel-body">
-                <div class="text-left">
-                    <p class="text-muted font-13"><strong>Candidate Name :</strong>
-                      <span class="m-l-15"><?=$resume->firstName;?> <?=$resume->lastName;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Candidate ABN :</strong>
-                      <span class="m-l-15"><?=$resume->abn;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Tax File Number :</strong>
-                      <span class="m-l-15"><?=$resume->taxNumber;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Candidate Email :</strong>
-                      <span class="m-l-15"><?=$resume->email;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Job Category :</strong>
-                      <span class="m-l-15"><?=getJobFunction($resume->jobFunctionId);?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Phone Number :</strong>
-                      <span class="m-l-15"><?=$resume->phoneNumber;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Address 1 :</strong>
-                      <span class="m-l-15"><?=$resume->address1;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Address 2 :</strong>
-                      <span class="m-l-15"><?=$resume->address2;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>City :</strong>
-                      <span class="m-l-15"><?=$resume->city;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>State :</strong>
-                      <span class="m-l-15"><?=$resume->state;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Postal Code :</strong>
-                      <span class="m-l-15"><?=$resume->zipCode;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Cover Letter :</strong>
-                      <span class="m-l-15"><?=$resume->coverLetter;?></span>
-                    </p>
-                    <p class="text-muted font-13"><strong>Resume :</strong>
-                      <span class="m-l-15"><?=$resume->uploadedResume;?></span>
-                    </a>
-                    </p>
-                </div>
-            </div>
+<div class="container container-fluid">
+  <div class="col-12 m-t-30 m-b-30">
+      <h2 class="text-blue"><?=$resume->firstName;?> <?=$resume->lastName;?></h2>
+      <p><label class="m-r-5">Email: </label><?=$resume->email;?></p>
+      <p><label class="m-r-5">Job Category: </label><?=getJobFunction($resume->jobFunctionId);?></p>
+      <p><label class="m-r-5">Phone Number: </label><?=$resume->phoneNumber;?></p>
+      <div class="col-12">
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Candidate ABN :</label><?=$resume->abn;?></p>
         </div>
-        <!-- Personal-Information -->
-        <div class="card-box">
-          <button>Update</button>
-          <button onclick="location.href='process.php?action=removeCandidate&Id=<?=$resume->Id;?>'">Remove</button>
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Tax File Number :</label><?=$resume->taxNumber;?></p>
         </div>
-    </div>
+      </div>
+      <div class="col-12">
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Address 1 :</label><?=$resume->address1;?></p>
+        </div>
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Address 2 :</label><?=$resume->address2;?></p>
+        </div>
+      </div>
+      <p><label class="m-r-5">City :</label><?=$resume->city;?></p>
+      <p><label class="m-r-5">State :</label><?=$resume->state;?></p>
+      <p><label class="m-r-5">Postal Code :</label><?=$resume->zipCode;?></p>
+      <hr>
+      <div class="col-12 text-center">
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Cover Letter :</label><br><?=$resume->coverLetter;?></p>
+        </div>
+        <div class="col-lg-6">
+            <p><label class="m-r-5"><strong>Resume :</label><br><?=$resume->uploadedResume;?></p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-12 m-t-30">
+        <div class="col-lg-6">
+          <button class="btn btn-success pull-right" style="width:350px;">Update</button>
+        </div>
+        <div class="col-lg-6">
+          <button class="btn btn-danger pull-left" style="width:350px;" onclick="location.href='process.php?action=removeCandidate&Id=<?=$resume->Id;?>'">Remove</button>
+        </div>
+      </div>
   </div>
+</div>

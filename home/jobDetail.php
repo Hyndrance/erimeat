@@ -25,8 +25,11 @@ function formatDate($val){
 }
 ?>
 
-<div class="container-fluid m-t-30">
+<div class="container-fluid m-t-10">
   <div class="row center-page container">
+    <div class="row m-l-5">
+      <a href="#" onclick="window.history.go(-1); return false;">< Return</a>
+    </div>
   <!-- Start Job Detail -->
   <div class="col-md-9">
     <h1><?=$job->position;?></h1>

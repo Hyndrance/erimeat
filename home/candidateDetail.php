@@ -13,8 +13,9 @@ function getCity($Id){
 }
 ?>
 
-<div class="container-fluid m-t-30">
+<div class="container-fluid m-t-10">
   <div class="row center-page container">
+    <a href="#" onclick="window.history.go(-1); return false;">< Return</a>
     <h1><?=getJobFunction($resume->jobFunctionId);?></h1>
     <b>Reference: </b> <?=$resume->refNum;?>
 
