@@ -1,0 +1,61 @@
+position hiring for - job classification - DONE
+fname lname remove - contact name - DONE
+work email - company email - client email - DONE
+required experience - 250 char - DONE
+business phone number  - format for australia
+country code
+zip code  - 4 digits - DONE
+dropdown for required experience
+0 to 3 yrs
+0 to 5 
+0 to 7
+7 to 10
+add part time for position type  - DONE
+
+add file maintainance for job function
+job function - job category
+position type - employment type
+
+filtered job category 
+logistics 
+zip code - postal code - DONE
+address -street address
+
+forms pattern to roberthalf
+navigation
+asterisk for required field
+make logo bigger
+
+footer widgets
+
+phone number for submit button
+
+we turn our passion into profession
+mirror the design of roberthalf
+chatbot
+https://www.yellowpages.com.au/
+
+accept or decline
+
+validation for required field
+
+client will not register on the website
+teamire will be the one to provide the login credentials to client
+
+client registration form - company name, company abn, business contact man,address,phone number-landline and mobile - DONE
+ dropdown for department, - DONE
+industry type from the 9 services - DONE
+
+client request form - admin just approve button - DONE
+ detailed note on how the website will work with login credentials
+
+add billing info to client request form
+
+authorization for client request - admin-job request applications-hr - DONE
+
+
+
+
+
+
+

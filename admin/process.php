@@ -411,7 +411,7 @@ function setInterviewDate()
 							Teamire";
 	sendEmail($email, $content);
 
-	header('Location: index.php?view=resumeDetail&You have scheduled an interview for this applicant&Id=' . $Id);
+	header('Location: index.php?view=resumeDetail&Id=' . $Id);
 }
 
 function hireApplicant()
