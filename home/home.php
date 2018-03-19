@@ -366,36 +366,36 @@ function getPositionName($Id){
         <div class="row m-t-30">
           <div class="col-lg-1"></div>
 
-          <div class="col-md-6 col-lg-2">
-            <h3 class="text-center text-blue">SYDNEY HQ</h3>
+          <div class="col-lg-2">
+            <h3 class="text-center center-page text-blue">SYDNEY HQ</h3>
             <div class="annex-img">
               <img src="../include/assets/images/home-img4.png" class="annex-img-layer_bottom">
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-2">
-            <h3 class="text-center text-blue">MANILA</h3>
+          <div class="col-lg-2">
+            <h3 class="text-center center-page text-blue">MANILA</h3>
             <div class="annex-img">
             	<img src="../include/assets/images/home-img1.png" class="annex-img-layer_bottom">
             </div>
           </div>
 
-            <div class="col-md-6 col-lg-2">
-              <h3 class="text-center text-blue">DELHI</h3>
+            <div class="col-lg-2">
+              <h3 class="text-center center-page text-blue">DELHI</h3>
               <div class="annex-img">
               	<img src="../include/assets/images/home-img2.png" class="annex-img-layer_bottom">
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-2">
-              <h3 class="text-center text-blue">BANGALORE</h3>
+            <div class="col-lg-2">
+              <h3 class="text-center center-page text-blue">BANGALORE</h3>
               <div class="annex-img">
               	<img src="../include/assets/images/home-img3.png" class="annex-img-layer_bottom">
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-2">
-              <h3 class="text-center text-blue">PROVIDENCE</h3>
+            <div class="col-lg-2">
+              <h3 class="text-center center-page text-blue">PROVIDENCE</h3>
               <div class="annex-img">
                 <img src="../include/assets/images/home-img5.png" class="annex-img-layer_bottom">
               </div>

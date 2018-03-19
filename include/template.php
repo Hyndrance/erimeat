@@ -65,7 +65,7 @@
                 <li>
                     <label for="drop-2" class="toggle23"><a style="color: white;" href="../home/?view=projects">Projects</a></label>
                 </li>
-               
+
                 <li style="visibility: hidden;">
                     <label for="drop-2" class="toggle23" >Government Notice</label>
                 </li>
@@ -291,12 +291,12 @@
             </div>
         </footer>
 
-       
+
 
         <!-- End Footer -->
         <?php
           include_once($footScript);
         ?>
-      
+
     </body>
 </html>
