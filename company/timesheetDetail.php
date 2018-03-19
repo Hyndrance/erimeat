@@ -51,17 +51,13 @@ function get_time_difference($record)
 
                             </tbody>
                         </table>
-                        <!-- <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Verify</button>
-                        <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
-                        <button type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
-                        <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button> -->
 
                         <?php if($ts->status==0) { ?>
-                          <button onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Verify</button>
-                          <button type="button"  data-toggle="modal" data-target="#dispute-modal">Despute</button>
+                          <button class="btn btn-sm btn-primary" onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Verify</button>
+                          <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#dispute-modal">Despute</button>
                         <?php } ?>
                         <?php if($ts->status==2) { ?>
-                          <button type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
+                          <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
                         <?php } ?>
 
                           </div>

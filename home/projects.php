@@ -19,6 +19,9 @@ function formatDate($val){
 <h2 class="m-t-20 text-center">Supply Chain Projects</h2>
   <!-- Start About Us Content -->
   <div class="center-page container-80">
+    <?php if(!$projectList){?>
+      <h4 class="text-center text-muted"> <i class="fa fa-folder-open-o fa-5x"></i><br> No Article Available </h4>
+    <?php }else{?>
   <?php
     foreach($projectList as $row){
       if($row->isDeleted==0){
@@ -44,6 +47,10 @@ function formatDate($val){
 
   <hr class="m-b-30 m-t-30" width="100%">
 <?php }}?>
+
+<?php
+}
+?>
 </div>
 </div>
 
