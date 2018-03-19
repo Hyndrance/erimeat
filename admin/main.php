@@ -1,4 +1,11 @@
+<?php
 
+function __setFullName($owner){
+  $resume = resume()->get("username='$owner'");
+  return $resume->firstName . " " . $resume->lastName;
+}
+
+?>
 <center><h1>Welcome to Admin home page</h1></center>
 
 <div class="row">
@@ -82,7 +89,7 @@
                         </tr>
                       <?php } ?>
                         <tr>
-                            <td colspan="3"><a href="?view=jobList">View all</a>
+                            <td colspan="3"><a href="?view=jobList&isApproved=0">View all</a>
                         </tr>
                     </tbody>
                 </table>
@@ -93,33 +100,32 @@
 <!-- Right lists -->
 <div class="col-lg-6">
     <div class="card-box">
-        <h4 class="m-t-0 header-title"><b>Recent Talent Requests</b></h4>
+        <h4 class="m-t-0 header-title"><b>Recent Invoices</b></h4>
         <div class="table-responsive">
             <table class="table table-hover m-0 table-actions-bar">
                 <thead>
                 <tr>
-                    <th>Job</th>
-                    <th>Required Experience</th>
+                    <th>Ref. Number</th>
+                    <th>Employee</th>
                     <th>&nbsp;</th>
                 </tr>
                 </thead>
                 <tbody>
-                  <?php foreach(job()->list("isApproved=0 order by createDate desc limit 5") as $row){?>
+                  <?php foreach(invoice()->list("Id>0 order by Id desc limit 5") as $row){?>
                     <tr>
                         <td width="150">
-                            <h5 class="m-b-0 m-t-0 font-600"><?=$row->position;?></h5>
-                            <p class="m-b-0"><small><?=$row->company;?></small></p>
+                          <?=$row->refNum;?>
                         </td>
                         <td>
-                            <?=$row->address;?>
+                            <?=__setFullName($row->owner);?>
                         </td>
                         <td>
-                            <a href="?view=jobDetail&Id=<?=$row->Id?>" class="table-action-btn">view</a>
+                            <a class="table-action-btn">view</a>
                         </td>
                     </tr>
                   <?php } ?>
                     <tr>
-                        <td colspan="3"><a href="?view=jobList">View all</a>
+                        <td colspan="3"><a href="?view=invoiceList">View all</a>
                     </tr>
                 </tbody>
             </table>
