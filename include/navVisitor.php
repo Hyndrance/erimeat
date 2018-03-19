@@ -1,4 +1,5 @@
 
+
 <div style="width: 1300px; margin: 0 auto;">
   <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
       <a href="index.php" class="logo m-t-5 pull-left">
@@ -6,10 +7,12 @@
       </a>
       <img style="position: absolute; top:0; left:0;" src="../include/assets/images/teamire-header-image.png">
 
+
     <div style="height: 68px; width: 1px; background-color: #9aebff;" class="header-slogan pull-left m-t-15 m-l-25"></div>
     <div class="pull-left m-t-10 m-l-10" style="width: 390px;height: 85px;">
       <img src="../include/assets/images/header-slogan.png" width="90%">
     </div>
+
 
     <div class="form-inline pull-right"  style="padding: 30px; margin-top: 10px;" id="myTopnav">
       <ul class="nav navbar-nav navbar-right nav-menu-right" id="above-nav">
@@ -20,39 +23,30 @@
         <li><a class="m-l-3 m-r-3" href="../home/?view=contactUs" style="font-size:15px;">Contact Us</a></li>
       </ul>
     </div>
-
   </div>
-
 </div>
   <div class="row">
-     <nav class="top" style="padding-left: 2%;">
+     <nav class="top">
     <label for="drop1" class="toggle1" style="background-color: #022664;color: #fff; float: right;" >Top Navigation <i class="fa fa-bars"></i></label>
         <input type="checkbox" id="drop1" />
           <ul class="menu1">
-
                 <li>
-                   <label for="drop-1" class="toggle1"><a class="m-l-3 m-r-3" href="../home/?view=projects" style="font-size:15px;">Supply Chain Projects</a></label>
+                    <label for="drop-1" class="toggle1"><a  href="../home/?view=projects" >Supply Chain Projects</a></label>
                 </li>
-
                 <li>
-                <label for="drop-2" class="toggle1"> <a class="m-l-3 m-r-3" href="../home/?view=logins" style="font-size:15px;">Timesheets</a></label>
+                    <label for="drop-2" class="toggle1"> <a  href="../home/?view=logins" >Timesheets</a></label>
                 </li>
-
                  <li>
-                <label for="drop-2" class="toggle1"> <a class="m-l-3 m-r-3" href="../home/?view=downloads" style="font-size:15px;">Downloads</a></label>
+                    <label for="drop-2" class="toggle1"> <a  href="../home/?view=downloads" >Downloads</a></label>
                 </li>
-
                  <li>
-                <label for="drop-2" class="toggle1"> <a class="m-l-3 m-r-3" href="../home/?view=hiringForm" style="font-size:15px;">Request Staff</a></label>
+                    <label for="drop-2" class="toggle1"> <a  href="../home/?view=hiringForm" >Request Staff</a></label>
                 </li>
-
                  <li>
-                <label for="drop-2" class="toggle1"> <a class="m-l-3 m-r-3" href="../home/?view=contactUs" style="font-size:15px;">Contact Us</a></label>
+                    <label for="drop-2" class="toggle1"> <a  href="../home/?view=contactUs" >Contact Us</a></label>
                 </li>
-
             </ul>
-
-    </nav>
+         </nav>
     </div>
 <div class="row">
 
@@ -60,45 +54,40 @@
         <label for="drop" class="toggle"><i class="fa fa-bars"></i> Main Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
-
                 <li>
                     <!-- First Tier Drop Down -->
                     <label for="drop-1" class="toggle">Employers <b class="fa fa-chevron-right m-l-15 text-darkgrey"></b></label>
-                <a href="#">Employers <b class="fa fa-chevron-right m-l-15 text-blue"></b></a>
+                    <a href="#">Employers <b class="fa fa-chevron-right m-l-15 text-blue"></b></a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
                         <li><a href="../home/?view=hiringForm">Request Talent</a></li>
-                    <li><a href="../home/?view=searchResume">Search Candidates</a></li>
+                        <li><a href="../home/?view=searchResume">Search Candidates</a></li>
                         <li><a href="../home/?view=clientForm">Employer Registration</a></li>
                     </ul>
 
                 </li>
                 <li>
-
                 <!-- First Tier Drop Down -->
                 <label for="drop-2" class="toggle">Job Seekers <b class="fa fa-chevron-right m-l-15 text-darkgrey"></b></label>
                 <a href="#">Job Seekers <b class="fa fa-chevron-right m-l-15 text-blue"></b></a>
                 <input type="checkbox" id="drop-2"/>
-                <ul>
-                     <li><a href="../home/?view=searchJob">Search Job</a></li>
-                <li><a href="../home/?view=submitResume">Submit Resume</a></li>
+                    <ul>
+                         <li><a href="../home/?view=searchJob">Search Job</a></li>
+                         <li><a href="../home/?view=submitResume">Submit Resume</a></li>
 
-                </ul>
+                    </ul>
                 </li>
-                     <li>
+                 <li>
                     <!-- First Tier Drop Down -->
                     <label for="drop-3" class="toggle">Work With Us <b class="fa fa-chevron-right m-l-15 text-darkgrey"></b></label>
-                <a href="#">Work With Us <b class="fa fa-chevron-right m-l-15 text-blue"></b></a>
+                    <a href="#">Work With Us <b class="fa fa-chevron-right m-l-15 text-blue"></b></a>
                     <input type="checkbox" id="drop-3"/>
                     <ul>
                         <li><a href="../home/?view=services">Our Services</a></li>
-              <li><a href="../home/?view=aboutUs">About Us</a></li>
+                        <li><a href="../home/?view=aboutUs">About Us</a></li>
                     </ul>
-
                 </li>
-
             </ul>
-
       <div class="pull-right m-t-10" style="padding-right: 4%;">
         <span class="text-white">+61 452 364 793 | </span>
         <img src="../include/assets/images/facebook.png">
@@ -107,10 +96,9 @@
         <img src="../include/assets/images/google.png">
         <img src="../include/assets/images/youtube.png">
       </div>
+
         </nav>
 </div>
-
-
 <style>
 body {
 
@@ -549,11 +537,12 @@ li > a:only-child:after { content: ''; }
     .toggle1 {
         display: block;
         background-color: #212121;;
-        padding:14px 20px;
+        padding:10px 20px;
         color:#3399cc;
         font-size:17px;
         text-decoration:none;
         border:none;
+
     }
 
     .toggle1:hover {
@@ -574,7 +563,7 @@ li > a:only-child:after { content: ''; }
 
     .top ul ul .toggle1,
     .top ul ul a {
-        padding: 0 40px;
+        padding: 0 20px;
     }
 
     .top ul ul ul a {
@@ -600,6 +589,7 @@ li > a:only-child:after { content: ''; }
     .top ul ul a {
         background-color: #212121;
         color: #fff;
+       height: 20px;
     }
 
     /* Hide Dropdowns by Default */
