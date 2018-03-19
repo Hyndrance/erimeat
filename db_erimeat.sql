@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-19 16:52:21
+# Date: 2018-03-19 23:21:33
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -73,7 +73,7 @@ CREATE TABLE `company` (
 # Data for table "company"
 #
 
-INSERT INTO `company` VALUES (1,'C1521441495','Villacar Transit','11111111111','jasldfjakdsjfljdsfdsfjlkdsjflkdsjflkdsjflkdsjfldf','torredale1014@gmail.com','Dale Torre','(+61) 234-567-890','(+61) 111-111-111','Billboard, Billboard','Domestic Transport','1','1');
+INSERT INTO `company` VALUES (1,'C1521441495','Villacar Transit','11111111111','jasldfjakdsjfljdsfdsfjlkdsjflkdsjflkdsjflkdsjfldf','torredale1014@gmail.com','Dale Torre','(+61) 234-567-890','(+61) 111-111-111','Billboard, Billboard','Domestic Transport','1','1'),(2,'C1521471998','ljasldjfsdflsdjf','12321321312','sadjlkfjsdlfjsfslflsdfdsfsdjfljlsadfsdf','a@a.com','sadfsjdfslflsdfj','(+61) 111-111-111','(+61) 111-111-111','lsjadfsjdflsjdlfj','asdjflsjflsjfdldsjf','5','1'),(3,'C1521472117','asdfsdfsdfsdf','22222222222','asdfsdfsdfsdfsdfsdfsdfasfsdf','torredale1014@gmail.com','dsfsfsdfsdfsdf','(+61) 234-567-890','(+61) 111-111-111','Billboard, Billboard','asdfsdfsdfsfasdf','6','1'),(4,'C1521472205','asdfsdfdsfdsf','33333333333','(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890','torredale1014@gmail.com','sadfsdfdsfdsf','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','asdfsdfsdfdsf','8','1'),(5,'C1521472305','asdfsdffds','44444444444','(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890','torredale1014@gmail.com','asdfdsfds','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','adsfdsfsdfsdf','4','1'),(6,'C1521472516','asdfsdfdsf','55555555555','sdfjsdjfldsjlfkdsjfjdsflkjdfljdsf','torredale1014@gmail.com','asdfdsfdsf','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','asdfsdfsdfdsf','7','1');
 
 #
 # Structure for table "country_option"
@@ -268,7 +268,7 @@ CREATE TABLE `job` (
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (1,'1521441294',1,1,'Bus Driver','Villacar Transit','11111111111','torredale1014@gmail.com','Operations Manager','(+61) 111-111-111','1111','Bacolod City Negros Occidental','0-1 Year','We are looking for an experienced bus driver',NULL,'1','Dale Torre');
+INSERT INTO `job` VALUES (1,'1521441294',1,1,'Bus Driver','Villacar Transit','11111111111','torredale1014@gmail.com','Operations Manager','(+61) 111-111-111','1111','Bacolod City Negros Occidental','0-1 Year','We are looking for an experienced bus driver',NULL,'1','Dale Torre'),(2,'1521454915',1,1,'asdfdsfsdfsdfsdfdsf','asdfsfsfsdf','11111111111','A@a.com','sadfdsfsdfsdf','(+61) 321-321-321','1232','sdsdasdasdsd','0-1 Year','sdsdasdasdsdsdsdasdasdsdsdsdasdasdsdsdsdasdasdsd','2018-03-19 18:22:57','1','sdfsdfdsfasfdsaf');
 
 #
 # Structure for table "job_function"
@@ -368,7 +368,7 @@ CREATE TABLE `resume` (
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (1,1,1,'E1521443984','1521441620','Mark','Mendoza','11-11-1111','22222222222','22222','rgmak12@gmail.com','(+61) 222-222-222','2222222222','2222222222222222','1','22222222','2222','222222222222222222222222','1521441620.txt','222222222222222222','0','0',NULL,'1','1','0'),(2,1,1,'E1521446057','1521445993','Robert','Cap','33-33-3333','33333333333','3333','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','fasdfsdfdsffasdfsdfdsffasdfsdfdsffasdfsdfdsffasdfsdfdsf','1521445993.pdf','sdfsfsfsdfsdf','1521445993.png','0',NULL,'1','1','0'),(3,1,1,'E1521447336','1521447280','adsfadsfdsfsd','sdfdsafdsf','12-32-1321','21312323123','21213123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','asdasdsadsadsadsadsadsadasdsad','1521447280.pdf','sadasdasdadsadsad','0','0',NULL,'1','1','0');
+INSERT INTO `resume` VALUES (1,1,1,'E1521443984','1521441620','Mark','Mendoza','11-11-1111','22222222222','22222','rgmak12@gmail.com','(+61) 222-222-222','2222222222','2222222222222222','1','22222222','2222','222222222222222222222222','1521441620.txt','222222222222222222','0','0',NULL,'1','1','0'),(2,1,1,'E1521446057','1521445993','Robert','Cap','33-33-3333','33333333333','3333','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','fasdfsdfdsffasdfsdfdsffasdfsdfdsffasdfsdfdsffasdfsdfdsf','1521445993.pdf','sdfsfsfsdfsdf','1521445993.png','0',NULL,'1','1','0'),(3,1,1,'E1521447336','1521447280','adsfadsfdsfsd','sdfdsafdsf','12-32-1321','21312323123','21213123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','asdasdsadsadsadsadsadsadasdsad','1521447280.pdf','sadasdasdadsadsad','0','0',NULL,'1','1','0'),(4,1,1,NULL,'1521450908','sadasdsad','asdasdasd','11-11-1111','11111111111','123123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','dsadsaddsasadsadsaddsasadsadsaddsasadsadsaddsasa','1521450908.pdf','dsadsaddsasa','1521450908.png','0',NULL,'0','0','0'),(5,1,1,'','1521447280','adsfadsfdsfsd','sdfdsafdsf','12-32-1321','21312323123','21213123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','asdasdsadsadsadsadsadsadasdsad','1521447280.pdf','sadasdasdadsadsad','0','0','1899-12-29 00:00:00','0','0','0');
 
 #
 # Structure for table "timesheet"
@@ -416,15 +416,15 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(12) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
+  `password` varchar(40) DEFAULT NULL,
   `firstName` varchar(50) DEFAULT NULL,
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'C1521441495','12345','Dale Torre','Villacar Transit','company'),(12,'E1521443984','12345','Mark','Mendoza','employee'),(13,'E1521446057','12345','Robert','Cap','employee'),(14,'E1521447336','12345','adsfadsfdsfsd','sdfdsafdsf','employee');
+INSERT INTO `user` VALUES (1,'C1521441495','12345','Dale Torre','Villacar Transit','company'),(12,'E1521443984','12345','Mark','Mendoza','employee'),(13,'E1521446057','12345','Robert','Cap','employee'),(14,'E1521447336','temppassword','adsfadsfdsfsd','sdfdsafdsf','employee'),(15,'C1521471998','2b8889e80cb6afc64ea9923339183799475b1123','sadfsjdfslflsdfj','ljasldjfsdflsdjf','company'),(16,'C1521472117','2b8889e80cb6afc64ea9923339183799475b1123','dsfsfsdfsdfsdf','asdfsdfsdfsdf','company'),(17,'C1521472205','2b8889e80cb6afc64ea9923339183799475b1123','sadfsdfdsfdsf','asdfsdfdsfdsf','company'),(18,'C1521472305','2b8889e80cb6afc64ea9923339183799475b1123','asdfdsfds','asdfsdffds','company'),(19,'C1521472516','8cb2237d0679ca88db6464eac60da96345513964','asdfdsfdsf','asdfsdfdsf','company');
