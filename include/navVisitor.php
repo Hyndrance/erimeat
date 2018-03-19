@@ -262,14 +262,15 @@ li > a:only-child:after { content: ''; }
         display: block;
         background-color: #eee;
         padding:14px 20px;
-        color:#3399cc;
+        color: #212121;
         font-size:17px;
         text-decoration:none;
         border:none;
     }
 
     .toggle:hover {
-        background-color: #000000;
+        background-color: #e2e2e2;
+        color: #212121;
     }
 
     /* Display Dropdown when clicked on Parent Lable */

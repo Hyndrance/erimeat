@@ -6,8 +6,8 @@ $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 $downloadList = downloads()->list("isDeleted='0'");
 
 ?>
-<div style="position: relative; height: auto; height: 300px;">
-  <img style="position: absolute; top:0; right:0; height: 300px;" src="../include/assets/images/homepage-bg-1.png">
+<div style="position: relative; min-height: 300px;">
+  <img class="pages-bg-grey" src="../include/assets/images/homepage-bg-1.png">
   <div class="container-fluid">
 <div class="container-80 center-page m-b-30">
   <h2 class="text-center m-b-30">Downloads</h2>

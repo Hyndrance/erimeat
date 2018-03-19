@@ -5762,12 +5762,18 @@ ul.sitemap-icon ul li a {
   li.candidates{
     list-style-type: none; }
 
-    a.icons{
-      background-color: transparent !important;
-      width: 24px;
-      margin-right: 3px;
-      height: 24px;
-      padding: 0;
-      display: inline-block;
-      display:block;
-    }
+  a.icons{
+    background-color: transparent !important;
+    width: 24px;
+    margin-right: 3px;
+    height: 24px;
+    padding: 0;
+    display: inline-block;
+    display:block;
+  }
+
+  .pages-bg-grey {
+    position: absolute;
+    top:0;
+    right:0;
+    height: 300px; }
