@@ -166,7 +166,7 @@
               </center>
               </div>
         </div>
-            <div class="container-fluid m-b-30 " style="padding: 30px 60px 10px 45px; color: #FFFFFF; background-color: #4a555c; bottom: 0;">
+            <div class="container-fluid m-b-30 " style="padding: 30px 60px 10px 45px; color: #FFFFFF; background-color: #4a555c; bottom: 0;" id="con">
                 <div class="row center-page container">
                   <div class="container-fluid col-12 col-lg-2">
                     <h4 class="text-white" style="padding-left: 40px;">ABOUT US</h4>

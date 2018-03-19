@@ -356,7 +356,7 @@
 --------------------------------------------- */
 
 @media all and (max-width : 768px) {
-    .container-fluid {
+    #con {
         display: none;
     }
     #emai_form{
