@@ -5713,10 +5713,6 @@ ul.sitemap-icon ul li a {
 
   .annex-img img {
     max-width: 100%; }
-
-  .annex-img .annex-img-layer_bottom {
-    display: block; }
-
   /** Multiline Truncate **/
   .truncate {
     width: 100%;
