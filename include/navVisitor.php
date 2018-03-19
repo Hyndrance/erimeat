@@ -54,9 +54,9 @@
 
     </nav>
     </div>
-<div class="row">
+<div class="row" >
 
-        <nav style="padding-left: 2%;">
+        <nav style="padding-left: 2%; width: 1350px; margin: 0 auto;">
         <label for="drop" class="toggle"><i class="fa fa-bars"></i> Main Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
