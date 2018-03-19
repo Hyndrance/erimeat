@@ -69,8 +69,12 @@ function getCity($Id){
 <!-- Static Date -->
 
 <div class="container m-t-30 m-b-30">
-  <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px"></i><br>No Candidates Found</h3>
+  <?php if(!$resumeList){?>
+    <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px"></i><br>No Candidates Found</h3>
+  <?php }else{?>
+
   <ul style="padding-left: 0;">
+    <?php foreach($resumeList as $row) {?>
     <li class="candidates">
 <div class="row m-t-10">
   <div style="width: 100%; padding: 10px; padding-left: 25px;">
@@ -79,106 +83,36 @@ function getCity($Id){
       <div class="col-md-10">
       <span style="font-size: 25px; font-weight: bold;" class="text-primary">
         <a href="../home/?view=candidateDetail&Id=<?=$row->Id;?>">
-          <u>Sample Data White Background</u>
+          <u><?=getJobFunction($row->jobFunctionId); ?></u>
         </a>
       </span>
       </div>
     </div>
     <!-- Reference -->
-    <span>Candidate Reference #: 1234567890</span>
+    <span>Candidate Reference #: <?=$row->refNum;?></span>
     <div class="clearfix"></div>
     <!-- Location -->
     <div class="col-md-4">
-      <i class="fa fa-map-marker"></i> Address 1
+      <i class="fa fa-map-marker"></i> <?=$row->address1;?>
     </div>
     <!-- College -->
     <div class="col-md-4">
-      <i class="fa fa-map-o"></i> Address 2
+      <i class="fa fa-map-o"></i> <?=$row->address2;?>
     </div>
     <!-- Experience -->
     <div class="col-md-4 m-b-10">
-      <i class="fa fa-globe"></i> 6100
+      <i class="fa fa-globe"></i> <?=getCity($row->city);?>&nbsp;<?=$row->state;?>&nbsp;<?=$row->zipCode;?>
     </div>
 
-    <span >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but also the leap into electroni</span>
+    <span ><?=$row->coverLetter;?></span>
   </div>
 </div>
 </li>
-<li class="candidates">
-<div class="row m-t-10">
-<div style="width: 100%; padding: 10px; padding-left: 25px;">
-<!-- Start Job List -->
-<div class="row">
-  <div class="col-md-10">
-  <span style="font-size: 25px; font-weight: bold;" class="text-primary">
-    <a href="../home/?view=candidateDetail&Id=<?=$row->Id;?>">
-      <u>Sample Data White Background</u>
-    </a>
-  </span>
-  </div>
-</div>
-<!-- Reference -->
-<span>Candidate Reference #: 1234567890</span>
-<div class="clearfix"></div>
-<!-- Location -->
-<div class="col-md-4">
-  <i class="fa fa-map-marker"></i> Address 1
-</div>
-<!-- College -->
-<div class="col-md-4">
-  <i class="fa fa-map-o"></i> Address 2
-</div>
-<!-- Experience -->
-<div class="col-md-4 m-b-10">
-  <i class="fa fa-globe"></i> 6100
-</div>
-
-<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-  text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-  make a type specimen book. It has survived not only five centuries, but also the leap into electroni</span>
-</div>
-</div>
-</li>
+<?php } } ?>
 </ul>
+
 <!-- End of Static Data -->
 
-<?php foreach($resumeList as $row) {?>
-  <div class="form-container container m-t-30 m-b-30">
-  <div class="row m-t-10">
-    <div style="width: 100%; padding: 10px; padding-left: 25px;">
-      <!-- Start Job List -->
-      <div class="row">
-        <div class="col-md-10">
-        <span style="font-size: 25px; font-weight: bold;" class="text-primary">
-          <a href="../home/?view=candidateDetail&Id=<?=$row->Id;?>">
-            <u><?=getJobFunction($row->jobFunctionId); ?></u>
-          </a>
-        </span>
-        </div>
-      </div>
-      <!-- Reference -->
-      <span>Candidate Reference #: <?=$row->refNum;?></span>
-      <div class="clearfix"></div>
-      <!-- Location -->
-      <div class="col-md-4">
-        <i class="fa fa-map-marker"></i> <?=$row->address1;?>
-      </div>
-      <!-- College -->
-      <div class="col-md-4">
-        <i class="fa fa-map-o"></i> <?=$row->address2;?>
-      </div>
-      <!-- Experience -->
-      <div class="col-md-4 m-b-10">
-        <i class="fa fa-globe"></i> <?=getCity($row->city);?>&nbsp;<?=$row->state;?>&nbsp;<?=$row->zipCode;?>
-      </div>
-
-      <span ><?=$row->coverLetter;?></span>
-    </div>
-  </div>
-</div>
-<?php } ?>
 </div>
 </div>
 
