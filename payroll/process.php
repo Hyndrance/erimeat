@@ -41,16 +41,20 @@ function approveTimesheet()
 	$invoice->obj['owner'] = $ts->employee;
 	$invoice->create();
 
-	// $hrList = admin()->list("jobFunctionId='$jobFunctionId'");
+	$timesheet = timesheet()->get("Id='$Id'");
+
+	$job = job()->get("Id='$timesheet->jobId'");
+
+	$hrList = admin()->list("jobFunctionId='$job->jobFunctionId'");
 	$adminList = admin()->list("level='admin'");
 
 	// Send email
-	// $hrmessage = __hrEmailMessage();
+	$hrmessage = __hrEmailMessage();
 	$adminmessage = __adminEmailMessage();
 
-	// foreach($hrList as $row){
-	// 	sendEmail($row->email,$hrmessage);
-	// }
+	foreach($hrList as $row){
+		sendEmail($row->email,$hrmessage);
+	}
 	//for admin
 	foreach($adminList as $row){
 		sendEmail($row->email,$adminmessage);
