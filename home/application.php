@@ -90,7 +90,7 @@ $ptList = position_type()->list();
                                     <?php foreach(country_option()->list() as $country){ ?>
                                     <optgroup label="<?=$country->country;?>">
                                         <?php foreach(city_option()->list("countryId=$country->Id") as $city){ ?>
-                                            <option><?=$city->city;?></option>
+                                            <option value="<?=$city->Id;?>"><?=$city->city;?></option>
                                         <?php } ?>
                                     <?php } ?>
                                 </select>
