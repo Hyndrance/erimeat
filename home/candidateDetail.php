@@ -16,7 +16,7 @@ function getCity($Id){
 <div class="container-fluid m-t-30">
   <div class="row center-page container">
     <h1><?=getJobFunction($resume->jobFunctionId);?></h1>
-    <b>Employee Reference #: </b> <?=$resume->refNum;?>
+    <b>Reference: </b> <?=$resume->refNum;?>
 
     <div class="col-12 row">
       <div class="col-md-4">
