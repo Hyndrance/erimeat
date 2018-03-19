@@ -9,9 +9,19 @@ function getPositionName($Id){
   echo $job->option;
 }
 
+function getJobFunction($Id){
+  $jf = job_function()->get("Id='$Id'");
+  echo $jf->option;
+}
+
 function getApplicantCount($Id){
   $applicantList = resume()->count("jobId='$Id' and isApproved='0'");
   return $applicantList;
+}
+
+function formatDate($val){
+  $date = date_create($val);
+  return date_format($date, "F d, Y");
 }
 ?>
 
@@ -33,24 +43,28 @@ function getApplicantCount($Id){
     <hr>
     <!-- Job Information -->
     <div class="row cleafix">
-      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Reference Number:</p>
-      <p class="col-lg-9 col-md-8 col-6"><?=$job->refNum;?></p>
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Required Experience:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=$job->requiredExperience;?></p>
     </div>
     <div class="row cleafix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Location:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=$job->address;?></p>
     </div>
     <div class="row cleafix">
-      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Postal Code:</p>
-      <p class="col-lg-9 col-md-8 col-6"><?=$job->zipCode;?></p>
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Date Posted:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=formatDate($job->createDate);?></p>
+    </div>
+    <div class="row cleafix">
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Reference:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=$job->refNum;?></p>
     </div>
     <div class="row cleafix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Employment Type:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=getPositionName($job->positionTypeId);?></p>
     </div>
     <div class="row cleafix">
-      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Required Experience:</p>
-      <p class="col-lg-9 col-md-8 col-6"><?=$job->requiredExperience;?></p>
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Category:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=getJobFunction($job->jobFunctionId);?></p>
     </div>
     <hr>
     <h2>Description</h2>
@@ -71,7 +85,7 @@ function getApplicantCount($Id){
     <hr>
     <div class="m-b-30">
     <h3><?=$job->address;?></h3>
-    <?=$job->createDate;?>
+    <?=$job->zipCode;?>
   </div>
   </div> <!-- End Job Detail -->
 

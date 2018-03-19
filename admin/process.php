@@ -369,6 +369,7 @@ function jobRequest()
 	$Id = $_GET['Id'];
 	$job = job();
 	$job->obj['isApproved'] = $result;
+	$job->obj['createDate'] = "NOW()";
 	$job->update("Id='$Id'");
 
 	$job = job()->get("$Id='$Id'");
