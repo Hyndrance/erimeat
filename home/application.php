@@ -83,16 +83,18 @@ $ptList = position_type()->list();
                               </div>
 
                           <div>
-                          <div class="form-group w-33-p pull-left p-r-10">
-                            <label for="username">City <span style="color: red;">*</span></label>
-                            <select class="form-control select2" name="city" required>
-                                <option>Select City</option>
-                                <?php foreach($cityList as $row) {?>
-                                  <optgroup label="<?=getCountry($row->countryId);?>">
-                                    <option value="<?=$row->Id;?>"><?=$row->city;?></option>
-                                <?php } ?>
-                            </select>
-                          </div>
+                            <div class="form-group w-33-p pull-left p-r-10">
+                                <label for="username">City <span style="color: red;">*</span></label>
+                                <select class="form-control select2" name="city" required>
+                                    <option>Select City</option>
+                                    <?php foreach(country_option()->list() as $country){ ?>
+                                    <optgroup label="<?=$country->country;?>">
+                                        <?php foreach(city_option()->list("countryId=$country->Id") as $city){ ?>
+                                            <option><?=$city->city;?></option>
+                                        <?php } ?>
+                                    <?php } ?>
+                                </select>
+                            </div>
 
                           <div class="form-group w-33-p pull-left">
                               <label for="username">State <span style="color: red;">*</span></label>
