@@ -9,6 +9,11 @@ function getPositionName($Id){
   $job = position_type()->get("Id='$Id'");
   echo $job->option;
 }
+
+function formatDate($val){
+  $date = date_create($val);
+  return date_format($date, "F d, Y");
+}
 ?>
 
 <div style="position: relative;">
@@ -95,7 +100,7 @@ function getPositionName($Id){
             <br>
             <span class="m-b-5"><?=getPositionName($row->positionTypeId);?></span>
             <br>
-            <span class="job-list-date"><?=$row->createDate;?></span>
+            <span class="job-list-date">Posted <?=formatDate($row->createDate);?></span>
             <br>
         </div>
 
