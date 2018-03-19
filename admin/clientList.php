@@ -24,22 +24,27 @@
           <div class="member-card">
               <div class="">
                   <h3 class="m-b-5"><?=$row->name;?></h3>
-                  <p class="text-muted"><?=$row->contactPerson;?> <span> | </span> <span> <a href="#" class="text-pink"><?=$row->email;?></a> </span></p>
+                  <hr>
+                  <p><i class="fa fa-user m-r-5"></i><b><?=$row->contactPerson;?></b><br>
+                  <i class="fa fa-envelope m-r-5"></i><a href="#" class="text-blue"><?=$row->email;?></a>
+                  </p>
               </div>
 
-              <p class="text-muted font-13">
+              <div style="height: 100px;">
+              <p class="truncate">
                 <?=$row->description;?>
               </p>
+            </div>
 
               <h4>Jobs</h4>
-              <button onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=1'">
+              <button style="width: 140px;" class="btn btn-sm btn-success" onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=1'">
                 Ongoing:<br> <?=job()->count("abn=$row->abn and isApproved=1")?>
               </button>
-              <button onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=0'">
+              <button style="width: 140px;" class="btn btn-sm btn-warning" onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=0'">
                 Requests:<br> <?=job()->count("abn=$row->abn and isApproved!=1")?>
               </button>
               <br><br>
-              <button onclick="location.href='?view=clientDetail&Id=<?=$row->Id;?>'">View Detail</button>
+              <button class="btn btn-blue" style="width: 285px;" onclick="location.href='?view=clientDetail&Id=<?=$row->Id;?>'">View Detail</button>
           </div>
       </div>
   </div> <!-- end col -->

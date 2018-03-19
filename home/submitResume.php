@@ -2,9 +2,6 @@
 $jfList = job_function()->list("isDeleted='0'");
 $ptList = position_type()->list();
 ?>
-
-
-
 <div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
@@ -88,9 +85,16 @@ $ptList = position_type()->list();
                           <div>
                           <div class="form-group w-33-p pull-left p-r-10">
                               <label for="username">City <span style="color: red;">*</span></label>
-                              <input type="text" class="form-control" name="city" required>
+                              <select class="form-control select2" name="city" required>
+                                  <option>Select City</option>
+                                  <?php foreach(country_option()->list() as $country){ ?>
+                                  <optgroup label="<?=$country->country;?>">
+                                      <?php foreach(city_option()->list("countryId=$country->Id") as $city){ ?>
+                                          <option><?=$city->city;?></option>
+                                      <?php } ?>
+                                  <?php } ?>
+                              </select>
                           </div>
-
                           <div class="form-group w-33-p pull-left">
                               <label for="username">State <span style="color: red;">*</span></label>
                               <input type="text" class="form-control" name="state" required>

@@ -2,7 +2,10 @@
 $jfList = job_function()->list();
 ?>
 
-  <h2 class="text-center m-t-30 m-b-30">Contact Us</h2>
+<div style="position: relative;">
+  <img style="position: absolute; top:0; width: 100%;" src="../include/assets/images/our-services-bg.png">
+  <div class="container-fluid">
+  <h2 class="text-center m-b-30">Contact Us</h2>
       <div class="clearfix"></div>
       <!--Start 2 panels -->
       <div class="container-80 center-page">
@@ -36,12 +39,12 @@ $jfList = job_function()->list();
         <div class="col-12 col-lg-5">
           <p class="text-center">For Employers</p>
           <p class="text-center"><a href="#">hr@teamire.com</a></p>
-          <p class=" text-center">or <a href="#">+61452 364 793</a></p>
+          <p class=" text-center">or <a href="#">+61 452 364 793</a></p>
         </div>
         <div class="col-12 col-lg-5">
           <p class="text-center">For Job Seekers</p>
           <p class="text-center"><a href="#">payroll@teamire.com</a></p>
-          <p class=" text-center">or <a href="#">+61452 364 793</a></p>
+          <p class=" text-center">or <a href="#">+61 452 364 793</a></p>
         </div>
         <div class="col-lg-1">&nbsp;</div>
       </div>
@@ -114,3 +117,6 @@ $jfList = job_function()->list();
           </div>
         </div> <!-- End Form -->
   </div> <!-- End Form Container -->
+</div>
+</div>
+<br>

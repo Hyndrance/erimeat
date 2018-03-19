@@ -299,11 +299,18 @@ function submitTimesheet()
 	// Get job functionId
 	$job = job()->get("Id=$emp->jobId");
 	// Get Hr email by jobFunctionId
-	$admin = admin()->get("jobFunctionId=$job->jobFunctionId");
+	$hrList = admin()->list("jobFunctionId='$job->jobFunctionId'");
+	$payrollList = admin()->list("level='payroll'");
 
 	// Send email to HR
 	$emailContent = "A new timesheet has been sent. Please check your teamire account";
-	sendEmail($admin->email, $emailContent);
+
+	foreach($hrList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+	foreach($payrollList as $row){
+		sendEmail($row->email, $emailContent);
+	}
 
 	// Update all dtr
 	header('Location: index.php');

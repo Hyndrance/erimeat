@@ -31,24 +31,30 @@
             <div class="container-fluid m-b-30 " style="padding: 30px 60px 10px 45px; color: #FFFFFF; background-color: #4a555c; bottom: 0;">
                 <div class="row center-page container">
                   <div class="container-fluid col-12 col-lg-2">
-                    <h4 class="text-white">ABOUT US</h4>
-                    <p><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></p>
-                    <p><a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></p>
-                    <p><a style="color: white;" href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></p>
-                    <p><a style="color: white;" href="../home/?view=logins">Timesheets</a></p>
-                    <p><a style="color: white;" href="../home/?view=contactUs">Contact Us</a></p>
+                    <h4 class="text-white" style="padding-left: 30px;">ABOUT US</h4>
+                    <ul style="list-style-type:none;">
+                      <li><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></li>
+                      <li><a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></li>
+                      <li><a style="color: white;" href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></li>
+                      <li><a style="color: white;" href="../home/?view=logins">Timesheets</a></li>
+                      <li><a style="color: white;" href="../home/?view=contactUs">Contact Us</a></li>
+                    </ul>
                   </div>
                   <div class="container-fluid col-12 col-lg-2">
-                    <h4 class="text-white">RESOURCES</h4>
-                    <p><a style="color: white;" href="../home/?view=services">Our Services</a></p>
-                    <p><a style="color: white;" href="../home/?view=projects">Projects</a></p>
+                    <h4 class="text-white" style="padding-left: 30px;">RESOURCES</h4>
+                    <ul style="list-style-type:none;">
+                      <li><a style="color: white;" href="../home/?view=services">Our Services</a></li>
+                      <li><a style="color: white;" href="../home/?view=projects">Projects</a></li>
+                    </ul>
                   </div>
                   <div class="container-fluid col-12 col-lg-2">
-                    <h4 class="text-white">LEGAL</h4>
-                    <p>Fraud Alert</p>
-                    <p>Privacy Policy</p>
-                    <p>Terms of Use</p>
-                    <p>Government Notice</p>
+                    <h4 class="text-white" style="padding-left: 30px;">LEGAL</h4>
+                    <ul style="list-style-type:none;">
+                    <li>Fraud Alert</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Use</li>
+                    <li>Government Notice</li>
+                  </ul>
                   </div>
                   <div class="col-12 col-lg-1"></div>
                   <div class="container-fluid col-12 col-lg-5">
@@ -141,7 +147,7 @@
 
             <div style="padding: 30px 0; margin-top: 0; bottom: 0; background-color: #394249; flex: 0 0 100%; max-width: 100%;">
                 <p style="font-size: 40px;" class="text-center"><a href="#" class="text-white">
-                  IT'S TIME WE ALL WORK HAPPY.
+                  LET US BE YOUR STRENGTH
                 </a></p>
             </div>
         </footer>

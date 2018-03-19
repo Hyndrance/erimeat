@@ -5630,7 +5630,7 @@ ul.sitemap-icon ul li a {
   .job-list-title {
     font-size: 23px;
     line-height: 28px;
-    font-weight: 600; }
+    font-weight: 800; }
 
   .job-list-date {
     bottom: 10px;
@@ -5747,6 +5747,12 @@ ul.sitemap-icon ul li a {
       float: left;
       margin: 10px auto 5px 20px;
       width: 28%;
-      display: none;
-    }
+      display: none; }}
+
+  .candidate-tab-content {
+     padding: 15px;
+     font-size: 17px;  }
+
+  .candidate-tab-border {
+    border: 1px solid #dddddd; border-top: none;
   }

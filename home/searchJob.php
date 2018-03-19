@@ -11,6 +11,8 @@ function getPositionName($Id){
 }
 ?>
 
+<div style="position: relative;">
+  <img style="position: absolute; top:0; right:0; height: 300px;" src="../include/assets/images/homepage-bg-1.png">
 <div class="container-fluid">
   <div class="container-80 center-page">
   <div class="col-md-10 center-page p-b-30">
@@ -38,7 +40,7 @@ function getPositionName($Id){
     <div>
       <button class="btn-primary btn-candidate-contact" onclick="myFunction()">
         <i class="fa fa-phone fa-3x"></i><br>
-        <span class="text-center font-13">Call +61452 364 793</span>
+        <span class="text-center font-13">Call +61 452 364 793</span>
       </button>
 
       <button class="btn-primary btn-candidate-contact" onclick="location.href='../home/?view=inquiryForm'">
@@ -85,6 +87,7 @@ function getPositionName($Id){
   <div class="form-container container m-t-30 m-b-30">
     <div class="row center-page job-list-row">
         <div class="col-lg-4 job-list-summary">
+
             <a href="?view=jobDetail&id=<?=$row->Id;?>" class="job-list-title"><?=$row->position;?></a>
             <br>
             <span class="m-b-5"><?=$row->address;?></span>
@@ -99,7 +102,7 @@ function getPositionName($Id){
           <?=$row->comment;?>
           <br>
           <span>
-            <a class="job-list-link" href="?view=jobDetail&id=<?=$row->Id;?>">Read More &gt;</a>
+            <a style="font-weight: 600;" class="job-list-link" href="?view=jobDetail&id=<?=$row->Id;?>">Read More &gt;</a>
           </span>
         </div>
         <?php } ?>
@@ -110,6 +113,9 @@ function getPositionName($Id){
 <?php }?>
 </div>
 <br>
+
+</div>
+
 <script>
 function myFunction() {
     var txt;

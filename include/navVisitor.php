@@ -6,11 +6,9 @@
         <img src="../include/assets/images/teamire-logo.png" style="width: 237px; height: 80px;">
       </a>
 
-    <div style="height: 55px; width: 1px; background-color: #9aebff;" class="header-slogan pull-left m-t-15 m-l-5"></div>
-    <div class="pull-left" style="width: 265px;height: 40px;">
-      <p class="text-lightblue m-l-15 m-t-20 font-13 header-slogan">
-        <b>It is our business to identify your needs, interests and concerns</b>
-      </p>
+    <div style="height: 68px; width: 1px; background-color: #9aebff;" class="header-slogan pull-left m-t-15 m-l-25"></div>
+    <div class="pull-left m-t-10 m-l-10" style="width: 390px;height: 85px;">
+      <img src="../include/assets/images/header-slogan.png" width="90%">
     </div>
 
     <div class="form-inline pull-right"  style="padding: 30px;" id="myTopnav">
@@ -72,7 +70,7 @@
             </ul>
 
       <div class="pull-right m-t-10" style="padding-right: 4%;">
-        <span class="text-white">+61 452-364-793 | </span>
+        <span class="text-white">+61 452 364 793 | </span>
         <img src="../include/assets/images/facebook.png">
         <img src="../include/assets/images/twitter.png">
         <img src="../include/assets/images/linkedin.png">

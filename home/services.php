@@ -7,7 +7,9 @@ function getPositionName($Id){
 }
 ?>
 
-<div class="container-fluid m-t-30">
+<div style="position: relative;">
+  <img style="position: absolute; top:0; width: 100%;" src="../include/assets/images/our-services-bg.png">
+<div class="container-fluid">
   <div class="container-fluid m-t-30">
     <div class="container-80 text-center center-page">
       <h2>
@@ -177,5 +179,6 @@ function getPositionName($Id){
     </p>
   </div>
   </div>
+</div>
 </div>
 </div>

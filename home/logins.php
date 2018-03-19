@@ -1,3 +1,6 @@
+<div style="position: relative;">
+  <img style="position: absolute; top:0; right:0; height: 300px;" src="../include/assets/images/homepage-bg-1.png">
+<div class="container-fluid">
 <h2 class="text-center m-t-30 m-b-30">Timesheets and Logins</h2>
 </br>
 <div>
@@ -23,3 +26,5 @@
 </div>
 </div>
 <br><br>
+</div>
+</div>

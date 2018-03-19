@@ -31,12 +31,7 @@ switch ($action) {
 
 function create()
 {
-
-	// This is if you want to get the last 6 digits
-	/*
-substr(round(microtime(true)), -6)
-
-	*/
+	$jobFunctionId = $_POST['jobFunctionId'];
 
 	$job = job();
 	$job->obj['refNum'] = round(microtime(true));
@@ -55,6 +50,9 @@ substr(round(microtime(true)), -6)
 	$job->obj['requiredExperience'] = $_POST['requiredExperience'];
 	$job->create();
 
+	$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
+	$adminList = admin()->list("level='admin'");
+
 	// Send email
 	$content = __talentRequestEmailMessage();
 	$hrmessage = __hrEmailMessage();
@@ -62,21 +60,21 @@ substr(round(microtime(true)), -6)
 
 	sendEmail($job->obj['workEmail'], $content);
 	//for HR
-	sendEmail('rgmak12@gmail.com',$hrmessage);
+	foreach($hrList as $row){
+		sendEmail($row->email,$hrmessage);
+	}
 	//for admin
-	sendEmail('torredale1014@gmail.com',$adminmessage);
+	foreach($adminList as $row){
+		sendEmail($row->email,$adminmessage);
+	}
 
 	header('Location: ../company/');
 }
 
 function clientRequest()
 {
-	// This is if you want to get the last 6 digits
-	/*
-	substr(round(microtime(true)), -6)
-	*/
-
 	$abn = $_POST['abn'];
+	$jobFunctionId = $_POST['jobFunctionId'];
 	$checkAbn = company()->get("abn='$abn'");
 
 	if($checkAbn){
@@ -100,20 +98,32 @@ function clientRequest()
 
 		__createClientLogin($company->Id);
 
+		$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
+		$adminList = admin()->list("level='admin'");
+
 		// Send email
 		$hrmessage = __hrEmailMessage();
 		$adminmessage = __adminEmailMessage();
 
 		//for HR
-		sendEmail('rgmak12@gmail.com',$hrmessage);
+		foreach($hrList as $row){
+			sendEmail($row->email,$hrmessage);
+		}
 		//for admin
-		sendEmail('torredale1014@gmail.com',$adminmessage);
+		foreach($adminList as $row){
+			sendEmail($row->email,$adminmessage);
+		}
 
 		header('Location: ../home/?view=success&Id='.$company->Id);
 	}
 }
 
 function __createClientLogin($Id){
+
+	// This is if you want to get the last 6 digits
+	/*
+	substr(round(microtime(true)), -6)
+	*/
 	// Get Detail
 	$company = company()->get("Id='$Id'");
 
@@ -175,7 +185,8 @@ function submitResume(){
 
 			$resume = resume()->get("abn='$abn'");
 
-			$admin = admin()->get("jobFunctionId='$jobFunctionId'");
+			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
+			$adminList = admin()->list("level='admin'");
 
 			// Send email
 			$content = __submitResumeEmailMessage();
@@ -185,9 +196,13 @@ function submitResume(){
 			//for candidate
 			sendEmail($res->obj['email'] , $content);
 			//for HR
-			sendEmail($admin->email,$hrmessage);
+			foreach($hrList as $row){
+				sendEmail($row->email,$hrmessage);
+			}
 			//for admin
-			sendEmail('torredale1014@gmail.com',$adminmessage);
+			foreach($adminList as $row){
+				sendEmail($row->email,$adminmessage);
+			}
 
 			header('Location: ../home/?view=success&Id='.$resume->Id);
 		}
@@ -229,7 +244,8 @@ function submitApplication()
 
 			$resume = resume()->get("abn='$abn'");
 
-			$admin = admin()->get("jobFunctionId='$jobFunctionId'");
+			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
+			$adminList = admin()->list("level='admin'");
 
 			// Send Email
 			$content = __submitApplicationEmailMessage();
@@ -237,12 +253,15 @@ function submitApplication()
 			$adminmessage = __adminEmailMessage();
 
 			//for candidate
-			sendEmail($admin->email,$hrmessage);
+			sendEmail($resume->email,$hrmessage);
 			//for HR
-			sendEmail('rgmak12@gmail.com',$hrmessage);
+			foreach($hrList as $row){
+				sendEmail($row->email,$hrmessage);
+			}
 			//for admin
-			sendEmail('torredale1014@gmail.com',$adminmessage);
-
+			foreach($adminList as $row){
+				sendEmail($row->email,$adminmessage);
+			}
 			header('Location: ../home/?view=success&Id='.$resume->Id);
 		}
 		else{
@@ -268,10 +287,12 @@ function sendInquiry()
 		$content = "From: $email<br><br>
 								Message: $message";
 
-		//send email to HR
-		sendEmail('rgmak12@gmail.com', $content);
+		$adminList = admin()->list("level='admin'");
+
 		//send email to admin
-		sendEmail('torredale1014@gmail.com', $content);
+		foreach($adminList as $row){
+			sendEmail($row->email, $content);
+		}
 
 		header('Location: ../home/?view=success');
 }
