@@ -113,9 +113,6 @@ function getPositionName($Id){
 <?php }?>
 </div>
 <br>
-
-</div>
-
 <script>
 function myFunction() {
     var txt;
@@ -127,3 +124,5 @@ function myFunction() {
     document.getElementById("demo").innerHTML = txt;
 }
 </script>
+</div>
+
