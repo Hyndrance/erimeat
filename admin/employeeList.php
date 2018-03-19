@@ -30,7 +30,9 @@ function __getName($username){
             <tr>
               <td><a href="?view=employeeDetail&username=<?=$row->username;?>"><?=__getName($row->username);?></a></td>
               <td><button class="btn btn-sm btn-warning" onclick="location.href='?view=timesheetList&employee=<?=$row->username;?>'">View Timesheets</button></td>
-              <td><button class="btn btn-sm btn-danger" >Terminate</button></td>
+              <td><button class="btn btn-sm btn-danger" href="#delete-alert-modal<?=$row->Id;?>" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="50" data-overlaycolor="#36404a">Terminate</button>
+              </td>
+              </td>
             </tr>
               <?php
                 }
@@ -40,3 +42,18 @@ function __getName($username){
       </div>
     </div>
   </div>
+
+
+<!-- Modal -->
+<?php foreach($employeeList as $row) {
+?>
+  <div id="delete-alert-modal<?=$row->Id;?>" class="modal-demo">
+      <div class="custom-modal-text">
+          Are you sure you want to terminate <?=__getName($row->username);?>? <br>
+          <button class="btn btn-sm btn-danger" onclick="location.href='process.php?action=terminateEmployee&username=<?=$row->username;?>'">Terminate</button>
+          <button class="btn btn-sm btn-warning" onclick="Custombox.close();">Cancel</button>
+      </div>
+  </div>
+  <?php
+    }
+  ?>
