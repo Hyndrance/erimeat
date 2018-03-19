@@ -47,6 +47,12 @@
       </li>
 
       <li>
+          <a href="?view=invoiceList">
+              <i class="mdi mdi-note-text"></i><span> Invoice </span>
+          </a>
+      </li>
+
+      <li>
           <a href="?view=accounts">
               <i class="mdi mdi-account-plus"></i><span> Accounts </span>
           </a>
