@@ -67,8 +67,21 @@ function getApplicantCount($Id){
       <p>Views</p>
     </div>
     <div class="clearfix"></div>
+    <p class="p-b-10">
+      OfficeTeam is the world's leader in professional staffing for office support jobs, focusing exclusively on the temporary and temporary-to-full-time placement of professionals in the administrative field. We are faster at finding you work because of the depth of our client network. Specifically, our professional staffing managers connect with thousands of hiring managers in North America every week to find your office support job opportunities. We evaluate all of our OfficeTeam temporaries' skills and match them with the needs of top employers in their area.
+      <br><br>
+      Apply for this job now or contact us today at 888.981.6731 for additional information.
+      <br><br>
+      All applicants applying for U.S. job openings must be authorized to work in the United States. All applicants applying for Canadian job openings must be authorized to work in Canada.
+      <br><br>
+      © 2018 OfficeTeam. A Robert Half Company. An Equal Opportunity Employer M/F/Disability/Veterans.
+      <br><br>
+      By clicking 'Apply Now' you are agreeing to Robert <a href="#">Half Terms of Use</a>.
+  </p>
+    <div class="clearfix"></div>
     <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
     <hr>
+
     <div class="m-b-30">
     <h3><?=$job->address;?></h3>
     <?=$job->createDate;?>
@@ -83,7 +96,7 @@ function getApplicantCount($Id){
       <form method="GET" accept-charset="UTF-8">
         <input type="hidden" name="view" value="searchJob">
           <input class="job-detail-search-form m-b-20" size="60" maxlength="128" type="text" name="s" placeholder="Job Title, Skills or Keywords">
-          <select name="c" class="form-control m-b-20" style="height: 67px; width:200px;" required>
+          <select name="c" class="form-control m-b-20" style="height: 67px; width:250px;" required>
             <option value="">Select Category</option>
             <?php foreach($jobFunctionList as $row){ ?>
               <option value="<?=$row->Id;?>"><?=$row->option;?></option>

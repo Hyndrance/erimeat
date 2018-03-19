@@ -49,6 +49,7 @@ function getPositionName($Id){
       </button>
     </div>
   </div>
+    <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px"></i><br>No Jobs Found</h3>
   <!-- Start Filter Panel and Results-->
 
     <!-- TODO: Filters -->
@@ -125,4 +126,3 @@ function myFunction() {
 }
 </script>
 </div>
-

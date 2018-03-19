@@ -18,16 +18,16 @@
           </div>
         </header>
         <!-- End Navigation Bar-->
-        <div class="wrapper" style="width: 1350px; margin: 0 auto;">
-
+        <div class="wrapper">
+          <div style="width: 1350px; max-width: 100%; margin: 0 auto;">
               <?php
                 include $content;
               ?>
-
+            </div>
         </div>
         <!-- end wrapper -->
         <!-- Footer -->
-        <footer style="padding: 0; padding-left: 0 !important; color: #FFFFFF; background-color: #4A555C; width: 1350px; margin: 0 auto;">
+        <footer style="padding: 0; padding-left: 0 !important; color: #FFFFFF; background-color: #4A555C;">
             <div class="container-fluid m-b-30 " style="padding: 30px 60px 10px 45px; color: #FFFFFF; background-color: #4a555c; bottom: 0;">
                 <div class="row center-page container">
                   <div class="container-fluid col-12 col-lg-2">

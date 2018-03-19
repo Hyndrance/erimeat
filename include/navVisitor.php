@@ -4,7 +4,6 @@
       <a href="index.php" class="logo m-t-5 pull-left">
         <img src="../include/assets/images/teamire-logo.png" style="width: 237px; height: 80px;">
       </a>
-      <img style="position: absolute; top:0; left:0;" src="../include/assets/images/teamire-header-image.png">
 
     <div style="height: 68px; width: 1px; background-color: #9aebff;" class="header-slogan pull-left m-t-15 m-l-25"></div>
     <div class="pull-left m-t-10 m-l-10" style="width: 390px;height: 85px;">

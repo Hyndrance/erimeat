@@ -5756,3 +5756,12 @@ ul.sitemap-icon ul li a {
   .candidate-tab-border {
     border: 1px solid #dddddd; border-top: none;
   }
+
+  li.candidates {
+    background: #eff0f1; }
+
+  li.candidates:nth-child(odd) {
+    background: #fff; }
+
+  li.candidates{
+    list-style-type: none; }
