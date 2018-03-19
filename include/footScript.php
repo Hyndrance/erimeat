@@ -335,12 +335,12 @@ $( "#myBtnShowResume" ).click(function() {
 
 
 
-    <script src="../include/assets/pages/jquery.dashboard-2.js"></script>
+<script src="../include/assets/pages/jquery.dashboard-2.js"></script>
 
 <!-- App js -->
 <script src="../include/assets/js/jquery.core.js"></script>
 <script src="../include/assets/js/jquery.app.js"></script>
-     <script type="text/javascript">
+<script type="text/javascript">
             $(document).ready(function() {
                 $('form').parsley();
             });
@@ -355,7 +355,7 @@ $( "#myBtnShowResume" ).click(function() {
                         });
             });
         </script>
-   <script type="text/javascript">
+<script type="text/javascript">
             jQuery(function($) {
                 $('.autonumber').autoNumeric('init');
             });
