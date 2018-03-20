@@ -22,7 +22,7 @@ if(!$currentSession)
                 <div class="topbar-left">
                     <a href="index.php" class="logo">
                         <span>
-                            <img src="../include/assets/images/teamire-header.png" alt="" height="60">
+                            <img src="../include/assets/images/teamire-header.png" class="p-b-10" alt="" height="80">
                         </span>
                         <i>
                             <img src="../include/assets/images/teamire-small.png" alt="" height="28">
@@ -211,11 +211,6 @@ if(!$currentSession)
                     </div> <!-- container -->
 
                 </div> <!-- content -->
-
-                <footer class="footer text-right">
-                    2018 © Teamire
-                </footer>
-
             </div>
 
             <!-- ============================================================== -->

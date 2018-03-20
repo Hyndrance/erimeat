@@ -1,21 +1,27 @@
-<div class="container">
-  <div class="row">
+
+
+<div style="width: 1300px; margin: 0 auto;">
+  <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
       <a href="index.php" class="logo m-t-5 pull-left">
         <img src="../include/assets/images/teamire-logo.png" style="width: 237px; height: 80px;">
       </a>
-      <img style="position: absolute; top:0; left:0; z-index:=2;" src="../include/assets/images/teamire-header-image.png">
+      <img style="position: absolute; top:0; left:0;" src="../include/assets/images/teamire-header-image.png">
+
+
     <div style="height: 68px; width: 1px; background-color: #9aebff;" class="header-slogan pull-left m-t-15 m-l-25"></div>
     <div class="pull-left m-t-10 m-l-10" style="width: 390px;height: 85px;">
       <img src="../include/assets/images/header-slogan.png" width="90%">
     </div>
-        <div class="form-inline pull-right"  style="padding: 30px;" id="myTopnav">
-          <ul class="nav navbar-nav navbar-right nav-menu-right" id="above-nav">
-            <li> <a class="m-l-3 m-r-3" href="../home/?view=projects" style="font-size:15px;">Supply Chain Projects</a></li>
-            <li> <a class="m-l-3 m-r-3" href="../home/?view=logins" style="font-size:15px;">Timesheets</a></li>
-            <li> <a class="m-l-3 m-r-3" href="../home/?view=downloads" style="font-size:15px;">Downloads</a></li>
-            <li> <a class="m-l-3 m-r-3" href="../home/?view=hiringForm" style="font-size:15px;">Request Staff</a></li>
-            <li><a class="m-l-3 m-r-3" href="../home/?view=contactUs" style="font-size:15px;">Contact Us</a></li>
-          </ul>
+
+
+    <div class="form-inline pull-right"  style="padding: 30px; margin-top: 10px;" id="myTopnav">
+      <ul class="nav navbar-nav navbar-right nav-menu-right" id="above-nav">
+        <li> <a class="m-l-3 m-r-3" href="../home/?view=projects" style="font-size:15px;">Supply Chain Projects</a></li>
+        <li> <a class="m-l-3 m-r-3" href="../home/?view=logins" style="font-size:15px;">Timesheets</a></li>
+        <li> <a class="m-l-3 m-r-3" href="../home/?view=downloads" style="font-size:15px;">Downloads</a></li>
+        <li> <a class="m-l-3 m-r-3" href="../home/?view=hiringForm" style="font-size:15px;">Request Staff</a></li>
+        <li><a class="m-l-3 m-r-3" href="../home/?view=contactUs" style="font-size:15px;">Contact Us</a></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -82,6 +88,7 @@
                     </ul>
                 </li>
             </ul>
+<<<<<<< HEAD
               <div class="pull-right m-t-10" style="padding-right: 4%;">
                 <span class="text-white">+61 452 364 793 | </span>
                 <img src="../include/assets/images/facebook.png">
@@ -89,6 +96,17 @@
                 <img src="../include/assets/images/linkedin.png">
                 <img src="../include/assets/images/google.png">
               </div>
+=======
+
+      <div class="pull-right m-t-10" style="padding-right: 4%;">
+        <span class="text-white">+61 452 364 793 | </span>
+        <img src="../include/assets/images/facebook.png">
+        <img src="../include/assets/images/twitter.png">
+        <img src="../include/assets/images/linkedin.png">
+        <img src="../include/assets/images/google.png">
+        <img src="../include/assets/images/youtube.png">
+      </div>
+>>>>>>> dc9ccb2dd46741a1b258f6d66787277a31b82c97
         </nav>
 </div>
 <style>

@@ -12,7 +12,7 @@ $ptList = position_type()->list();
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
      <form  action="process.php?action=create" method="POST" id="default-wizard" data-parsley-validate="">
-      <div class="jumbotron center-page container" style="width: 84.5%;">
+      <div class="jumbotron center-page container" style="width: 1139px;">
 
 
                                     <div class="alert alert-warning hidden fade in">

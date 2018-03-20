@@ -9,7 +9,7 @@ $jfList = job_function()->list();
         <h2 style="position: absolute;top: 25%; left: 36%;" class="text-white"> Employer Registration Form </h2>
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
-      <div class="jumbotron center-page container" style="width: 84.5%;">
+      <div class="jumbotron center-page container" style="width: 1139px;">
             <form id="default-wizard" action="process.php?action=clientRequest" method="POST" data-parsley-validate="">
                     <div class="row m-t-20">
                         <div class="col-sm-7 center-page">

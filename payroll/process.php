@@ -37,9 +37,28 @@ function approveTimesheet()
 
 	$invoice = invoice();
 	$invoice->obj['refNum'] = round(microtime(true));
-	$invoice->obj['timesheetId'] = $ts->timesheetId;
+	$invoice->obj['timesheetId'] = $Id;
 	$invoice->obj['owner'] = $ts->employee;
 	$invoice->create();
+
+	$timesheet = timesheet()->get("Id='$Id'");
+
+	$job = job()->get("Id='$timesheet->jobId'");
+
+	$hrList = admin()->list("jobFunctionId='$job->jobFunctionId'");
+	$adminList = admin()->list("level='admin'");
+
+	// Send email
+	$hrmessage = __hrEmailMessage();
+	$adminmessage = __adminEmailMessage();
+
+	foreach($hrList as $row){
+		sendEmail($row->email,$hrmessage);
+	}
+	//for admin
+	foreach($adminList as $row){
+		sendEmail($row->email,$adminmessage);
+	}
 
 	header('Location: index.php?view=timesheetDetail&success=You have approved this timesheet&tsId=' . $Id);
 }
@@ -84,5 +103,19 @@ session_start();
 session_destroy();
 header('Location: index.php');
 	exit;
+}
+
+/* ======================== Email Messages ==============================*/
+
+function __hrEmailMessage(){
+	return "A new invoice has been created. Please login to <a href='www.bandbajabaraath.kovasaf.com/hr'>www.teamire.com</a><br>
+					and check the new invoice.<br><br>
+					Teamire";
+}
+
+function __adminEmailMessage(){
+	return "A new invoice has been created. Please login to <a href='www.bandbajabaraath.kovasaf.com/admin'>www.teamire.com</a><br>
+					and check the new invoice.<br><br>
+					Teamire";
 }
 ?>

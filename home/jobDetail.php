@@ -22,11 +22,11 @@ function getApplicantCount($Id){
     <h1><?=$job->position;?></h1>
     <div class="col-md-8"></div>
     <div class="col-md-2 text-center">
-      <h2><?=getApplicantCount($Id);?></h2>
+      <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
       <p>Applicants</p>
     </div>
     <div class="col-md-2 text-center">
-      <h2>60</h2>
+      <h2 data-plugin="counterup">60</h2>
       <p>Views</p>
     </div>
     <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>

@@ -31,7 +31,7 @@ $resume = resume()->get("Id=$Id");
             </button>
         <?php } ?>
         <?php if($resume->isApproved==1){?>
-          <button onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>'">
+          <button onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$resume->jobId;?>'">
             Hire
           </button>
           <button onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$resume->Id;?>'">
