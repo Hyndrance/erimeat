@@ -87,7 +87,7 @@ function __setFullName($owner){
                         </tr>
                       <?php } ?>
                         <tr>
-                            <td colspan="3"><a href="?view=invoiceList">View all</a>
+                            <td colspan="3"><a href="?view=timesheetList">View all</a>
                         </tr>
                     </tbody>
                 </table>

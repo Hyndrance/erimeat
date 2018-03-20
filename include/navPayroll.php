@@ -18,7 +18,7 @@
     </li>
 
     <li>
-        <a href="../payroll/?view=archive">
+        <a href="../payroll/?view=timesheetList">
             <i class="mdi mdi-archive"></i><span> Archive </span>
         </a>
     </li>
