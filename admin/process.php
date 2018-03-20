@@ -440,7 +440,7 @@ function __createEmployeeLogin($Id, $jobId){
 	// Create account
 	$user = user();
 	$user->obj['username'] =  "E" . round(microtime(true));
-	$user->obj['password'] = "temppassword";
+	$user->obj['password'] = sha1("temppassword");
 	$user->obj['firstName'] = $resume->firstName;
 	$user->obj['lastName'] = $resume->lastName;
 	$user->obj['level'] = "employee";
@@ -460,7 +460,7 @@ function __createEmployeeLogin($Id, $jobId){
 	$content = "Congratulations!<br><br>
 							You are hired. We have approved your application. Please use the credentials we have created for you.<br>
 							Username: " . $user->obj['username'] . "<br>
-							Password: " . $user->obj['password'] . "<br><br>
+							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='www.bandbajabaraath.kovasaf.com/employee/index.php?view=changepassword'>www.bandbajabaraath.kovasaf.com</a><br><br>
 							Teamire";
