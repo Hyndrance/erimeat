@@ -48,6 +48,7 @@ function create()
 	$job->obj['businessPhone'] = $_POST['businessPhone'];
 	$job->obj['zipCode'] = $_POST['zipCode'];
 	$job->obj['requiredExperience'] = $_POST['requiredExperience'];
+	$job->obj['createDate'] = "NOW()";
 	$job->create();
 
 	$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
@@ -120,6 +121,7 @@ function clientRequest()
 
 function __createClientLogin($Id){
 
+
 	// This is if you want to get the last 6 digits
 	/*
 	substr(round(microtime(true)), -6)
@@ -130,7 +132,7 @@ function __createClientLogin($Id){
 	// Create account
 	$user = user();
 	$user->obj['username'] = "C" . round(microtime(true));
-	$user->obj['password'] = "temppassword";
+	$user->obj['password'] = sha1("temppassword");
 	$user->obj['firstName'] = $company->contactPerson;
 	$user->obj['lastName'] = $company->name;
 	$user->obj['level'] = "company";
@@ -144,7 +146,7 @@ function __createClientLogin($Id){
 	// Send email
 	$content = "We have approved your request. Please use the credentials we have created for you.<br>
 							Username: " . $user->obj['username'] . " <br>
-							Password: " . $user->obj['password'] . " <br><br>
+							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='www.bandbajabaraath.kovasaf.com/company/index.php?view=changepassword'>www.bandbajabaraath.kovasaf.com</a><br><br>
 							Teamire";

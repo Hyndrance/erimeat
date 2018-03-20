@@ -17,6 +17,11 @@ switch ($view) {
 		$template	= '../include/template_login.php';
 		break;
 
+	case 'changepassword' :
+		$content 	= 'changepassword.php';
+		$template	= '../include/template_login.php';
+		break;
+
 	case 'talentRequest' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'talentRequest.php';

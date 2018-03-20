@@ -6,6 +6,9 @@ function getJobFunction($Id){
     $jf = job_function()->get("Id='$Id'");
     echo $jf->option;
 }
+
+$myIp = getHostByName(getHostName());
+echo $myIp;
 ?>
 
 <div class="container container-fluid">

@@ -2,7 +2,7 @@
 $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$jobFunc = job_function()->list("code!='null'");
+$jobFunc = job_function()->list("code!='0'");
 ?>
 
   <div class="row">
@@ -22,7 +22,6 @@ $jobFunc = job_function()->list("code!='null'");
         <table id="datatable" class="table table-striped table-bordered">
           <thead>
             <tr>
-              <th>Services</th>
               <th>Title</th>
               <th>Header</th>
               <th>Description</th>
@@ -35,7 +34,6 @@ $jobFunc = job_function()->list("code!='null'");
               $id = $row->Id;
               ?>
               <tr>
-                <td><?=$row->option;?></td>
                 <td><?=$row->title;?></td>
                 <td><?=$row->header;?></td>
                 <td><?=$row->description;?></td>

@@ -170,7 +170,7 @@ function getPositionName($Id){
     </a>
   </div>
   <div class="col-lg-2">
-    <a href="#">
+    <a href="../home?view=otherServices">
       <div class="icons icons-container text-center">
         <img src="../include/assets/images/others.png">
         <p class="text-white"><b>Others</b></p>

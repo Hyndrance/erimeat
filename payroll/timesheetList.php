@@ -6,12 +6,14 @@ if ($jobId){
     $timesheetList = timesheet()->list("jobId='$jobId'");
     $job = job()->get("Id=$jobId");
     $headerTitle= $job->position;
-}
-
-if ($employee){
+}else if ($employee){
     $timesheetList = timesheet()->list("employee='$employee'");
     $resume = resume()->get("username='$employee'");
     $headerTitle = "Timesheet of " . $resume->firstName . " " . $resume->lastName;
+}
+else {
+    $timesheetList = timesheet()->list();
+    $headerTitle = "Archive timesheets";
 }
 
 // Functions
