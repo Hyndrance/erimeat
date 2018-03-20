@@ -88,16 +88,6 @@
                     </ul>
                 </li>
             </ul>
-<<<<<<< HEAD
-              <div class="pull-right m-t-10" style="padding-right: 4%;">
-                <span class="text-white">+61 452 364 793 | </span>
-                <img src="../include/assets/images/facebook.png">
-                <img src="../include/assets/images/twitter.png">
-                <img src="../include/assets/images/linkedin.png">
-                <img src="../include/assets/images/google.png">
-              </div>
-=======
-
       <div class="pull-right m-t-10" style="padding-right: 4%;">
         <span class="text-white">+61 452 364 793 | </span>
         <img src="../include/assets/images/facebook.png">
@@ -106,7 +96,7 @@
         <img src="../include/assets/images/google.png">
         <img src="../include/assets/images/youtube.png">
       </div>
->>>>>>> dc9ccb2dd46741a1b258f6d66787277a31b82c97
+
         </nav>
 </div>
 <style>
