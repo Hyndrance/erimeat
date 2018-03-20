@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-19 23:21:33
+# Date: 2018-03-20 14:13:05
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -67,13 +67,12 @@ CREATE TABLE `company` (
   `jobFunctionId` varchar(11) DEFAULT NULL,
   `isApproved` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
 #
 
-INSERT INTO `company` VALUES (1,'C1521441495','Villacar Transit','11111111111','jasldfjakdsjfljdsfdsfjlkdsjflkdsjflkdsjflkdsjfldf','torredale1014@gmail.com','Dale Torre','(+61) 234-567-890','(+61) 111-111-111','Billboard, Billboard','Domestic Transport','1','1'),(2,'C1521471998','ljasldjfsdflsdjf','12321321312','sadjlkfjsdlfjsfslflsdfdsfsdjfljlsadfsdf','a@a.com','sadfsjdfslflsdfj','(+61) 111-111-111','(+61) 111-111-111','lsjadfsjdflsjdlfj','asdjflsjflsjfdldsjf','5','1'),(3,'C1521472117','asdfsdfsdfsdf','22222222222','asdfsdfsdfsdfsdfsdfsdfasfsdf','torredale1014@gmail.com','dsfsfsdfsdfsdf','(+61) 234-567-890','(+61) 111-111-111','Billboard, Billboard','asdfsdfsdfsfasdf','6','1'),(4,'C1521472205','asdfsdfdsfdsf','33333333333','(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890','torredale1014@gmail.com','sadfsdfdsfdsf','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','asdfsdfsdfdsf','8','1'),(5,'C1521472305','asdfsdffds','44444444444','(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890(+61) 234-567-890','torredale1014@gmail.com','asdfdsfds','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','adsfdsfsdfsdf','4','1'),(6,'C1521472516','asdfsdfdsf','55555555555','sdfjsdjfldsjlfkdsjfjdsflkjdfljdsf','torredale1014@gmail.com','asdfdsfdsf','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','asdfsdfsdfdsf','7','1');
 
 #
 # Structure for table "country_option"
@@ -131,13 +130,12 @@ CREATE TABLE `dtr` (
   `createDate` date DEFAULT NULL,
   `status` varchar(1) DEFAULT '0' COMMENT '0:login, 1:break, 2:break2, 3:lunch, 4:logout',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "dtr"
 #
 
-INSERT INTO `dtr` VALUES (4,2,'E1521443984','15:28:58','15:29:01','15:28:58','15:28:59','15:29:00','15:29:01','15:29:00','15:28:59','2018-03-18','0'),(5,2,'E1521443984','15:29:10','15:29:13','15:29:11','15:29:11','15:29:12','15:29:13','15:29:12','15:29:11','2018-03-17','0'),(8,3,'E1521446057','15:55:30','15:55:33','15:55:30','15:55:31','15:55:32','15:55:33','15:55:32','15:55:31','2018-03-18','4'),(9,3,'E1521446057','15:55:41','15:55:45','15:55:42','15:55:42','15:55:44','15:55:44','15:55:43','15:55:43','2018-03-19','4'),(10,4,'E1521447336','16:16:02','16:16:05','16:16:03','16:16:03','16:16:04','16:16:05','16:16:04','16:16:04','2018-03-19','4');
 
 #
 # Structure for table "employee"
@@ -151,13 +149,12 @@ CREATE TABLE `employee` (
   `createDate` datetime DEFAULT NULL,
   `status` varchar(2) DEFAULT '1' COMMENT '1: Employed, 0: Unemployed',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "employee"
 #
 
-INSERT INTO `employee` VALUES (19,1,'E1521443984','2018-03-19 15:19:43','1'),(20,1,'E1521446057','2018-03-19 15:54:16','1'),(21,1,'E1521447336','2018-03-19 16:15:35','1');
 
 #
 # Structure for table "faq"
@@ -217,7 +214,6 @@ CREATE TABLE `interview_date` (
 # Data for table "interview_date"
 #
 
-INSERT INTO `interview_date` VALUES (1,'1','2018-03-28','13:00:00'),(2,'1','2018-03-20','01:00:00'),(3,'1','2018-03-20','01:00:00'),(4,'1','2018-03-16','01:00:00'),(5,'1','2018-03-21','01:00:00'),(6,'1','2018-03-20','01:00:00'),(7,'1','2018-03-20','01:00:00'),(8,'2','2018-03-14','01:00:00'),(9,'3','2018-03-22','02:00:00');
 
 #
 # Structure for table "invoice"
@@ -230,13 +226,12 @@ CREATE TABLE `invoice` (
   `timesheetId` varchar(11) DEFAULT NULL,
   `owner` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "invoice"
 #
 
-INSERT INTO `invoice` VALUES (2,'1521444994','2','E1521443984'),(3,'1521446216','3','E1521446057'),(4,'1521447444','4','E1521447336');
 
 #
 # Structure for table "job"
@@ -262,13 +257,12 @@ CREATE TABLE `job` (
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
   `contactName` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (1,'1521441294',1,1,'Bus Driver','Villacar Transit','11111111111','torredale1014@gmail.com','Operations Manager','(+61) 111-111-111','1111','Bacolod City Negros Occidental','0-1 Year','We are looking for an experienced bus driver',NULL,'1','Dale Torre'),(2,'1521454915',1,1,'asdfdsfsdfsdfsdfdsf','asdfsfsfsdf','11111111111','A@a.com','sadfdsfsdfsdf','(+61) 321-321-321','1232','sdsdasdasdsd','0-1 Year','sdsdasdasdsdsdsdasdasdsdsdsdasdasdsdsdsdasdasdsd','2018-03-19 18:22:57','1','sdfsdfdsfasfdsaf');
 
 #
 # Structure for table "job_function"
@@ -362,13 +356,12 @@ CREATE TABLE `resume` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (1,1,1,'E1521443984','1521441620','Mark','Mendoza','11-11-1111','22222222222','22222','rgmak12@gmail.com','(+61) 222-222-222','2222222222','2222222222222222','1','22222222','2222','222222222222222222222222','1521441620.txt','222222222222222222','0','0',NULL,'1','1','0'),(2,1,1,'E1521446057','1521445993','Robert','Cap','33-33-3333','33333333333','3333','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','fasdfsdfdsffasdfsdfdsffasdfsdfdsffasdfsdfdsffasdfsdfdsf','1521445993.pdf','sdfsfsfsdfsdf','1521445993.png','0',NULL,'1','1','0'),(3,1,1,'E1521447336','1521447280','adsfadsfdsfsd','sdfdsafdsf','12-32-1321','21312323123','21213123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','asdasdsadsadsadsadsadsadasdsad','1521447280.pdf','sadasdasdadsadsad','0','0',NULL,'1','1','0'),(4,1,1,NULL,'1521450908','sadasdsad','asdasdasd','11-11-1111','11111111111','123123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','dsadsaddsasadsadsaddsasadsadsaddsasadsadsaddsasa','1521450908.pdf','dsadsaddsasa','1521450908.png','0',NULL,'0','0','0'),(5,1,1,'','1521447280','adsfadsfdsfsd','sdfdsafdsf','12-32-1321','21312323123','21213123','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','asdasdsadsadsadsadsadsadasdsad','1521447280.pdf','sadasdasdadsadsad','0','0','1899-12-29 00:00:00','0','0','0');
 
 #
 # Structure for table "timesheet"
@@ -383,13 +376,12 @@ CREATE TABLE `timesheet` (
   `status` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:verified, 2:dispute, 3:approved',
   `createDate` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "timesheet"
 #
 
-INSERT INTO `timesheet` VALUES (2,1,'E1521443984','Timesheet as of 2018-03-19 08:29:24','3','2018-03-19 15:29:24'),(3,1,'E1521446057','Timesheet as of 2018-03-19 08:55:50','3','2018-03-19 15:55:50'),(4,1,'E1521447336','Timesheet as of 2018-03-19 09:16:12','3','2018-03-19 16:16:12');
 
 #
 # Structure for table "timesheet_dispute"
@@ -421,10 +413,9 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'C1521441495','12345','Dale Torre','Villacar Transit','company'),(12,'E1521443984','12345','Mark','Mendoza','employee'),(13,'E1521446057','12345','Robert','Cap','employee'),(14,'E1521447336','temppassword','adsfadsfdsfsd','sdfdsafdsf','employee'),(15,'C1521471998','2b8889e80cb6afc64ea9923339183799475b1123','sadfsjdfslflsdfj','ljasldjfsdflsdjf','company'),(16,'C1521472117','2b8889e80cb6afc64ea9923339183799475b1123','dsfsfsdfsdfsdf','asdfsdfsdfsdf','company'),(17,'C1521472205','2b8889e80cb6afc64ea9923339183799475b1123','sadfsdfdsfdsf','asdfsdfdsfdsf','company'),(18,'C1521472305','2b8889e80cb6afc64ea9923339183799475b1123','asdfdsfds','asdfsdffds','company'),(19,'C1521472516','8cb2237d0679ca88db6464eac60da96345513964','asdfdsfdsf','asdfsdfdsf','company');

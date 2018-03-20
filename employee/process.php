@@ -143,7 +143,7 @@ function changepassword()
 		if(sha1($password) != sha1("temppassword")){
 
 			$user = user();
-			$user->obj['password'] = $password;
+			$user->obj['password'] = sha1($password);
 			$user->update("username='$username'");
 
 			header('Location: index.php');
