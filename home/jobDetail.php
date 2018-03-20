@@ -39,7 +39,7 @@ function formatDate($val){
       <p>Applicants</p>
     </div>
     <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup">60</h2>
+      <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
       <p>Views</p>
     </div>
     <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
@@ -126,3 +126,10 @@ function formatDate($val){
   <div class="clearfix"></div>
 </div>
 </div>
+
+<!-- Add view counter -->
+<?php
+$vc = job();
+$vc->obj["viewCounter"] = $job->viewCounter + 1;
+$vc->update("Id='$Id'");
+?>

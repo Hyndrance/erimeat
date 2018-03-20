@@ -1,8 +1,7 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-20 18:33:18
-# Generator: MySQL-Front 5.4  (Build 1.40)
+# Date: 2018-03-20 20:17:44
+# Generator: MySQL-Front 6.0  (Build 2.20)
 
-/*!40101 SET NAMES utf8 */;
 
 #
 # Structure for table "admin"
@@ -149,7 +148,7 @@ CREATE TABLE `employee` (
   `createDate` datetime DEFAULT NULL,
   `status` varchar(2) DEFAULT '1' COMMENT '1: Employed, 0: Unemployed',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "employee"
@@ -209,7 +208,7 @@ CREATE TABLE `interview_date` (
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
@@ -258,6 +257,7 @@ CREATE TABLE `job` (
   `createDate` datetime DEFAULT NULL,
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
   `contactName` varchar(100) DEFAULT NULL,
+  `viewCounter` int(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -357,14 +357,15 @@ CREATE TABLE `resume` (
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
+  `viewCounter` int(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (6,3,1,'E1521530493','1521530357','Mark','Mendoza','22-22-2222','22222222222','22222','torredale1014@gmail.com','(+61) 222-222-222','jsdlfjsadlfjldsjflsjdfljsdfj','jljsadlfjsldjflkdsjfljs','1','neg occ','1111','asdsaldjalskdlsadsdsadasdsad','1521530357.pdf','asdadsadasdasdsad','1521530357.png','0',NULL,'1','1','0');
+INSERT INTO `resume` VALUES (6,3,1,'E1521530493','1521530357','Mark','Mendoza','22-22-2222','22222222222','22222','torredale1014@gmail.com','(+61) 222-222-222','jsdlfjsadlfjldsjflsjdfljsdfj','jljsadlfjsldjflkdsjfljs','1','neg occ','1111','asdsaldjalskdlsadsdsadasdsad','1521530357.pdf','asdadsadasdasdsad','1521530357.png','0',NULL,'1','1','0',22);
 
 #
 # Structure for table "timesheet"
@@ -416,10 +417,9 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (22,'C1521533182','2b8889e80cb6afc64ea9923339183799475b1123','dsfsdfdsf','sadfsdfsdfds','company'),(23,'C1521533353','2b8889e80cb6afc64ea9923339183799475b1123','asdsfasfdsf','asdfsfdsfdsf','company'),(24,'C1521533495','2b8889e80cb6afc64ea9923339183799475b1123','sdfsfsdf','adsfdsfdsfdsf','company');
