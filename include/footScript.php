@@ -9,9 +9,6 @@
 <script src="../include/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../include/plugins/datatables/dataTables.bootstrap.js"></script>
 
-
-
-
 <script src="../include/plugins/datatables/dataTables.buttons.min.js"></script>
 <script src="../include/plugins/datatables/buttons.bootstrap.min.js"></script>
 <script src="../include/plugins/datatables/jszip.min.js"></script>
@@ -362,4 +359,4 @@ $( "#myBtnShowResume" ).click(function() {
             jQuery(function($) {
                 $('.autonumber').autoNumeric('init');
             });
-        </script>
+</script>
