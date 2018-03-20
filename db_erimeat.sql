@@ -1,7 +1,8 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-20 20:17:44
-# Generator: MySQL-Front 6.0  (Build 2.20)
+# Date: 2018-03-20 23:13:23
+# Generator: MySQL-Front 5.4  (Build 1.40)
 
+/*!40101 SET NAMES utf8 */;
 
 #
 # Structure for table "admin"
@@ -19,13 +20,13 @@ CREATE TABLE `admin` (
   `email` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0');
+INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0'),(43,'hr','8cb2237d0679ca88db6464eac60da96345513964','hr','hr','hr','3','a@a.com','0'),(44,'payroll','4de4727ba00457f7e5330d2c36ed39d9a59714db','payroll','payroll','payroll','0','payroll@payroll.com','0');
 
 #
 # Structure for table "city_option"
@@ -66,7 +67,7 @@ CREATE TABLE `company` (
   `jobFunctionId` varchar(11) DEFAULT NULL,
   `isApproved` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
@@ -257,9 +258,8 @@ CREATE TABLE `job` (
   `createDate` datetime DEFAULT NULL,
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
   `contactName` varchar(100) DEFAULT NULL,
-  `viewCounter` int(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
@@ -273,20 +273,20 @@ CREATE TABLE `job` (
 DROP TABLE IF EXISTS `job_function`;
 CREATE TABLE `job_function` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `code` varchar(10) DEFAULT NULL,
+  `code` varchar(10) DEFAULT '0',
   `option` varchar(255) DEFAULT NULL,
   `title` text,
   `header` text,
   `description` text,
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job_function"
 #
 
-INSERT INTO `job_function` VALUES (1,'tran','Transportation','Transporation','Transportation expert hiring made easy','Enter description here..','0'),(2,'pro','Procurement','Procurement','Procurement expert hiring made easy','Involves the process of selecting vendors, establishing payment terms, strategic vetting, selection, the negotiation of contracts and actual purchasing of goods. We are concerned with acquiring (procuring) all of the goods, services, and work that is vital to an organization. Procurement is, essentially, the overarching or umbrella term within which purchasing can be found.','0'),(3,'sup','Supply Planning','Supply Planning','Supply Planning expert hiring made easy','Involve with determining how best to fulfill the requirements created from the Demand Plan. Our objective is to balance supply and demand in a manner that we achieve the financial and service objectives of the enterprise.','0'),(4,'log','Logistics','Logistics','Logistics expert hiring made easy','Enter description here..\n','0'),(5,'tra','Training Certification','Training Certification','Training Certification expert hiring made easy','Gain a practical, how-to overview of the entire training function. Through modeling of the best practices and latest techniques in training delivery, discover the 4Ps of training: Purpose & Assessment, Planning & Preparation, Presentation & Facilitation, and Performance & Evaluation.','0'),(6,'dem','Demand Planning','Demand Planning','Demand Planning expert hiring made easy','A multi-step operational supply chain management (SCM) process used to create reliable forecasts. We can quickly guide users to improve the accuracy of revenue forecasts, align inventory levels with peaks and troughs in demands, and help enhance profitability for a given channel or product.','0'),(7,'ord','Order Fulfillment','Order Fulfillment','Order Fulfillment expert hiring made easy','We facilitate customer orders through the order fulfillment cycle. In internal advocacy and voice for sales and customer needs.','0'),(8,'man','Manufacturing','Manufacturing\t','Manufacturing expert hiring made easy','We cover work performed in mechanical, physical, or components into new products. Assembling of component parts for manufactured products also falls under this umbrella unless the activity is appropriately classified in Construction.','0'),(9,'war','Warehousing','Warehousing','Warehousing expert hiring made easy','Enter description here..\n','0');
+INSERT INTO `job_function` VALUES (1,'tran','Transportation','Transporation','Transportation expert hiring made easy','Enter description here..','0'),(2,'pro','Procurement','Procurement','Procurement expert hiring made easy','Involves the process of selecting vendors, establishing payment terms, strategic vetting, selection, the negotiation of contracts and actual purchasing of goods. We are concerned with acquiring (procuring) all of the goods, services, and work that is vital to an organization. Procurement is, essentially, the overarching or umbrella term within which purchasing can be found.','0'),(3,'sup','Supply Planning','Supply Planning','Supply Planning expert hiring made easy','Involve with determining how best to fulfill the requirements created from the Demand Plan. Our objective is to balance supply and demand in a manner that we achieve the financial and service objectives of the enterprise.','0'),(4,'log','Logistics','Logistics','Logistics expert hiring made easy','Enter description here..\n','0'),(5,'tra','Training Certification','Training Certification','Training Certification expert hiring made easy','Gain a practical, how-to overview of the entire training function. Through modeling of the best practices and latest techniques in training delivery, discover the 4Ps of training: Purpose & Assessment, Planning & Preparation, Presentation & Facilitation, and Performance & Evaluation.','0'),(6,'dem','Demand Planning','Demand Planning','Demand Planning expert hiring made easy','A multi-step operational supply chain management (SCM) process used to create reliable forecasts. We can quickly guide users to improve the accuracy of revenue forecasts, align inventory levels with peaks and troughs in demands, and help enhance profitability for a given channel or product.','0'),(7,'ord','Order Fulfillment','Order Fulfillment','Order Fulfillment expert hiring made easy','We facilitate customer orders through the order fulfillment cycle. In internal advocacy and voice for sales and customer needs.','0'),(8,'man','Manufacturing','Manufacturing\t','Manufacturing expert hiring made easy','We cover work performed in mechanical, physical, or components into new products. Assembling of component parts for manufactured products also falls under this umbrella unless the activity is appropriately classified in Construction.','0'),(9,'war','Warehousing','Warehousing','Warehousing expert hiring made easy','Enter description here..\n','0'),(11,'0','Customer Service',NULL,NULL,'We offer good customer service1','0'),(12,'0','Web Services',NULL,NULL,'We offer IT solutions from hardware to software services','0');
 
 #
 # Structure for table "position_type"
@@ -357,15 +357,14 @@ CREATE TABLE `resume` (
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
-  `viewCounter` int(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (6,3,1,'E1521530493','1521530357','Mark','Mendoza','22-22-2222','22222222222','22222','torredale1014@gmail.com','(+61) 222-222-222','jsdlfjsadlfjldsjflsjdfljsdfj','jljsadlfjsldjflkdsjfljs','1','neg occ','1111','asdsaldjalskdlsadsdsadasdsad','1521530357.pdf','asdadsadasdasdsad','1521530357.png','0',NULL,'1','1','0',22);
+INSERT INTO `resume` VALUES (6,3,1,'E1521530493','1521530357','Mark','Mendoza','22-22-2222','22222222222','22222','torredale1014@gmail.com','(+61) 222-222-222','jsdlfjsadlfjldsjflsjdfljsdfj','jljsadlfjsldjflkdsjfljs','1','neg occ','1111','asdsaldjalskdlsadsdsadasdsad','1521530357.pdf','asdadsadasdasdsad','1521530357.png','0',NULL,'1','1','0'),(7,0,3,NULL,'1521548690','dale','torre','11-11-1111','11111111111','1111','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','sdfsdfsdafdsafdsafdsafsadfsadfdsaf','1521548690.txt','asdfsdfsdf','1521548690.PNG','0',NULL,'0','0','0');
 
 #
 # Structure for table "timesheet"
