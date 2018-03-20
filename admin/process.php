@@ -43,6 +43,10 @@ switch ($action) {
 		addJobFunction();
 		break;
 
+	case 'updateJobFunction' :
+		updateJobFunction();
+		break;
+
 	case 'updateAccounts' :
 		updateAccounts();
 		break;
@@ -242,7 +246,19 @@ function addJobFunction()
 {
 	$jf = job_function();
 	$jf->obj['option'] = $_POST['option'];
+	$jf->obj['description'] = $_POST['description'];
 	$jf->create();
+
+	header('Location: ../admin/?view=jobCategory&message=You have succesfully added a new Job Category.');
+}
+
+function updateJobFunction()
+{
+	$Id = $_POST['Id'];
+	$jf = job_function();
+	$jf->obj['option'] = $_POST['option'];
+	$jf->obj['description'] = $_POST['description'];
+	$jf->update("Id='$Id'");
 
 	header('Location: ../admin/?view=jobCategory&message=You have succesfully added a new Job Category.');
 }
