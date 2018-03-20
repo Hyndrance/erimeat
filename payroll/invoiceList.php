@@ -10,13 +10,6 @@ $invoiceList = invoice()->list();
   <div class="row">
     <div class="col-sm-12">
     <br>
-    <div class="pull-right">
-      <button type="button" class="btn btn-primary waves-effect waves-light btn-sm" data-toggle="modal" data-target="#add-account-modal"><i class="fa fa-plus"></i> Add New</button>
-
-    </div>
-    <br>
-
-    <br>
     <?php if($message){?>
     <div class="alert alert-success alert-dismissible fade in" role="alert">
         <button type="button" class="close" data-dismiss="alert"

@@ -20,7 +20,7 @@ function formatDate($val){
   <!-- Start About Us Content -->
   <div class="center-page container-80">
     <?php if(!$projectList){?>
-      <h4 class="text-center text-muted"> <i class="fa fa-folder-open-o fa-5x"></i><br> No Article Available </h4>
+      <h4 class="text-center text-muted"> <i class="fa fa-folder-open-o fa-5x"></i><br> No Projects Available </h4>
     <?php }else{?>
   <?php
     foreach($projectList as $row){
