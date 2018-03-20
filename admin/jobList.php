@@ -1,15 +1,16 @@
 <?php
-$isApproved = $_GET['isApproved'];
-$abn = $_GET['abn'];
 
-$jobList = job()->list("abn='$abn' and isApproved='$isApproved'");
-$company = company()->get("abn='$abn'");
+$isApproved = (isset($_GET['isApproved']) && $_GET['isApproved'] != '') ? 'isApproved=\''.$_GET['isApproved'].'\' and ' : '';
+$abn = (isset($_GET['abn']) && $_GET['abn'] != '') ?  'abn=\''.$_GET['abn'].'\' and '  : '';
 
+$jobList = job()->list("$abn $isApproved Id>0");
+$company = company()->get("$abn Id>0");
+$title = $abn ?  $company->name  : 'Job Lists';
 ?>
   <div class="row">
     <div class="col-sm-12">
       <div class="card-box table-responsive">
-          <h4 class="page-title"><?=$company->name;?></h4><br>
+          <h4 class="page-title"><?=$title;?></h4><br>
         <table id="datatable" class="table table-striped table-bordered">
           <thead>
             <tr>

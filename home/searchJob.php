@@ -17,7 +17,7 @@ function formatDate($val){
 ?>
 
 <div style="position: relative;">
-  <img style="position: absolute; top:0; right:0; height: 300px;" src="../include/assets/images/homepage-bg-1.png">
+  <img class="pages-bg-grey" src="../include/assets/images/homepage-bg-1.png">
 <div class="container-fluid">
   <div class="container-80 center-page">
   <div class="col-md-10 center-page p-b-30">
@@ -54,7 +54,7 @@ function formatDate($val){
       </button>
     </div>
   </div>
-    <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px"></i><br>No Jobs Found</h3>
+
   <!-- Start Filter Panel and Results-->
 
     <!-- TODO: Filters -->
@@ -86,11 +86,13 @@ function formatDate($val){
         <option>Select City</option>
     </select> -->
     <!-- </div> -->
-
-<?php foreach($jobList as $row) {
-  if ($row->isApproved==1){
-?>
+<?php if(!$jobList){?>
+  <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px m-t-30"></i><br>No Jobs Found</h3>
+<?php }else{?>
   <div class="form-container container m-t-30 m-b-30">
+    <?php foreach($jobList as $row) {
+      if ($row->isApproved==1){
+    ?>
     <div class="row center-page job-list-row">
         <div class="col-lg-4 job-list-summary">
 
@@ -114,9 +116,9 @@ function formatDate($val){
         <?php } ?>
     </div>
     <br>
-
+  <?php } }?>
   </div> <!-- End List Container -->
-<?php }?>
+
 </div>
 <br>
 <script>

@@ -5713,10 +5713,6 @@ ul.sitemap-icon ul li a {
 
   .annex-img img {
     max-width: 100%; }
-
-  .annex-img .annex-img-layer_bottom {
-    display: block; }
-
   /** Multiline Truncate **/
   .truncate {
     width: 100%;
@@ -5765,3 +5761,19 @@ ul.sitemap-icon ul li a {
 
   li.candidates{
     list-style-type: none; }
+
+  a.icons{
+    background-color: transparent !important;
+    width: 24px;
+    margin-right: 3px;
+    height: 24px;
+    padding: 0;
+    display: inline-block;
+    display:block;
+  }
+
+  .pages-bg-grey {
+    position: absolute;
+    top:0;
+    right:0;
+    height: 300px; }

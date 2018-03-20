@@ -48,6 +48,7 @@ function create()
 	$job->obj['businessPhone'] = $_POST['businessPhone'];
 	$job->obj['zipCode'] = $_POST['zipCode'];
 	$job->obj['requiredExperience'] = $_POST['requiredExperience'];
+	$job->obj['createDate'] = "NOW()";
 	$job->create();
 
 	$hrList = admin()->list("jobFunctionId='$jobFunctionId'");

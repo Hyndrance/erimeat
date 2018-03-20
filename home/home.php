@@ -16,13 +16,13 @@ function getPositionName($Id){
     </div>
 
         <div>
-        <div class="main-text hidden-xs">
+        <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center">
-                    <p class="carousel-title m-t-10 center-page" style="font-size: 40px; width: 100%; color: #fff; text-shadow: 2px 2px 2px #000000;">
+                    <p class="carousel-title m-t-10" style="font-size: 40px; color: #fff; text-shadow: 2px 2px 2px #000000;">
                       Ask us how to go virtual and hire the most qualified
                       Supply Chain Professional for your business in unpredicted ways
                     </p>
-                    <div class="row m-b-20" style="margin-top: 100px;">
+                    <div class="row m-b-20" style="margin-top: 100px; width: 100%;">
                       <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
                       <button id="myBtn2" class="btn" style="width:382px;">LOOKING FOR A JOB?</button>
                     </div>
@@ -70,7 +70,8 @@ function getPositionName($Id){
 
               </div>
             </form>
-                    </div></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -366,38 +367,38 @@ function getPositionName($Id){
         <div class="row m-t-30">
           <div class="col-lg-1"></div>
 
-          <div class="col-lg-2">
-            <h3 class="text-center center-page text-blue">SYDNEY HQ</h3>
+          <div class="col-lg-2 text-center">
+            <h3 class="center-page text-blue">SYDNEY HQ</h3>
             <div class="annex-img">
-              <img src="../include/assets/images/home-img4.png" class="annex-img-layer_bottom">
+              <img src="../include/assets/images/home-img4.png">
             </div>
           </div>
 
-          <div class="col-lg-2">
-            <h3 class="text-center center-page text-blue">MANILA</h3>
+          <div class="col-lg-2 text-center">
+            <h3 class="center-page text-blue">MANILA</h3>
             <div class="annex-img">
-            	<img src="../include/assets/images/home-img1.png" class="annex-img-layer_bottom">
+            	<img src="../include/assets/images/home-img1.png">
             </div>
           </div>
 
-            <div class="col-lg-2">
-              <h3 class="text-center center-page text-blue">DELHI</h3>
+            <div class="col-lg-2 text-center">
+              <h3 class="center-page text-blue">DELHI</h3>
               <div class="annex-img">
-              	<img src="../include/assets/images/home-img2.png" class="annex-img-layer_bottom">
+              	<img src="../include/assets/images/home-img2.png">
               </div>
             </div>
 
-            <div class="col-lg-2">
-              <h3 class="text-center center-page text-blue">BANGALORE</h3>
+            <div class="col-lg-2 text-center">
+              <h3 class="center-page text-blue">BANGALORE</h3>
               <div class="annex-img">
-              	<img src="../include/assets/images/home-img3.png" class="annex-img-layer_bottom">
+              	<img src="../include/assets/images/home-img3.png">
               </div>
             </div>
 
-            <div class="col-lg-2">
-              <h3 class="text-center center-page text-blue">PROVIDENCE</h3>
+            <div class="col-lg-2 text-center">
+              <h3 class="center-page text-blue">PROVIDENCE</h3>
               <div class="annex-img">
-                <img src="../include/assets/images/home-img5.png" class="annex-img-layer_bottom">
+                <img src="../include/assets/images/home-img5.png">
               </div>
             </div>
             <div class="col-lg-1"></div>
