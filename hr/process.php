@@ -57,14 +57,43 @@ function login()
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$result = admin()->get("username='$username' and password = '$password' and level='hr'");
+	$result = admin()->get("username='$username' and password = '".sha1($password)."' and level='hr'");
 
 	if ($result){
 		$_SESSION['hr_session'] = $username;
+		if (sha1($password) == sha1('temppassword')){
+			$_SESSION['temp_session'] = $username;
+			header('Location: index.php?view=changepassword');
+		}else{
 		header('Location: index.php');
+		}
 	}
 	else {
 			header('Location: index.php?error=User not found in the Database');
+	}
+}
+
+function changepassword()
+{
+	$password = $_POST['password'];
+	$password2 = $_POST['password2'];
+	$username = $_POST['username'];
+
+	if(sha1($password) == sha1($password2)){
+		if(sha1($password) != sha1("temppassword")){
+
+			$admin = admin();
+			$admin->obj['password'] = sha1($password);
+			$admin->update("username='$username'");
+
+			header('Location: index.php');
+		}
+		else{
+			header('Location: index.php?view=changepassword&error=Invalid Password');
+		}
+	}
+	else{
+		header('Location: index.php?view=changepassword&error=Password not matched');
 	}
 }
 
@@ -193,29 +222,6 @@ function __createEmployeeLogin($Id, $jobId){
 	sendEmail($resume->email, $content);
 }
 
-function changepassword()
-{
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$password2 = $_POST['password2'];
-
-	if($password == $password2){
-		if($password != 'temppassword'){
-			$obj = new Profile;
-			$user = user();
-			$user->obj['password'] = $password;
-			$user->update("username=$username");
-
-			header('Location: ../account/');
-		}
-		else{
-			header('Location: index.php?view=changepassword&error=Invalid Password');
-		}
-	}
-	else{
-		header('Location: index.php?view=changepassword&error=Password not matched');
-	}
-}
 
 function jobRequest()
 {

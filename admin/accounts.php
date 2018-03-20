@@ -114,7 +114,7 @@ function getJobFunction($Id){
 
               <div class="form-group">
                 <label>Password</label>
-                <input type="password" class="form-control" name="password"  placeholder="">
+                <input type="text" class="form-control" name="password"  value="temppassword" disabled>
               </div>
 
               <div class="form-group">

@@ -15,6 +15,11 @@ switch ($view) {
 		$template	= '../include/template_login.php';
 		break;
 
+	case 'changepassword' :
+		$content 	= 'changepassword.php';
+		$template	= '../include/template_login.php';
+		break;
+
 	case 'invoiceList' :
 		$currentSession = isset($_SESSION["payroll_session"]);
 		$content 	= 'invoiceList.php';
