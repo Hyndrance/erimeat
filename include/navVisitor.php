@@ -167,7 +167,7 @@ nav ul li {
 /* Styling the links */
 nav a {
     display:block;
-    padding: 10px 25px;
+    padding: 6px 25px;
     color:#fff;
     font-weight: 600;
     text-decoration:none;
