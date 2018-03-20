@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-20 14:13:05
+# Date: 2018-03-20 18:33:18
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
+  `password` varchar(40) DEFAULT NULL,
   `firstName` varchar(50) DEFAULT NULL,
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
@@ -20,13 +20,13 @@ CREATE TABLE `admin` (
   `email` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (34,'admin','admin','admin','admin','admin','0','torredale1014@gmail.com','0'),(35,'hr','hr','hr','hr','hr','1','robertcdc21@gmail.com','0'),(36,'payroll','payroll','payroll','payroll','payroll','0','payroll@payroll.com','0');
+INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0');
 
 #
 # Structure for table "city_option"
@@ -155,6 +155,7 @@ CREATE TABLE `employee` (
 # Data for table "employee"
 #
 
+INSERT INTO `employee` VALUES (22,3,'E1521530493','2018-03-20 15:21:33','1');
 
 #
 # Structure for table "faq"
@@ -214,6 +215,7 @@ CREATE TABLE `interview_date` (
 # Data for table "interview_date"
 #
 
+INSERT INTO `interview_date` VALUES (10,'6','2018-03-21','01:00:00');
 
 #
 # Structure for table "invoice"
@@ -362,6 +364,7 @@ CREATE TABLE `resume` (
 # Data for table "resume"
 #
 
+INSERT INTO `resume` VALUES (6,3,1,'E1521530493','1521530357','Mark','Mendoza','22-22-2222','22222222222','22222','torredale1014@gmail.com','(+61) 222-222-222','jsdlfjsadlfjldsjflsjdfljsdfj','jljsadlfjsldjflkdsjfljs','1','neg occ','1111','asdsaldjalskdlsadsdsadasdsad','1521530357.pdf','asdadsadasdasdsad','1521530357.png','0',NULL,'1','1','0');
 
 #
 # Structure for table "timesheet"
@@ -419,3 +422,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
+INSERT INTO `user` VALUES (22,'C1521533182','2b8889e80cb6afc64ea9923339183799475b1123','dsfsdfdsf','sadfsdfsdfds','company'),(23,'C1521533353','2b8889e80cb6afc64ea9923339183799475b1123','asdsfasfdsf','asdfsfdsfdsf','company'),(24,'C1521533495','2b8889e80cb6afc64ea9923339183799475b1123','sdfsfsdf','adsfdsfdsfdsf','company');
