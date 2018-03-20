@@ -9,7 +9,6 @@ function __setFullName($owner){
 <center><h1>Welcome to payroll home page</h1></center>
 
 <div class="row">
-
   <!-- Total clients -->
     <div class="col-lg-3 col-md-6">
       <div class="card-box widget-box-two widget-two-custom">
@@ -60,41 +59,77 @@ function __setFullName($owner){
 
 <div class="row">
 
-<!-- Left lists -->
-<div class="col-lg-6">
-    <div class="card-box">
-        <h4 class="m-t-0 header-title"><b>Recent Invoices</b></h4>
-        <div class="table-responsive">
-            <table class="table table-hover m-0 table-actions-bar">
-                <thead>
-                <tr>
-                    <th>Ref. Number</th>
-                    <th>Employee</th>
-                    <th>&nbsp;</th>
-                </tr>
-                </thead>
-                <tbody>
-                  <?php foreach(invoice()->list("Id>0 order by Id desc limit 5") as $row){?>
+    <!-- Left lists -->
+    <div class="col-lg-6">
+        <div class="card-box">
+            <h4 class="m-t-0 header-title"><b>Recent Timesheet</b></h4>
+            <div class="table-responsive">
+                <table class="table table-hover m-0 table-actions-bar">
+                    <thead>
                     <tr>
-                        <td width="150">
-                          <?=$row->refNum;?>
-                        </td>
-                        <td>
-                            <?=__setFullName($row->owner);?>
-                        </td>
-                        <td>
-                            <a class="table-action-btn">view</a>
-                        </td>
+                        <th>Timesheet</th>
+                        <th>Employee</th>
+                        <th>&nbsp;</th>
                     </tr>
-                  <?php } ?>
-                    <tr>
-                        <td colspan="3"><a href="?view=invoiceList">View all</a>
-                    </tr>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                      <?php foreach(timesheet()->list("Id>0 order by Id desc limit 5") as $row){?>
+                        <tr>
+                            <td width="150">
+                              <?=$row->name;?>
+                            </td>
+                            <td>
+                                <?=__setFullName($row->employee);?>
+                            </td>
+                            <td>
+                                <a class="table-action-btn">view</a>
+                            </td>
+                        </tr>
+                      <?php } ?>
+                        <tr>
+                            <td colspan="3"><a href="?view=invoiceList">View all</a>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+
+  <!-- Right lists -->
+  <div class="col-lg-6">
+      <div class="card-box">
+          <h4 class="m-t-0 header-title"><b>Recent Invoices</b></h4>
+          <div class="table-responsive">
+              <table class="table table-hover m-0 table-actions-bar">
+                  <thead>
+                  <tr>
+                      <th>Ref. Number</th>
+                      <th>Employee</th>
+                      <th>&nbsp;</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach(invoice()->list("Id>0 order by Id desc limit 5") as $row){?>
+                      <tr>
+                          <td width="150">
+                            <?=$row->refNum;?>
+                          </td>
+                          <td>
+                              <?=__setFullName($row->owner);?>
+                          </td>
+                          <td>
+                              <a class="table-action-btn">view</a>
+                          </td>
+                      </tr>
+                    <?php } ?>
+                      <tr>
+                          <td colspan="3"><a href="?view=invoiceList">View all</a>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
 
 
 </div>
