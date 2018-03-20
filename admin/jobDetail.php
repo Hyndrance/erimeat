@@ -1,6 +1,21 @@
 <?php
 $Id = $_GET['Id'];
 $job = job()->get("Id=$Id");
+
+function getJobFunction($Id){
+  $jf = job_function()->get("Id='$Id'");
+  echo $jf->option;
+}
+
+function getPositionName($Id){
+  $job = position_type()->get("Id='$Id'");
+  echo $job->option;
+}
+
+function formatDate($val){
+  $date = date_create($val);
+  return date_format($date, "F d, Y");
+}
 ?>
 
 <div class="container container-fluid">
@@ -12,14 +27,14 @@ $job = job()->get("Id=$Id");
         <p><label class="m-r-5">Zip Code: </label><?=$job->zipCode;?></p>
         <div class="row">
           <div class="col-lg-6">
-            <p><label class="m-r-5">Job Function ID: </label><?=$job->jobFunctionId;?></p>
+            <p><label class="m-r-5">Job Category: </label><?=getJobFunction($job->jobFunctionId);?></p>
           </div>
           <div class="col-lg-6">
-            <p><label class="m-r-5">Position Type ID: </label><?=$job->positionTypeId;?></p>
+            <p><label class="m-r-5">Employement Type: </label><?=getPositionName($job->positionTypeId);?></p>
           </div>
         </div>
 
-        <p class="text-muted">Created at: </label><?=$job->createDate;?></p>
+        <p class="text-muted">Created at: </label><?=formatDate($job->createDate);?></p>
     <div class="col-12 m-t-30">
       <div class="col-lg-4">
         <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
@@ -40,15 +55,12 @@ $job = job()->get("Id=$Id");
         ABN: <?=$job->abn;?>
       </div>
       <div class="col-lg-4">
-        ID: <?=$job->Id;?>
-      </div>
-      <div class="col-lg-4">
         Reference Number: <?=$job->refNum;?>
       </div>
     </div>
     <div class="clearfix"></div>
     <hr>
-    <h3>Comment</h3>
+    <h3>Hiring Needs</h3>
     <?=$job->comment;?>
     <hr>
 

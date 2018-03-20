@@ -101,14 +101,14 @@ function sendEmail($email, $content){
 
 	require_once "../email/swift/lib/swift_required.php";
 
-	$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-										->setUsername('samplehr2k18@gmail.com')
-										->setPassword('smpl2k18');
+	$transport = Swift_SmtpTransport::newInstance('gator4234.hostgator.com', 465, 'ssl')
+										->setUsername('noreply@teamire.com')
+										->setPassword('noreplytest1');
 
 	$mailer = Swift_Mailer::newInstance($transport);
 
-	$message = Swift_Message::newInstance("No Reply")
-										->setFrom(array('samplehr2k18@gmail.com' => 'Teamire'))
+	$message = Swift_Message::newInstance("Teamire")
+										->setFrom(array('norepyly@teamire.com' => 'Teamire'))
 										->setTo(array($email));
 
 	$message->setBody($content, 'text/html');
