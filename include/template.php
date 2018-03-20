@@ -36,22 +36,22 @@
               <input type="checkbox" id="drop2" />
               <ul class="menu1">
                 <li>
-                    <label for="drop-1" class="toggle2"><a  href="../home/?view=projects" ><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></label>
+                    <label for="drop-1" class="toggle2 footer-res"><a  href="../home/?view=projects" ><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></label>
                 </li>
                 <li>
-                    <label for="drop-2" class="toggle2"> <a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></label>
+                    <label for="drop-2" class="toggle2 footer-res"> <a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></label>
                 </li>
                  <li>
-                    <label for="drop-2" class="toggle2"> <a  href="../home/?view=downloads" >Downloads</a></label>
+                    <label for="drop-2" class="toggle2 footer-res"> <a  href="../home/?view=downloads" >Downloads</a></label>
                 </li>
                  <li>
-                    <label for="drop-2" class="toggle2"><a style="color: white;" href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></label>
+                    <label for="drop-2" class="toggle2 footer-res"><a style="color: white;" href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></label>
                 </li>
                  <li>
-                    <label for="drop-2" class="toggle2"><a style="color: white;" href="../home/?view=logins">Timesheets</a></label>
+                    <label for="drop-2" class="toggle2 footer-res"><a style="color: white;" href="../home/?view=logins">Timesheets</a></label>
                 </li>
                  <li>
-                    <label for="drop-2" class="toggle2"><a style="color: white;" href="../home/?view=contactUs">Contact Us</a></label>
+                    <label for="drop-2" class="toggle2 footer-res"><a style="color: white;" href="../home/?view=contactUs">Contact Us</a></label>
                 </li>
             </ul>
          </nav>
@@ -60,14 +60,13 @@
                 <input type="checkbox" id="drop23" />
                   <ul class="menu23">
                 <li>
-                    <label for="drop-1" class="toggle23"><a style="color: white;" href="../home/?view=services">Our Services</a></label>
+                    <label for="drop-1" class="toggle23 footer-res"><a style="color: white;" href="../home/?view=services">Our Services</a></label>
                 </li>
                 <li>
-                    <label for="drop-2" class="toggle23"><a style="color: white;" href="../home/?view=projects">Projects</a></label>
+                    <label for="drop-2" class="toggle23 footer-res"><a class="text-white" href="../home/?view=projects">Projects</a></label>
                 </li>
-
                 <li style="visibility: hidden;">
-                    <label for="drop-2" class="toggle23" >Government Notice</label>
+                    <label for="drop-2" class="toggle23 footer-res" >Government Notice</label>
                 </li>
             </ul>
           </nav>
@@ -76,16 +75,16 @@
                 <input type="checkbox" id="drop24" />
                   <ul class="menu24">
                 <li>
-                    <label for="drop-1" class="toggle24">Fraud Alert</label>
+                    <label for="drop-1" class="toggle24 text-white footer-res" style="padding: 20px 40px;">Fraud Alert</label>
                 </li>
                 <li>
-                    <label for="drop-2" class="toggle24">Privacy Policy</label>
+                    <label for="drop-2" class="toggle24 text-white footer-res" style="padding: 20px 40px;">Privacy Policy</label>
                 </li>
                   <li>
-                    <label for="drop-2" class="toggle24">Terms of Use</label>
+                    <label for="drop-2" class="toggle24 text-white footer-res" style="padding: 20px 40px;">Terms of Use</label>
                 </li>
                   <li>
-                    <label for="drop-2" class="toggle24">Government Notice</label>
+                    <label for="drop-2" class="toggle24 text-white" style="margin-bottom: 0; padding: 20px 40px;">Government Notice</label>
                 </li>
             </ul>
           </nav>
@@ -171,7 +170,7 @@
                   <div class="container-fluid col-12 col-lg-2">
                     <h4 class="text-white" style="padding-left: 40px;">ABOUT US</h4>
                     <ul style="list-style-type:none;">
-                      <li><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></li>
+                      <li><a style="color: white; padding:none;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></li>
                       <li><a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></li>
                       <li><a style="color: white;" href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></li>
                       <li><a style="color: white;" href="../home/?view=logins">Timesheets</a></li>
@@ -186,7 +185,7 @@
                     </ul>
                   </div>
                   <div class="container-fluid col-12 col-lg-2">
-                    <h4 class="text-white" style="padding-left: 40px;">LEGAL</h4>
+                    <h4 class="text-white" style="padding-left: 40px">LEGAL</h4>
                     <ul style="list-style-type:none;">
                     <li>Fraud Alert</li>
                     <li>Privacy Policy</li>

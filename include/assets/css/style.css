@@ -1038,6 +1038,9 @@ a:focus {
 .text-primary {
   color: #3399cc !important; }
 
+.text-black {
+  color: #212121 !important; }
+
 .text-lightblue {
   color: #9aebff !important; }
 
@@ -5769,11 +5772,15 @@ ul.sitemap-icon ul li a {
     height: 24px;
     padding: 0;
     display: inline-block;
-    display:block;
-  }
+    display:block; }
 
   .pages-bg-grey {
     position: absolute;
     top:0;
     right:0;
     height: 300px; }
+
+    /** Classes for footer responsive **/
+    .footer-res{
+      margin-bottom: 0;
+      border-bottom: 2px solid #545e65 !important; }
