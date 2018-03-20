@@ -13,7 +13,7 @@
     </div>
 
 
-    <div class="form-inline pull-right"  style="padding: 30px; margin-top: 10px;" id="myTopnav">
+    <div class="form-inline pull-right"  style="padding: 30px; margin-top: 5px;" id="myTopnav">
       <ul class="nav navbar-nav navbar-right nav-menu-right" id="above-nav">
         <li> <a class="m-l-3 m-r-3" href="../home/?view=projects" style="font-size:15px;">Supply Chain Projects</a></li>
         <li> <a class="m-l-3 m-r-3" href="../home/?view=logins" style="font-size:15px;">Timesheets</a></li>
@@ -87,8 +87,8 @@
                     </ul>
                 </li>
             </ul>
-      <div class="pull-right m-t-10" style="padding-right: 4%;">
-        <span class="text-white pull-left m-r-5">+61 452 364 793 | </span>
+      <div class="pull-right m-t-5" style="padding-right: 4%;">
+        <span class="text-white pull-left m-r-5" style="margin-top: 2px;">+61 452 364 793 | </span>
         <ul>
         <li><a class="icons" href="https://www.facebook.com/" target="blank_"><img src="../include/assets/images/facebook.png"></a></li>
         <li><a class="icons" href="https://www.twitter.com/" target="blank_"><img src="../include/assets/images/twitter.png"></a></li>
@@ -191,7 +191,7 @@ nav ul ul {
     display: none;
     position: absolute;
     /* has to be the same number as the "line-height" of "nav a" */
-    top: 50px;
+    top: 40px;
 }
 
 /* Display Dropdowns on Hover */
