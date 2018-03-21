@@ -6,6 +6,9 @@
           $jfList = job_function()->list("isDeleted='0'");
         ?>
         <link rel="stylesheet" type="text/css" href="../include/assets/css/footer_responsive.css">
+        <link rel="stylesheet" type="text/css" href="../include/assets/css/chat.css">
+
+
     </head>
     <body>
         <!-- Navigation Bar-->
@@ -24,8 +27,20 @@
               <?php
                 include $content;
               ?>
+              <div class="chat-box">
+                  <div class="chat-closed"><span class="fa fa-comment"></span> Chat Now </div>
+                      <div class="chat-header hide"><div class="box"></div>Online Support</div>
+                        <div class="chat-content hide">
+                          <div class="well">
+                            <div id="output"></div>
+                          </div>
+                              <div id="container" class="container">
+                                  <input type="text" id="input" value="" class="form-control">
+                              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
         <!-- end wrapper -->
         <!-- Footer -->
 
@@ -300,6 +315,6 @@
         <?php
           include_once($footScript);
         ?>
-
+        
     </body>
 </html>
