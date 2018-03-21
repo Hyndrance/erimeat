@@ -92,10 +92,13 @@ function formatDate($val){
                 <label>Project Title</label>
                 <input type="text" class="form-control" name="title" placeholder="">
               </div>
-
+              
               <div class="form-group">
-                <label>Content</label>
-                <textarea class="form-control" name="content"></textarea>
+              <label>Content</label>
+              <textarea id="message" class="form-control" name="content"
+                                data-parsley-trigger="keyup" data-parsley-minlength="20"
+                                data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
+                                data-parsley-validation-threshold="10"></textarea>
               </div>
 
               <div class="form-group">

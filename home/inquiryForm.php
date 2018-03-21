@@ -2,10 +2,13 @@
 $jfList = job_function()->list();
 ?>
 
-<div class="row">
+<div class="row m-b-30">
     <div class="col-md-12">
-      <h2 class="text-center m-t-30 m-b-30">Send Us an Email</h2>
-      <div class="jumbotron center-page" style="width: 1140px;">
+      <div class="text-center" style="position:relative;">
+        <h2 style="position: absolute;top: 23%; left: 44%;" class="text-white"> Inquiry Form </h2>
+        <img style="top:0;" src="../include/assets/images/submit-header.png">
+      </div>
+      <div class="jumbotron center-page container" style="width: 1139px;">
             <form id="default-wizard" action="process.php?action=sendInquiry" method="POST" data-parsley-validate="">
                     <div class="row m-t-20">
                         <div class="col-sm-7 center-page">
@@ -60,5 +63,5 @@ $jfList = job_function()->list();
           </div>
     </div>
 </div>
-
+</div>
 <!-- End row -->

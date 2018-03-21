@@ -12,7 +12,7 @@ $faqList = faq()->list("level='employee'");
   foreach($faqList as $row){
 ?>
   <div class="container-80 center-page">
-    <h3 class="form-container">Q: <?=$row->question;?></h3>
+    <h3 class="faq-container">Q: <?=$row->question;?></h3>
     <div class="container center-page">
       <p class="m-b-30">
         <?=$row->answer;?>

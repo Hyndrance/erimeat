@@ -10,7 +10,7 @@ $downloadList = downloads()->list("isDeleted='0'");
   <img class="pages-bg-grey" src="../include/assets/images/homepage-bg-1.png">
   <div class="container-fluid">
 <div class="container-80 center-page m-b-30">
-  <h2 class="text-center m-b-30">Downloads</h2>
+  <h2 class="text-center m-t-30 m-b-30">Downloads</h2>
       <div class="clearfix"></div>
       <!--Start 2 panels -->
       <?php if(!$downloadList){?>
