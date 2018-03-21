@@ -167,7 +167,7 @@ nav ul li {
 /* Styling the links */
 nav a {
     display:block;
-    padding: 6px 25px;
+    padding: 10px 25px;
     color:#fff;
     font-weight: 600;
     text-decoration:none;
@@ -191,7 +191,7 @@ nav ul ul {
     display: none;
     position: absolute;
     /* has to be the same number as the "line-height" of "nav a" */
-    top: 40px;
+    top: 50px;
 }
 
 /* Display Dropdowns on Hover */

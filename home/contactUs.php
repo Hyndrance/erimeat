@@ -14,17 +14,17 @@ $jfList = job_function()->list();
         <div class="col-12 col-lg-4 p-30">
           <h2 class="text-center mt30 mb25">Employers</h2>
           <p class="text-center mb20">Looking for the right candidate?</p>
-          <div class="text-center m-b-10"><button class="btn-small btn-primary container-100" onclick="location.href='../home/?view=hiringForm'" role="button">REQUEST TALENT</button></div>
-          <div class="text-center m-b-10"><button class="btn-small btn-primary container-100" onclick="location.href='../home/?view=searchResume'" role="button">SEARCH CANDIDATE</button></div>
-          <div class="text-center m-b-10"><button class="btn-small btn-primary container-100" onclick="location.href='../home?view=employerFaq'" role="button">EMPLOYERS FAQ</button></div>
+          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=hiringForm'" role="button">REQUEST TALENT</button></div>
+          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=searchResume'" role="button">SEARCH CANDIDATE</button></div>
+          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home?view=employerFaq'" role="button">EMPLOYERS FAQ</button></div>
         </div>
         <div class="col-lg-2">&nbsp;</div>
         <div class="col-12 col-lg-4 p-30">
           <h2 class="text-center mt30 mb25">Job Seekers</h2>
           <p class="text-center mb20">Looking for a job? We can help.</p>
-          <div class="text-center m-b-10"><button class="btn-small btn-primary container-100" onclick="location.href='../home/?view=submitResume'" role="button">SUBMIT YOUR RESUME</button></div>
-          <div class="text-center m-b-10"><button class="btn-small btn-primary container-100" onclick="location.href='../home/?view=searchJob'" role="button">SEARCH JOB</button></div>
-          <div class="text-center m-b-10"><button class="btn-small btn-primary container-100" onclick="location.href='../home?view=jobseekerFaq'" role="button">JOB SEEKER FAQ</button></div>
+          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=submitResume'" role="button">SUBMIT YOUR RESUME</button></div>
+          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=searchJob'" role="button">SEARCH JOB</button></div>
+          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home?view=jobseekerFaq'" role="button">JOB SEEKER FAQ</button></div>
         </div>
         <div class="col-lg-1">&nbsp;</div>
       </div>

@@ -275,9 +275,9 @@
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="col-lg-6 center-page">
-                  <a href="#" class="text-white"><b>1.877.695.6045</b></a><br>
-                  © 2018 Teamire Inc. Lorem Ipsum Dolor Sit
+                <div class="col-lg-6">
+                  <b class="text-white">+61 452 364 793</b><br>
+                  © 2018 Teamire. Catalyst in continuous improvement.
                 </div>
             </div>
 

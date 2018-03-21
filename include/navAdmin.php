@@ -7,10 +7,8 @@
 
     <li>
         <a href="javascript: void(0);"><i class="fi-briefcase"></i> <span> Application </span> <span class="menu-arrow"></span></a>
-        <ul class="nav-second-level" aria-expanded="false">
+        <ul class="nav-second-level nav" aria-expanded="false">
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=scheduleInterview">Schedule Interview</a></li>
-        </ul>
-        <ul class="nav-second-level" aria-expanded="false">
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=candidates">Candidates</a></li>
         </ul>
     </li>
@@ -22,27 +20,15 @@
     </li>
 
       <li>
-          <a href="javascript: void(0);"><i class="fi-briefcase"></i> <span> Settings </span> <span class="menu-arrow"></span></a>
-          <ul class="nav-second-level" aria-expanded="false">
-              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=jobCategory">Job Category</a></li>
-          </ul>
-          <ul class="nav-second-level" aria-expanded="false">
-              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=services">Services</a></li>
-          </ul>
-          <ul class="nav-second-level" aria-expanded="false">
-              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=projects">Special Projects</a></li>
-          </ul>
-          <ul class="nav-second-level" aria-expanded="false">
-              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=faq">FAQ</a></li>
-          </ul>
-          <ul class="nav-second-level" aria-expanded="false">
-              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=downloads">Download Files</a></li>
-          </ul>
-          <ul class="nav-second-level" aria-expanded="false">
-              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=countries">Countries</a></li>
-          </ul>
-          <ul class="nav-second-level" aria-expanded="false">
-              <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=cities">Cities</a></li>
+        <a href="javascript: void(0);" aria-expanded="true"><i class="fi-briefcase"></i> <span> Settings </span> <span class="menu-arrow"></span></a>
+        <ul class="nav-second-level nav" aria-expanded="true">
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=jobCategory">Job Category</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=services">Services</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=projects">Special Projects</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=faq">FAQ</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=downloads">Download Files</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=countries">Countries</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=cities">Cities</a></li>
           </ul>
       </li>
 
