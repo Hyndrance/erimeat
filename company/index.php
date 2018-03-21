@@ -59,7 +59,7 @@ switch ($view) {
 
 	case 'resumeList' :
 		$currentSession = isset($_SESSION["company_session"]);
-		$content 	= 'jobList.php';
+		$content 	= 'resumeList.php';
 		$template	= '../include/dashboard.php';
 		break;
 

@@ -1,86 +1,72 @@
 <?php
 $Id = $_GET['Id'];
 $resume = resume()->get("Id=$Id");
+
+function getJobFunction($Id){
+  $job = job_function()->get("Id='$Id'");
+  echo $job->option;
+}
+function getCity($Id){
+  $city = city_option()->get("Id='$Id'");
+  echo $city->city;
+}
+
 ?>
-<div class="row">
-  <div class="col-md-7">
-      <div class="text-center card-box">
-          <div class="clearfix"></div>
-          <div class="member-card">
 
-              <?php
-              if($resume){
-                foreach ($resume as $key => $value) {
-                  echo $key . ": " . $value . "<br>";
-                }
-              }
-              ?>
-          </div>
+<div class="container container-fluid">
+  <div class="col-12 m-t-30 m-b-30">
+    <h2 class="text-blue"> <?=$resume->lastName;?>, <?=$resume->firstName;?> </h2>
+    <p><label class="m-r-5 m-t-15">Job Category: </label><?=getJobFunction($resume->jobFunctionId);?><p>
+    <p><label class="m-r-5">Email: </label><?=$resume->email;?></p>
+    <p><label class="m-r-5">Birthdate: </label><?=$resume->birthdate;?></p>
+    <div class="col-12">
+      <div class="col-lg-4">
+        <p><label class="m-r-5">Employee Reference: </label><?=$resume->refNum;?></p>
       </div>
-  </div> <!-- end col -->
-
-  <div class="col-md-5">
-      <div class="text-center card-box">
-          <h4>Detail</h4>
-          <?php if($resume->isApproved==0){?>
-            <button data-toggle="modal" data-target="#schedule-modal">
-              Schedule an Interview
-            </button>
-            <button onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">
-              Deny
-            </button>
-        <?php } ?>
-        <?php if($resume->isApproved==1){?>
-          <button onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>'">
-            Hire
-          </button>
-          <button onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$resume->Id;?>'">
-            Reject
-          </button>
-      <?php } ?>
+      <div class="col-lg-4">
+        <p><label class="m-r-5">Employee ABN: </label><?=$resume->abn;?></p>
       </div>
+      <div class="col-lg-4">
+        <p><label class="m-r-5">Tax Number: </label><?=$resume->taxNumber;?></p>
+      </div>
+    </div>
+      <div class="col-12">
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Address 1: </label><?=$resume->address1;?></p>
+        </div>
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Address 2: </label><?=$resume->address2;?></p>
+        </div>
+      </div>
+      <p><label class="m-r-5 m-t-15">City: </label><?=getCity($resume->city);?></p>
+      <p><label class="m-r-5">State: </label><?=$resume->state;?></p>
+      <p><label class="m-r-5">Postal Code: </label><?=$resume->zipCode;?></p>
+      <hr>
+      <p><label class="m-r-5">Cover Letter: </label><?=$resume->coverLetter;?><p>
+      <p><label class="m-r-5">Speedtest: </label><?=$resume->speedtest;?><p>
+        <div class="col-12 text-center">
+          <div class="col-lg-4">
+      <p><label class="m-r-5">Uploaded Specs: </label><br><?=$resume->uploadedSpecs;?><p>
+      </div>
+      <div class="col-lg-4">
+      <p><label class="m-r-5">Uploaded Certificate: </label><br><?=$resume->uploadedCerts;?><p>
+      </div>
+      <div class="col-lg-4">
+      <p><label class="m-r-5">Uploaded Resume: </label><br><?=$resume->uploadedResume;?><p>
+      </div>
+    </div>
+    </div>
   </div>
-</div>
-
-<!-- Schedule and interview modal content -->
-<div id="schedule-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
-            <div class="modal-body">
-                <h2 class="text-uppercase text-center m-b-30">
-                    <a href="index.html" class="text-success">
-                        <span><img src="assets/images/logo_dark.png" alt="" height="30"></span>
-                    </a>
-                </h2>
-
-                <form class="form-horizontal" action="process.php?action=setInterViewDate" method="post">
-
-                      <input type="hidden" name="resumeId" value="<?=$resume->Id;?>">
-                      <input type="hidden" name="email" value="<?=$resume->email;?>">
-                                        <div class="form-group account-btn text-center m-t-10">
-                  <div class="input-group">
-                      <input type="date" name="date" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose" required>
-                      <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
-                  </div>
-                </div>
-
-                <div class="form-group account-btn text-center m-t-10">
-                  <div class="input-group">
-                        <input id="timepicker" name="time" type="time" class="form-control" required>
-                        <span class="input-group-addon"><i class="mdi mdi-clock"></i></span>
-                    </div>  </div>
-
-                    <div class="form-group account-btn text-center m-t-10">
-                        <div class="col-xs-12">
-                            <button class="btn w-lg btn-rounded btn-lg btn-custom waves-effect waves-light" type="submit">Set</button>
-                        </div>
-                    </div>
-
-                </form>
-
+<hr>
+          <h3 class="text-center">STATUS</h3>
+            <div class="row  text-center m-b-30">
+              <?php if($resume->isHired==0){ ?>
+              <div class=" btn btn-warning btn-xs tooltips">
+                Pending
+              </div>
+              <?php }else{ ?>
+              <div class=" btn btn-success btn-xs tooltips">
+                Hired
+              </div>
+              <?php } ?>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
