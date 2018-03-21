@@ -50,7 +50,7 @@ function formatDate($val){
               ?>
               <tr>
                 <td><?=$row->title;?></td>
-                <td><?=$row->content;?></td>
+                <td style="word-break:break-all;"><?=$row->content;?></td>
                 <td><?=formatDate($row->createDate);?></td>
                 <td>
                   <a href="#" data-toggle="modal" data-target="#update-account-modal-<?=$row->Id?>" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>
