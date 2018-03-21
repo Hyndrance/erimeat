@@ -26,7 +26,7 @@ body { font-size: 10px }
     .button-back { float: left }
 
     .button-next,
-    .stepy-navigator input[type="submit"] { float: right }
+    .stepy-navigator input[type="submit"] { float: right}
 
     .button-back,
     .button-next,

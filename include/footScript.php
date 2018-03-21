@@ -192,6 +192,61 @@ function getFaq(id){
     console.log(datastring+url);
   }
 </script>
+<!--script for triggering chatbot-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".chat-closed").on("click",function(e){
+        $(".chat-header,.chat-content").removeClass("hide");
+        $(this).addClass("hide");
+    });
+
+    $(".chat-header").on("click",function(e){
+        $(".chat-header,.chat-content").addClass("hide");
+        $(".chat-closed").removeClass("hide");
+    });
+});
+
+</script>
+<!--script for chatbot content-->
+<script type="text/javascript">
+  var questionNum = 0;                          // keep count of question, used for IF condition.
+var question = '<p>what is your name?</p>';         // first question
+
+var output = document.getElementById('output');       // store id="output" in output variable
+output.innerHTML = question;                          // ouput first question
+
+function bot() { 
+    var input = document.getElementById("input").value;
+    console.log(input);
+
+    if (questionNum == 0) {
+    output.innerHTML = '<p>hello ' + input + '</p>';// output response
+    document.getElementById("input").value = "";      // clear text box
+    question = '<p>how old are you?</p>';           // load next question   
+    setTimeout(timedQuestion, 2000);                  // output next question after 2sec delay
+    }
+
+    else if (questionNum == 1) {
+    output.innerHTML = '<p>That means you were born in ' + (2016 - input) + '</p>';
+    document.getElementById("input").value = "";   
+    question = '<p>Want to search job?</p>';                  
+    setTimeout(timedQuestion, 2000);
+    }   
+}
+
+function timedQuestion() {
+    output.innerHTML = question;
+}
+
+//push enter key (using jquery), to run bot function.
+$(document).keypress(function(e) {
+  if (e.which == 13) {
+    bot();                                            // run bot function when enter key pressed
+    questionNum++;                                    // increase questionNum count by 1
+  }
+});
+
+</script>
 
 <script type="text/javascript">
     $('#carousel-example-captions').carousel();
