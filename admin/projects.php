@@ -50,7 +50,7 @@ function formatDate($val){
               ?>
               <tr>
                 <td><?=$row->title;?></td>
-                <td><?=$row->content;?></td>
+                <td style="word-break:break-all;"><?=$row->content;?></td>
                 <td><?=formatDate($row->createDate);?></td>
                 <td>
                   <?php
@@ -92,7 +92,7 @@ function formatDate($val){
                 <label>Project Title</label>
                 <input type="text" class="form-control" name="title" placeholder="">
               </div>
-              
+
               <div class="form-group">
               <label>Content</label>
               <textarea id="message" class="form-control" name="content"
