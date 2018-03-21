@@ -7,7 +7,7 @@
 
     <li>
         <a href="../hr/?view=talentRequest">
-            <i class="mdi mdi-comment-account"></i><span> Talent Request </span>
+            <i class="mdi mdi-account-search"></i><span> Talent Request </span>
         </a>
     </li>
 

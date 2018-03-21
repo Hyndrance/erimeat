@@ -1038,6 +1038,9 @@ a:focus {
 .text-primary {
   color: #3399cc !important; }
 
+.text-black {
+  color: #212121 !important; }
+
 .text-lightblue {
   color: #9aebff !important; }
 
@@ -1430,6 +1433,11 @@ a:focus {
 
 .btn-md {
   padding: 9px 18px; }
+
+.btn-contact-us {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold; }
 
 .btn-group-lg > .btn, .btn-lg {
   padding: 12px 20px !important;
@@ -5590,6 +5598,14 @@ ul.sitemap-icon ul li a {
     background-color: #eeeeee;
     padding: 30px; }
 
+/** Grey Form Panel **/
+  .faq-container{
+    background-color: #022664;
+    padding: 30px;
+    color: #ffffff;
+    opacity: 0.9;
+    border-radius: 5px;}
+
 /** Horizontal Line **/
   .h-line {
     background-color: #ffffff;
@@ -5769,11 +5785,15 @@ ul.sitemap-icon ul li a {
     height: 24px;
     padding: 0;
     display: inline-block;
-    display:block;
-  }
+    display:block; }
 
   .pages-bg-grey {
     position: absolute;
     top:0;
     right:0;
     height: 300px; }
+
+    /** Classes for footer responsive **/
+    .footer-res{
+      margin-bottom: 0;
+      border-bottom: 2px solid #545e65 !important; }
