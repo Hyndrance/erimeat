@@ -3,6 +3,7 @@
     right:15px;
     bottom:0;
     box-shadow:0 0 0.1em #000;
+
 }
 
 .chat-closed {
@@ -25,6 +26,7 @@
     border:1px solid #777;
     border-bottom:none;
     color: #fff;
+    
 }
 
 .chat-content{
