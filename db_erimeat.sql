@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-21 21:46:25
+# Date: 2018-03-21 21:57:45
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -26,7 +26,7 @@ CREATE TABLE `admin` (
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0'),(45,'payroll','4de4727ba00457f7e5330d2c36ed39d9a59714db','payroll','payroll','payroll','0','payroll@payroll.com','0');
+INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0');
 
 #
 # Structure for table "city_option"
@@ -73,7 +73,6 @@ CREATE TABLE `company` (
 # Data for table "company"
 #
 
-INSERT INTO `company` VALUES (1,'C1521625640','Villacar Transit','11111111111','We are a domestic transport company','torredale1014@gmail.com','Dale Torre','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','Domestic Transport','1','1'),(2,'C1521625707','Ace Hardware','22222222222','We are a hardware company','rgmak12@gmail.com','Mark Mendoza','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','Hardware Supplier','9','1');
 
 #
 # Structure for table "country_option"
@@ -137,7 +136,6 @@ CREATE TABLE `dtr` (
 # Data for table "dtr"
 #
 
-INSERT INTO `dtr` VALUES (1,1,'E1521626802','18:08:27','18:08:30','18:08:27','18:08:28','18:08:29','18:08:30','18:08:29','18:08:28','2018-03-20','4'),(2,1,'E1521626802','18:08:40','18:08:44','18:08:41','18:08:41','18:08:43','18:08:44','18:08:42','18:08:42','2018-03-19','4'),(3,1,'E1521626802','18:08:51','18:08:55','18:08:52','18:08:52','18:08:54','18:08:54','18:08:53','18:08:53','2018-03-21','4');
 
 #
 # Structure for table "employee"
@@ -157,7 +155,6 @@ CREATE TABLE `employee` (
 # Data for table "employee"
 #
 
-INSERT INTO `employee` VALUES (23,1,'E1521626802','2018-03-21 18:06:42','1');
 
 #
 # Structure for table "faq"
@@ -177,7 +174,6 @@ CREATE TABLE `faq` (
 # Data for table "faq"
 #
 
-INSERT INTO `faq` VALUES (9,'',NULL,NULL,'0');
 
 #
 # Structure for table "inquiries"
@@ -218,7 +214,6 @@ CREATE TABLE `interview_date` (
 # Data for table "interview_date"
 #
 
-INSERT INTO `interview_date` VALUES (11,'8','2018-03-23','01:00:00');
 
 #
 # Structure for table "invoice"
@@ -237,7 +232,6 @@ CREATE TABLE `invoice` (
 # Data for table "invoice"
 #
 
-INSERT INTO `invoice` VALUES (1,'1521627069','1','E1521626802');
 
 #
 # Structure for table "job"
@@ -270,7 +264,6 @@ CREATE TABLE `job` (
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (1,'1521625776',1,4,'Bus Driver','Villacar Transit','11111111111','torredale1014@gmail.com','Operations Manager','(+61) 234-567-890','6100','Billboard, Billboard','1-3 Years','We are looking for an experience bus driver','2018-03-21 17:57:15','1','Dale Torre','9');
 
 #
 # Structure for table "job_function"
@@ -370,7 +363,6 @@ CREATE TABLE `resume` (
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (8,1,1,'E1521626802','1521626606','Kevin','Sumalde','10-23-1994','00000000000','000000000','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','heheheehehhe hire me na bla','1521626606.pdf','www.bandwidthplace.com/asdfsf/123123','1521626606.png','0',NULL,'1','1','0'),(9,0,6,NULL,'1521627802','Kevin','Sumalde','66-66-6666','66666666666','666666','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100',' sdfsdfsdf sdfsdfsdf sdfsdfsdf sdfsdfsdf sdfsdfsdf','1521627802.txt','dsfsdfdsf','1521627802.png','0',NULL,'0','0','0'),(11,1,1,NULL,'1521629634','asdfsfsdf','sdfsfsdf','11-11-1111','87777777777','C1521625640','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','asdfsafsdfsdfdsfasdfsafsdfsdfdsfasdfsafsdfsdfdsfasdfsafsdfsdfdsfasdfsafsdfsdfdsf','1521629634.txt','asdfdsfdsfdsfsdaf','1521629634.PNG','0',NULL,'0','0','0');
 
 #
 # Structure for table "timesheet"
@@ -391,7 +383,6 @@ CREATE TABLE `timesheet` (
 # Data for table "timesheet"
 #
 
-INSERT INTO `timesheet` VALUES (1,1,'E1521626802','Timesheet as of 2018-03-21 11:09:02','3','2018-03-21 18:09:02');
 
 #
 # Structure for table "timesheet_dispute"
@@ -429,4 +420,3 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'C1521625640','8cb2237d0679ca88db6464eac60da96345513964','Dale Torre','Villacar Transit','company'),(2,'C1521625707','2b8889e80cb6afc64ea9923339183799475b1123','Mark Mendoza','Ace Hardware','company'),(3,'E1521626802','8cb2237d0679ca88db6464eac60da96345513964','Kevin','Sumalde','employee');

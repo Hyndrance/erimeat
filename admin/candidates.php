@@ -22,7 +22,6 @@ $resumeList = resume()->list();
           </thead>
           <tbody>
             <?php foreach($resumeList as $row) {
-              if ($row->isApproved==1){
             ?>
             <tr>
               <td><?=$row->refNum;?></td>
@@ -44,7 +43,6 @@ $resumeList = resume()->list();
               </td>
             </tr>
             <?php
-              }
             }
             ?>
           </tbody>
