@@ -19,6 +19,10 @@ switch ($action) {
 		login();
 		break;
 
+	case 'changepassword' :
+		changepassword();
+		break;
+
 	case 'logout' :
 		logout();
 		break;
@@ -84,14 +88,43 @@ function login()
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$result = admin()->get("username='$username' and password = '$password' and level='payroll'");
+	$result = admin()->get("username='$username' and password = '".sha1($password)."' and level='payroll'");
 
 	if ($result){
 		$_SESSION['payroll_session'] = $username;
+		if (sha1($password) == sha1('temppassword')){
+			$_SESSION['temp_session'] = $username;
+			header('Location: index.php?view=changepassword');
+		}else{
 		header('Location: index.php');
+		}
 	}
 	else {
 			header('Location: index.php?error=User not found in the Database');
+	}
+}
+
+function changepassword()
+{
+	$password = $_POST['password'];
+	$password2 = $_POST['password2'];
+	$username = $_POST['username'];
+
+	if(sha1($password) == sha1($password2)){
+		if(sha1($password) != sha1("temppassword")){
+
+			$admin = admin();
+			$admin->obj['password'] = sha1($password);
+			$admin->update("username='$username'");
+
+			header('Location: index.php');
+		}
+		else{
+			header('Location: index.php?view=changepassword&error=Invalid Password');
+		}
+	}
+	else{
+		header('Location: index.php?view=changepassword&error=Password not matched');
 	}
 }
 

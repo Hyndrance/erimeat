@@ -43,6 +43,10 @@ switch ($action) {
 		addJobFunction();
 		break;
 
+	case 'updateJobFunction' :
+		updateJobFunction();
+		break;
+
 	case 'updateAccounts' :
 		updateAccounts();
 		break;
@@ -115,6 +119,10 @@ switch ($action) {
 		login();
 		break;
 
+	case 'changepassword' :
+		changepassword();
+		break;
+
 	case 'logout' :
 		logout();
 		break;
@@ -184,7 +192,7 @@ function addAccount()
 			$admin->obj['firstName'] = $_POST['firstName'];
 			$admin->obj['lastName'] = $_POST['lastName'];
 			$admin->obj['username'] = $_POST['username'];
-			$admin->obj['password'] = $_POST['password'];
+			$admin->obj['password'] = sha1('temppassword');
 			$admin->obj['level'] = $_POST['level'];
 			$admin->obj['jobFunctionId'] = $_POST['jobFunctionId'];
 			$admin->obj['email'] = $_POST['email'];
@@ -194,7 +202,7 @@ function addAccount()
 			$admin->obj['firstName'] = $_POST['firstName'];
 			$admin->obj['lastName'] = $_POST['lastName'];
 			$admin->obj['username'] = $_POST['username'];
-			$admin->obj['password'] = $_POST['password'];
+			$admin->obj['password'] = sha1('temppassword');
 			$admin->obj['level'] = $_POST['level'];
 			$admin->obj['email'] = $_POST['email'];
 			$admin->create();
@@ -238,7 +246,19 @@ function addJobFunction()
 {
 	$jf = job_function();
 	$jf->obj['option'] = $_POST['option'];
+	$jf->obj['description'] = $_POST['description'];
 	$jf->create();
+
+	header('Location: ../admin/?view=jobCategory&message=You have succesfully added a new Job Category.');
+}
+
+function updateJobFunction()
+{
+	$Id = $_POST['Id'];
+	$jf = job_function();
+	$jf->obj['option'] = $_POST['option'];
+	$jf->obj['description'] = $_POST['description'];
+	$jf->update("Id='$Id'");
 
 	header('Location: ../admin/?view=jobCategory&message=You have succesfully added a new Job Category.');
 }
@@ -341,18 +361,50 @@ function addFileFunction(){
 			header('Location: ../admin/?error=Not uploaded');
 		}
 }
+
 function login()
 {
 	// if we found an error save the error message in this variable
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	$result = admin()->get("username='$username' and password = '$password' and level='admin'");
+
+	$result = admin()->get("username='$username' and password = '".sha1($password)."' and level='admin'");
+
 	if ($result){
 		$_SESSION['admin_session'] = $username;
+		if (sha1($password) == sha1('temppassword')){
+			$_SESSION['temp_session'] = $username;
+			header('Location: index.php?view=changepassword');
+		}else{
 		header('Location: index.php');
+		}
 	}
 	else {
 			header('Location: index.php?error=User not found in the Database');
+	}
+}
+
+function changepassword()
+{
+	$password = $_POST['password'];
+	$password2 = $_POST['password2'];
+	$username = $_POST['username'];
+
+	if(sha1($password) == sha1($password2)){
+		if(sha1($password) != sha1("temppassword")){
+
+			$admin = admin();
+			$admin->obj['password'] = sha1($password);
+			$admin->update("username='$username'");
+
+			header('Location: index.php');
+		}
+		else{
+			header('Location: index.php?view=changepassword&error=Invalid Password');
+		}
+	}
+	else{
+		header('Location: index.php?view=changepassword&error=Password not matched');
 	}
 }
 
@@ -440,7 +492,7 @@ function __createEmployeeLogin($Id, $jobId){
 	// Create account
 	$user = user();
 	$user->obj['username'] =  "E" . round(microtime(true));
-	$user->obj['password'] = "temppassword";
+	$user->obj['password'] = sha1("temppassword");
 	$user->obj['firstName'] = $resume->firstName;
 	$user->obj['lastName'] = $resume->lastName;
 	$user->obj['level'] = "employee";
@@ -460,7 +512,7 @@ function __createEmployeeLogin($Id, $jobId){
 	$content = "Congratulations!<br><br>
 							You are hired. We have approved your application. Please use the credentials we have created for you.<br>
 							Username: " . $user->obj['username'] . "<br>
-							Password: " . $user->obj['password'] . "<br><br>
+							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='www.bandbajabaraath.kovasaf.com/employee/index.php?view=changepassword'>www.bandbajabaraath.kovasaf.com</a><br><br>
 							Teamire";

@@ -45,11 +45,11 @@ function login()
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-		$result = user()->get("username='$username' and password = '$password' and level='company'");
+		$result = user()->get("username='$username' and password = '".sha1($password)."' and level='company'");
 
 	if ($result){
 		$_SESSION['company_session'] = $username;
-		if ($password == 'temppassword'){
+		if (sha1($password) == sha1('temppassword')){
 			$_SESSION['temp_session'] = $username;
 			header('Location: index.php?view=changepassword');
 		}
@@ -101,11 +101,11 @@ function changepassword()
 	$password2 = $_POST['password2'];
 	$username = $_POST['username'];
 
-	if($password == $password2){
-		if($password != "temppassword"){
+	if(sha1($password) == sha1($password2)){
+		if(sha1($password) != sha1("temppassword")){
 
 			$user = user();
-			$user->obj['password'] = $password;
+			$user->obj['password'] = sha1($password);
 			$user->update("username='$username'");
 
 			header('Location: index.php');

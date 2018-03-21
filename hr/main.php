@@ -13,7 +13,7 @@ function __setJob($jobId){
 }
 
 ?>
-<center><h1>Welcome to Admin home page</h1></center>
+<center><h1>Welcome to HR home page</h1></center>
 
 <div class="row">
 
