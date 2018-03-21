@@ -387,8 +387,8 @@
     /* Stylinf the toggle lable */
     .toggle2 {
         display: block;
-        background-color: #212121;;
-        padding:10px 20px;
+        background-color: #212121;
+        padding: 0px 20px;
         color:#3399cc;
         font-size:17px;
         text-decoration:none;
@@ -486,7 +486,7 @@
     .toggle23 {
         display: block;
         background-color: #212121;;
-        padding:10px 20px;
+        padding:0px 20px;
         color:#3399cc;
         font-size:17px;
         text-decoration:none;
@@ -585,7 +585,7 @@
     .toggle24 {
         display: block;
         background-color: #212121;;
-        padding:10px 20px;
+        padding:0px 20px;
         color:#3399cc;
         font-size:17px;
         text-decoration:none;
