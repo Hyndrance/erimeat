@@ -76,11 +76,11 @@ function formatDate($val){
     </p>
 
     <div class="col-md-2 text-center">
-      <h2><?=getApplicantCount($Id);?></h2>
+      <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
       <p>Applicants</p>
     </div>
     <div class="col-md-2 text-center m-b-30">
-      <h2>60</h2>
+      <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
       <p>Views</p>
     </div>
     <div class="clearfix"></div>

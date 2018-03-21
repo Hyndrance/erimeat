@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-20 23:13:23
+# Date: 2018-03-21 21:46:25
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -26,7 +26,7 @@ CREATE TABLE `admin` (
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0'),(43,'hr','8cb2237d0679ca88db6464eac60da96345513964','hr','hr','hr','3','a@a.com','0'),(44,'payroll','4de4727ba00457f7e5330d2c36ed39d9a59714db','payroll','payroll','payroll','0','payroll@payroll.com','0');
+INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0'),(45,'payroll','4de4727ba00457f7e5330d2c36ed39d9a59714db','payroll','payroll','payroll','0','payroll@payroll.com','0');
 
 #
 # Structure for table "city_option"
@@ -67,12 +67,13 @@ CREATE TABLE `company` (
   `jobFunctionId` varchar(11) DEFAULT NULL,
   `isApproved` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
 #
 
+INSERT INTO `company` VALUES (1,'C1521625640','Villacar Transit','11111111111','We are a domestic transport company','torredale1014@gmail.com','Dale Torre','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','Domestic Transport','1','1'),(2,'C1521625707','Ace Hardware','22222222222','We are a hardware company','rgmak12@gmail.com','Mark Mendoza','(+61) 234-567-890','(+61) 612-345-678','Billboard, Billboard','Hardware Supplier','9','1');
 
 #
 # Structure for table "country_option"
@@ -84,13 +85,13 @@ CREATE TABLE `country_option` (
   `country` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0: notDeleted, 1: Deleted',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "country_option"
 #
 
-INSERT INTO `country_option` VALUES (1,'Philippines','0'),(2,'Australia','0'),(4,'India','0');
+INSERT INTO `country_option` VALUES (1,'Philippines','0'),(2,'Australia','0'),(4,'India','0'),(5,'Rhode Island','0');
 
 #
 # Structure for table "downloads"
@@ -103,7 +104,7 @@ CREATE TABLE `downloads` (
   `uploadedFile` varchar(255) DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "downloads"
@@ -130,12 +131,13 @@ CREATE TABLE `dtr` (
   `createDate` date DEFAULT NULL,
   `status` varchar(1) DEFAULT '0' COMMENT '0:login, 1:break, 2:break2, 3:lunch, 4:logout',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "dtr"
 #
 
+INSERT INTO `dtr` VALUES (1,1,'E1521626802','18:08:27','18:08:30','18:08:27','18:08:28','18:08:29','18:08:30','18:08:29','18:08:28','2018-03-20','4'),(2,1,'E1521626802','18:08:40','18:08:44','18:08:41','18:08:41','18:08:43','18:08:44','18:08:42','18:08:42','2018-03-19','4'),(3,1,'E1521626802','18:08:51','18:08:55','18:08:52','18:08:52','18:08:54','18:08:54','18:08:53','18:08:53','2018-03-21','4');
 
 #
 # Structure for table "employee"
@@ -155,7 +157,7 @@ CREATE TABLE `employee` (
 # Data for table "employee"
 #
 
-INSERT INTO `employee` VALUES (22,3,'E1521530493','2018-03-20 15:21:33','1');
+INSERT INTO `employee` VALUES (23,1,'E1521626802','2018-03-21 18:06:42','1');
 
 #
 # Structure for table "faq"
@@ -169,12 +171,13 @@ CREATE TABLE `faq` (
   `level` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "faq"
 #
 
+INSERT INTO `faq` VALUES (9,'',NULL,NULL,'0');
 
 #
 # Structure for table "inquiries"
@@ -215,7 +218,7 @@ CREATE TABLE `interview_date` (
 # Data for table "interview_date"
 #
 
-INSERT INTO `interview_date` VALUES (10,'6','2018-03-21','01:00:00');
+INSERT INTO `interview_date` VALUES (11,'8','2018-03-23','01:00:00');
 
 #
 # Structure for table "invoice"
@@ -228,12 +231,13 @@ CREATE TABLE `invoice` (
   `timesheetId` varchar(11) DEFAULT NULL,
   `owner` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "invoice"
 #
 
+INSERT INTO `invoice` VALUES (1,'1521627069','1','E1521626802');
 
 #
 # Structure for table "job"
@@ -258,13 +262,15 @@ CREATE TABLE `job` (
   `createDate` datetime DEFAULT NULL,
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
   `contactName` varchar(100) DEFAULT NULL,
+  `viewCounter` varchar(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
+INSERT INTO `job` VALUES (1,'1521625776',1,4,'Bus Driver','Villacar Transit','11111111111','torredale1014@gmail.com','Operations Manager','(+61) 234-567-890','6100','Billboard, Billboard','1-3 Years','We are looking for an experience bus driver','2018-03-21 17:57:15','1','Dale Torre','9');
 
 #
 # Structure for table "job_function"
@@ -286,7 +292,7 @@ CREATE TABLE `job_function` (
 # Data for table "job_function"
 #
 
-INSERT INTO `job_function` VALUES (1,'tran','Transportation','Transporation','Transportation expert hiring made easy','Enter description here..','0'),(2,'pro','Procurement','Procurement','Procurement expert hiring made easy','Involves the process of selecting vendors, establishing payment terms, strategic vetting, selection, the negotiation of contracts and actual purchasing of goods. We are concerned with acquiring (procuring) all of the goods, services, and work that is vital to an organization. Procurement is, essentially, the overarching or umbrella term within which purchasing can be found.','0'),(3,'sup','Supply Planning','Supply Planning','Supply Planning expert hiring made easy','Involve with determining how best to fulfill the requirements created from the Demand Plan. Our objective is to balance supply and demand in a manner that we achieve the financial and service objectives of the enterprise.','0'),(4,'log','Logistics','Logistics','Logistics expert hiring made easy','Enter description here..\n','0'),(5,'tra','Training Certification','Training Certification','Training Certification expert hiring made easy','Gain a practical, how-to overview of the entire training function. Through modeling of the best practices and latest techniques in training delivery, discover the 4Ps of training: Purpose & Assessment, Planning & Preparation, Presentation & Facilitation, and Performance & Evaluation.','0'),(6,'dem','Demand Planning','Demand Planning','Demand Planning expert hiring made easy','A multi-step operational supply chain management (SCM) process used to create reliable forecasts. We can quickly guide users to improve the accuracy of revenue forecasts, align inventory levels with peaks and troughs in demands, and help enhance profitability for a given channel or product.','0'),(7,'ord','Order Fulfillment','Order Fulfillment','Order Fulfillment expert hiring made easy','We facilitate customer orders through the order fulfillment cycle. In internal advocacy and voice for sales and customer needs.','0'),(8,'man','Manufacturing','Manufacturing\t','Manufacturing expert hiring made easy','We cover work performed in mechanical, physical, or components into new products. Assembling of component parts for manufactured products also falls under this umbrella unless the activity is appropriately classified in Construction.','0'),(9,'war','Warehousing','Warehousing','Warehousing expert hiring made easy','Enter description here..\n','0'),(11,'0','Customer Service',NULL,NULL,'We offer good customer service1','0'),(12,'0','Web Services',NULL,NULL,'We offer IT solutions from hardware to software services','0');
+INSERT INTO `job_function` VALUES (1,'tran','Transportation','Transporation','Transportation expert hiring made easy','Enter description here..','0'),(2,'pro','Procurement','Procurement','Procurement expert hiring made easy','Involves the process of selecting vendors, establishing payment terms, strategic vetting, selection, the negotiation of contracts and actual purchasing of goods. We are concerned with acquiring (procuring) all of the goods, services, and work that is vital to an organization. Procurement is, essentially, the overarching or umbrella term within which purchasing can be found.','0'),(3,'sup','Supply Planning','Supply Planning','Supply Planning expert hiring made easy','Involve with determining how best to fulfill the requirements created from the Demand Plan. Our objective is to balance supply and demand in a manner that we achieve the financial and service objectives of the enterprise.','0'),(4,'log','Logistics','Logistics','Logistics expert hiring made easy','Enter description here..\n','0'),(5,'tra','Training Certification','Training Certification','Training Certification expert hiring made easy','Gain a practical, how-to overview of the entire training function. Through modeling of the best practices and latest techniques in training delivery, discover the 4Ps of training: Purpose & Assessment, Planning & Preparation, Presentation & Facilitation, and Performance & Evaluation.','0'),(6,'dem','Demand Planning','Demand Planning','Demand Planning expert hiring made easy','A multi-step operational supply chain management (SCM) process used to create reliable forecasts. We can quickly guide users to improve the accuracy of revenue forecasts, align inventory levels with peaks and troughs in demands, and help enhance profitability for a given channel or product.','0'),(7,'ord','Order Fulfillment','Order Fulfillment','Order Fulfillment expert hiring made easy','We facilitate customer orders through the order fulfillment cycle. In internal advocacy and voice for sales and customer needs.','0'),(8,'man','Manufacturing','Manufacturing\t','Manufacturing expert hiring made easy','We cover work performed in mechanical, physical, or components into new products. Assembling of component parts for manufactured products also falls under this umbrella unless the activity is appropriately classified in Construction.','0'),(9,'war','Warehousing','Warehousing','Warehousing expert hiring made easy','Enter description here..\n','0'),(11,'0','Customer Service',NULL,NULL,'We offer good customer service','0'),(12,'0','Web Services',NULL,NULL,'We offer IT solutions from hardware to software services','0');
 
 #
 # Structure for table "position_type"
@@ -318,7 +324,7 @@ CREATE TABLE `projects` (
   `createDate` datetime DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "projects"
@@ -364,7 +370,7 @@ CREATE TABLE `resume` (
 # Data for table "resume"
 #
 
-INSERT INTO `resume` VALUES (6,3,1,'E1521530493','1521530357','Mark','Mendoza','22-22-2222','22222222222','22222','torredale1014@gmail.com','(+61) 222-222-222','jsdlfjsadlfjldsjflsjdfljsdfj','jljsadlfjsldjflkdsjfljs','1','neg occ','1111','asdsaldjalskdlsadsdsadasdsad','1521530357.pdf','asdadsadasdasdsad','1521530357.png','0',NULL,'1','1','0'),(7,0,3,NULL,'1521548690','dale','torre','11-11-1111','11111111111','1111','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','sdfsdfsdafdsafdsafdsafsadfsadfdsaf','1521548690.txt','asdfsdfsdf','1521548690.PNG','0',NULL,'0','0','0');
+INSERT INTO `resume` VALUES (8,1,1,'E1521626802','1521626606','Kevin','Sumalde','10-23-1994','00000000000','000000000','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','heheheehehhe hire me na bla','1521626606.pdf','www.bandwidthplace.com/asdfsf/123123','1521626606.png','0',NULL,'1','1','0'),(9,0,6,NULL,'1521627802','Kevin','Sumalde','66-66-6666','66666666666','666666','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100',' sdfsdfsdf sdfsdfsdf sdfsdfsdf sdfsdfsdf sdfsdfsdf','1521627802.txt','dsfsdfdsf','1521627802.png','0',NULL,'0','0','0'),(11,1,1,NULL,'1521629634','asdfsfsdf','sdfsfsdf','11-11-1111','87777777777','C1521625640','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','1','Negros Occidental','6100','asdfsafsdfsdfdsfasdfsafsdfsdfdsfasdfsafsdfsdfdsfasdfsafsdfsdfdsfasdfsafsdfsdfdsf','1521629634.txt','asdfdsfdsfdsfsdaf','1521629634.PNG','0',NULL,'0','0','0');
 
 #
 # Structure for table "timesheet"
@@ -379,12 +385,13 @@ CREATE TABLE `timesheet` (
   `status` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:verified, 2:dispute, 3:approved',
   `createDate` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "timesheet"
 #
 
+INSERT INTO `timesheet` VALUES (1,1,'E1521626802','Timesheet as of 2018-03-21 11:09:02','3','2018-03-21 18:09:02');
 
 #
 # Structure for table "timesheet_dispute"
@@ -416,9 +423,10 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
+INSERT INTO `user` VALUES (1,'C1521625640','8cb2237d0679ca88db6464eac60da96345513964','Dale Torre','Villacar Transit','company'),(2,'C1521625707','2b8889e80cb6afc64ea9923339183799475b1123','Mark Mendoza','Ace Hardware','company'),(3,'E1521626802','8cb2237d0679ca88db6464eac60da96345513964','Kevin','Sumalde','employee');
