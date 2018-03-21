@@ -26,7 +26,7 @@
 </div>
   <div class="row">
      <nav class="top">
-    <label for="drop1" class="toggle1" style="background-color: #022664;color: #fff; float: right; border-bottom: none;" >Top Navigation <i class="fa fa-bars"></i></label>
+    <label for="drop1" class="toggle1" style="background-color: #022664;color: #fff; float: right; border-bottom: none; padding: 10px 20px;" >Top Navigation <i class="fa fa-bars"></i></label>
         <input type="checkbox" id="drop1" />
           <ul class="menu1">
                 <li>
@@ -47,15 +47,15 @@
             </ul>
          </nav>
     </div>
-<div class="row" >
+<div class="row">
 
-        <nav style="padding-left: 2%; width: 1350px; margin: 0 auto;">
+        <nav style="width: 1350px; margin: 0 auto;">
         <label for="drop" style="border-bottom: none; background-color: #212121;" class="toggle"><i class="fa fa-bars"></i> Main Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
                 <li>
                     <!-- First Tier Drop Down -->
-                    <label for="drop-1" class="toggle">Employers <b class="fa fa-chevron-right m-l-15 text-blue"></b></label>
+                    <label for="drop-1" class="toggle" style=>Employers <b class="fa fa-chevron-right m-l-15 text-blue"></b></label>
                     <a href="#">Employers <b class="fa fa-chevron-right m-l-15 text-primary"></b></a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
@@ -87,8 +87,8 @@
                     </ul>
                 </li>
             </ul>
-      <div class="pull-right m-t-5" style="padding-right: 4%;">
-        <span class="text-white pull-left m-r-5" style="margin-top: 2px;">+61 452 364 793 | </span>
+      <div class="pull-right m-t-10 hidden-xs" style="padding-right: 2%;">
+        <span class="text-white pull-left m-r-5" style="margin-top: 1px;">+61 452 364 793 | </span>
         <ul>
         <li><a class="icons" href="https://www.facebook.com/" target="blank_"><img src="../include/assets/images/facebook.png"></a></li>
         <li><a class="icons" href="https://www.twitter.com/" target="blank_"><img src="../include/assets/images/twitter.png"></a></li>
@@ -261,10 +261,11 @@ li > a:only-child:after { content: ''; }
     .toggle {
         display: block;
         background-color: #2e2e2e;
-        padding:14px 20px;
+        padding: 10px 20px;
         color: #ffffff;
         font-size:17px;
         text-decoration:none;
+        min-width: 1350px;
         border:none;
         margin-bottom: 0;
         border-bottom: 2px solid #212121;
@@ -540,7 +541,7 @@ li > a:only-child:after { content: ''; }
     .toggle1 {
         display: block;
         background-color: #212121;
-        padding:10px 20px;
+        padding: 0px 20px;
         color:#3399cc;
         font-size:17px;
         text-decoration:none;

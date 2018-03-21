@@ -31,12 +31,12 @@
 
         <footer style="padding: 0; padding-left: 0 !important; color: #FFFFFF; background-color: #4A555C;">
           <div class="row">
-            <nav style="padding-left: 2%;" class="foot">
-             <label for="drop2" class="toggle2" style="background-color: #022664;color: #fff;" >ABOUT US <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
+            <nav class="foot">
+             <label for="drop2" class="toggle2" style="background-color: #022664;color: #fff; padding: 5px 20px; padding-top: 10px;">ABOUT US <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
               <input type="checkbox" id="drop2" />
               <ul class="menu1">
                 <li>
-                    <label for="drop-1" class="toggle2 footer-res"><a  href="../home/?view=projects" ><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How we do this</a></label>
+                    <label for="drop-1" class="toggle2 footer-res"><a style="color: white;" href="../home/?view=aboutUs#howWeDoThis">How We Do This</a></label>
                 </li>
                 <li>
                     <label for="drop-2" class="toggle2 footer-res"> <a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></label>
@@ -55,36 +55,33 @@
                 </li>
             </ul>
          </nav>
-          <nav style="padding-left: 2%;" class="foot2">
-            <label for="drop23" class="toggle23" style="background-color: #022664;color: #fff;" >RESOURCES <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
+          <nav class="foot2">
+            <label for="drop23" class="toggle23" style="background-color: #022664;color: #fff; padding: 5px 20px; padding-top: 10px;">RESOURCES <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
                 <input type="checkbox" id="drop23" />
                   <ul class="menu23">
                 <li>
-                    <label for="drop-1" class="toggle23 footer-res"><a style="color: white;" href="../home/?view=services">Our Services</a></label>
+                    <label for="drop-1" class="toggle23 footer-res" style="min-width: 1350px;"><a style="color: white;" href="../home/?view=services">Our Services</a></label>
                 </li>
                 <li>
                     <label for="drop-2" class="toggle23 footer-res"><a class="text-white" href="../home/?view=projects">Projects</a></label>
                 </li>
-                <li style="visibility: hidden;">
-                    <label for="drop-2" class="toggle23 footer-res" >Government Notice</label>
-                </li>
             </ul>
           </nav>
-           <nav style="padding-left: 2%;" class="foot3">
-              <label for="drop24" class="toggle24" style="background-color: #022664;color: #fff;" >LEGAL <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
+           <nav class="foot3">
+              <label for="drop24" class="toggle24" style="background-color: #022664;color: #fff; padding: 5px 20px; padding-top: 10px;">LEGAL <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
                 <input type="checkbox" id="drop24" />
                   <ul class="menu24">
                 <li>
-                    <label for="drop-1" class="toggle24 text-white footer-res" style="padding: 20px 40px;">Fraud Alert</label>
+                    <label for="drop-1" class="toggle24 text-white footer-res" style="padding: 10px 40px;">Fraud Alert</label>
                 </li>
                 <li>
-                    <label for="drop-2" class="toggle24 text-white footer-res" style="padding: 20px 40px;">Privacy Policy</label>
+                    <label for="drop-2" class="toggle24 text-white footer-res" style="padding: 10px 40px;">Privacy Policy</label>
                 </li>
                   <li>
-                    <label for="drop-2" class="toggle24 text-white footer-res" style="padding: 20px 40px;">Terms of Use</label>
+                    <label for="drop-2" class="toggle24 text-white footer-res" style="padding: 10px 40px;">Terms of Use</label>
                 </li>
                   <li>
-                    <label for="drop-2" class="toggle24 text-white" style="margin-bottom: 0; padding: 20px 40px;">Government Notice</label>
+                    <label for="drop-2" class="toggle24 text-white" style="margin-bottom: 0; padding: 10px 40px;">Government Notice</label>
                 </li>
             </ul>
           </nav>
