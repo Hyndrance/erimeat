@@ -1,8 +1,13 @@
-<div class="row">
-<h2 class="text-muted text-center" style="margin-top:18%;"><i class="mdi mdi-account-off mdi-48px"></i><br>No Clients Available</h2>
-<?php foreach (company()->list() as $row) {
+<?php
+$companyList = company()->list();
 ?>
 
+<div class="row">
+<?php if(empty($companyList)) {?>
+  <h2 class="text-muted text-center" style="margin-top:18%;"><i class="mdi mdi-account-off mdi-48px"></i><br>No Clients Available</h2>
+<?php }else {?>
+  <?php foreach ($companyList as $row) {
+  ?>
   <div class="col-md-4">
       <div class="text-center card-box">
           <div class="clearfix"></div>
@@ -35,7 +40,7 @@
   </div> <!-- end col -->
 
 <?php
-}
+} }
 ?>
 
 </div>

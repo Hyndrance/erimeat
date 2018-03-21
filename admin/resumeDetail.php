@@ -83,7 +83,7 @@ function getCity($Id){
                 </button>
               </div>
               <div class="col-lg-6">
-                <button class="btn btn-danger pull-right" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$resume->Id;?>'">
+                <button class="btn btn-danger pull-left" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$resume->Id;?>'">
                   Reject
                 </button>
               </div>
