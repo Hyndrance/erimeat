@@ -13,7 +13,7 @@ function formatDate($val){
 }
 ?>
 
-<div style="position: relative;height: 300px;">
+<div style="position: relative;">
   <img style="position: absolute; top:0; right:0; height: 300px;" src="../include/assets/images/homepage-bg-1.png">
 <div class="container-80 container-fluid m-b-30">
 <h2 class="m-t-20 text-center">Supply Chain Projects</h2>
@@ -53,7 +53,6 @@ function formatDate($val){
 ?>
 </div>
 </div>
-
 <div class="container-fluid m-b-30">
     <div class="container-80 center-page">
         <div class="col-md-10 center-page p-b-30">

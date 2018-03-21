@@ -5598,6 +5598,14 @@ ul.sitemap-icon ul li a {
     background-color: #eeeeee;
     padding: 30px; }
 
+/** Grey Form Panel **/
+  .faq-container{
+    background-color: #022664;
+    padding: 30px;
+    color: #ffffff;
+    opacity: 0.9;
+    border-radius: 5px;}
+
 /** Horizontal Line **/
   .h-line {
     background-color: #ffffff;
