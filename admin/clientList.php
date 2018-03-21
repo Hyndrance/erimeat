@@ -1,4 +1,5 @@
 <div class="row">
+<h2 class="text-muted text-center" style="margin-top:18%;"><i class="mdi mdi-account-off mdi-48px"></i><br>No Clients Available</h2>
 <?php foreach (company()->list() as $row) {
 ?>
 

@@ -103,24 +103,6 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function() {
-  $('#myModal').on('show.bs.modal', function(e) {
-    var id = $(e.relatedTarget).data('id');
-     $('#getId').val(id);
-     return (id);
-
-  });
-});
-
-$(document).ready(function() {
-  $('#myModal1').on('show.bs.modal', function(e) {
-    var id = $(e.relatedTarget).data('id');
-     $('#getId').val(id);
-     return (id);
-
-  });
-});
-
 $(function() {
     $('#hr').hide();
     $('#level').change(function(){
@@ -184,34 +166,6 @@ function getDownload(id){
       console.log(datastring+url);
     }
 
-function getAccount(id){
-    var datastring = 'action=getAccount&'+'id='+id;
-    var url = 'fetch_accounts.php';
-    $('#myModal1').modal({
-      keyboard: true,
-      backdrop: 'static'
-    });
-
-    $.ajax({
-      type: "POST",
-      data: datastring,
-      url: url,
-      dataType: 'json',
-      success:function (data){
-
-        $('#getId').val(data.Id);
-        $('#getUsername').val(data.username);
-        $('#getFirstName').val(data.firstName);
-        $('#getLastName').val(data.lastName);
-        $('#getEmail').val(data.email);
-        $('#getLevel').val(data.level);
-
-
-      }
-    });
-    console.log(datastring+url);
-  }
-
 function getFaq(id){
     var datastring = 'action=getFaq&'+'id='+id;
     var url = 'fetch_faq.php';
@@ -232,31 +186,6 @@ function getFaq(id){
         $('#getAnswer').html(data.answer);
         $('#getLevel').val(data.level);
 
-
-      }
-    });
-    console.log(datastring+url);
-  }
-
-function getProjects(id){
-    var datastring = 'action=getProjects&'+'id='+id;
-    var url = 'fetch_projects.php';
-    $('#myModal1').modal({
-      keyboard: true,
-      backdrop: 'static'
-    });
-
-    $.ajax({
-      type: "POST",
-      data: datastring,
-      url: url,
-      dataType: 'json',
-      success:function (data){
-
-        $('#getId').val(data.Id);
-        $('#getTitle').val(data.title);
-        $('#getContent').html(data.content);
-        $('#getImage').html(data.uploadedImage);
 
       }
     });

@@ -50,12 +50,10 @@ function formatDate($val){
               ?>
               <tr>
                 <td><?=$row->title;?></td>
-                <td><?=$row->content;?></td>
+                <td style="word-break:break-all;"><?=$row->content;?></td>
                 <td><?=formatDate($row->createDate);?></td>
                 <td>
-                  <?php
-                    echo  '<a href="#" onclick="getProjects('.$id.')" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>';
-                  ?>
+                  <a href="#" data-toggle="modal" data-target="#update-account-modal-<?=$row->Id?>" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>
                 </td>
                 <td>
                   <a href="process.php?action=removeProjects&Id=<?=$row->Id;?>"  class=" btn btn-danger btn-xs tooltips" title="Click To Edit"><span class="fa fa-close"></span>Remove</a>
@@ -92,7 +90,7 @@ function formatDate($val){
                 <label>Project Title</label>
                 <input type="text" class="form-control" name="title" placeholder="">
               </div>
-              
+
               <div class="form-group">
               <label>Content</label>
               <textarea id="message" class="form-control" name="content"
@@ -118,7 +116,8 @@ function formatDate($val){
   </div><!-- /.modal -->
 </div>
 
-  <div id="myModal1" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+<?php foreach ($projectsList as $row) {?>
+  <div id="update-account-modal-<?=$row->Id;?>" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog modal-lg">
           <div class="modal-content">
               <div class="modal-header">
@@ -130,25 +129,25 @@ function formatDate($val){
                    <p class="m-b-0">
                       <?=$error?>
                   </p>
-                  <input type="hidden" name="Id" id="getId">
+                  <input type="hidden" name="Id" value="<?=$row->Id;?>">
                   <div class="row m-t-20">
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" name="title" id="getTitle">
+                        <input type="text" class="form-control" name="title" value="<?=$row->title;?>">
                       </div>
 
                       <div class="form-group">
                       <label>Content</label>
-                      <textarea  class="form-control" name="content" id="getContent"
+                      <textarea  class="form-control" name="content"
                                         data-parsley-trigger="keyup" data-parsley-minlength="20"
                                         data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
-                                        data-parsley-validation-threshold="10"></textarea>
+                                        data-parsley-validation-threshold="10"><?=$row->content;?></textarea>
                       </div>
 
                       <div class="form-group">
                         <label>Upload Image</label>
-                        <input type="file" class="form-control" name="upload_file" id="getImage" accept=".png, .jpg, .jpeg">
+                        <input type="file" class="form-control" name="upload_file" accept=".png, .jpg, .jpeg">
                         <span class="help-block"><small>Supported File: .png, .jpg, .jpeg</small></span>
                       </div>
                     </div>
@@ -162,3 +161,4 @@ function formatDate($val){
           </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+<?php } ?>
