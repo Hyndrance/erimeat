@@ -6,6 +6,11 @@ function getJobFunction($Id){
   $job = job_function()->get("Id='$Id'");
   echo $job->option;
 }
+
+function getCity($Id){
+  $city = city_option()->get("Id='$Id'");
+  echo $city->city;
+}
 ?>
 
 <div class="container container-fluid">
@@ -30,7 +35,7 @@ function getJobFunction($Id){
           <p><label class="m-r-5">Address 2 :</label><?=$resume->address2;?></p>
         </div>
       </div>
-      <p><label class="m-r-5">City :</label><?=$resume->city;?></p>
+      <p><label class="m-r-5">City :</label><?=getCity($resume->city);?></p>
       <p><label class="m-r-5">State :</label><?=$resume->state;?></p>
       <p><label class="m-r-5">Postal Code :</label><?=$resume->zipCode;?></p>
       <hr>
@@ -45,10 +50,10 @@ function getJobFunction($Id){
       <div class="clearfix"></div>
       <div class="col-12 m-t-30">
         <div class="col-lg-6">
-          <button class="btn btn-success pull-right" style="width:350px;">Update</button>
+          <!-- <button class="btn btn-info pull-right" style="width:350px;">Set an Interview</button> -->
         </div>
         <div class="col-lg-6">
-          <button class="btn btn-danger pull-left" style="width:350px;" onclick="location.href='process.php?action=removeCandidate&Id=<?=$resume->Id;?>'">Remove</button>
+          <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-default pull-left" style="width:350px;">More Info</button>
         </div>
       </div>
   </div>

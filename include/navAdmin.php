@@ -4,6 +4,12 @@
             <i class="mdi mdi-home"></i><span> Home </span>
         </a>
     </li>
+    
+    <li>
+        <a href="?view=clientList">
+            <i class="mdi mdi-account-plus"></i><span> Clients </span>
+        </a>
+    </li>
 
     <li>
         <a href="javascript: void(0);"><i class="fi-briefcase"></i> <span> Application </span> <span class="menu-arrow"></span></a>
@@ -11,12 +17,6 @@
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=scheduleInterview">Schedule Interview</a></li>
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=candidates">Candidates</a></li>
         </ul>
-    </li>
-
-    <li>
-        <a href="?view=clientList">
-            <i class="mdi mdi-account-plus"></i><span> Clients </span>
-        </a>
     </li>
 
       <li>
