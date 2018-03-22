@@ -31,12 +31,25 @@
                   <div class="chat-closed"><span class="fa fa-comment"></span> Chat Now </div>
                       <div class="chat-header hide"><div class="box"></div>Online Support</div>
                         <div class="chat-content hide">
+                        <div class="container">
+                          <p>Welcome! here are some of our quick links below.</p>
+                           <ul>
+                              <li><a  href="../home/?view=aboutUs#howWeDoThis">How we do this</a></li>
+                              <li><a  href="../home/?view=aboutUs#ourVision">Our Vision</a></li>
+                              <li><a  href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></li>
+                              <li><a  href="../home/?view=logins">Timesheets</a></li>
+                              <li><a  href="../home/?view=contactUs">Contact Us</a></li>
+                              <li><a  href="../home/?view=services">Our Services</a></li>
+                              <li><a  href="../home/?view=projects">Projects</a></li>
+                           </ul>
+                        </div>
                           <div class="well">
                             <div id="output"></div>
                           </div>
                               <div id="container" class="container">
                                   <input type="text" id="input" value="" class="form-control">
-                              </div>
+                              </div><br>
+                              <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>

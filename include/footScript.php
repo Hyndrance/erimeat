@@ -223,15 +223,16 @@ function bot() {
     output.innerHTML = '<p>hello ' + input + '</p>';// output response
     document.getElementById("input").value = "";      // clear text box
     question = '<p>how old are you?</p>';           // load next question   
-    setTimeout(timedQuestion, 2000);                  // output next question after 2sec delay
+    setTimeout(timedQuestion, 1000);                  // output next question after 2sec delay
     }
 
     else if (questionNum == 1) {
-    output.innerHTML = '<p>That means you were born in ' + (2016 - input) + '</p>';
-    document.getElementById("input").value = "";   
-    question = '<p>Want to search job?</p>';                  
-    setTimeout(timedQuestion, 2000);
-    }   
+    output.innerHTML = '<p>That means you were born in ' + (2018 - input) + '</p>';
+    document.getElementById("input").style.visibility="hidden";   
+    question = '<p>Want to search job?Click the link below</p><br><a href="../home/?view=searchJob">Search Job</a>';                  
+    setTimeout(timedQuestion, 1000);
+    } 
+ 
 }
 
 function timedQuestion() {
