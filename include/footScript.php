@@ -192,6 +192,7 @@ function getFaq(id){
     console.log(datastring+url);
   }
 </script>
+<!--script for triggering chatbot-->
 <script type="text/javascript">
 $(document).ready(function(){
     $(".chat-closed").on("click",function(e){
@@ -206,6 +207,7 @@ $(document).ready(function(){
 });
 
 </script>
+<!--script for chatbot content-->
 <script type="text/javascript">
   var questionNum = 0;                          // keep count of question, used for IF condition.
 var question = '<p>what is your name?</p>';         // first question
@@ -245,6 +247,7 @@ $(document).keypress(function(e) {
 });
 
 </script>
+
 <script type="text/javascript">
     $('#carousel-example-captions').carousel();
 </script>
