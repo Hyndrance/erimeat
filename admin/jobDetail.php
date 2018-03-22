@@ -35,22 +35,20 @@ function formatDate($val){
         </div>
 
         <p class="text-muted">Created at: </label><?=formatDate($job->createDate);?></p>
-    <div class="col-12 m-t-30">
-      <div class="col-lg-4">
+    <div class="row m-t-20">
+      <div class="col-lg-6">
         <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
         <br>
         <?=$job->jobTitle;?>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         <i class="fa fa-envelope m-r-5"></i><?=$job->workEmail;?>
         <br>
         <i class="fa fa-phone m-r-5"></i><?=$job->businessPhone;?>
       </div>
-      <div class="col-lg-4">
-      </div>
     </div>
     <div class="clearfix"></div>
-    <div class="col-12 m-t-30">
+    <div class="row m-t-20">
       <div class="col-lg-4">
         ABN: <?=$job->abn;?>
       </div>
@@ -66,12 +64,23 @@ function formatDate($val){
 
         <!--  This button only shows if job is approved -->
         <?php if($job->isApproved==0) {?>
-          <button class="btn btn-blue" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
-          <button class="btn btn-warning" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
-          <button class="btn btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
+          <div class="center-page text-center">
+            <div class="row col-12">
+              <div class="col-lg-4">
+          <button class="btn btn-blue" style="width: 100%;" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
+        </div>
+        <div class="col-lg-4">
+          <button class="btn btn-warning" style="width: 100%;" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
+        </div>
+        <div class="col-lg-4">
+          <button class="btn btn-success" style="width: 100%;" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
+        </div>
         <?php } ?>
         <?php if($job->isApproved==-1) {?>
           <button class="btn btn-warning" type="button">Waiting for the updated info</button>
+        </div>
+        </div>
+        <div class="clearfix"></div>
         <?php } ?>
         <br>
 
