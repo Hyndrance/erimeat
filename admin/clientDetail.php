@@ -12,7 +12,7 @@ function getJobFunction($Id){
   <div class="col-12 m-t-30">
     <h2><?=$company->name;?></h2>
     <div class="row p-t-10 p-b-10">
-    <div class="col-12">
+    <div>
       <div class="col-lg-4">
         <label class="m-r-5">Department: </label><?=$company->department;?>
         <br>
@@ -29,8 +29,8 @@ function getJobFunction($Id){
       </div>
     </div>
     </div>
-    <h4 class="m-t-30 m-b-30">Job Category: <?=getJobFunction($company->jobFunctionId);?></h4>
-    <div class="col-12">
+    <h4 class="m-t-20 m-b-30">Job Category: <?=getJobFunction($company->jobFunctionId);?></h4>
+    <div class="row">
       <div class="col-lg-6">
         <label class="m-r-5">Australian Business Number: </label><?=$company->abn;?>
       </div>

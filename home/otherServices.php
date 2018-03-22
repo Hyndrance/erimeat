@@ -18,31 +18,15 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
   <!-- Start About Us Content -->
   <div class="center-page container-80">
   <ul style="padding-left: 0;">
-    <li class="other-services">
-      <div class="m-b-30 p-20">
-        <p style="font-size: 25px; font-weight: bold;" class="text-center">Sample Sample</p>
-        <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor
-        sit amet lorem ipsum dolor. Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor
-        sit amet lorem ipsum dolor.</p>
-      </div>
-    </li>
-    <li class="other-services">
-      <div class="m-b-30 p-20">
-        <p style="font-size: 25px; font-weight: bold;" class="text-center">Sample Sample</p>
-        <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor
-        sit amet lorem ipsum dolor. Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor
-        sit amet lorem ipsum dolor.</p>
-      </div>
-    </li>
-  </ul>
-
     <?php foreach($jobFunc as $row){?>
-    <h3 class="text-center m-b-30"><?=$row->option;?></h3>
-    <p class="text-center m-b-30" style="font-size: 17px;">
-      <?=$row->description;?>
-    </p>
-  <?php } ?>
-
+    <li class="other-services">
+      <div class="m-b-30 p-20">
+        <p style="font-size: 25px; font-weight: bold;" class="text-center"><?=$row->option;?></p>
+        <p class="text-center"><?=$row->description;?></p>
+      </div>
+    </li>
+    <?php } ?>
+  </ul>
     <div class="form-container m-b-30 m-t-30">
       <div class="row">
         <form action="process.php?action=create" method="POST" id="default-wizard" data-parsley-validate="">
