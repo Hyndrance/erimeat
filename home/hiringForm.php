@@ -4,7 +4,7 @@ $ptList = position_type()->list();
 ?>
 
 
-<div class="row m-b-30">
+<div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
         <h2 style="position: absolute;top: 23%; left: 42%;" class="text-white"> Talent Request </h2>

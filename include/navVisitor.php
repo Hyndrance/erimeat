@@ -55,8 +55,8 @@
             <ul class="menu">
                 <li>
                     <!-- First Tier Drop Down -->
-                    <label for="drop-1" class="toggle" style=>Employers <b class="fa fa-chevron-right m-l-15 text-blue"></b></label>
-                    <a href="#">Employers <b class="fa fa-chevron-right m-l-15 text-primary"></b></a>
+                    <label for="drop-1" class="toggle">Employers <b class="fa fa-chevron-down m-l-15 text-blue"></b></label>
+                    <a href="#">Employers <b class="fa fa-chevron-down m-l-15 text-primary"></b></a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
                         <li><a   href="../home/?view=hiringForm">Request Talent</a></li>
@@ -67,8 +67,8 @@
                 </li>
                 <li>
                 <!-- First Tier Drop Down -->
-                <label for="drop-2" class="toggle">Job Seekers <b class="fa fa-chevron-right m-l-15 text-blue"></b></label>
-                <a href="#">Job Seekers <b class="fa fa-chevron-right m-l-15 text-primary"></b></a>
+                <label for="drop-2" class="toggle">Job Seekers <b class="fa fa-chevron-down m-l-15 text-blue"></b></label>
+                <a href="#">Job Seekers <b class="fa fa-chevron-down m-l-15 text-primary"></b></a>
                 <input type="checkbox" id="drop-2"/>
                     <ul>
                          <li><a   href="../home/?view=searchJob">Search Job</a></li>
@@ -78,8 +78,8 @@
                 </li>
                  <li>
                     <!-- First Tier Drop Down -->
-                    <label for="drop-3" class="toggle">Work With Us <b class="fa fa-chevron-right m-l-15 text-blue"></b></label>
-                    <a href="#">Work With Us <b class="fa fa-chevron-right m-l-15 text-primary"></b></a>
+                    <label for="drop-3" class="toggle">Work With Us <b class="fa fa-chevron-down m-l-15 text-blue"></b></label>
+                    <a href="#">Work With Us <b class="fa fa-chevron-down m-l-15 text-primary"></b></a>
                     <input type="checkbox" id="drop-3"/>
                     <ul>
                         <li><a   href="../home/?view=services">Our Services</a></li>
@@ -126,7 +126,7 @@ body {
 nav {
     margin:0;
     padding: 0;
-    background-color: #022664;
+    background-color: rgba(0, 0, 0, 0.3) ;
 }
 
 #logo {
@@ -161,7 +161,7 @@ nav ul li {
     margin: 0px;
     display:inline-block;
     float: left;
-    background-color: #022664;
+    background-color: rgba(0, 0, 0, 0);
     }
 
 /* Styling the links */
@@ -175,13 +175,13 @@ nav a {
 }
 
 
-nav ul li ul li:hover { background-color: #021844;
+nav ul li ul li:hover { background-color: rgba(0, 0, 0, 0.7);
 
 }
 
 /* Background color change on Hover */
 nav a:hover {
-    background-color: #021844;
+    background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
 }
 
@@ -191,7 +191,7 @@ nav ul ul {
     display: none;
     position: absolute;
     /* has to be the same number as the "line-height" of "nav a" */
-    top: 50px;
+    top: 52px;
 }
 
 /* Display Dropdowns on Hover */
@@ -207,7 +207,7 @@ nav ul ul li {
     float:none;
     display:list-item;
     position: relative;
-    background-color: #232d33;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border-bottom: 2px solid #545e65;
 }
@@ -363,7 +363,7 @@ li > a:only-child:after { content: ''; }
 
 }
 #above-nav a {
-    color: #fff;
+    color: #0064c8;
     text-decoration: none;
     transition: color 0.1s, background-color 0.1s;
 
@@ -374,7 +374,7 @@ li > a:only-child:after { content: ''; }
     padding: 2px 0;
     margin: 0 12px;
     line-height: 16px;
-    color: #eeeeee;
+    color: #0064c8;
     font-family: "Futura BT W01 Book",OpenSansRegular,"Open Sans Regular",sans-serif;
 }
 #above-nav a::before {
@@ -388,7 +388,7 @@ li > a:only-child:after { content: ''; }
 
     transform-origin: right top;
     transform: scale(0, 0);
-    border-bottom: 0.5px solid #fff;
+    border-bottom: 0.5px solid #0064c8;
 }
 #above-nav a:active::before {
     background-color: #337ab7;
@@ -623,7 +623,7 @@ li > a:only-child:after { content: ''; }
         /* has to be the same number as the "width" of "nav ul ul li" */
 
     }
-  
+
 
 }
 
