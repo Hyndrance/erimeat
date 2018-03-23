@@ -107,7 +107,7 @@ function uploadMultipleFile($uploadedFile){
 		// File name
 	   	$filename = $uploadedFile['name'][$i];
 	   	// Get extension
-  		 $ext = end((explode(".", $filename)));
+  		 $ext = explode(".", $filename);
 		   if(move_uploaded_file($uploadedFile['tmp_name'][$i],'../media/'.$filename)){
 		   		$filenameList[] = $filename;
 			}

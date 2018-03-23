@@ -226,8 +226,10 @@ function submitApplication()
 		$abn = $_POST["abn"];
 		$jobFunctionId = $_POST['jobFunctionId'];
 
-		$upload = uploadFile($_FILES['upload_file']);
-		if ($upload)
+		$uploadFile = uploadFile($_FILES['upload_file']);
+		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
+
+		if ($uploadFile && !isset($uploadList['error']))
 		{
 			$res = resume();
 			$res->obj['jobId'] = $_POST["jobId"];
@@ -247,12 +249,18 @@ function submitApplication()
 			$res->obj['zipCode'] = $_POST["zipCode"];
 			$res->obj['speedtest'] = $_POST["speedtest"];
 			$res->obj['coverLetter'] = $_POST["coverLetter"];
-			$res->obj['uploadedResume'] = $upload;
+			$res->obj['uploadedResume'] = $uploadFile;
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
-			$res->obj['uploadedCerts'] = uploadFile($_FILES["upload_certs"]);
 			$res->create();
 
 			$resume = resume()->get("abn='$abn'");
+
+			foreach($uploadList as $file){
+				$certs = certificates();
+				$certs->obj['resumeId']  = $resume->Id;
+				$certs->obj['uploadedCerts'] = $file;
+				$certs->create();
+			}
 
 			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
 			$adminList = admin()->list("level='admin'");
