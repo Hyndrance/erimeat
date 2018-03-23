@@ -65,7 +65,6 @@ function getJobFunction($Id){
            <?php foreach($adminList as $row) {
 
             if ($row->isDeleted==0){
-              $id = $row->Id;
               ?>
               <tr>
                 <td><?=$row->firstName;?> <?=$row->lastName;?> </td>
