@@ -185,11 +185,15 @@ function submitResume(){
 			$res->create();
 
 			$resume = resume()->get("abn='$abn'");
-	
-			$certs = certificates();
-			$certs->obj['resumeId']  = $resume->Id;
-			$certs->obj['uploadedCerts'] = uploadFile($_FILES["upload_certs"]);
-			$certs->create();			
+
+			$uploadList = $_FILES["upload_certs"];
+
+			foreach($uploadList as $file){
+				$certs = certificates();
+				$certs->obj['resumeId']  = $resume->Id;
+				$certs->obj['uploadedCerts'] = uploadFile($file);
+				$certs->create();
+			}
 
 			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
 			$adminList = admin()->list("level='admin'");
