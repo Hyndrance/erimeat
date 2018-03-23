@@ -308,6 +308,7 @@
                 </div>
             </div>
             <div style="padding: 30px 0; margin-top: 0; bottom: 0; background-color: #000; flex: 0 0 100%; max-width: 100%;">
+              <div style="width: 95%; margin: 0 auto; height: 1px; background-color: #fff;"></div>
                 <p style="font-size: 40px;" class="text-center text-white">
                     LET US BE YOUR STRENGTH
                 </p>
