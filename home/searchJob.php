@@ -86,13 +86,13 @@ function formatDate($val){
         <option>Select City</option>
     </select> -->
     <!-- </div> -->
-<?php if(!$jobList){?>
+<?php if(!$jobList && $s && $c){?>
   <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px m-t-30"></i><br>No Jobs Found</h3>
 <?php }else{?>
+  <?php foreach($jobList as $row) {
+    if ($row->isApproved==1){
+  ?>
   <div class="form-container container m-t-30 m-b-30">
-    <?php foreach($jobList as $row) {
-      if ($row->isApproved==1){
-    ?>
     <div class="row center-page job-list-row">
         <div class="col-lg-4 job-list-summary">
 
@@ -116,8 +116,8 @@ function formatDate($val){
         <?php } ?>
     </div>
     <br>
-  <?php } }?>
   </div> <!-- End List Container -->
+<?php } }?>
 
 </div>
 <br>

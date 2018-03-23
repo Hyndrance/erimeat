@@ -69,7 +69,7 @@ function getCity($Id){
 <!-- Static Date -->
 
 <div class="container m-t-30 m-b-30">
-  <?php if(!$resumeList){?>
+  <?php if(!$resumeList && $j && $c){?>
     <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px"></i><br>No Candidates Found</h3>
   <?php }else{?>
 
