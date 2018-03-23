@@ -12,8 +12,8 @@
     </head>
     <body>
         <!-- Navigation Bar-->
-        <header id="topnav">
-          <div class="bg-darkgrey">
+        <header id="topnav" style="position: absolute;">
+          <div class="">
               <?php
                 include 'navVisitor.php';
               ?>
@@ -22,7 +22,7 @@
           </div>
         </header>
         <!-- End Navigation Bar-->
-        <div class="wrapper">
+        <div class="wrapper" style="position:relative; margin-top: 157px;">
           <div style="width: 1350px; max-width: 100%; margin: 0 auto;">
               <?php
                 include $content;
@@ -52,13 +52,14 @@
                               <div class="clearfix"></div>
                         </div>
                     </div>
+                    <img src="../include/assets/images/footer-img.png" style="width: 1350px;">
                 </div>
             </div>
         <!-- end wrapper -->
         <!-- Footer -->
 
-        <footer style="padding: 0; padding-left: 0 !important; color: #FFFFFF; background-color: #4A555C;">
-          <div class="row">
+        <footer>
+          <div class="row" style="padding: 0; padding-left: 0 !important; color: #FFFFFF; background-color: #000000;">
             <nav class="foot">
              <label for="drop2" class="toggle2" style="background-color: #022664;color: #fff; padding: 5px 20px; padding-top: 10px;">ABOUT US <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
               <input type="checkbox" id="drop2" />
@@ -190,7 +191,7 @@
               </center>
               </div>
         </div>
-            <div class="container-fluid m-b-30 " style="padding: 30px 60px 10px 45px; color: #FFFFFF; background-color: #4a555c; bottom: 0;" id="con">
+            <div class="container-fluid" style="padding: 30px 60px 10px 45px; color: #FFFFFF; background-color: #000; bottom: 0;" id="con">
                 <div class="row center-page container">
                   <div class="container-fluid col-12 col-lg-2">
                     <h4 class="text-white" style="padding-left: 40px;">ABOUT US</h4>
@@ -288,43 +289,32 @@
                         <div class="row">
                           <div class="col-12 col-lg-9">
                             <p class="font-13">This information will not be transferred, disclosed, or shared with a third party,
-                              or used for marketing purposes.</p>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                              <button type="submit" class="btn-sm btn-blue stepy-finish pull-right"> SUBMIT </button>
-                        </div>
+                            or used for marketing purposes.</p>
+                          </div>
+                          <div class="col-12 col-lg-3">
+                            <button type="submit" class="btn-sm btn-blue stepy-finish pull-right"> SUBMIT </button>
+                          </div>
                         </div>
                         </form>
                   </div>
                 </div>
                   </div>
                 </div>
-                <div class="clearfix"></div>
+
                 <div class="col-lg-6">
-                  <b class="text-white">+61 452 364 793</b><br>
-                  © 2018 Teamire. Catalyst in continuous improvement.
+                  <b class="text-white"><i class="fa fa-phone"></i> +61 452 364 793</b><br>
+                  © 2018 Teamire. Catalyst in Continuous Improvement.
                 </div>
             </div>
-
-            <div style="border: none;" class="container-80 center-page">
-              <!-- <div class="col-md-4 text-center">Lorem ipsum</div> -->
-              <div class="clearfix"></div>
+            <div style="padding: 30px 0; margin-top: 0; bottom: 0; background-color: #000; flex: 0 0 100%; max-width: 100%;">
+                <p style="font-size: 40px;" class="text-center text-white">
+                    LET US BE YOUR STRENGTH
+                </p>
             </div>
-
-            <div style="padding: 30px 0; margin-top: 0; bottom: 0; background-color: #394249; flex: 0 0 100%; max-width: 100%;">
-
-                <p style="font-size: 40px;" class="text-center"><a href="#" class="text-white">
-                  LET US BE YOUR STRENGTH
-                </a></p>
-            </div>
-        </footer>
-
-
-
-        <!-- End Footer -->
+        </footer><!-- End Footer -->
         <?php
           include_once($footScript);
         ?>
-        
+
     </body>
 </html>

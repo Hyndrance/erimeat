@@ -9,20 +9,17 @@ function getPositionName($Id){
 ?>
 
 <div>
-  <div style="position:inherit;">
-
-    <div>
-      <img src="../include/assets/images/worldMap.png"  style="width: 100%;">
-    </div>
-
+  <div>
+    <div class="bgimg-1" style="min-height: 600px; top:0; margin-top: -157px;"></div>
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
-                <div class="col-md-12 text-center">
-                    <p class="carousel-title m-t-10" style="font-size: 40px; color: #fff; text-shadow: 2px 2px 2px #000000;">
-                      Ask us how to go virtual and hire the most qualified
-                      Supply Chain Professional for your business in unpredicted ways
+                <div class="col-md-12 text-center" style="min-width: 1350px;">
+                    <span class="m-t-10" style="font-size: 50px; line-height: 1;font-weight: bold; color: #0064c8;">
+                      WE'RE CRITICAL THINKERS
+                    </span>
+                    <p style="color: #0064c8; font-size: 27px;">Virtual Supply Chain Experts Creating Milestones
                     </p>
-                    <div class="row m-b-20" style="margin-top: 100px; width: 100%;">
+                    <div class="row m-b-20" style="margin-top: 100px; min-width: 1350px;">
                       <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
                       <button id="myBtn2" class="btn" style="width:382px;">LOOKING FOR A JOB?</button>
                     </div>
@@ -78,16 +75,15 @@ function getPositionName($Id){
     </div>
   </div>
   <div>
-<div style="position: relative;">
-  <img style="position: absolute; top:0; right:0;" src="../include/assets/images/homepage-bg-1.png">
+<div>
+<div class="bgimg-2">
 <div class="container">
-
 <div class="container-fluid m-t-30 m-b-30">
   <div class="container-80 text-center center-page">
-    <h2>
+    <h2 class="text-blue">
       Our Supply Chain Services
     </h2>
-    <div class="center-page" style="height: 2px; width: 20%; background-color: #3a3a3a;"></div>
+    <div class="center-page" style="height: 2px; width: 20%; background-color: #0064c8;"></div>
     <br>
   </div>
 <div class="row">
@@ -182,15 +178,12 @@ function getPositionName($Id){
 
 </div> <!-- container -->
 </div>
+</div>
     <!-- Basic Form Wizard -->
-<div style="position: relative;">
-  <hr>
-  <img style="position: absolute; top:0; left:0;" src="../include/assets/images/homepage-bg-2.png">
-  <br>
+<div class="bgimg-3">
     <div class="container-80 center-page">
 
-
-                                    <ul class="nav nav-tabs navtab-bg nav-justified">
+                                    <ul class="nav nav-tabs navtab-bg nav-justified m-t-30">
                                         <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
                                             <a href="#home1" data-toggle="tab" aria-expanded="false">
                                                 <span class="visible-xs"><i class="fa fa-home"></i></span>
@@ -207,19 +200,20 @@ function getPositionName($Id){
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane" id="home1">
-                                            <form id="wizard-clickable">
+                                            <form id="wizard-clickable" class="text-blue">
                                         <fieldset title="1">
                                             <legend>Tell us about your hiring needs</legend>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/services-img1.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img1.png" style="margin-left: 100px;width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 1: Tell us about your hiring needs</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 1: Tell us about your hiring needs</strong></h4>
                                                     <p>
                                                         Submit your job opening online in just minutes, or simply call us. Either way, our recruiting specialists will evaluate the skills, experience and corporate culture fit you require. We are 100% committed to finding employees who are the best fit for your company. Need someone today, or even weeks from now? No problem, we have you covered.
                                                     </p>
                                                 </div>
+                                                <div class="clearfix"></div>
                                             </div>
 
                                         </fieldset>
@@ -229,10 +223,10 @@ function getPositionName($Id){
 
                                        <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/services-img2.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img2.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 2: Your staffing options</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 2: Your staffing options</strong></h4>
                                                     <p>
                                                       Teamire is known for providing a selection of highly skilled professionals, and our staffing professionals can provide you with temporary, temporary-to-full-time, project and full-time staffing solutions. We even have our own full-time specialized employees, who you can hire on an interim or recurring basis. Wondering how to make the most of your hiring budget? There is no cost until you hire, so let’s talk.
                                                     </p>
@@ -245,10 +239,10 @@ function getPositionName($Id){
 
                                         <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/services-img3.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img3.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 3: Review and select candidates</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 3: Review and select candidates</strong></h4>
                                                     <p>
                                                       Finding candidates who are just the right fit for your role is our top priority. We will provide you with your choice of well-matched candidates, and our recommendations will be tailored to the nuances of your role and business. Then, once you select the best candidate, we’ll coordinate all aspects of the recruiting process, working hard to ensure a smooth start for you and your new employee.
                                                     </p>
@@ -260,10 +254,10 @@ function getPositionName($Id){
 
                                           <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/about-us-img6.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img4.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 4: Service and your happiness</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 4: Service and your happiness</strong></h4>
                                                     <p>
                                                       Ensuring you are happy with your hiring experience is what defines Robert Half. We are committed to the highest level of customer service, and we back it up with a satisfaction guarantee. Our communication, expert advice and recruiting support is provided on your terms, not just during the hiring process but beyond, creating a lasting relationship with you.
                                                     </p>
@@ -271,22 +265,22 @@ function getPositionName($Id){
                                             </div>
                                         </fieldset>
                                         <center>
-                                            <a href="../home/?view=hiringForm"  class="btn btn-primary">REQUEST TALENT</a>
+                                            <a href="../home/?view=hiringForm"  class="btn btn-primary m-t-30 m-b-30">REQUEST TALENT</a>
                                         </center>
                                            <button style="display: none;" type="submit" class="btn btn-blue btn-sm stepy-finish">Submit</button>
                                     </form>
 
                                         </div>
                                         <div class="tab-pane active" id="profile1">
-                                          <form id="default-wizard">
+                                          <form id="default-wizard" class="text-blue">
                                         <fieldset title="1">
                                                <legend>Search for jobs and apply</legend>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/services-img1.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img5.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 1: Search for jobs and apply</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 1: Search for jobs and apply</strong></h4>
                                                     <p>
                                                        Quickly and easily search our open positions to find one that fits your skills and experience. We have jobs with top local companies in your area.
                                                     </p>
@@ -301,10 +295,10 @@ function getPositionName($Id){
 
                                        <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/services-img2.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img6.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 2: Upload your resume</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 2: Upload your resume</strong></h4>
                                                     <p>
                                                     Our online form makes it easy to send us your resume or upload the details of your LinkedIn profile. We’ll then contact you if your qualifications meet the requirements of an open position or match what our clients typically look for.
                                                     </p>
@@ -317,10 +311,10 @@ function getPositionName($Id){
 
                                         <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/services-img3.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img7.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 3: Getting to know you</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 3: Getting to know you</strong></h4>
                                                     <p>
                                                      You are more than just a resume or an application. That is why we work so hard to understand your career goals, so that we can help you find a job that is just the right fit for you.
                                                     </p>
@@ -331,10 +325,10 @@ function getPositionName($Id){
                                             <legend>While we find the right fit</legend>
                                                <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="../include/assets/images/about-us-img6.jpg" style="width: 30%;height:30%;" class="img-circle img-thumbnail">
+                                                    <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <h4><strong>Step 4: While we find the right fit</strong></h4>
+                                                    <h4 class="text-blue"><strong>Step 4: While we find the right fit</strong></h4>
                                                     <p>
                                                      In addition to helping find your next career move, we are also here to help you with refining your resume, prepping you for interviews, and sharing local salary and hiring trends.
                                                     </p>
@@ -346,24 +340,19 @@ function getPositionName($Id){
                                         <button style="display: none;" type="submit" class="btn btn-blue btn-sm stepy-finish">Submit</button>
                                     </form>
                                       <center>
-                                            <a href="../home/?view=submitResume"  class="btn btn-blue m-t-30">SUBMIT RESUME</a>
+                                            <a href="../home/?view=submitResume"  class="btn btn-blue m-t-30 m-b-30">SUBMIT RESUME</a>
                                         </center>
                                         </div>
-
-
                                     </div>
-
-
+                                </div>
                       </div>
                         <!-- End row -->
 </div>
   <!-- Start Location Panels-->
-  <div style="position: relative;">
-    <hr>
-    <img style="position: absolute; top:0; right:0;" src="../include/assets/images/homepage-bg-3.png">
+  <div class="bgimg-4" style="min-height: 400px;">
       <div class="container center-page">
-        <h2 class="text-center">Business Partners</h2>
-        <div class="center-page" style="height: 2px; width: 20%; background-color: #3a3a3a;"></div>
+        <h2 class="text-center m-t-30 text-blue">Business Partners</h2>
+        <div class="center-page" style="height: 2px; width: 20%; background-color: #0064c8;"></div>
         <div class="row m-t-30">
           <div class="col-lg-1"></div>
 
@@ -404,7 +393,7 @@ function getPositionName($Id){
             <div class="col-lg-1"></div>
         </div>
       </div>
-      <div class="clearfix m-b-30"></div>
+      <div class="clearfix"></div>
         <!-- end row -->
   <!-- End Location Panels-->
   </div>

@@ -1045,7 +1045,7 @@ a:focus {
   color: #9aebff !important; }
 
 .text-blue {
-  color: #0e679f !important; }
+  color: #0064c8 !important; }
 
 .text-darkgrey {
   color: #292b2c !important; }
@@ -1481,14 +1481,14 @@ a:focus {
   border-color: rgba(49, 58, 70, 0.2) !important; }
 
 .btn-primary {
-  background-color: #022664 !important;
-  border: 1px solid #022664 !important; }
+  background-color: #477cbd !important;
+  border: 1px solid #477cbd !important; }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
 .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover,
 .open > .dropdown-toggle.btn-primary {
-  background-color: #011b46 !important;
-  border-color: #011b46 !important; }
+  background-color: #2e5f9b !important;
+  border-color: #2e5f9b !important; }
 
 .btn-success {
   background-color: #32c861 !important;
@@ -1547,12 +1547,12 @@ a:focus {
   border-color: #e95084 !important; }
 
 .btn-blue {
-  background-color: #022664 !important;
-  border: 1px solid #022664 !important; }
+  background-color: #477cbd !important;
+  border: 1px solid #477cbd !important; }
 
 .btn-blue:hover, .btn-blue:focus, .btn-blue:active {
-  background-color: #011b46 !important;
-  border-color: #011b46 !important; }
+  background-color: #2e5f9b !important;
+  border-color: #2e5f9b !important; }
 
 .btn-bordered {
   background-color: transparent !important; }
@@ -3196,7 +3196,7 @@ textarea.form-control {
       top: 43px;
       width: 50%;
       height: 2px;
-      background-color: #022664;
+      background-color: #0064c8;
       z-index: 9; }
     .stepy-header li:before {
       left: 0; }
@@ -3210,7 +3210,7 @@ textarea.form-control {
       color: #999;
       font-weight: 600; }
     .stepy-header li div {
-      background-color: #022664;
+      background-color: #0064c8;
       font-size: 0;
       position: relative;
       color: #ffffff;
@@ -3218,7 +3218,7 @@ textarea.form-control {
       margin-right: auto;
       width: 48px;
       height: 48px;
-      border: 2px solid #022664;
+      border: 2px solid #0064c8;
       z-index: 10;
       line-height: 44px;
       text-align: center;
@@ -3248,13 +3248,13 @@ textarea.form-control {
       content: none; }
   .stepy-header li.stepy-active div {
     cursor: auto;
-    border-color: #022664;
+    border-color: #0064c8;
     background-color: #ffffff;
-    color: #022664; }
+    color: #0064c8; }
     .stepy-header li.stepy-active div:after {
       content: "\F64F"; }
   .stepy-header li.stepy-active span {
-    color: #022664; }
+    color: #0064c8; }
 
 @media (max-width: 769px) {
   .stepy-header {
@@ -3267,7 +3267,7 @@ textarea.form-control {
       .stepy-header li:first-child:before, .stepy-header li:last-child:after {
         content: ''; }
     .stepy-header li.stepy-active:last-child:after {
-      background-color: #022664; } }
+      background-color: #0064c8; } }
 @media (max-width: 480px) {
   .stepy-header li {
     width: 100%; }
@@ -5752,10 +5752,10 @@ ul.sitemap-icon ul li a {
 
   /** Services Icons Hover **/
   .icons {
-    background-color: #acacac;  }
+    background-color: rgba(0, 100, 200, 0.5) }
 
   .icons:hover {
-    background-color: #022664;
+    background-color: #0064c8;
     transition:all 0.5s ease;  }
 
   .icons-container {
@@ -5823,3 +5823,33 @@ ul.sitemap-icon ul li a {
     .footer-res{
       margin-bottom: 0;
       border-bottom: 2px solid #545e65 !important; }
+
+    /** Images for parallax in homepage **/
+    .bgimg-1 {
+      background-image: url('../images/bgimg-1.png');
+      min-height: 100%; }
+
+    .bgimg-2 {
+      background-image: url('../images/bgimg-2.png');
+      min-height: 100%; }
+
+    .bgimg-3 {
+      background-image: url('../images/bgimg-3.png');
+      min-height: 100%; }
+
+    .bgimg-4 {
+      background-image: url('../images/bgimg-4.png');
+      min-height: 100%; }
+
+    /* .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4{
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } */
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4{
+      background-position: center;
+      background-size: cover; }
+
+    @media only screen and (max-device-width: 1024px) {
+      .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+          background-attachment: scroll; } }
