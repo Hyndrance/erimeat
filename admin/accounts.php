@@ -35,6 +35,17 @@ function getJobFunction($Id){
         <?=$message;?>
     </div>
   <?php }?>
+  <?php if($error){?>
+    <div>
+      <div class="alert alert-danger alert-dismissible fade in" role="alert">
+          <button type="button" class="close" data-dismiss="alert"
+                  aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          <?=$error;?>
+      </div>
+    </div>
+  <?php } ?>
       <div class="card-box table-responsive">
         <h4 class="page-title">Accounts</h4><br>
         <table id="datatable" class="table table-striped table-bordered">
@@ -92,9 +103,6 @@ function getJobFunction($Id){
       </div>
       <div class="modal-body">
         <form id="default-wizard" action="process.php?action=addAccount" method="POST">
-          <p class="m-b-0">
-            <?=$error;?>
-          </p>
           <div class="row m-t-20">
             <div class="col-sm-12">
               <div class="form-group">

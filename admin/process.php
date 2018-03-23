@@ -190,7 +190,7 @@ function addAccount()
 	$level = $_POST['level'];
 	$checkUser = admin()->get("username='$username'");
 
-	if($checkUser != '1'){
+	if($checkUser != 1){
 		if($level == 'hr'){
 			$admin = admin();
 			$admin->obj['firstName'] = $_POST['firstName'];
