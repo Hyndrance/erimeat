@@ -34,20 +34,8 @@ function create()
 	$jobFunctionId = $_POST['jobFunctionId'];
 
 	$job = job();
+	$job->obj = $_POST;
 	$job->obj['refNum'] = round(microtime(true));
-	$job->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$job->obj['positionTypeId'] = $_POST['positionTypeId'];
-	$job->obj['contactName'] = $_POST['contactName'];
-	$job->obj['position'] = $_POST['position'];
-	$job->obj['company'] = $_POST['company'];
-	$job->obj['abn'] = $_POST['abn'];
-	$job->obj['comment'] = $_POST['comment'];
-	$job->obj['address'] = $_POST['address'];
-	$job->obj['workEmail'] = $_POST['workEmail'];
-	$job->obj['jobTitle'] = $_POST['jobTitle'];
-	$job->obj['businessPhone'] = $_POST['businessPhone'];
-	$job->obj['zipCode'] = $_POST['zipCode'];
-	$job->obj['requiredExperience'] = $_POST['requiredExperience'];
 	$job->obj['createDate'] = "NOW()";
 	$job->create();
 
@@ -82,16 +70,7 @@ function clientRequest()
 		header('Location: ../home?view=clientForm&error=ABN already exist!');
 	}else{
 		$comp = company();
-		$comp->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-		$comp->obj['department'] = $_POST['department'];
-		$comp->obj['name'] = $_POST['name'];
-		$comp->obj['abn'] = $_POST['abn'];
-		$comp->obj['contactPerson'] = $_POST['contactPerson'];
-		$comp->obj['email'] = $_POST['email'];
-		$comp->obj['address'] = $_POST['address'];
-		$comp->obj['phoneNumber'] = $_POST['phoneNumber'];
-		$comp->obj['mobileNumber'] = $_POST['mobileNumber'];
-		$comp->obj['description '] = $_POST['description'];
+		$comp->obj = $_POST;
 		$comp->obj['isApproved '] = "1";
 		$comp->create();
 
@@ -165,23 +144,9 @@ function submitResume(){
 		if ($uploadFile && !isset($uploadList['error']))
 		{
 			$res = resume();
+			$res->obj = $_POST;
 			$res->obj['jobId'] = "0";
-			$res->obj['jobFunctionId'] = $_POST["jobFunctionId"];
 			$res->obj['refNum'] = round(microtime(true));
-			$res->obj['firstName'] = $_POST["firstName"];
-			$res->obj['lastName']= $_POST["lastName"];
-			$res->obj['birthdate'] = $_POST["birthdate"];
-			$res->obj['abn'] = $_POST["abn"];
-			$res->obj['taxNumber'] = $_POST["taxNumber"];
-			$res->obj['email'] = $_POST["email"];
-			$res->obj['phoneNumber'] = $_POST["phoneNumber"];
-			$res->obj['address1'] = $_POST["address1"];
-			$res->obj['address2'] = $_POST["address2"];
-			$res->obj['city'] = $_POST["city"];
-			$res->obj['state'] = $_POST["state"];
-			$res->obj['zipCode'] = $_POST["zipCode"];
-			$res->obj['speedtest'] = $_POST["speedtest"];
-			$res->obj['coverLetter'] = $_POST["coverLetter"];
 			$res->obj['uploadedResume'] = $uploadFile;
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
 			$res->create();
