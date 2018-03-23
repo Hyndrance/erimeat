@@ -115,6 +115,10 @@ switch ($action) {
 		denyResume();
 		break;
 
+	case 'denyCandidateResume' :
+		denyCandidateResume();
+		break;
+
 	case 'login' :
 		login();
 		break;
@@ -186,7 +190,7 @@ function addAccount()
 	$level = $_POST['level'];
 	$checkUser = admin()->get("username='$username'");
 
-	if($checkUser != '1'){
+	if($checkUser != 1){
 		if($level == 'hr'){
 			$admin = admin();
 			$admin->obj['firstName'] = $_POST['firstName'];
@@ -533,6 +537,22 @@ function denyResume()
 	sendEmail($resume->email, $content);
 
 	header('Location: index.php?view=resumeList&isApproved=0&jobId=' . $resume->jobId);
+}
+
+function denyCandidateResume()
+{
+	$Id=$_GET['Id'];
+	$resume = resume();
+	$resume->obj['isApproved'] = "-1";
+	$resume->update("Id='$Id'");
+
+	$resume = resume()->get("Id='$Id'");
+
+	// Send email
+	$content = __moreInfoEmailMessage();
+	sendEmail($resume->email, $content);
+
+	header('Location: index.php?view=candidates');
 }
 
 function removeCompany()

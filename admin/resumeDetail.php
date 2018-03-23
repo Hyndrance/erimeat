@@ -46,13 +46,13 @@ function getCity($Id){
       <p><label class="m-r-5">Speedtest: </label><?=$resume->speedtest;?><p>
         <div class="col-12 text-center">
           <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Specs: </label><br><?=$resume->uploadedSpecs;?><p>
+      <p><label class="m-r-5">Uploaded Specs: </label><br><a href="../media/<?=$resume->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a><p>
       </div>
       <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Certificate: </label><br><?=$resume->uploadedCerts;?><p>
+      <p><label class="m-r-5">Uploaded Certificate: </label><br><a href="../media/<?=$resume->uploadedCerts;?>" target="blank_">Click to view Candidate Resume</a><p>
       </div>
       <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Resume: </label><br><?=$resume->uploadedResume;?><p>
+      <p><label class="m-r-5">Uploaded Resume: </label><br><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a><p>
       </div>
     </div>
     </div>

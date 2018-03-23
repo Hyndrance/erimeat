@@ -35,6 +35,17 @@ function getJobFunction($Id){
         <?=$message;?>
     </div>
   <?php }?>
+  <?php if($error){?>
+    <div>
+      <div class="alert alert-danger alert-dismissible fade in" role="alert">
+          <button type="button" class="close" data-dismiss="alert"
+                  aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          <?=$error;?>
+      </div>
+    </div>
+  <?php } ?>
       <div class="card-box table-responsive">
         <h4 class="page-title">Accounts</h4><br>
         <table id="datatable" class="table table-striped table-bordered">
@@ -63,7 +74,7 @@ function getJobFunction($Id){
                 <td><?=$row->email;?></td>
                 <td><?=$row->level;?></td>
                 <td>
-                  <a href="#" data-toggle="modal" data-target="#update-account-modal-<?=$row->Id?>" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>
+                  <a href="#" data-toggle="modal" data-target="#update-account-modal-<?=$row->Id;?>" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>
                 </td>
                 <td>
                   <a href="process.php?action=removeAccounts&Id=<?=$row->Id;?>"  class=" btn btn-danger btn-xs tooltips" title="Click To Edit"><span class="fa fa-close"></span>Remove</a>
@@ -92,9 +103,6 @@ function getJobFunction($Id){
       </div>
       <div class="modal-body">
         <form id="default-wizard" action="process.php?action=addAccount" method="POST">
-          <p class="m-b-0">
-            <?=$error;?>
-          </p>
           <div class="row m-t-20">
             <div class="col-sm-12">
               <div class="form-group">

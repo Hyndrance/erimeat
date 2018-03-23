@@ -6,6 +6,11 @@ function getJobFunction($Id){
   $jobFunc = job_function()->get("Id='$Id'");
   echo $jobFunc->option;
 }
+
+function getCity($Id){
+  $city = city_option()->get("Id='$Id'");
+  echo $city->city;
+}
 ?>
 
 <div class="row">
@@ -30,7 +35,7 @@ function getJobFunction($Id){
                 <tr>
                     <td><?=getJobFunction($row->jobFunctionId); ?></td>
                     <td><?=$row->firstName; ?> <?=$row->lastName; ?></td>
-                    <td><?=$row->city; ?>, <?=$row->state; ?></td>
+                    <td><?=getCity($row->city);?>, <?=$row->state; ?></td>
                     <td>
                       <?php if($row->isHired==0){ ?>
                       <div class=" btn btn-warning btn-xs tooltips">

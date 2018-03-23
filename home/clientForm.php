@@ -3,7 +3,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $jfList = job_function()->list();
 ?>
 
-<div class="row m-b-30">
+  <div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
         <h2 style="position: absolute;top: 25%; left: 36%;" class="text-white"> Employer Registration Form </h2>
@@ -93,5 +93,4 @@ $jfList = job_function()->list();
           </div>
     </div>
 </div>
-
 <!-- End row -->

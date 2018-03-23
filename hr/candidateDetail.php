@@ -45,14 +45,14 @@ function getJobName($Id){
                     <span class="m-l-15"><?=$resume->coverLetter;?></span>
                   </p>
                   <br><br>
-                  <p class="text-muted font-13"><strong>Click to view specs :</strong>
-                    <span class="m-l-15"><a href="../media/<?=$resume->uploadedSpecs;?>"></a></span>
+                  <p class="text-muted font-13"><strong>Click to view specs</strong>
+                    <span class="m-l-15"><a href="../media/<?=$resume->uploadedSpecs;?>" target="blank_">Computer Specification</a></span>
                   </p>
                   <p class="text-muted font-13"><strong>Click to view resume :</strong>
-                    <span class="m-l-15"><a href="../media/<?=$resume->uploadedResume;?>"></a></span>
+                    <span class="m-l-15"><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
                   </p>
                   <p class="text-muted font-13"><strong>Click to view certificates :</strong>
-                    <span class="m-l-15"><a href="../media/<?=$resume->uploadedCerts;?>"></a></span>
+                    <span class="m-l-15"><a href="../media/<?=$resume->uploadedCerts;?>" target="blank_">Supporting Documents</a></span>
                   </p>
               </div>
             </div>

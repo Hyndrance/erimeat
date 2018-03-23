@@ -10,7 +10,7 @@ $downloadList = downloads()->list();
     <div class="col-sm-12">
      <br>
     <div class="pull-right">
-      <button type="button" class="btn btn-primary waves-effect waves-light btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Add New</button>
+      <button type="button" class="btn btn-primary waves-effect waves-light btn-sm" data-toggle="modal" data-target="#add-downloads-modal"><i class="fa fa-plus"></i> Add New</button>
 
     </div>
     <br>
@@ -45,7 +45,7 @@ $downloadList = downloads()->list();
             ?>
               <div class="col-12">
                           <div class="col-lg-3">
-                                <div class="file-man-box" data-toggle="modal" data-target="#update-account-modal-<?=$row->Id?>">
+                                <div class="file-man-box" data-toggle="modal" data-target="#update-downloads-modal-<?=$row->Id?>">
                                     <div class="file-img-box">
                                         <img src="../include/assets/images/file_icons/pdf.svg" alt="icon">
                                     </div>
@@ -67,7 +67,7 @@ $downloadList = downloads()->list();
     </div>
 
 <!-- sample modal content -->
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="add-downloads-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -103,7 +103,7 @@ $downloadList = downloads()->list();
 </div><!-- End row -->
 
 <?php foreach ($downloadList as $row) {?>
-<div id="update-account-modal-<?=$row->Id;?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="update-downloads-modal-<?=$row->Id;?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -121,7 +121,7 @@ $downloadList = downloads()->list();
             <div class="col-sm-12">
               <div class="form-group">
                 <label>File Name</label>
-                <input type="text" class="form-control" value="<?=$row->fileName;?>" name="fileNae" placeholder="">
+                <input type="text" class="form-control" value="<?=$row->fileName;?>" name="fileName" placeholder="">
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ $downloadList = downloads()->list();
             <div class="col-sm-12">
                     <div class="form-group">
                       <label>File Upload</label>
-                      <input type="file" class="form-control" name="upload_file" id="getFileUpload" accept=".pdf">
+                      <input type="file" class="form-control" name="upload_file" accept=".pdf">
                       <span class="help-block"><small>Supported File: .pdf</small></span>
                     </div>
                   </div>

@@ -22,7 +22,7 @@
           </div>
         </header>
         <!-- End Navigation Bar-->
-        <div class="wrapper" style="position:relative; margin-top: 157px;">
+        <div class="wrapper" style="position:relative; padding-top: 157px;">
           <div style="width: 1350px; max-width: 100%; margin: 0 auto;">
               <?php
                 include $content;
@@ -52,12 +52,13 @@
                               <div class="clearfix"></div>
                         </div>
                     </div>
-                    <img src="../include/assets/images/footer-img.png" style="width: 1350px;">
                 </div>
             </div>
         <!-- end wrapper -->
         <!-- Footer -->
-
+        <div style="width: 1350px; max-width: 100%; margin: 0 auto;">
+          <img src="../include/assets/images/footer-img.png" style="width: 1350px;">
+        </div>
         <footer>
           <div class="row" style="padding: 0; padding-left: 0 !important; color: #FFFFFF; background-color: #000000;">
             <nav class="foot">

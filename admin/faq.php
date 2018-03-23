@@ -10,7 +10,7 @@ $faqList = faq()->list();
     <div class="col-sm-12">
      <br>
     <div class="pull-right">
-      <button type="button" class="btn btn-primary waves-effect waves-light btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Add New</button>
+      <button type="button" class="btn btn-primary waves-effect waves-light btn-sm" data-toggle="modal" data-target="#add-faq-modal"><i class="fa fa-plus"></i> Add New</button>
 
     </div>
     <br>
@@ -48,9 +48,7 @@ $faqList = faq()->list();
                 <td><?=$row->answer;?></td>
                 <td><?=$row->level;?></td>
                 <td>
-                  <?php
-                    echo  '<a href="#" onclick="getFaq('.$id.')" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>';
-                  ?>
+                  <a href="#" data-toggle="modal" data-target="#update-faq-modal-<?=$row->Id;?>" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>
                 </td>
                 <td>
                   <a href="process.php?action=removeFaq&Id=<?=$row->Id;?>"  class=" btn btn-danger btn-xs tooltips" title="Click To Edit"><span class="fa fa-close"></span>Remove</a>
@@ -68,7 +66,7 @@ $faqList = faq()->list();
 </div>
 
 <!-- sample modal content -->
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="add-faq-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -97,9 +95,9 @@ $faqList = faq()->list();
 
               <div class="form-group">
                 <label>Level</label>
-                <select class="form-control" name="level" required="">on>
+                <select class="form-control" name="level" required="">
                    <option value="employer">Employer</option>
-                   <option value="employee">Job Seeker</option>
+                   <option value="employee">Employee</option>
                 </select>
               </div>
             </div>
@@ -114,7 +112,9 @@ $faqList = faq()->list();
   </div><!-- /.modal -->
 </div><!-- End row -->
 
-<div id="myModal1" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+
+<?php foreach ($faqList as $row) {?>
+<div id="update-faq-modal-<?=$row->Id;?>" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -126,28 +126,28 @@ $faqList = faq()->list();
                  <p class="m-b-0">
                     <?=$error?>
                 </p>
-                <input type="hidden" name="Id" id="getId">
+                <input type="hidden" name="Id" value="<?=$row->Id;?>">
                 <div class="row m-t-20">
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label>Question</label>
-                      <input type="text" class="form-control" name="question" id="getQuestion">
+                      <input type="text" class="form-control" name="question" value="<?=$row->question;?>">
                     </div>
 
                     <div class="form-group">
                     <label>Answer</label>
-                    <textarea  class="form-control" name="answer" id="getAnswer"
+                    <textarea  class="form-control" name="answer"
                                       data-parsley-trigger="keyup" data-parsley-minlength="20"
                                       data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
-                                      data-parsley-validation-threshold="10"></textarea>
+                                      data-parsley-validation-threshold="10"><?=$row->answer;?></textarea>
                     </div>
 
                     <div class="form-group">
                       <label>Level</label>
-                      <select class="form-control" name="level" id="getLevel">
-                       <option>Please Select</option>
+                      <select class="form-control" name="level">
+                       <option><?=$row->level;?></option>
                          <option value="employer">Employer</option>
-                         <option value="employee">Job Seeker</option>
+                         <option value="employee">Employee</option>
                       </select>
                     </div>
                   </div>
@@ -161,3 +161,4 @@ $faqList = faq()->list();
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<?php } ?>
