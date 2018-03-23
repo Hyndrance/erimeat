@@ -1,6 +1,6 @@
-﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-21 21:57:45
-# Generator: MySQL-Front 5.4  (Build 1.40)
+﻿# Host: localhost  (Version: 5.5.5-10.1.31-MariaDB)
+# Date: 2018-03-23 19:21:17
+# Generator: MySQL-Front 5.3  (Build 4.122)
 
 /*!40101 SET NAMES utf8 */;
 
@@ -27,6 +27,24 @@ CREATE TABLE `admin` (
 #
 
 INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0');
+
+#
+# Structure for table "certificates"
+#
+
+DROP TABLE IF EXISTS `certificates`;
+CREATE TABLE `certificates` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `uploadedCerts` varchar(255) DEFAULT NULL,
+  `resumeId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+#
+# Data for table "certificates"
+#
+
+INSERT INTO `certificates` VALUES (1,'1521850933.jpg',0),(2,'1521851135.jpg',0),(3,'1521851233.jpg',1);
 
 #
 # Structure for table "city_option"
@@ -357,12 +375,13 @@ CREATE TABLE `resume` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "resume"
 #
 
+INSERT INTO `resume` VALUES (1,0,8,NULL,'1521850933','ksldkalsk','slkdl','23-23-2323','12312312312','asdlklaskd','rgmak12@gmail.com','(+61) 123-333-333','kdqkwel','qweqwe','1','klasdl','1231','dklsakdlaslkdlaskdlkasldaslkdlaskdlaskdlkasldkalsdslakdasl','1521850933.txt','asldkl','1521850933.jpg',NULL,NULL,'0','0','0'),(2,0,8,NULL,'1521851135','ksldkalsk','slkdl','23-23-2323','12312312312','asdlklaskd','rgmak12@gmail.com','(+61) 123-333-333','kdqkwel','qweqwe','1','klasdl','1231','dklsakdlaslkdlaskdlkasldaslkdlaskdlaskdlkasldkalsdslakdasl','1521851135.txt','asldkl','1521851135.jpg',NULL,NULL,'0','0','0'),(3,0,8,NULL,'1521851232','ksldkalsk','slkdl','23-23-2323','12312312312','asdlklaskd','rgmak12@gmail.com','(+61) 123-333-333','kdqkwel','qweqwe','1','klasdl','1231','dklsakdlaslkdlaskdlkasldaslkdlaskdlaskdlkasldkalsdslakdaslsdfksldf','1521851232.txt','asldkl','1521851232.jpg',NULL,NULL,'0','0','0');
 
 #
 # Structure for table "timesheet"

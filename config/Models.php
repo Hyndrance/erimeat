@@ -127,4 +127,10 @@ function invoice() {
 	$crud->table = "invoice";
 	return $crud;
 }
+
+function certificates(){
+	$crud = new CRUD;
+	$crud->table = "certificates";
+	return $crud;	
+}
 ?>
