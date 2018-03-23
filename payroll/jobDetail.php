@@ -1,6 +1,16 @@
 <?php
 $Id = $_GET['Id'];
 $job = job()->get("Id=$Id");
+
+function getJobFunction($Id){
+  $jf = job_function()->get("Id='$Id'");
+  echo $jf->option;
+}
+
+function getPosition($Id){
+  $pt = position_type()->get("Id='$Id'");
+  echo $pt->option;
+}
 ?>
 
 <div class="container container-fluid">
@@ -12,10 +22,10 @@ $job = job()->get("Id=$Id");
         <p><label class="m-r-5">Zip Code: </label><?=$job->zipCode;?></p>
         <div class="row">
           <div class="col-lg-6">
-            <p><label class="m-r-5">Job Function ID: </label><?=$job->jobFunctionId;?></p>
+            <p><label class="m-r-5">Job Category: </label><?=getJobFunction($job->jobFunctionId);?></p>
           </div>
           <div class="col-lg-6">
-            <p><label class="m-r-5">Position Type ID: </label><?=$job->positionTypeId;?></p>
+            <p><label class="m-r-5">Employment Type: </label><?=getPosition($job->positionTypeId);?></p>
           </div>
         </div>
 
@@ -36,13 +46,10 @@ $job = job()->get("Id=$Id");
     </div>
     <div class="clearfix"></div>
     <div class="col-12 m-t-30">
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         ABN: <?=$job->abn;?>
       </div>
-      <div class="col-lg-4">
-        ID: <?=$job->Id;?>
-      </div>
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         Reference Number: <?=$job->refNum;?>
       </div>
     </div>
@@ -57,19 +64,9 @@ $job = job()->get("Id=$Id");
           <div class="center-page text-center">
           <h3 class="m-b-30">Detail</h3>
           <div class="row col-12">
-            <div class="col-lg-4">
-          <button class="btn btn-blue" onclick="location.href='?view=employeeList&jobId=<?=$job->Id?>&status=1'">
-              View <?=employee()->count("jobId=$job->Id and status=1");?> employees
-          </button>
-        </div>
-        <div class="col-lg-4">
+        <div class="col-lg-12">
           <button class="btn btn-warning" onclick="location.href='?view=timesheetList&jobId=<?=$job->Id?>'">
               View <?=timesheet()->count("jobId=$job->Id");?> timesheets
-          </button>
-        </div>
-        <div class="col-lg-4">
-          <button class="btn btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
-              View <?=resume()->count("jobId=$job->Id and isApproved=0");?> applicants
           </button>
         </div>
         </div>
