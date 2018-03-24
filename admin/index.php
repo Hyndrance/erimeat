@@ -166,6 +166,12 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
+	case 'openJobs' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'openJobs.php';
+		$template	= '../include/dashboard.php';
+		break;
+
 	case 'jobCategory' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'jobCategory.php';
