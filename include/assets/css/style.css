@@ -5598,13 +5598,26 @@ ul.sitemap-icon ul li a {
     background-color: #eeeeee;
     padding: 30px; }
 
-/** Grey Form Panel **/
+/** Blue Form Panel **/
   .faq-container{
     background-color: #022664;
     padding: 30px;
     color: #ffffff;
     opacity: 0.9;
     border-radius: 5px;}
+
+    .services-container1{
+      background-color: #459cb2;
+      padding: 30px;
+      color: #ffffff;
+      opacity: 0.9;
+      border-radius: 5px;}
+      .services-container2{
+        background-color: #e2e2e2;
+        padding: 30px;
+        color: #ffffff;
+        opacity: 0.9;
+        border-radius: 5px;}
 
 /** Horizontal Line **/
   .h-line {
@@ -5769,6 +5782,7 @@ ul.sitemap-icon ul li a {
     border: 1px solid #dddddd; border-top: none;
   }
 
+  /** Candidate List Alternate Div Color **/
   li.candidates {
     background: #eff0f1; }
 
@@ -5776,6 +5790,18 @@ ul.sitemap-icon ul li a {
     background: #fff; }
 
   li.candidates{
+    list-style-type: none; }
+
+  /** Other Services List Alternate Div Color **/
+  li.other-services {
+    background: #57a6b9;
+    color: #ffffff; }
+
+  li.other-services:nth-child(odd) {
+    background: #e4e4e4;
+    color: #3e4041;}
+
+  li.other-services{
     list-style-type: none; }
 
   a.icons{

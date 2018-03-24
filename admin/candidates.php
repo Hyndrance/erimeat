@@ -22,6 +22,7 @@ $resumeList = resume()->list();
           </thead>
           <tbody>
             <?php foreach($resumeList as $row) {
+              if($row->jobId==0){
             ?>
             <tr>
               <td><?=$row->refNum;?></td>
@@ -43,7 +44,7 @@ $resumeList = resume()->list();
               </td>
             </tr>
             <?php
-            }
+          } }
             ?>
           </tbody>
         </table>

@@ -113,84 +113,6 @@ $(function() {
         }
     });
 });
-
-function getdata(id){
-      var datastring = 'action=getdata&'+'id='+id;
-      var url = 'fetch_service.php';
-      $('#myModal').modal({
-        keyboard: true,
-        backdrop: 'static'
-      });
-
-      $.ajax({
-        type: "POST",
-        data: datastring,
-        url: url,
-        dataType: 'json',
-        success:function (data){
-
-          $('#getId').val(data.Id);
-          $('#getOption').val(data.option);
-          $('#getTitle').val(data.title);
-          $('#getHeader').html(data.header);
-          $('#getDescription').html(data.description);
-
-
-        }
-      });
-      console.log(datastring+url);
-    }
-
-function getDownload(id){
-      var datastring = 'action=getDownload&'+'id='+id;
-      var url = 'fetch_downloads.php';
-      $('#myModal1').modal({
-        keyboard: true,
-        backdrop: 'static'
-      });
-
-      $.ajax({
-        type: "POST",
-        data: datastring,
-        url: url,
-        dataType: 'json',
-        success:function (data){
-
-          $('#getId').val(data.Id);
-          $('#getFileName').val(data.fileName);
-          $('#getFileUpload').val(data.uploadedFile);
-
-
-        }
-      });
-      console.log(datastring+url);
-    }
-
-function getFaq(id){
-    var datastring = 'action=getFaq&'+'id='+id;
-    var url = 'fetch_faq.php';
-    $('#myModal1').modal({
-      keyboard: true,
-      backdrop: 'static'
-    });
-
-    $.ajax({
-      type: "POST",
-      data: datastring,
-      url: url,
-      dataType: 'json',
-      success:function (data){
-
-        $('#getId').val(data.Id);
-        $('#getQuestion').val(data.question);
-        $('#getAnswer').html(data.answer);
-        $('#getLevel').val(data.level);
-
-
-      }
-    });
-    console.log(datastring+url);
-  }
 </script>
 <!--script for triggering chatbot-->
 <script type="text/javascript">
@@ -215,24 +137,24 @@ var question = '<p>what is your name?</p>';         // first question
 var output = document.getElementById('output');       // store id="output" in output variable
 output.innerHTML = question;                          // ouput first question
 
-function bot() { 
+function bot() {
     var input = document.getElementById("input").value;
     console.log(input);
 
     if (questionNum == 0) {
     output.innerHTML = '<p>hello ' + input + '</p>';// output response
     document.getElementById("input").value = "";      // clear text box
-    question = '<p>how old are you?</p>';           // load next question   
+    question = '<p>how old are you?</p>';           // load next question
     setTimeout(timedQuestion, 1000);                  // output next question after 2sec delay
     }
 
     else if (questionNum == 1) {
     output.innerHTML = '<p>That means you were born in ' + (2018 - input) + '</p>';
-    document.getElementById("input").style.visibility="hidden";   
-    question = '<p>Want to search job?Click the link below</p><br><a href="../home/?view=searchJob">Search Job</a>';                  
+    document.getElementById("input").style.visibility="hidden";
+    question = '<p>Want to search job?Click the link below</p><br><a href="../home/?view=searchJob">Search Job</a>';
     setTimeout(timedQuestion, 1000);
-    } 
- 
+    }
+
 }
 
 function timedQuestion() {

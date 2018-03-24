@@ -31,16 +31,13 @@ $jobFunc = job_function()->list("code!='0'");
           <tbody>
            <?php foreach($jobFunc as $row) {
             if ($row->isDeleted==0){
-              $id = $row->Id;
               ?>
               <tr>
                 <td><?=$row->title;?></td>
                 <td><?=$row->header;?></td>
                 <td><?=$row->description;?></td>
                 <td>
-
-                  <?php echo  '<a href="#" onclick="getdata('.$id.')" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>';
-      ?>
+                  <a href="#" data-toggle="modal" data-target="#update-services-modal-<?=$row->Id;?>" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>
                 </td>
               </tr>
           <?php
@@ -56,7 +53,8 @@ $jobFunc = job_function()->list("code!='0'");
 
 
 <!-- sample modal content -->
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<?php foreach($jobFunc as $row) { ?>
+<div id="update-services-modal-<?=$row->Id;?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -69,17 +67,17 @@ $jobFunc = job_function()->list("code!='0'");
             <?=$error?>
           </p>
           <div class="row m-t-20">
-            <input type="hidden" name="Id" id="getId">
+            <input type="hidden" name="Id" value="<?=$row->Id;?>">
             <div class="col-sm-12">
               <div class="form-group">
                 <label>Services</label>
 
-                <input type="text" class="form-control" name="option" placeholder="" id="getOption">
+                <input type="text" class="form-control" name="option" placeholder="" value="<?=$row->option;?>">
               </div>
 
               <div class="form-group">
                 <label>Title</label>
-                <input type="text" class="form-control" name="title" placeholder="" id="getTitle">
+                <input type="text" class="form-control" name="title" placeholder="" value="<?=$row->title;?>">
               </div>
 
               <div class="form-group">
@@ -87,7 +85,7 @@ $jobFunc = job_function()->list("code!='0'");
                 <textarea class="form-control" name="header"
                                     data-parsley-trigger="keyup" data-parsley-minlength="20"
                                     data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
-                                    data-parsley-validation-threshold="10" id="getHeader"></textarea>
+                                    data-parsley-validation-threshold="10"><?=$row->header;?></textarea>
               </div>
 
               <div class="form-group">
@@ -95,7 +93,7 @@ $jobFunc = job_function()->list("code!='0'");
                   <textarea  class="form-control" name="description"
                                       data-parsley-trigger="keyup" data-parsley-minlength="20"
                                       data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
-                                      data-parsley-validation-threshold="10" id="getDescription"></textarea>
+                                      data-parsley-validation-threshold="10"><?=$row->description;?></textarea>
               </div>
             </div>
           </div>
@@ -107,3 +105,5 @@ $jobFunc = job_function()->list("code!='0'");
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+</div>
+<?php } ?>
