@@ -107,6 +107,10 @@ switch ($action) {
 		setInterViewDate();
 		break;
 
+	case 'setCandidateInterview' :
+		setCandidateInterview();
+		break;
+
 	case 'hireApplicant' :
 		hireApplicant();
 		break;
@@ -469,6 +473,33 @@ function setInterviewDate()
 	sendEmail($email, $content);
 
 	header('Location: index.php?view=resumeDetail&Id=' . $Id);
+}
+
+function setCandidateInterview()
+{
+	$email = $_POST['email'];
+	$Id = $_POST['resumeId'];
+	$date = $_POST['date'];
+	$time = $_POST['time'];
+
+	$intDate = interview_date();
+	$intDate->obj['resumeId'] = $Id;
+	$intDate->obj['date'] = $date;
+	$intDate->obj['time'] = $time;
+	$intDate->create();
+
+	$resume = resume();
+	$resume->obj['isApproved'] = "1";
+	$resume->update("Id='$Id'");
+
+	$content = "We have considered your application. Please be available on the schedule below<br>
+							for your interview.<br><br>
+							Date = $date<br>
+							Time = $time<br><br>
+							Teamire";
+	sendEmail($email, $content);
+
+	header('Location: index.php?view=candidatesDetail&Id=' . $Id);
 }
 
 function hireApplicant()

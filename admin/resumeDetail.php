@@ -61,7 +61,7 @@ function getCity($Id){
 <hr>
           <h3 class="text-center">Detail</h3>
           <?php if($resume->isApproved==0){?>
-            <div class="row  text-center m-b-30">
+            <div class="row text-center m-b-30">
               <div class="col-12">
                 <div class="col-lg-6">
                   <button class="btn btn-success pull-right" style="width:350px;" data-toggle="modal" data-target="#schedule-modal">

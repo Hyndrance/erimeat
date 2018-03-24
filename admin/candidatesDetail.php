@@ -48,6 +48,7 @@ function getCity($Id){
         </div>
       </div>
       <div class="clearfix"></div>
+      <?php if($resume->isApproved==0){?>
       <div class="col-12 m-t-30">
         <div class="col-lg-6">
           <button class="btn btn-info pull-right" style="width:350px;" data-toggle="modal" data-target="#schedule-modal">
@@ -58,6 +59,16 @@ function getCity($Id){
           <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-default pull-left" style="width:350px;">More Info</button>
         </div>
       </div>
+      <?php } ?>
+      <?php if($resume->isApproved==1){?>
+      <div class="col-12 m-t-30">
+        <div class="col-lg-12 text-center">
+          <button class="btn btn-info" style="width:350px;">
+            Assign Job
+          </button>
+        </div>
+      </div>
+      <?php } ?>
   </div>
 </div>
 
@@ -74,7 +85,7 @@ function getCity($Id){
                     </a>
                 </h2>
 
-                <form class="form-horizontal" action="process.php?action=setInterViewDate" method="post">
+                <form class="form-horizontal" action="process.php?action=setCandidateInterview" method="post">
 
                       <input type="hidden" name="resumeId" value="<?=$resume->Id;?>">
                       <input type="hidden" name="email" value="<?=$resume->email;?>">
