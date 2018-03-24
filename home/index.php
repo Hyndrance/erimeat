@@ -9,7 +9,7 @@ switch ($view) {
 
 	case 'home' :
 		$content 	= 'home.php';
-		$template	= '../include/template.php';
+		$template	= '../include/template-homepage.php';
 		break;
 
 	case 'logins' :
