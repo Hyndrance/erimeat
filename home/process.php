@@ -159,8 +159,10 @@ function submitResume(){
 		$abn = $_POST["abn"];
 		$jobFunctionId = $_POST['jobFunctionId'];
 
-		$upload = uploadFile($_FILES['upload_file']);
-		if ($upload)
+		$uploadFile = uploadFile($_FILES['upload_file']);
+		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
+
+		if ($uploadFile && !isset($uploadList['error']))
 		{
 			$res = resume();
 			$res->obj['jobId'] = "0";
@@ -180,18 +182,16 @@ function submitResume(){
 			$res->obj['zipCode'] = $_POST["zipCode"];
 			$res->obj['speedtest'] = $_POST["speedtest"];
 			$res->obj['coverLetter'] = $_POST["coverLetter"];
-			$res->obj['uploadedResume'] = $upload;
+			$res->obj['uploadedResume'] = $uploadFile;
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
 			$res->create();
 
 			$resume = resume()->get("abn='$abn'");
 
-			$uploadList = $_FILES["upload_certs"];
-
 			foreach($uploadList as $file){
 				$certs = certificates();
 				$certs->obj['resumeId']  = $resume->Id;
-				$certs->obj['uploadedCerts'] = uploadFile($file);
+				$certs->obj['uploadedCerts'] = $file;
 				$certs->create();
 			}
 
