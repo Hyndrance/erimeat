@@ -92,6 +92,32 @@ function uploadFile($uploadedFile){
 		else{
 			return 0;
 		}
+
+}
+
+/* =====================================Functions===================================== */
+/* Retrieve one record */
+function uploadMultipleFile($uploadedFile){
+
+	$filenameList = array();
+
+	$countfiles = count($uploadedFile['name']);
+
+	for($i=0;$i<$countfiles;$i++){
+		// File name
+	   	$filename = $uploadedFile['name'][$i];
+	   	// Get extension
+  		 $ext = explode(".", $filename);
+		   if(move_uploaded_file($uploadedFile['tmp_name'][$i],'../media/'.$filename)){
+		   		$filenameList[] = $filename;
+			}
+			else{
+		   		$filenameList['error'] = true;
+			}
+	}
+
+	return $filenameList;
+
 }
 
 /* =====================================Functions===================================== */
