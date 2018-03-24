@@ -148,7 +148,7 @@ function getPositionName($Id){
     </h3>
     <div class="truncate" style="height: 100px;">
       <p>
-      Look into our featured projects that we have finished.
+      Look into our featured projects that we offer.
     </p>
   </div>
     <p class="rh-promos-view-block__read-more">
@@ -169,7 +169,6 @@ function getPositionName($Id){
     <div class="truncate" style="height: 100px;">
     <p>
       Message our team regarding your needs and we will attend to it and contact you personally.
-
     </p>
   </div>
     <p class="rh-promos-view-block__read-more">
