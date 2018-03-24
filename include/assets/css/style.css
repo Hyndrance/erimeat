@@ -5853,3 +5853,51 @@ ul.sitemap-icon ul li a {
     @media only screen and (max-device-width: 1024px) {
       .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
           background-attachment: scroll; } }
+
+          #fadeinDown {
+          text-align: center;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+      }
+      @keyframes fadein {
+          from {
+              opacity:0;
+		          transform: translate3d(0, -50%, 0);
+          }
+          to {
+              opacity:1;
+		          transform: translate3d(0, 0, 0);
+          }
+      }
+      @-moz-keyframes fadein { /* Firefox */
+          from {
+              opacity:0;
+		          transform: translate3d(0, -50%, 0);
+          }
+          to {
+              opacity:1;
+		          transform: translate3d(0, 0, 0);
+          }
+      }
+      @-webkit-keyframes fadein { /* Safari and Chrome */
+          from {
+              opacity:0;
+		          transform: translate3d(0, -50%, 0);
+          }
+          to {
+              opacity:1;
+		          transform: translate3d(0, 0, 0);
+          }
+      }
+      @-o-keyframes fadein { /* Opera */
+          from {
+              opacity:0;
+		          transform: translate3d(0, -50%, 0);
+          }
+          to {
+              opacity: 1;
+		          transform: translate3d(0, 0, 0);
+          }
+      }

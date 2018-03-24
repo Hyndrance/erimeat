@@ -10,7 +10,7 @@ function getPositionName($Id){
 
 <div>
   <div>
-    <div class="bgimg-1" style="min-height: 600px; top:0; margin-top: -157px;"></div>
+    <div class="bgimg-1" style="min-height: 678px; top:0; margin-top: -157px;"></div>
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
@@ -76,17 +76,17 @@ function getPositionName($Id){
   </div>
   <div>
 <div>
-<div class="bgimg-2">
+<div class="bgimg-2" style="min-height: 678px;">
 <div class="container">
-<div class="container-fluid m-t-30 m-b-30">
+<div class="container-fluid m-t-30 m-b-30" style="padding-top: 6%;">
   <div class="container-80 text-center center-page">
-    <h2 class="text-blue">
+    <h2 class="text-blue" id="fadeinDown">
       Our Supply Chain Services
     </h2>
     <div class="center-page" style="height: 2px; width: 20%; background-color: #0064c8;"></div>
     <br>
   </div>
-<div class="row">
+<div class="row"  id="fadeinDown">
   <div class="col-lg-1"></div>
   <div class="col-lg-2">
     <a href="../home?view=servicesDetail&code=dem">
@@ -131,7 +131,7 @@ function getPositionName($Id){
   <div class="col-lg-1"></div>
 </div>
 
-<div class="row m-t-20">
+<div class="row m-t-20"  id="fadeinDown">
   <div class="col-lg-1"></div>
   <div class="col-lg-2">
     <a href="../home?view=servicesDetail&code=tran">
@@ -180,7 +180,7 @@ function getPositionName($Id){
 </div>
 </div>
     <!-- Basic Form Wizard -->
-<div class="bgimg-3">
+<div class="bgimg-3"style="min-height: 675px;">
     <div class="container-80 center-page">
 
                                     <ul class="nav nav-tabs navtab-bg nav-justified m-t-30">
@@ -349,8 +349,8 @@ function getPositionName($Id){
                         <!-- End row -->
 </div>
   <!-- Start Location Panels-->
-  <div class="bgimg-4" style="min-height: 400px;">
-      <div class="container center-page">
+  <div class="bgimg-4" style="min-height: 678px;">
+      <div class="container center-page" style="padding-top: 10%;"  id="fadeinDown">
         <h2 class="text-center m-t-30 text-blue">Business Partners</h2>
         <div class="center-page" style="height: 2px; width: 20%; background-color: #0064c8;"></div>
         <div class="row m-t-30">
