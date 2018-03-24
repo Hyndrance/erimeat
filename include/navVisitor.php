@@ -26,7 +26,7 @@
 </div>
   <div class="row">
      <nav class="top">
-    <label for="drop1" class="toggle1" style="background-color: #022664;color: #fff; float: right; border-bottom: none; padding: 10px 20px;" >Top Navigation <i class="fa fa-bars"></i></label>
+    <label for="drop1" class="toggle1" style="background-color: rgba(2, 38, 100, 0);color: #fff; float: right; border-bottom: none; padding: 10px 20px;" >Top Navigation <i class="fa fa-bars"></i></label>
         <input type="checkbox" id="drop1" />
           <ul class="menu1">
                 <li>
@@ -50,7 +50,7 @@
 <div class="row">
 
         <nav style="width: 1350px; margin: 0 auto;">
-        <label for="drop" style="border-bottom: none; background-color: #212121;" class="toggle"><i class="fa fa-bars"></i> Main Menu</label>
+        <label for="drop" style="border-bottom: none; background-color: rgba(46, 46, 46, 0.8)" class="toggle"><i class="fa fa-bars"></i> Main Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
                 <li>
@@ -88,7 +88,9 @@
                 </li>
             </ul>
       <div class="pull-right m-t-10 hidden-xs" style="padding-right: 2%;">
-        <span class="text-white pull-left m-r-5" style="margin-top: 1px;">+61 452 364 793 | </span>
+        <span class="text-white pull-left m-r-5" style="margin-top: 1px; text-align: right; line-height: 13px; margin-top: 0px;"><i class="fa fa-phone"></i> +61 452 364 793
+          <br><i class="fa fa-envelope"></i> hrcoordinator@teamire.com</span>
+        <span class="text-white pull-left m-r-5" style="text-align: right;"> | </span>
         <ul>
         <li><a class="icons" href="https://www.facebook.com/" target="blank_"><img src="../include/assets/images/facebook.png"></a></li>
         <li><a class="icons" href="https://www.twitter.com/" target="blank_"><img src="../include/assets/images/twitter.png"></a></li>
@@ -260,7 +262,7 @@ li > a:only-child:after { content: ''; }
     /* Stylinf the toggle lable */
     .toggle {
         display: block;
-        background-color: #2e2e2e;
+        background-color: rgba(46, 46, 46, 0.5);
         padding: 10px 20px;
         color: #ffffff;
         font-size:17px;
@@ -268,11 +270,11 @@ li > a:only-child:after { content: ''; }
         min-width: 1350px;
         border:none;
         margin-bottom: 0;
-        border-bottom: 2px solid #212121;
+        border-bottom: 2px solid rgba(46, 46, 46, 0.2);
         font-family: "Century Gothic", sans-serif; }
 
     .toggle:hover {
-        background-color: #131313;
+        background-color: rgba(46, 46, 46, 0.6);
         color: #ffffff;
     }
 
@@ -314,7 +316,7 @@ li > a:only-child:after { content: ''; }
 
     nav ul li ul li .toggle,
     nav ul ul a {
-        background-color: #1a4795;
+        background-color: rgba(26, 71, 149, 0.4);
     }
 
     /* Hide Dropdowns by Default */
@@ -410,7 +412,7 @@ li > a:only-child:after { content: ''; }
 .top {
     margin:0;
     padding: 0;
-    background-color: #022664;
+    background-color: rgba(2, 38, 100, 0.7);
 }
 
 
@@ -540,7 +542,7 @@ li > a:only-child:after { content: ''; }
     /* Stylinf the toggle lable */
     .toggle1 {
         display: block;
-        background-color: #212121;
+        background-color: rgba(33, 33, 33, 0.5);
         padding: 0px 20px;
         color:#3399cc;
         font-size:17px;
@@ -551,7 +553,7 @@ li > a:only-child:after { content: ''; }
         font-family: "Century Gothic", sans-serif;  }
 
     .toggle1:hover {
-        background-color: #131313;
+        background-color: rgba(33, 33, 33, 1);
     }
 
     /* Display Dropdown when clicked on Parent Lable */
@@ -577,7 +579,7 @@ li > a:only-child:after { content: ''; }
 
     .top a:hover,
     .top ul ul ul a {
-        background-color: #131313;
+        background-color: rgba(33, 33, 33, 0.5);
         color: #fff;
     }
 

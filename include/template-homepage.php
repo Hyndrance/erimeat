@@ -12,7 +12,7 @@
     </head>
     <body>
         <!-- Navigation Bar-->
-        <header id="topnav">
+        <header id="topnav" style="position:relative;">
           <div class="">
               <?php
                 include 'navVisitor.php';
@@ -22,7 +22,7 @@
           </div>
         </header>
         <!-- End Navigation Bar-->
-        <div class="wrapper">
+        <div class="wrapper" style="margin-top: -157px;">
           <div style="width: 1350px; max-width: 100%; margin: 0 auto;">
               <?php
                 include $content;

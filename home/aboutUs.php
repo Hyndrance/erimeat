@@ -19,7 +19,7 @@ function getPositionName($Id){
   <div class="center-page container-80">
   <div class="row">
     <div class="col-md-3">
-      <img src="../include/assets/images/about-us-img2.jpg" style="width: 80%; border-radius: 50%;">
+      <img src="../include/assets/images/aboutus-img.png" style="width: 100%; border-radius: 50%;">
     </div>
     <div class="col-md-9">
       <h4>About Us</h4>
@@ -66,7 +66,7 @@ function getPositionName($Id){
        </p>
     </div>
     <div class="col-md-3">
-      <img src="../include/assets/images/about-us-img1.jpg" style="width: 80%; border-radius: 50%;">
+      <img src="../include/assets/images/aboutus-img2.png" style="width: 100%; border-radius: 50%;">
     </div>
   </div>
 

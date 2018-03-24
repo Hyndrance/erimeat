@@ -10,14 +10,14 @@ function getPositionName($Id){
 
 <div>
   <div>
-    <div class="bgimg-1" style="min-height: 678px; top:0; margin-top: -157px;"></div>
+    <div class="bgimg-1" style="min-height: 678px; margin-top: -157px; z-index:-1; position: relative;"></div>
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
-                    <span class="m-t-10" style="font-size: 50px; line-height: 1;font-weight: bold; color: #0064c8;">
+                    <p class="m-t-10" id="fadeinDown" style="font-size: 60px; line-height: 1;font-weight: bold; color: #0064c8;">
                       WE'RE CRITICAL THINKERS
-                    </span>
-                    <p style="color: #0064c8; font-size: 27px;">Virtual Supply Chain Experts Creating Milestones
+                    </p>
+                    <p style="color: #0064c8; font-size: 32px;" id="fadeinDown">Virtual Supply Chain Experts Creating Milestones
                     </p>
                     <div class="row m-b-20" style="margin-top: 100px; min-width: 1350px;">
                       <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
@@ -181,7 +181,7 @@ function getPositionName($Id){
 </div>
     <!-- Basic Form Wizard -->
 <div class="bgimg-3"style="min-height: 675px;">
-    <div class="container-80 center-page">
+    <div class="container-80 center-page" style="padding-top: 2%;">
 
                                     <ul class="nav nav-tabs navtab-bg nav-justified m-t-30">
                                         <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">

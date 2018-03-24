@@ -117,7 +117,7 @@ function getPositionName($Id){
   </div>
   <div class="center-page container-fluid container-80">
   <div class="col-md-4 services-panel">
-    <img src="../include/assets/images/services-img1.jpg" style="width: 100%;">
+    <img src="../include/assets/images/aboutus-img.png" style="width: 100%;">
     <div>
     <h3>
       <a href="../home/?view=aboutUs" target="_self">
@@ -139,7 +139,7 @@ function getPositionName($Id){
   </div>
   </div>
   <div class="col-md-4 services-panel">
-    <img src="../include/assets/images/services-img2.jpg" style="width: 100%;">
+    <img src="../include/assets/images/projects-img.png" style="width: 100%;">
     <div>
     <h3>
       <a href="../home/?view=projects" target="_self">
@@ -159,7 +159,7 @@ function getPositionName($Id){
   </div>
   </div>
   <div class="col-md-4 services-panel">
-    <img src="../include/assets/images/services-img3.jpg" style="width:100%;">
+    <img src="../include/assets/images/contactus-img.png" style="width:100%;">
     <div>
     <h3>
       <a href="../home/?view=contactUs" target="_self">
