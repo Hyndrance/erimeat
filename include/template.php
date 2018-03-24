@@ -6,9 +6,6 @@
           $jfList = job_function()->list("isDeleted='0'");
         ?>
         <link rel="stylesheet" type="text/css" href="../include/assets/css/footer_responsive.css">
-        <link rel="stylesheet" type="text/css" href="../include/assets/css/chat.css">
-
-
     </head>
     <body>
         <!-- Navigation Bar-->
@@ -27,31 +24,6 @@
               <?php
                 include $content;
               ?>
-              <div class="chat-box">
-                  <div class="chat-closed"><span class="fa fa-comment"></span> Chat Now </div>
-                      <div class="chat-header hide"><div class="box"></div>Online Support</div>
-                        <div class="chat-content hide">
-                        <div class="container">
-                          <p>Welcome! here are some of our quick links below.</p>
-                           <ul>
-                              <li><a  href="../home/?view=aboutUs#howWeDoThis">How we do this</a></li>
-                              <li><a  href="../home/?view=aboutUs#ourVision">Our Vision</a></li>
-                              <li><a  href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></li>
-                              <li><a  href="../home/?view=logins">Timesheets</a></li>
-                              <li><a  href="../home/?view=contactUs">Contact Us</a></li>
-                              <li><a  href="../home/?view=services">Our Services</a></li>
-                              <li><a  href="../home/?view=projects">Projects</a></li>
-                           </ul>
-                        </div>
-                          <div class="well">
-                            <div id="output"></div>
-                          </div>
-                              <div id="container" class="container">
-                                  <input type="text" id="input" value="" class="form-control">
-                              </div><br>
-                              <div class="clearfix"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         <!-- end wrapper -->
@@ -319,5 +291,7 @@
           include_once($footScript);
         ?>
 
+    <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '6704f5a1-ee6c-4bab-ad3b-475af65f04a9', f: true }); done = true; } }; })();
+    </script>
     </body>
 </html>
