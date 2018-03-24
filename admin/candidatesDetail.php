@@ -60,7 +60,7 @@ function getCity($Id){
         </div>
       </div>
       <?php } ?>
-      <?php if($resume->isApproved==1){?>
+      <?php if($resume->isApproved==1 && $resume->isHired==0){?>
       <div class="col-12 m-t-30">
         <div class="col-lg-12 text-center">
           <button onclick="location.href='?view=openJobs&Id=<?=$resume->Id;?>'" class="btn btn-info" style="width:350px;">

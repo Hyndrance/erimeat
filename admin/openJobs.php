@@ -12,11 +12,6 @@ function getJobFunction($Id){
 
   <div class="row">
     <div class="col-sm-12">
-     <br>
-    <div class="pull-right">
-      <button type="button" class="btn btn-primary waves-effect waves-light btn-sm" data-toggle="modal" data-target="#add-faq-modal"><i class="fa fa-plus"></i> Add New</button>
-
-    </div>
     <br>
     <br>
       <div class="card-box table-responsive">
@@ -40,7 +35,7 @@ function getJobFunction($Id){
                 <td><?=$row->position;?></td>
                 <td><?=getJobFunction($row->jobFunctionId);?></td>
                 <td>
-                  <a href="#"  class=" btn btn-success btn-xs tooltips" title="Click To Edit">Assign Candidate</a>
+                  <a href="process.php?action=assignCandidate&Id=<?=$Id;?>&jobId=<?=$row->Id;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit">Assign Candidate</a>
                 </td>
               </tr>
           <?php

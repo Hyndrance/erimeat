@@ -11,6 +11,10 @@ switch ($action) {
 		terminateEmployee();
 		break;
 
+	case 'assignCandidate' :
+		assignCandidate();
+		break;
+
 	case 'updateInformation' :
 		updateInformation();
 		break;
@@ -169,6 +173,24 @@ function terminateEmployee()
 	$emp->obj['status'] = "0";
 	$emp->update("username='$username'");
 	header('Location: index.php?view=employeeDetail&success=You have terminated an employee&username=' . $username);
+}
+
+function assignCandidate()
+{
+	$Id = $_GET['Id'];
+	$jobId = $_GET['jobId'];
+
+	$resume = resume();
+	$resume->obj['jobId'] = $jobId;
+	$resume->update("Id='$Id'");
+
+	__createEmployeeLogin($Id, $jobId);
+
+	$resume = resume();
+	$resume->obj['isHired'] = "1";
+	$resume->update("Id='$Id'");
+
+	header('Location: ../admin/?view=candidatesDetail&Id=' . $Id);
 }
 
 function addCountry(){
