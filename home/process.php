@@ -182,10 +182,14 @@ function submitResume(){
 			$res->obj['coverLetter'] = $_POST["coverLetter"];
 			$res->obj['uploadedResume'] = $upload;
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
-			$res->obj['uploadedCerts'] = uploadFile($_FILES["upload_certs"]);
 			$res->create();
 
 			$resume = resume()->get("abn='$abn'");
+	
+			$certs = certificates();
+			$certs->obj['resumeId']  = $resume->Id;
+			$certs->obj['uploadedCerts'] = uploadFile($_FILES["upload_certs"]);
+			$certs->create();			
 
 			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
 			$adminList = admin()->list("level='admin'");
