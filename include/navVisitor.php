@@ -89,7 +89,7 @@
             </ul>
       <div class="pull-right m-t-10 hidden-xs" style="padding-right: 2%;">
         <span class="text-white pull-left m-r-5" style="margin-top: 1px; text-align: right; line-height: 13px; margin-top: 0px;"><i class="fa fa-phone"></i> +61 452 364 793
-          <br><i class="fa fa-envelope"></i> hrcoordinator@teamire.com</span>
+          <br><i class="fa fa-envelope"></i> info@teamire.com</span>
         <span class="text-white pull-left m-r-5" style="text-align: right;"> | </span>
         <ul>
         <li><a class="icons" href="https://www.facebook.com/" target="blank_"><img src="../include/assets/images/facebook.png"></a></li>

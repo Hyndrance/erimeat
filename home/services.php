@@ -12,13 +12,13 @@ function getPositionName($Id){
 <div class="container-fluid">
   <div class="container-fluid m-t-30">
     <div class="container-80 text-center center-page">
-      <h2>
+      <h2 class="slideanim">
         Our Supply Chain Services
       </h2>
       <div class="center-page" style="height: 2px; width: 20%; background-color: #3a3a3a;"></div>
       <br>
     </div>
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-lg-1"></div>
     <div class="col-lg-2">
       <a href="../home?view=servicesDetail&code=dem">
@@ -63,7 +63,7 @@ function getPositionName($Id){
     <div class="col-lg-1"></div>
   </div>
 
-  <div class="row m-t-20">
+  <div class="row m-t-20 slideanim">
     <div class="col-lg-1"></div>
     <div class="col-lg-2">
       <a href="../home?view=servicesDetail&code=tran">
