@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-25 20:22:33
+# Date: 2018-03-25 20:42:52
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -82,14 +82,15 @@ CREATE TABLE `company` (
   `department` varchar(100) DEFAULT NULL,
   `jobFunctionId` varchar(11) DEFAULT NULL,
   `isApproved` varchar(1) DEFAULT '0',
+  `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
 #
 
-INSERT INTO `company` VALUES (2,'1','1','1','11','1','1','1','1','1\t1','1','1','0');
+INSERT INTO `company` VALUES (2,'1','1','1','11','1','1','1','1','1\t1','1','1','0','1');
 
 #
 # Structure for table "country_option"

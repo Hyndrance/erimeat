@@ -301,6 +301,7 @@ function submitTimesheet()
 	// Get Hr email by jobFunctionId
 	$hrList = admin()->list("jobFunctionId='$job->jobFunctionId'");
 	$payrollList = admin()->list("level='payroll'");
+	$adminList = admin()->list("level='admin'");
 
 	// Send email to HR
 	$emailContent = "A new timesheet has been sent. Please check your teamire account";
@@ -310,6 +311,10 @@ function submitTimesheet()
 	}
 
 	foreach($payrollList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+
+	foreach($adminList as $row){
 		sendEmail($row->email, $emailContent);
 	}
 

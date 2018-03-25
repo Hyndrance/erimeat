@@ -127,6 +127,10 @@ switch ($action) {
 		denyResume();
 		break;
 
+	case 'deleteCompany' :
+		deleteCompany();
+		break;
+
 	case 'denyCandidateResume' :
 		denyCandidateResume();
 		break;
@@ -181,7 +185,18 @@ function deleteJob()
 	$job->obj['isDeleted'] = "1";
 	$job->update("Id=$Id");
 
-	header('Location: index.php?view=jobList&Success=You have deleted a job');
+	header('Location: index.php?view=jobList&success=You have deleted a job');
+}
+
+function deleteCompany()
+{
+	$Id = $_GET['Id'];
+
+	$job = company();
+	$job->obj['isDeleted'] = "1";
+	$job->update("Id=$Id");
+
+	header('Location: index.php?view=clientList&success=You have deleted a company');
 }
 
 function terminateEmployee()

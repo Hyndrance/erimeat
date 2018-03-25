@@ -5,6 +5,7 @@
           include_once($headScript);
           $jfList = job_function()->list("isDeleted='0'");
         ?>
+        
         <link rel="stylesheet" type="text/css" href="../include/assets/css/footer_responsive.css">
     </head>
     <body>
@@ -276,7 +277,7 @@
 
                 <div class="col-lg-6">
                   <b class="text-white m-r-5"><i class="fa fa-phone"></i> +61 452 364 793</b> |
-                  <b class="text-white m-l-5"><i class="fa fa-envelope"></i> hrcoordinator@teamire.com</b><br>
+                  <b class="text-white m-l-5"><i class="fa fa-envelope"></i> info@teamire.com</b><br>
                   © 2018 Teamire. Catalyst in Continuous Improvement.
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <?php
-$companyList = company()->list();
+$companyList = company()->list("isDeleted=0");
 ?>
 
 <div class="row">

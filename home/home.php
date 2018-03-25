@@ -7,17 +7,16 @@ function getPositionName($Id){
   echo $job->option;
 }
 ?>
-
 <div>
   <div>
     <div class="bgimg-1" style="min-height: 678px; margin-top: -157px; z-index:-1; position: relative;"></div>
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
-                    <p class="m-t-10" id="fadeinDown" style="font-size: 60px; line-height: 1;font-weight: bold; color: #0064c8;">
+                    <p class="m-t-10 slideanim" style="font-size: 60px; line-height: 1;font-weight: bold; color: #0064c8;">
                       WE'RE CRITICAL THINKERS
                     </p>
-                    <p style="color: #0064c8; font-size: 32px;" id="fadeinDown">Virtual Supply Chain Experts Creating Milestones
+                    <p style="color: #0064c8; font-size: 32px;" class="slideanim">Virtual Supply Chain Experts Creating Milestones
                     </p>
                     <div class="row m-b-20" style="margin-top: 100px; min-width: 1350px;">
                       <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
@@ -80,13 +79,13 @@ function getPositionName($Id){
 <div class="container">
 <div class="container-fluid m-t-30 m-b-30" style="padding-top: 6%;">
   <div class="container-80 text-center center-page">
-    <h2 class="text-blue" id="fadeinDown">
+    <h2 class="text-blue slideanim">
       Our Supply Chain Services
     </h2>
     <div class="center-page" style="height: 2px; width: 20%; background-color: #0064c8;"></div>
     <br>
   </div>
-<div class="row"  id="fadeinDown">
+<div class="row slideanim">
   <div class="col-lg-1"></div>
   <div class="col-lg-2">
     <a href="../home?view=servicesDetail&code=dem">
@@ -131,7 +130,7 @@ function getPositionName($Id){
   <div class="col-lg-1"></div>
 </div>
 
-<div class="row m-t-20"  id="fadeinDown">
+<div class="row m-t-20 slideanim">
   <div class="col-lg-1"></div>
   <div class="col-lg-2">
     <a href="../home?view=servicesDetail&code=tran">
@@ -350,7 +349,7 @@ function getPositionName($Id){
 </div>
   <!-- Start Location Panels-->
   <div class="bgimg-4" style="min-height: 678px;">
-      <div class="container center-page" style="padding-top: 10%;"  id="fadeinDown">
+      <div class="container center-page slideanim" style="padding-top: 10%;">
         <h2 class="text-center m-t-30 text-blue">Business Partners</h2>
         <div class="center-page" style="height: 2px; width: 20%; background-color: #0064c8;"></div>
         <div class="row m-t-30">

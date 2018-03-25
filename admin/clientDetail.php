@@ -49,11 +49,14 @@ function getJobFunction($Id){
   <div class="center-page text-center p-t-10 m-b-30">
     <h4>Jobs</h4>
     <div class="row">
-      <button class="btn btn-success stepy-finish" onclick="location.href='?view=jobList&abn=<?=$company->abn;?>&isApproved=1'">
+      <button class="btn btn-lg btn-success stepy-finish" onclick="location.href='?view=jobList&abn=<?=$company->abn;?>&isApproved=1'">
         Ongoing: <?=job()->count("abn=$company->abn and isApproved=1")?>
       </button>
-      <button class="btn btn-warning stepy-finish" onclick="location.href='?view=jobList&abn=<?=$company->abn;?>&isApproved=0'">
+      <button class="btn btn-lg btn-warning stepy-finish" onclick="location.href='?view=jobList&abn=<?=$company->abn;?>&isApproved=0'">
         Requests: <?=job()->count("abn=$company->abn and isApproved!=1")?>
+      </button>
+      <button class="btn btn-lg btn-danger stepy-finish" onclick="location.href='process.php?action=deleteCompany&Id=<?=$company->Id;?>'">
+        Delete
       </button>
     </div>
   </div>

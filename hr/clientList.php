@@ -1,5 +1,5 @@
 <div class="row">
-<?php foreach (company()->list() as $row) {
+<?php foreach (company()->list("isDeleted=0") as $row) {
 ?>
 
   <div class="col-md-4">
