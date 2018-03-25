@@ -126,6 +126,29 @@ function verifyTimesheet()
 	$ts->obj['status'] = "1";
 	$ts->update("Id=$Id");
 
+	$timeSheet = timesheet()->get("Id='$Id'");
+
+	$job = job()->get("Id='$timeSheet->jobId'");
+
+	$hrList = admin()->list("jobFunctionId='$job->jobFunctionId'");
+	$payrollList = admin()->list("level='payroll'");
+	$adminList = admin()->list("level='admin'");
+
+	// Send email to Admins
+	$emailContent = "A new timesheet has been verified. Please check your teamire account";
+
+	foreach($hrList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+
+	foreach($payrollList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+
+	foreach($adminList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+
 	header('Location: index.php?view=timesheetDetail&success=You have verified this timesheet&tsId=' . $Id);
 }
 
@@ -141,7 +164,30 @@ function disputeTimesheet()
 	$td->obj['reason'] = $_POST['reason'];
 	$td->create();
 
-		header('Location: index.php?view=timesheetDetail&success=You have disputed this timesheet&tsId=' . $Id);
+	$timeSheet = timesheet()->get("Id='$Id'");
+
+	$job = job()->get("Id='$timeSheet->jobId'");
+
+	$hrList = admin()->list("jobFunctionId='$job->jobFunctionId'");
+	$payrollList = admin()->list("level='payroll'");
+	$adminList = admin()->list("level='admin'");
+
+	// Send email to Admins
+	$emailContent = "A new timesheet has been disputed. Please check your teamire account";
+
+	foreach($hrList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+
+	foreach($payrollList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+
+	foreach($adminList as $row){
+		sendEmail($row->email, $emailContent);
+	}
+
+	header('Location: index.php?view=timesheetDetail&success=You have disputed this timesheet&tsId=' . $Id);
 }
 
 function logout()
