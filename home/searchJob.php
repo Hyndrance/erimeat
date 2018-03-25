@@ -1,7 +1,7 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 $c = (isset($_GET['c']) && $_GET['c'] != '') ? $_GET['c'] : '';
-$jobList = job()->list("position like '%$s%' and jobFunctionId=$c");
+$jobList = job()->list("position like '%$s%' and jobFunctionId=$c and isDeleted=0");
 
 $jobFunctionList = job_function()->list("isDeleted=0");
 

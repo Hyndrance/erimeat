@@ -2,7 +2,7 @@
 $jobId = $_GET['jobId'];
 $isApproved = $_GET['isApproved'];
 
-$resumeList = resume()->list("isApproved='$isApproved' and jobId=$jobId");
+$resumeList = resume()->list("isApproved='$isApproved' and jobId=$jobId and isDeleted=0");
 $job = job()->get("Id=$jobId");
 ?>
   <div class="row">

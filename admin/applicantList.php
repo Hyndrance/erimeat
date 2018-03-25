@@ -1,5 +1,5 @@
 <?php
-$resume = resume()->list();
+$resume = resume()->list("isDeleted=0");
 
 function getJobName($Id){
   $job = job()->get("Id='$Id'");

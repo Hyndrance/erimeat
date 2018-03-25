@@ -3,7 +3,7 @@
 $isApproved = (isset($_GET['isApproved']) && $_GET['isApproved'] != '') ? 'isApproved=\''.$_GET['isApproved'].'\' and ' : '';
 $abn = (isset($_GET['abn']) && $_GET['abn'] != '') ?  'abn=\''.$_GET['abn'].'\' and '  : '';
 
-$jobList = job()->list("$abn $isApproved Id>0");
+$jobList = job()->list("$abn $isApproved Id>0 and isDeleted=0");
 $company = company()->get("$abn Id>0");
 $title = $abn ?  $company->name  : 'Job Lists';
 ?>

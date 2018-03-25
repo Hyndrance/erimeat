@@ -64,50 +64,25 @@ function formatDate($val){
 
         <!--  This button only shows if job is approved -->
         <?php if($job->isApproved==0) {?>
-          <div class="center-page text-center">
-            <div class="row col-12">
-              <div class="col-lg-4">
-          <button class="btn btn-blue" style="width: 100%;" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
-        </div>
-        <div class="col-lg-4">
-          <button class="btn btn-warning" style="width: 100%;" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
-        </div>
-        <div class="col-lg-4">
-          <button class="btn btn-success" style="width: 100%;" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
-        </div>
+          <button class="btn btn-lg btn-blue" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
+          <button class="btn btn-lg btn-warning" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
+          <button class="btn btn-lg btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
         <?php } ?>
         <?php if($job->isApproved==-1) {?>
-          <button class="btn btn-warning" type="button">Waiting for the updated info</button>
-        </div>
-        </div>
-        <div class="clearfix"></div>
+          <button class="btn btn-lg btn-warning" type="button">Waiting for the updated info</button>
         <?php } ?>
-        <br>
-
         <?php if($job->isApproved==1) {?>
-          <div class="center-page text-center">
-          <h3 class="m-b-30">Detail</h3>
-          <div class="row col-12">
-            <div class="col-lg-4">
-          <button class="btn btn-blue" onclick="location.href='?view=employeeList&jobId=<?=$job->Id?>&status=1'">
+          <button class="btn btn-lg btn-blue" onclick="location.href='?view=employeeList&jobId=<?=$job->Id?>&status=1'">
               View <?=employee()->count("jobId=$job->Id and status=1");?> employees
           </button>
-        </div>
-        <div class="col-lg-4">
-          <button class="btn btn-warning" onclick="location.href='?view=timesheetList&jobId=<?=$job->Id?>'">
+          <button class="btn btn-lg btn-warning" onclick="location.href='?view=timesheetList&jobId=<?=$job->Id?>'">
               View <?=timesheet()->count("jobId=$job->Id");?> timesheets
           </button>
-        </div>
-        <div class="col-lg-4">
-          <button class="btn btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
+          <button class="btn btn-lg btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
               View <?=resume()->count("jobId=$job->Id and isApproved=0");?> applicants
           </button>
-        </div>
-        </div>
-        <div class="clearfix"></div>
-        <br>
-        <br>
         <?php } ?>
+          <button class="btn btn-lg btn-danger" type="button" onclick="location.href='process.php?action=deleteJob&Id=<?=$job->Id?>'">Delete</button>
         <br><br><br><br>
   </div>
 </div>

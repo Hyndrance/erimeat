@@ -1,8 +1,7 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-24 00:29:22
-# Generator: MySQL-Front 5.4  (Build 1.40)
+# Date: 2018-03-25 20:22:33
+# Generator: MySQL-Front 6.0  (Build 2.20)
 
-/*!40101 SET NAMES utf8 */;
 
 #
 # Structure for table "admin"
@@ -90,6 +89,7 @@ CREATE TABLE `company` (
 # Data for table "company"
 #
 
+INSERT INTO `company` VALUES (2,'1','1','1','11','1','1','1','1','1\t1','1','1','0');
 
 #
 # Structure for table "country_option"
@@ -147,12 +147,13 @@ CREATE TABLE `dtr` (
   `createDate` date DEFAULT NULL,
   `status` varchar(1) DEFAULT '0' COMMENT '0:login, 1:break, 2:break2, 3:lunch, 4:logout',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "dtr"
 #
 
+INSERT INTO `dtr` VALUES (1,0,'aa','19:39:01','19:39:09','19:39:05','19:39:06',NULL,NULL,'19:39:08','19:39:07','2018-03-25','4');
 
 #
 # Structure for table "employee"
@@ -272,15 +273,17 @@ CREATE TABLE `job` (
   `comment` text,
   `createDate` datetime DEFAULT NULL,
   `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
+  `isDeleted` varchar(2) DEFAULT '0',
   `contactName` varchar(100) DEFAULT NULL,
   `viewCounter` varchar(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
+INSERT INTO `job` VALUES (2,'1',1,1,'1','1','1','1','1','1','1','1\t','1','1\t',NULL,'-1','1','1','0');
 
 #
 # Structure for table "job_function"
@@ -380,6 +383,7 @@ CREATE TABLE `resume` (
 # Data for table "resume"
 #
 
+INSERT INTO `resume` VALUES (5,0,1,'aa','11','ii','ii','ii','11111111111','9898989','aa@aa.aa','989898','89898\t','jkhkjhkj','435435','kjhkj','kjhkj','jkhkj\t','kjh','kjhkj','kjhkjh','kjh',NULL,'0','0','1');
 
 #
 # Structure for table "timesheet"
@@ -437,3 +441,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
+INSERT INTO `user` VALUES (2,'aa','d033e22ae348aeb5660fc2140aec35850c4da997','qq','qq','employee');

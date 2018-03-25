@@ -23,6 +23,10 @@ switch ($action) {
 		jobRequest();
 		break;
 
+	case 'deleteJob' :
+		deleteJob();
+		break;
+
 	case 'addAccount' :
 		addAccount();
 		break;
@@ -127,6 +131,10 @@ switch ($action) {
 		denyCandidateResume();
 		break;
 
+	case 'deleteCandidateResume' :
+		deleteCandidateResume();
+		break;
+
 	case 'login' :
 		login();
 		break;
@@ -163,6 +171,17 @@ function updateInformation()
 	$job->update("Id=$Id");
 
 	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
+}
+
+function deleteJob()
+{
+	$Id = $_GET['Id'];
+
+	$job = job();
+	$job->obj['isDeleted'] = "1";
+	$job->update("Id=$Id");
+
+	header('Location: index.php?view=jobList&Success=You have deleted a job');
 }
 
 function terminateEmployee()
@@ -606,6 +625,15 @@ function denyCandidateResume()
 	sendEmail($resume->email, $content);
 
 	header('Location: index.php?view=candidates');
+}
+
+function deleteCandidateResume()
+{
+	$Id=$_GET['Id'];
+	$resume = resume();
+	$resume->obj['isDeleted'] = "1";
+	$resume->update("Id='$Id'");
+	header('Location: index.php?view=candidates&message=Resume has been deleted');
 }
 
 function removeCompany()

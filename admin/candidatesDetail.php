@@ -50,14 +50,11 @@ function getCity($Id){
       <div class="clearfix"></div>
       <?php if($resume->isApproved==0){?>
       <div class="col-12 m-t-30">
-        <div class="col-lg-6">
-          <button class="btn btn-info pull-right" style="width:350px;" data-toggle="modal" data-target="#schedule-modal">
+          <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#schedule-modal">
             Set an Interview
           </button>
-        </div>
-        <div class="col-lg-6">
-          <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-default pull-left" style="width:350px;">More Info</button>
-        </div>
+          <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-default">More Info</button>
+          <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-danger">Delete</button>
       </div>
       <?php } ?>
       <?php if($resume->isApproved==1 && $resume->isHired==0){?>

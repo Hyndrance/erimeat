@@ -1,7 +1,7 @@
 <?php
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$resumeList = resume()->list();
+$resumeList = resume()->list("isDeleted=0");
 ?>
 <p class="m-b-0">
   <?=$message?></p>
