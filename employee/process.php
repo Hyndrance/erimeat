@@ -308,9 +308,12 @@ function submitTimesheet()
 	foreach($hrList as $row){
 		sendEmail($row->email, $emailContent);
 	}
+
 	foreach($payrollList as $row){
 		sendEmail($row->email, $emailContent);
 	}
+
+	sendEmail($job->workEmail, $emailContent);
 
 	// Update all dtr
 	header('Location: index.php');
