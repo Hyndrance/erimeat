@@ -1487,8 +1487,8 @@ a:focus {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
 .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover,
 .open > .dropdown-toggle.btn-primary {
-  background-color: #2e5f9b !important;
-  border-color: #2e5f9b !important; }
+  background-color: #4489e4 !important;
+  border-color: #4489e4 !important; }
 
 .btn-success {
   background-color: #32c861 !important;
@@ -1571,11 +1571,11 @@ a:focus {
 
 .btn-bordered.btn-primary {
   color: #4489e4 !important;
-  border: 2px solid #4489e4 !important; }
+  border: 1px solid #4489e4 !important; }
   .btn-bordered.btn-primary:hover, .btn-bordered.btn-primary:focus, .btn-bordered.btn-primary:active {
     background-color: #4489e4;
     color: #ffffff !important;
-    border: 2px solid #2575df !important; }
+    border: 1px solid #4489e4 !important; }
 
 .btn-bordered.btn-success {
   color: #32c861 !important;
@@ -1694,8 +1694,8 @@ a:focus {
 ============= */
 .portlet {
   background: #ffffff;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
   border-radius: 5px;
+  border: 1px solid #c7c7c7;
   margin-bottom: 20px;
   position: relative;
   -webkit-transition: opacity 3s ease-in-out;
