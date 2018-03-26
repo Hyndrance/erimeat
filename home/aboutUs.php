@@ -101,7 +101,7 @@ function getPositionName($Id){
       </p>
     </div>
     <div class="col-md-3">
-      <img src="../include/assets/images/about-us-img3.jpg" style="width: 80%; border-radius: 50%;">
+      <img src="../include/assets/images/aboutus-img4.png" style="width: 100%; border-radius: 50%;">
     </div>
   </div>
 
