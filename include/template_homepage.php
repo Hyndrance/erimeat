@@ -6,7 +6,7 @@
           $jfList = job_function()->list("isDeleted='0'");
         ?>
         <link rel="stylesheet" type="text/css" href="../include/assets/css/footer_responsive.css">
-        <link rel="stylesheet" type="text/css" href="../include/assets/css/chat.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../include/assets/css/chat.css"> -->
 
 
     </head>

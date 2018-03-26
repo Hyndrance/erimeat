@@ -7,11 +7,6 @@
       </a>
 
 
-    <div style="height: 68px; width: 1px; background-color: #9aebff;" class="header-slogan pull-left m-t-15 m-l-25"></div>
-    <div class="pull-left m-t-10 m-l-10" style="width: 390px;height: 85px;">
-      <img src="../include/assets/images/header-slogan.png" width="90%">
-    </div>
-
 
     <div class="form-inline pull-right"  style="padding: 30px; margin-top: 5px;" id="myTopnav">
       <ul class="nav navbar-nav navbar-right nav-menu-right" id="above-nav">

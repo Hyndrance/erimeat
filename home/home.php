@@ -13,10 +13,10 @@ function getPositionName($Id){
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
-                    <p class="m-t-10 slideanim" style="font-size: 60px; line-height: 1;font-weight: bold; color: #0064c8;">
-                      WE'RE CRITICAL THINKERS
+                    <p class="m-t-10 slideanim" style="font-size: 50px; line-height: 1;font-weight: bold; color: #0064c8;">
+                      IT IS OUR BUSINESS TO IDENTIFY YOUR NEEDS, INTERESTS AND CONCERNS
                     </p>
-                    <p style="color: #0064c8; font-size: 32px;" class="slideanim">Virtual Supply Chain Experts Creating Milestones
+                    <p style="color: #0064c8; font-size: 32px;" class="slideanim">We're data driven.....
                     </p>
                     <div class="row m-b-20" style="margin-top: 100px; min-width: 1350px;">
                       <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
