@@ -2,15 +2,7 @@
 $jobFunctionList = job_function()->list("isDeleted=0");
 $projectList = projects()->list();
 
-function getPositionName($Id){
-  $job = position_type()->get("Id='$Id'");
-  echo $job->option;
-}
 
-function formatDate($val){
-  $date = date_create($val);
-  return date_format($date, "F d, Y g:i A");
-}
 ?>
 
 <div style="position: relative;">
@@ -33,52 +25,19 @@ function formatDate($val){
     </ul>
   </div>
   <div class="col-lg-9">
-    <img class="pull-right" src="../include/assets/images/aboutus-img.png">
-    <h3 class="text-blue">Sample Lorem Ipsum</h3>
-
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <?php
+      include 'projectDetail.php'
+    ?>
   </div>
 </div>
 
 <!-- End of Static List -->
 
 
-  <!-- Start About Us Content -->
-  <div class="center-page container-80">
-    <?php if(!$projectList){?>
-      <h4 class="text-center text-muted"> <i class="fa fa-folder-open-o fa-5x"></i><br> No Projects Available </h4>
-    <?php }else{?>
-  <?php
-    foreach($projectList as $row){
-      if($row->isDeleted==0){
-  ?>
-  <div class="row">
-    <div class="col-lg-12">
-      <h3 class="text-primary"><?=$row->title?></h3>
-      <p class="font-13" style="margin-top: -">Posted last <?=formatDate($row->createDate);?></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-3">
-      <img class="img-thumbnail" src=../media/<?=$row->uploadedImage;?>>
-    </div>
-    <div class="col-lg-9" style="height: 150px;">
-      <div class="truncate">
-        <p><?=$row->content;?></p>
-      </div>
-    <button onclick="location.href='../home/?view=projectDetail&Id=<?=$row->Id;?>'" style="width: 20%; bottom: 0; position: absolute;"
-    class="btn btn-sm btn-block btn-warning waves-effect waves-light" type="submit">READ MORE</button>
-    </div>
-  </div>
+
 
   <hr class="m-b-30 m-t-30" width="100%">
-<?php }}?>
 
-<?php
-}
-?>
 </div>
 </div>
 <div class="container-fluid m-b-30">
