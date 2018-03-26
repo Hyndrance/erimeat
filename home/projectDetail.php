@@ -1,16 +1,10 @@
 <?php
-//$Id = $_GET['Id'];
-//$projects = projects()->get("Id='$Id'");
+$Id = $_GET['Id'];
+$projects = projects()->get("Id='$Id'");
 
-//function formatDate($val){
-  //$date = date_create($val);
-  //return date_format($date, "F d, Y g:i A");
-//}
 ?>
-<img class="pull-right" src="../include/assets/images/aboutus-img.png">
-<h3 class="text-blue">Sample Lorem Ipsum</h3>
+<img class="pull-right" src="../media/<?=$projects->uploadedImage;?>">
+<h3 class="text-blue"><?=$projects->title;?></h3>
 
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p><?=$projects->content;?></p>
 <br>
