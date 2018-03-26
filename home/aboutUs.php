@@ -17,11 +17,11 @@ function getPositionName($Id){
 
   <!-- Start About Us Content -->
   <div class="center-page container-80">
-  <div class="row">
-    <div class="col-md-3">
+  <div class="row slideanim">
+    <div class="col-md-3 slideleft">
       <img src="../include/assets/images/aboutus-img.png" style="width: 100%; border-radius: 50%;">
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 slideleft">
       <h4>About Us</h4>
       <p>Teamire (Aust) Pty Ltd is a consulting business in Supply Chain Management specializing in Synchronization
          of business activities. In early 2017 Teamire was established by Simon Reddy, founder and CEO as a “go to”
@@ -42,7 +42,7 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-md-9">
       <h4 id="howWeDoThis">How we do this</h4>
       <p>Often, vertical channel conflict (i.e. between layers of supply chain) occurs due to ambiguous roles and
@@ -72,11 +72,11 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
-    <div class="col-md-3">
+  <div class="row slideanim">
+    <div class="col-md-3 slideleft">
       <img src="../include/assets/images/about-us-img2.jpg" style="width: 80%; border-radius: 50%;">
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 slideleft">
       <h4 id="ourVision">Our Vision</h4>
       <p>At Teamire our purpose is to help our client streamline their business processes by synchronizing
          their Production, Inventory and Sales and relisting them as a reliable and competitive source for
@@ -89,7 +89,7 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-md-9">
       <h4 id="ourObjectives">Our Objectives</h4>
       <p>Is to ensure that we always have a realistic plan in restructuring our client’s strategic business
@@ -107,11 +107,11 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
-    <div class="col-md-3">
-      <img src="../include/assets/images/aboutus-img5.png" style="width: 100%; border-radius: 50%;">
+  <div class="row slideanim">
+    <div class="col-md-3 slideleft">
+      <img src="../include/assets/images/about-us-img4.jpg" style="width: 80%; border-radius: 50%;">
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 slideleft">
       <h4>Our Services</h4>
       <p>Whilst a customized business solution is what we thrive on, TEAMIRE is also engaged in sourcing,
          Administrative Support Staff, Demand & Forecasting Analysts, Demand Planners, Supply Chain Planners,

@@ -15,7 +15,7 @@ function getPositionName($Id){
       <h2 class="slideanim">
         Our Supply Chain Services
       </h2>
-      <div class="center-page" style="height: 2px; width: 20%; background-color: #3a3a3a;"></div>
+      <div class="center-page slideanim" style="height: 2px; width: 20%; background-color: #3a3a3a;"></div>
       <br>
     </div>
   <div class="row slideanim">
@@ -113,9 +113,9 @@ function getPositionName($Id){
   <hr class="m-b-30 m-t-30" width="75%">
   <div class="m-b-30">
   <div class="col-md-8 center-page text-center">
-  <h3 class="m-b-30 m-t-30">More from Teamire</h3>
+  <h3 class="m-b-30 m-t-30 slideanim">More from Teamire</h3>
   </div>
-  <div class="center-page container-fluid container-80">
+  <div class="center-page container-fluid container-80 slideanim">
   <div class="col-md-4 services-panel">
     <img src="../include/assets/images/aboutus-img.png" style="width: 100%;">
     <div>
