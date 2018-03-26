@@ -109,7 +109,7 @@ function getPositionName($Id){
 
   <div class="row">
     <div class="col-md-3">
-      <img src="../include/assets/images/about-us-img4.jpg" style="width: 80%; border-radius: 50%;">
+      <img src="../include/assets/images/aboutus-img5.png" style="width: 100%; border-radius: 50%;">
     </div>
     <div class="col-md-9">
       <h4>Our Services</h4>
