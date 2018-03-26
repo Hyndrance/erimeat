@@ -55,6 +55,7 @@
 <link href="../include/assets/css/responsive.css" rel="stylesheet" type="text/css" />
 <script src="../include/assets/js/modernizr.min.js"></script>
 <script src="../include/assets/js/float-panel.js"></script>
+<script src="../include/assets/js/float-left.js"></script>
 <style type="text/css">
 body {
         font-family: "Futura BT W01 Book",OpenSansRegular,"Open Sans Regular",sans-serif;
@@ -82,6 +83,31 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.slideleft {
+    visibility:hidden;
+    visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideleft.slide {
+    visibility: visible;
+    animation: slide 1s;
+}
+.slideleft::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
