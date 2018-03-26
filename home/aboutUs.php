@@ -17,7 +17,7 @@ function getPositionName($Id){
 
   <!-- Start About Us Content -->
   <div class="center-page container-80">
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-md-3 slideleft">
       <img src="../include/assets/images/aboutus-img.png" style="width: 100%; border-radius: 50%;">
     </div>
@@ -42,7 +42,7 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-md-9">
       <h4 id="howWeDoThis">How we do this</h4>
       <p>Often, vertical channel conflict (i.e. between layers of supply chain) occurs due to ambiguous roles and
@@ -72,7 +72,7 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-md-3 slideleft">
       <img src="../include/assets/images/about-us-img2.jpg" style="width: 80%; border-radius: 50%;">
     </div>
@@ -89,7 +89,7 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-md-9">
       <h4 id="ourObjectives">Our Objectives</h4>
       <p>Is to ensure that we always have a realistic plan in restructuring our client’s strategic business
@@ -107,7 +107,7 @@ function getPositionName($Id){
 
   <hr class="m-b-30 m-t-30" width="100%">
 
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-md-3 slideleft">
       <img src="../include/assets/images/about-us-img4.jpg" style="width: 80%; border-radius: 50%;">
     </div>
