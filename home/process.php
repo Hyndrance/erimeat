@@ -66,9 +66,9 @@ function clientRequest()
 {
 	$email = $_POST['email'];
 	$jobFunctionId = $_POST['jobFunctionId'];
-	$checkAbn = company()->get("email='$email'");
+	$checkEmail = company()->get("email='$email'");
 
-	if($checkAbn){
+	if($checkEmail){
 		header('Location: ../home?view=clientForm&error=Email already exist!');
 	}else{
 		$comp = company();
