@@ -115,7 +115,7 @@ $(function() {
 });
 </script>
 <!--script for triggering chatbot-->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(document).ready(function(){
     $(".chat-closed").on("click",function(e){
         $(".chat-header,.chat-content").removeClass("hide");
@@ -128,7 +128,7 @@ $(document).ready(function(){
     });
 });
 
-</script>
+</script> -->
 <!--script for chatbot content-->
 <!-- <script type="text/javascript">
   var questionNum = 0;                          // keep count of question, used for IF condition.
