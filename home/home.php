@@ -13,10 +13,10 @@ function getPositionName($Id){
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
-                    <p class="m-t-10 slideanim" style="font-size: 50px; width: 800px; margin: 0 auto; text-shadow: 1px 1px 5px #000; line-height: 1;font-weight: bold; color: #fff;">
-                      IT IS OUR BUSINESS TO IDENTIFY YOUR NEEDS, INTERESTS AND CONCERNS
+                    <p class="m-t-10 slideanim" style="font-size: 24px; width: 800px; margin: 0 auto; line-height: 1;font-weight: bold; color: #2a3c71;">
+                      It is our Business to Identify your Need, Interest Concern and Expectation
                     </p>
-                    <p style="color: #0064c8; font-size: 32px;" class="slideanim">Remote Supply Chain Data driven experts.....
+                    <p style="color: #2a3c71; font-size: 24px;" class="slideanim">Remote Supply Chain Data driven experts.....
                     </p>
                     <div class="row m-b-20" style="margin-top: 100px; min-width: 1350px;">
                       <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
@@ -359,35 +359,35 @@ function getPositionName($Id){
             <div class="annex-img">
               <img src="../include/assets/images/home-img4.png">
             </div>
-            <h2 class="center-page text-blue">SYDNEY HQ</h2>
+            <h3 class="center-page text-blue">SYDNEY HQ</h3>
           </div>
 
           <div class="col-lg-2 text-center">
             <div class="annex-img">
             	<img src="../include/assets/images/home-img1.png">
             </div>
-            <h2 class="center-page text-blue">MANILA</h2>
+            <h3 class="center-page text-blue">MANILA</h3>
           </div>
 
             <div class="col-lg-2 text-center">
               <div class="annex-img">
               	<img src="../include/assets/images/home-img2.png">
               </div>
-              <h2 class="center-page text-blue">DELHI</h2>
+              <h3 class="center-page text-blue">DELHI</h3>
             </div>
 
             <div class="col-lg-2 text-center">
               <div class="annex-img">
               	<img src="../include/assets/images/home-img3.png">
               </div>
-              <h2 class="center-page text-blue">BANGALORE</h2>
+              <h3 class="center-page text-blue">BANGALORE</h3>
             </div>
 
             <div class="col-lg-2 text-center">
               <div class="annex-img">
                 <img src="../include/assets/images/home-img5.png">
               </div>
-              <h2 class="center-page text-blue">PROVIDENCE</h2>
+              <h3 class="center-page text-blue">PROVIDENCE</h3>
             </div>
             <div class="col-lg-1"></div>
         </div>
