@@ -64,19 +64,19 @@ function create()
 
 function clientRequest()
 {
-	$abn = $_POST['abn'];
+	$email = $_POST['email'];
 	$jobFunctionId = $_POST['jobFunctionId'];
-	$checkAbn = company()->get("abn='$abn'");
+	$checkAbn = company()->get("email='$email'");
 
 	if($checkAbn){
-		header('Location: ../home?view=clientForm&error=ABN already exist!');
+		header('Location: ../home?view=clientForm&error=Email already exist!');
 	}else{
 		$comp = company();
 		$comp->obj = $_POST;
 		$comp->obj['isApproved '] = "1";
 		$comp->create();
 
-		$company = company()->get("abn='$abn'");
+		$company = company()->get("email='$email'");
 
 		__createClientLogin($company->Id);
 

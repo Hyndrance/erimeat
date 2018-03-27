@@ -1,9 +1,9 @@
 <?php
 $isApproved = $_GET['isApproved'];
-$abn = $_GET['abn'];
+$email = $_GET['email'];
 
-$jobList = job()->list("abn='$abn' and isApproved='$isApproved' and isDeleted=0");
-$company = company()->get("abn='$abn'");
+$jobList = job()->list("workEmail='$email' and isApproved='$isApproved' and isDeleted=0");
+$company = company()->get("email='$email'");
 
 ?>
   <div class="row">

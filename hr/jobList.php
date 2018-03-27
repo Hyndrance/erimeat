@@ -1,11 +1,11 @@
 <?php
-
+$email = $_GET['email'];
 $isApproved = (isset($_GET['isApproved']) && $_GET['isApproved'] != '') ? 'isApproved=\''.$_GET['isApproved'].'\' and ' : '';
-$abn = (isset($_GET['abn']) && $_GET['abn'] != '') ?  'abn=\''.$_GET['abn'].'\' and '  : '';
+$workEmail = (isset($_GET['email']) && $_GET['email'] != '') ?  'workEmail=\''.$_GET['email'].'\' and '  : '';
 
-$jobList = job()->list("$abn $isApproved isDeleted=0");
-$company = company()->get("$abn Id>0");
-$title = $abn ?  $company->name  : 'Job Lists';
+$jobList = job()->list("$workEmail $isApproved isDeleted=0");
+$company = company()->get("email='$email' and Id>0");
+$title = $email ?  $company->name  : 'Job Lists';
 ?>
   <div class="row">
     <div class="col-sm-12">

@@ -33,7 +33,7 @@ function getCount($Id){
           </thead>
           <tbody>
             <?php foreach($jobList as $row) {
-              if ($row->isApproved==1 && $row->abn==$company->abn && getCount($row->Id)==0){
+              if ($row->isApproved==1 && $row->abn==$company->workEmail && getCount($row->Id)==0){
             ?>
             <tr>
               <td><?=getJobFunction($row->jobFunctionId);?></td>

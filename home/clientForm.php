@@ -40,8 +40,8 @@ $jfList = job_function()->list();
 
                               <div class="p-l-10 w-50-p pull-left">
                               <div class="form-group">
-                                <label for="username">Employer ABN <span style="color: red;">*</span></label>
-                                <input type="text" class="form-control" data-mask="99999999999" name="abn" required>
+                                <label for="username">Employer ABN </label>
+                                <input type="text" class="form-control" data-mask="99999999999" name="abn">
                               </div>
                               </div>
 

@@ -27,11 +27,11 @@ $companyList = company()->list("isDeleted=0");
             </div>
 
               <h4>Jobs</h4>
-              <button style="width: 140px;" class="btn btn-sm btn-success" onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=1'">
-                Ongoing:<br> <?=job()->count("abn=$row->abn and isApproved=1")?>
+              <button style="width: 140px;" class="btn btn-sm btn-success" onclick="location.href='?view=jobList&email=<?=$row->email;?>&isApproved=1'">
+                Ongoing:<br> <?=job()->count("workEmail='$row->email' and isApproved=1")?>
               </button>
-              <button style="width: 140px;" class="btn btn-sm btn-warning" onclick="location.href='?view=jobList&abn=<?=$row->abn;?>&isApproved=0'">
-                Requests:<br> <?=job()->count("abn=$row->abn and isApproved!=1")?>
+              <button style="width: 140px;" class="btn btn-sm btn-warning" onclick="location.href='?view=jobList&email=<?=$row->email;?>&isApproved=0'">
+                Requests:<br> <?=job()->count("workEmail='$row->email' and isApproved!=1")?>
               </button>
               <br><br>
               <button class="btn btn-blue" style="width: 285px;" onclick="location.href='?view=clientDetail&Id=<?=$row->Id;?>'">View Detail</button>
