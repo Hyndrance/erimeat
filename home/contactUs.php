@@ -3,30 +3,51 @@ $jfList = job_function()->list();
 ?>
 
 <div style="position: relative;">
-  <img style="position: absolute; top:0; width: 100%;" src="../include/assets/images/our-services-bg.png">
+  <img style="position: absolute; top:0; z-index:-1; width: 100%;" src="../include/assets/images/our-services-bg.png">
   <div class="container-fluid">
   <h2 class="text-center m-b-30">Contact Us</h2>
-      <div class="clearfix"></div>
+
+     <div class="text-center m-b-20" style="font-size: 100px; color: #98a6ad;"><i class="fa fa-phone-square"></i></div>
       <!--Start 2 panels -->
       <div class="container-80 center-page">
       <div class="row">
-        <div class="col-lg-1">&nbsp;</div>
-        <div class="col-12 col-lg-4 p-30">
-          <h2 class="text-center mt30 mb25">Employers</h2>
-          <p class="text-center mb20">Looking for the right candidate?</p>
-          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=hiringForm'" role="button">REQUEST TALENT</button></div>
-          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=searchResume'" role="button">SEARCH CANDIDATE</button></div>
-          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home?view=employerFaq'" role="button">EMPLOYERS FAQ</button></div>
-        </div>
         <div class="col-lg-2">&nbsp;</div>
         <div class="col-12 col-lg-4 p-30">
-          <h2 class="text-center mt30 mb25">Job Seekers</h2>
-          <p class="text-center mb20">Looking for a job? We can help.</p>
-          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=submitResume'" role="button">SUBMIT YOUR RESUME</button></div>
-          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home/?view=searchJob'" role="button">SEARCH JOB</button></div>
-          <div class="text-center m-b-10"><button class="btn-primary container-100 btn-contact-us" onclick="location.href='../home?view=jobseekerFaq'" role="button">JOB SEEKER FAQ</button></div>
+
+          <div class="portlet">
+              <div class="portlet-heading bg-primary">
+                  <h3 class="portlet-title text-center center-page">
+                      EMPLOYERS
+                  </h3>
+                  <div class="clearfix"></div>
+              </div>
+              <div id="bg-primary" class="panel-collapse collapse in show">
+                  <div class="portlet-body center-page text-center">
+                    Looking for the right candidate?
+                      <div class="text-center m-b-10"><button class="btn-sm btn-primary btn-bordered" style="padding: 10px !important; width: 90%; font-size: 17px;" onclick="location.href='../home/?view=hiringForm'" role="button">REQUEST TALENT</button></div>
+                      <div class="text-center m-b-10"><button class="btn-sm btn-primary btn-bordered" style="padding: 10px !important; width: 90%; font-size: 17px;" onclick="location.href='../home/?view=searchResume'" role="button">SEARCH CANDIDATE</button></div>
+                      <div class="text-center m-b-10"><button class="btn-sm btn-primary btn-bordered" style="padding: 10px !important; width: 90%; font-size: 17px;" onclick="location.href='../home?view=employerFaq'" role="button">EMPLOYERS FAQ</button></div>
+                  </div>
+              </div>
+          </div>
         </div>
-        <div class="col-lg-1">&nbsp;</div>
+        <div class="col-12 col-lg-4 p-30">
+          <div class="portlet">
+              <div class="portlet-heading bg-primary">
+                  <h3 class="portlet-title text-center center-page">
+                      JOB SEEKERS
+                  </h3>
+                  <div class="clearfix"></div>
+              </div>
+              <div id="bg-primary" class="panel-collapse collapse in show">
+                  <div class="portlet-body center-page text-center">
+                    Looking for a job? We can help.
+                      <div class="text-center m-b-10"><button class="btn-sm btn-primary btn-bordered" style="padding: 10px !important; width: 90%; font-size: 17px;" onclick="location.href='../home/?view=submitResume'" role="button">SUBMIT YOUR RESUME</button></div>
+                      <div class="text-center m-b-10"><button class="btn-sm btn-primary btn-bordered" style="padding: 10px !important; width: 90%; font-size: 17px;" onclick="location.href='../home/?view=searchJob'" role="button">SEARCH JOB</button></div>
+                      <div class="text-center m-b-10"><button class="btn-sm btn-primary btn-bordered" style="padding: 10px !important; width: 90%; font-size: 17px;" onclick="location.href='../home?view=jobseekerFaq'" role="button">JOB SEEKER FAQ</button></div>
+                  </div>
+              </div>
+          </div>
       </div>
     </div>
 
