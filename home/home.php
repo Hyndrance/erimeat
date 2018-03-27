@@ -13,7 +13,7 @@ function getPositionName($Id){
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
-                    <p class="m-t-10 slideanim" style="font-size: 50px; line-height: 1;font-weight: bold; color: #0064c8;">
+                    <p class="m-t-10 slideanim" style="font-size: 50px; width: 800px; margin: 0 auto; text-shadow: 1px 1px 5px #000; line-height: 1;font-weight: bold; color: #fff;">
                       IT IS OUR BUSINESS TO IDENTIFY YOUR NEEDS, INTERESTS AND CONCERNS
                     </p>
                     <p style="color: #0064c8; font-size: 32px;" class="slideanim">Remote Supply Chain Data driven experts.....
