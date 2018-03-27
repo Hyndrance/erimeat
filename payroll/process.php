@@ -38,9 +38,10 @@ function approveTimesheet()
 	$ts->update("Id='$Id'");
 
 	$ts = timesheet()->get("Id='$Id'");
+	$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
 	$invoice = invoice();
-	$invoice->obj['refNum'] = round(microtime(true));
+	$invoice->obj['refNum'] = strtoupper($refNum);
 	$invoice->obj['timesheetId'] = $Id;
 	$invoice->obj['owner'] = $ts->employee;
 	$invoice->create();

@@ -33,9 +33,11 @@ function create()
 {
 	$jobFunctionId = $_POST['jobFunctionId'];
 
+	$refNum = bin2hex(openssl_random_pseudo_bytes(4));
+
 	$job = job();
 	$job->obj = $_POST;
-	$job->obj['refNum'] = round(microtime(true));
+	$job->obj['refNum'] = strtoupper($refNum);
 	$job->obj['createDate'] = "NOW()";
 	$job->create();
 
@@ -137,6 +139,7 @@ function submitResume(){
 
 		$abn = $_POST["abn"];
 		$jobFunctionId = $_POST['jobFunctionId'];
+		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
@@ -146,7 +149,7 @@ function submitResume(){
 			$res = resume();
 			$res->obj = $_POST;
 			$res->obj['jobId'] = "0";
-			$res->obj['refNum'] = round(microtime(true));
+			$res->obj['refNum'] = strtoupper($refNum);
 			$res->obj['uploadedResume'] = $uploadFile;
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
 			$res->create();
@@ -190,6 +193,7 @@ function submitApplication()
 {
 		$abn = $_POST["abn"];
 		$jobFunctionId = $_POST['jobFunctionId'];
+		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
@@ -199,7 +203,7 @@ function submitApplication()
 			$res = resume();
 			$res->obj['jobId'] = $_POST["jobId"];
 			$res->obj['jobFunctionId'] = $_POST["jobFunctionId"];
-			$res->obj['refNum'] = round(microtime(true));
+			$res->obj['refNum'] = strtoupper($refNum);
 			$res->obj['firstName'] = $_POST["firstName"];
 			$res->obj['lastName']= $_POST["lastName"];
 			$res->obj['birthdate'] = $_POST["birthdate"];
