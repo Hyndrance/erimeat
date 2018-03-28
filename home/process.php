@@ -33,9 +33,11 @@ function create()
 {
 	$jobFunctionId = $_POST['jobFunctionId'];
 
+	$refNum = bin2hex(openssl_random_pseudo_bytes(4));
+
 	$job = job();
 	$job->obj = $_POST;
-	$job->obj['refNum'] = round(microtime(true));
+	$job->obj['refNum'] = strtoupper($refNum);
 	$job->obj['createDate'] = "NOW()";
 	$job->create();
 
@@ -62,19 +64,19 @@ function create()
 
 function clientRequest()
 {
-	$abn = $_POST['abn'];
+	$email = $_POST['email'];
 	$jobFunctionId = $_POST['jobFunctionId'];
-	$checkAbn = company()->get("abn='$abn'");
+	$checkEmail = company()->get("email='$email'");
 
-	if($checkAbn){
-		header('Location: ../home?view=clientForm&error=ABN already exist!');
+	if($checkEmail){
+		header('Location: ../home?view=clientForm&error=Email already exist!');
 	}else{
 		$comp = company();
 		$comp->obj = $_POST;
 		$comp->obj['isApproved '] = "1";
 		$comp->create();
 
-		$company = company()->get("abn='$abn'");
+		$company = company()->get("email='$email'");
 
 		__createClientLogin($company->Id);
 
@@ -137,6 +139,7 @@ function submitResume(){
 
 		$abn = $_POST["abn"];
 		$jobFunctionId = $_POST['jobFunctionId'];
+		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
@@ -146,7 +149,7 @@ function submitResume(){
 			$res = resume();
 			$res->obj = $_POST;
 			$res->obj['jobId'] = "0";
-			$res->obj['refNum'] = round(microtime(true));
+			$res->obj['refNum'] = strtoupper($refNum);
 			$res->obj['uploadedResume'] = $uploadFile;
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
 			$res->create();
@@ -190,6 +193,7 @@ function submitApplication()
 {
 		$abn = $_POST["abn"];
 		$jobFunctionId = $_POST['jobFunctionId'];
+		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
@@ -199,7 +203,7 @@ function submitApplication()
 			$res = resume();
 			$res->obj['jobId'] = $_POST["jobId"];
 			$res->obj['jobFunctionId'] = $_POST["jobFunctionId"];
-			$res->obj['refNum'] = round(microtime(true));
+			$res->obj['refNum'] = strtoupper($refNum);
 			$res->obj['firstName'] = $_POST["firstName"];
 			$res->obj['lastName']= $_POST["lastName"];
 			$res->obj['birthdate'] = $_POST["birthdate"];

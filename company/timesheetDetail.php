@@ -6,6 +6,8 @@ $dtrList = dtr()->list("timesheetId='$timesheetId'");
 $ts = timesheet()->get("Id='$timesheetId'");
 $dispute = timesheet_dispute()->get("timesheetId='$timesheetId'");
 
+$job = job()->get("Id='$ts->jobId'");
+
 function get_time_difference($record)
 {
     $workTime = (strtotime("1/1/1980 $record->checkOut") - strtotime("1/1/1980 $record->checkIn")) / 3600;
@@ -22,6 +24,10 @@ function get_time_difference($record)
         <div class="col-sm-12">
             <div class="card-box table-responsive">
                 <h4 class="page-title"><?=$ts->name;?> by <?=$ts->employee;?></h4><br>
+                Job Reference Number: <?=$job->refNum;?><br>
+                Client Name: <?=$job->company;?><br>
+                Job Classification: <?=$job->position;?><br>
+                <br>
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>

@@ -9,26 +9,26 @@ function getPositionName($Id){
 ?>
 <div>
   <div>
-    <div class="bgimg-1" style="min-height: 678px; margin-top: -157px; z-index:-1; position: relative;"></div>
+    <div class="bgimg-1" style="min-height: 678px; margin-top: -147px; z-index:-1; position: relative;"></div>
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
-                    <p class="m-t-10 slideanim" style="font-size: 50px; line-height: 1;font-weight: bold; color: #0064c8;">
-                      IT IS OUR BUSINESS TO IDENTIFY YOUR NEEDS, INTERESTS AND CONCERNS
+                    <p class="m-t-30 slideanim" style="font-size: 24px; width: 800px; margin: 0 auto; line-height: 1;font-weight: bold; color: #2a3c71;">
+                      It is our Business to Identify your Need, Interest Concern and Expectation
                     </p>
-                    <p style="color: #0064c8; font-size: 32px;" class="slideanim">We're data driven.....
+                    <p style="color: #2a3c71; font-size: 24px;" class="slideanim">Remote Supply Chain Data driven experts.....
                     </p>
                     <div class="row m-b-20" style="margin-top: 100px; min-width: 1350px;">
-                      <button id="myBtn1" class="btn" style="width:382px;">NEED TO HIRE?</button>
-                      <button id="myBtn2" class="btn" style="width:382px;">LOOKING FOR A JOB?</button>
+                      <button id="myBtn1" class="btn btn-sm" style="width:300px;">NEED TO HIRE?</button>
+                      <button id="myBtn2" class="btn btn-sm" style="width:300px;">LOOKING FOR A JOB?</button>
                     </div>
 
                 <div class="">
                 <div id="myDIV">
                   <form class="form-inline" method="GET">
-                    <div class="form-group" style="margin-top:1px;">
+                    <div class="form-group">
                     <input type="hidden" name="view" value="searchResume">
-                    <select name="c" class="form-control" style="height: 67px; width:250px;" required>
+                    <select name="c" class="form-control" style="height: 40px; width:230px;" required>
                         <option>Select City</option>
                         <?php foreach(country_option()->list() as $country){ ?>
                         <optgroup label="<?=$country->country;?>">
@@ -37,13 +37,13 @@ function getPositionName($Id){
                             <?php } ?>
                         <?php } ?>
                     </select>
-                    <select name="j" class="form-control" style="height: 67px; width:200px;" required>
+                    <select name="j" class="form-control" style="height: 40px; width:203px;" required>
                       <option value="">Select Category</option>
                       <?php foreach($jobFunctionList as $row){ ?>
                         <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                       <?php } ?>
                     </select>
-                    <button type="submit" class="btn btn-blue pull-right m-l-5 waves-effect waves-light"><i class="fa fa-search m-r-5"></i> Find Candidates</button>
+                    <button type="submit" class="btn btn-sm btn-blue pull-right m-l-5 waves-effect waves-light" style="height: 40px;"><i class="fa fa-search m-r-5"></i> Find Candidates</button>
                     </div>
                   </form>
                 </div>
@@ -55,14 +55,14 @@ function getPositionName($Id){
               <form class="form-inline" method="GET">
               <div class="form-group">
                 <input type="hidden" name="view" value="searchJob">
-                <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:305px;">
-                <select name="c" class="form-control" style="height: 67px; width:200px;" required>
+                <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 40px;width:230px;">
+                <select name="c" class="form-control" style="height: 40px; width:203px;" required>
                   <option value="">Select Category</option>
                   <?php foreach($jobFunctionList as $row){ ?>
                     <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                   <?php } ?>
                 </select>
-                    <button type="submit" class="btn waves-effect waves-light btn-blue"><i class="fa fa-search m-r-5"></i>Search Job</button>
+                    <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue" style="height: 40px; width: 170px; margin-top: -1px;"><i class="fa fa-search m-r-5"></i>Search Job</button>
 
               </div>
             </form>
@@ -348,46 +348,47 @@ function getPositionName($Id){
                         <!-- End row -->
 </div>
   <!-- Start Location Panels-->
-  <div class="bgimg-4" style="min-height: 678px;">
-      <div class="container center-page slideanim" style="padding-top: 10%;">
+    <div style="position: relative; min-height: 500px;">
+      <img style="position: absolute; top:0; width: 100%;" src="../include/assets/images/our-services-bg.png">
+      <div class="container center-page slideanim" style="padding-top: 5%;">
         <h2 class="text-center m-t-30 text-blue">Business Partners</h2>
         <div class="center-page" style="height: 2px; width: 20%; background-color: #0064c8;"></div>
         <div class="row m-t-30">
           <div class="col-lg-1"></div>
 
           <div class="col-lg-2 text-center">
-            <h3 class="center-page text-blue">SYDNEY HQ</h3>
             <div class="annex-img">
               <img src="../include/assets/images/home-img4.png">
             </div>
+            <h3 class="center-page text-blue">SYDNEY HQ</h3>
           </div>
 
           <div class="col-lg-2 text-center">
-            <h3 class="center-page text-blue">MANILA</h3>
             <div class="annex-img">
             	<img src="../include/assets/images/home-img1.png">
             </div>
+            <h3 class="center-page text-blue">MANILA</h3>
           </div>
 
             <div class="col-lg-2 text-center">
-              <h3 class="center-page text-blue">DELHI</h3>
               <div class="annex-img">
               	<img src="../include/assets/images/home-img2.png">
               </div>
+              <h3 class="center-page text-blue">DELHI</h3>
             </div>
 
             <div class="col-lg-2 text-center">
-              <h3 class="center-page text-blue">BANGALORE</h3>
               <div class="annex-img">
               	<img src="../include/assets/images/home-img3.png">
               </div>
+              <h3 class="center-page text-blue">BANGALORE</h3>
             </div>
 
             <div class="col-lg-2 text-center">
-              <h3 class="center-page text-blue">PROVIDENCE</h3>
               <div class="annex-img">
                 <img src="../include/assets/images/home-img5.png">
               </div>
+              <h3 class="center-page text-blue">PROVIDENCE</h3>
             </div>
             <div class="col-lg-1"></div>
         </div>
