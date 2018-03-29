@@ -14,7 +14,7 @@ function getPositionName($Id){
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
                     <p class="m-t-30 slideanim" style="font-size: 24px; width: 800px; margin: 0 auto; line-height: 1;font-weight: bold; color: #2a3c71;">
-                      It is our Business to Identify your Need, Interest Concern and Expectation
+                      It is our Business to Identify your Need, Interest, Concern and Expectation
                     </p>
                     <p style="color: #2a3c71; font-size: 24px;" class="slideanim">Remote Supply Chain Data driven experts.....
                     </p>

@@ -66,6 +66,7 @@ function clientRequest()
 {
 	$email = $_POST['email'];
 	$jobFunctionId = $_POST['jobFunctionId'];
+	$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 	$checkEmail = company()->get("email='$email'");
 
 	if($checkEmail){
@@ -73,6 +74,7 @@ function clientRequest()
 	}else{
 		$comp = company();
 		$comp->obj = $_POST;
+		$comp->obj['refNum'] = strtoupper($refNum);
 		$comp->obj['isApproved '] = "1";
 		$comp->create();
 
