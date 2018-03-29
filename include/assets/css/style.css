@@ -2085,11 +2085,16 @@ a:focus {
    Tabs
 ============= */
 .tab-content {
-  padding: 20px 0 0 0; }
+  padding: 0px; }
 
 .nav-tabs > li > a, .nav-pills > li > a {
   color: #313a46;
-  font-weight: 600; }
+  font-weight: 600;
+  background-color: #e2e2e2;}
+
+.nav-tabs li a:hover {
+  background-color: #d2d2d2;
+  border: 1px solid #d2d2d2; }
 
 .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
   background-color: #64c5b1; }
@@ -3171,7 +3176,7 @@ textarea.form-control {
 /* =============
    Form wizard
 ============= */
-.stepy-step {
+.-step {
   padding: 0 20px; }
 
 .stepy-header {
@@ -3186,14 +3191,14 @@ textarea.form-control {
     display: table-cell;
     vertical-align: top;
     width: auto;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
     position: relative; }
     .stepy-header li:after, .stepy-header li:before {
       content: '';
       display: block;
       position: absolute;
-      top: 43px;
+      top: 33px;
       width: 50%;
       height: 2px;
       background-color: #0064c8;
@@ -3206,8 +3211,8 @@ textarea.form-control {
       content: none; }
     .stepy-header li span {
       display: block;
-      margin-top: 10px;
-      color: #999;
+      margin-top: 1px;
+      color: #3e3e3e;
       font-weight: 600; }
     .stepy-header li div {
       background-color: #0064c8;
@@ -3216,17 +3221,17 @@ textarea.form-control {
       color: #ffffff;
       margin-left: auto;
       margin-right: auto;
-      width: 48px;
-      height: 48px;
+      width: 38px;
+      height: 38px;
       border: 2px solid #0064c8;
       z-index: 10;
-      line-height: 44px;
+      line-height: 33px;
       text-align: center;
       border-radius: 50%; }
       .stepy-header li div:after {
         font-family: "Material Design Icons";
         -webkit-font-smoothing: antialiased;
-        line-height: 44px;
+        line-height: 33px;
         -webkit-transition: all 0.15s ease-in-out;
         -moz-osx-font-smoothing: grayscale;
         content: "\F12D";
@@ -3273,10 +3278,6 @@ textarea.form-control {
     width: 100%; }
   .stepy-header li.stepy-active:after {
     background-color: #64c5b1; } }
-.stepy-navigator {
-  text-align: right;
-  margin-bottom: 0;
-  margin-top: 20px; }
 
 /* =============
    Summernote

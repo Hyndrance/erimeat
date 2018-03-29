@@ -18,9 +18,9 @@ function getPositionName($Id){
                     </p>
                     <p style="color: #2a3c71; font-size: 24px;" class="slideanim">Remote Supply Chain Data driven experts.....
                     </p>
-                    <div class="row m-b-20" style="margin-top: 100px; min-width: 1350px;">
-                      <button id="myBtn1" class="btn btn-sm" style="width:300px;">NEED TO HIRE?</button>
-                      <button id="myBtn2" class="btn btn-sm" style="width:300px;">LOOKING FOR A JOB?</button>
+                    <div class="row m-b-20" style="margin-top: 200px; min-width: 1350px;">
+                      <button id="myBtn1" class="btn btn-sm" style="width:300px; height: 50px;">NEED TO HIRE?</button>
+                      <button id="myBtn2" class="btn btn-sm" style="width:300px; height: 50px;">LOOKING FOR A JOB?</button>
                     </div>
 
                 <div class="">
@@ -28,7 +28,7 @@ function getPositionName($Id){
                   <form class="form-inline" method="GET">
                     <div class="form-group">
                     <input type="hidden" name="view" value="searchResume">
-                    <select name="c" class="form-control" style="height: 40px; width:230px;" required>
+                    <select name="c" class="form-control" style="height: 40px; width:230px; border: none;" required>
                         <option>Select City</option>
                         <?php foreach(country_option()->list() as $country){ ?>
                         <optgroup label="<?=$country->country;?>">
@@ -37,13 +37,13 @@ function getPositionName($Id){
                             <?php } ?>
                         <?php } ?>
                     </select>
-                    <select name="j" class="form-control" style="height: 40px; width:203px;" required>
+                    <select name="j" class="form-control" style="height: 40px; width:203px; border: none;" required>
                       <option value="">Select Category</option>
                       <?php foreach($jobFunctionList as $row){ ?>
                         <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                       <?php } ?>
                     </select>
-                    <button type="submit" class="btn btn-sm btn-blue pull-right m-l-5 waves-effect waves-light" style="height: 40px;"><i class="fa fa-search m-r-5"></i> Find Candidates</button>
+                    <button type="submit" class="btn btn-sm btn-blue pull-right m-l-5 waves-effect waves-light" style="height: 41px;"><i class="fa fa-search m-r-5"></i> Find Candidates</button>
                     </div>
                   </form>
                 </div>
@@ -55,14 +55,14 @@ function getPositionName($Id){
               <form class="form-inline" method="GET">
               <div class="form-group">
                 <input type="hidden" name="view" value="searchJob">
-                <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 40px;width:230px;">
-                <select name="c" class="form-control" style="height: 40px; width:203px;" required>
+                <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 40px;width:230px; border: none;">
+                <select name="c" class="form-control" style="height: 40px; width:203px; border: none;" required>
                   <option value="">Select Category</option>
                   <?php foreach($jobFunctionList as $row){ ?>
                     <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                   <?php } ?>
                 </select>
-                    <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue" style="height: 40px; width: 170px; margin-top: -1px;"><i class="fa fa-search m-r-5"></i>Search Job</button>
+                    <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue" style="height: 41px; width: 163px;"><i class="fa fa-search m-r-5"></i>Search Job</button>
 
               </div>
             </form>
@@ -178,173 +178,173 @@ function getPositionName($Id){
 </div> <!-- container -->
 </div>
 </div>
-    <!-- Basic Form Wizard -->
-<div class="bgimg-3"style="min-height: 675px;">
-    <div class="container-80 center-page" style="padding-top: 2%;">
+<!-- Basic Form Wizard -->
+<div class="bgimg-3">
+   <div class="container-80 center-page">
 
-                                    <ul class="nav nav-tabs navtab-bg nav-justified m-t-30">
-                                        <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
-                                            <a href="#home1" data-toggle="tab" aria-expanded="false">
-                                                <span class="visible-xs"><i class="fa fa-home"></i></span>
-                                                <h3 class="hidden-xs">Four Simple Steps to Hire</h3>
-                                            </a>
-                                        </li>
-                                        <li class="" style="background-color: #f2f2f2; border-radius:5px;">
-                                            <a href="#profile1" data-toggle="tab" aria-expanded="true">
-                                                <span class="visible-xs"><i class="fa fa-user"></i></span>
-                                                <h3 class="hidden-xs">How We Help You Find a Job</h3>
-                                            </a>
-                                        </li>
+                                   <ul class="nav nav-tabs navtab-bg nav-justified m-t-30">
+                                       <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
+                                           <a href="#home1" data-toggle="tab" aria-expanded="false">
+                                               <span class="visible-xs"><i class="fa fa-home"></i></span>
+                                               <h3 class="hidden-xs">Four Simple Steps to Hire</h3>
+                                           </a>
+                                       </li>
+                                       <li class="" style="background-color: #f2f2f2; border-radius:5px;">
+                                           <a href="#profile1" data-toggle="tab" aria-expanded="true">
+                                               <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                               <h3 class="hidden-xs">How We Help You Find a Job</h3>
+                                           </a>
+                                       </li>
 
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane" id="home1">
-                                            <form id="wizard-clickable" class="text-blue">
-                                        <fieldset title="1">
-                                            <legend>Tell us about your hiring needs</legend>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img1.png" style="margin-left: 100px;width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 1: Tell us about your hiring needs</strong></h4>
-                                                    <p>
-                                                        Submit your job opening online in just minutes, or simply call us. Either way, our recruiting specialists will evaluate the skills, experience and corporate culture fit you require. We are 100% committed to finding employees who are the best fit for your company. Need someone today, or even weeks from now? No problem, we have you covered.
-                                                    </p>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
+                                   </ul>
+                                   <div class="tab-content">
+                                       <div class="tab-pane" id="home1">
+                                           <form id="wizard-clickable" class="text-blue">
+                                       <fieldset title="1">
+                                           <legend>Tell us about your hiring needs</legend>
+                                           <div class="row">
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img1.png" style="margin-left: 100px;width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 1: Tell us about your hiring needs</strong></h4>
+                                                   <p>
+                                                       Submit your job opening online in just minutes, or simply call us. Either way, our recruiting specialists will evaluate the skills, experience and corporate culture fit you require. We are 100% committed to finding employees who are the best fit for your company. Need someone today, or even weeks from now? No problem, we have you covered.
+                                                   </p>
+                                               </div>
+                                               <div class="clearfix"></div>
+                                           </div>
 
-                                        </fieldset>
+                                       </fieldset>
 
-                                        <fieldset title="2">
-                                            <legend>Your staffing options</legend>
+                                       <fieldset title="2">
+                                           <legend>Your staffing options</legend>
 
-                                       <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img2.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 2: Your staffing options</strong></h4>
-                                                    <p>
-                                                      Teamire is known for providing a selection of highly skilled professionals, and our staffing professionals can provide you with temporary, temporary-to-full-time, project and full-time staffing solutions. We even have our own full-time specialized employees, who you can hire on an interim or recurring basis. Wondering how to make the most of your hiring budget? There is no cost until you hire, so let’s talk.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </fieldset>
+                                      <div class="row">
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img2.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 2: Your staffing options</strong></h4>
+                                                   <p>
+                                                     Teamire is known for providing a selection of highly skilled professionals, and our staffing professionals can provide you with temporary, temporary-to-full-time, project and full-time staffing solutions. We even have our own full-time specialized employees, who you can hire on an interim or recurring basis. Wondering how to make the most of your hiring budget? There is no cost until you hire, so let’s talk.
+                                                   </p>
+                                               </div>
+                                           </div>
+                                       </fieldset>
 
-                                        <fieldset title="3">
-                                            <legend>Review and select candidates</legend>
-
-                                        <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img3.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 3: Review and select candidates</strong></h4>
-                                                    <p>
-                                                      Finding candidates who are just the right fit for your role is our top priority. We will provide you with your choice of well-matched candidates, and our recommendations will be tailored to the nuances of your role and business. Then, once you select the best candidate, we’ll coordinate all aspects of the recruiting process, working hard to ensure a smooth start for you and your new employee.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                                 <fieldset title="4">
-                                            <legend>Service and your happiness</legend>
-
-                                          <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img4.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 4: Service and your happiness</strong></h4>
-                                                    <p>
-                                                      Ensuring you are happy with your hiring experience is what defines Robert Half. We are committed to the highest level of customer service, and we back it up with a satisfaction guarantee. Our communication, expert advice and recruiting support is provided on your terms, not just during the hiring process but beyond, creating a lasting relationship with you.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                        <center>
-                                            <a href="../home/?view=hiringForm"  class="btn btn-primary m-t-30 m-b-30">REQUEST TALENT</a>
-                                        </center>
-                                           <button style="display: none;" type="submit" class="btn btn-blue btn-sm stepy-finish">Submit</button>
-                                    </form>
-
-                                        </div>
-                                        <div class="tab-pane active" id="profile1">
-                                          <form id="default-wizard" class="text-blue">
-                                        <fieldset title="1">
-                                               <legend>Search for jobs and apply</legend>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img5.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 1: Search for jobs and apply</strong></h4>
-                                                    <p>
-                                                       Quickly and easily search our open positions to find one that fits your skills and experience. We have jobs with top local companies in your area.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-
-                                        </fieldset>
-
-                                        <fieldset title="2">
-                                            <legend>Upload your resume</legend>
+                                       <fieldset title="3">
+                                           <legend>Review and select candidates</legend>
 
                                        <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img6.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 2: Upload your resume</strong></h4>
-                                                    <p>
-                                                    Our online form makes it easy to send us your resume or upload the details of your LinkedIn profile. We’ll then contact you if your qualifications meet the requirements of an open position or match what our clients typically look for.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </fieldset>
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img3.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 3: Review and select candidates</strong></h4>
+                                                   <p>
+                                                     Finding candidates who are just the right fit for your role is our top priority. We will provide you with your choice of well-matched candidates, and our recommendations will be tailored to the nuances of your role and business. Then, once you select the best candidate, we’ll coordinate all aspects of the recruiting process, working hard to ensure a smooth start for you and your new employee.
+                                                   </p>
+                                               </div>
+                                           </div>
+                                       </fieldset>
+                                                <fieldset title="4">
+                                           <legend>Service and your happiness</legend>
 
-                                        <fieldset title="3">
-                                            <legend>Getting to know you</legend>
+                                         <div class="row">
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img4.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 4: Service and your happiness</strong></h4>
+                                                   <p>
+                                                     Ensuring you are happy with your hiring experience is what defines Robert Half. We are committed to the highest level of customer service, and we back it up with a satisfaction guarantee. Our communication, expert advice and recruiting support is provided on your terms, not just during the hiring process but beyond, creating a lasting relationship with you.
+                                                   </p>
+                                               </div>
+                                           </div>
+                                       </fieldset>
+                                       <center>
+                                           <a href="../home/?view=hiringForm"  class="btn btn-primary m-t-30 m-b-30">REQUEST TALENT</a>
+                                       </center>
+                                          <button style="display: none;" type="submit" class="btn btn-blue btn-sm stepy-finish">Submit</button>
+                                   </form>
 
-                                        <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img7.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 3: Getting to know you</strong></h4>
-                                                    <p>
-                                                     You are more than just a resume or an application. That is why we work so hard to understand your career goals, so that we can help you find a job that is just the right fit for you.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                        <fieldset title="4">
-                                            <legend>While we find the right fit</legend>
-                                               <div class="row">
-                                                <div class="col-md-4">
-                                                    <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h4 class="text-blue"><strong>Step 4: While we find the right fit</strong></h4>
-                                                    <p>
-                                                     In addition to helping find your next career move, we are also here to help you with refining your resume, prepping you for interviews, and sharing local salary and hiring trends.
-                                                    </p>
-                                                </div>
-                                            </div>
+                                       </div>
+                                       <div class="tab-pane active" id="profile1">
+                                         <form id="default-wizard" class="text-blue">
+                                       <fieldset title="1">
+                                              <legend>Search for jobs and apply</legend>
+                                           <div class="row">
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img5.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 1: Search for jobs and apply</strong></h4>
+                                                   <p>
+                                                      Quickly and easily search our open positions to find one that fits your skills and experience. We have jobs with top local companies in your area.
+                                                   </p>
+                                               </div>
+                                           </div>
 
-                                        </fieldset>
 
-                                        <button style="display: none;" type="submit" class="btn btn-blue btn-sm stepy-finish">Submit</button>
-                                    </form>
-                                      <center>
-                                            <a href="../home/?view=submitResume"  class="btn btn-blue m-t-30 m-b-30">SUBMIT RESUME</a>
-                                        </center>
-                                        </div>
-                                    </div>
-                                </div>
-                      </div>
+                                       </fieldset>
+
+                                       <fieldset title="2">
+                                           <legend>Upload your resume</legend>
+
+                                      <div class="row">
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img6.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 2: Upload your resume</strong></h4>
+                                                   <p>
+                                                   Our online form makes it easy to send us your resume or upload the details of your LinkedIn profile. We’ll then contact you if your qualifications meet the requirements of an open position or match what our clients typically look for.
+                                                   </p>
+                                               </div>
+                                           </div>
+                                       </fieldset>
+
+                                       <fieldset title="3">
+                                           <legend>Getting to know you</legend>
+
+                                       <div class="row">
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img7.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 3: Getting to know you</strong></h4>
+                                                   <p>
+                                                    You are more than just a resume or an application. That is why we work so hard to understand your career goals, so that we can help you find a job that is just the right fit for you.
+                                                   </p>
+                                               </div>
+                                           </div>
+                                       </fieldset>
+                                       <fieldset title="4">
+                                           <legend>While we find the right fit</legend>
+                                              <div class="row">
+                                               <div class="col-md-4">
+                                                   <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                               </div>
+                                               <div class="col-md-8">
+                                                   <h4 class="text-blue"><strong>Step 4: While we find the right fit</strong></h4>
+                                                   <p>
+                                                    In addition to helping find your next career move, we are also here to help you with refining your resume, prepping you for interviews, and sharing local salary and hiring trends.
+                                                   </p>
+                                               </div>
+                                           </div>
+
+                                       </fieldset>
+
+                                       <button style="display: none;" type="submit" class="btn btn-blue btn-sm stepy-finish">Submit</button>
+                                   </form>
+                                     <center>
+                                           <a href="../home/?view=submitResume"  class="btn btn-blue m-t-30 m-b-30">SUBMIT RESUME</a>
+                                       </center>
+                                       </div>
+                                   </div>
+                               </div>
+                     </div>
                         <!-- End row -->
 </div>
   <!-- Start Location Panels-->
