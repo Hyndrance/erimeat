@@ -40,7 +40,9 @@ function getJobCategory($Id){
                     <p class="text-muted font-13"><strong>Phone Number :</strong>
                       <span class="m-l-15"><?=$resume->phoneNumber;?></span>
                     </p>
-                    <p class="text-muted font-13"><strong><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Click to view resume</a></strong></p>
+                    <p class="text-muted font-13"><strong>Click to view resume :</strong>
+                      <span class="m-l-15"><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
+                    </p>
                 </div>
             </div>
         </div>

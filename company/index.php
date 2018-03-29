@@ -27,12 +27,6 @@ switch ($view) {
 		$template	= '../include/template_login.php';
 		break;
 
-	case 'reports' :
-		$currentSession = isset($_SESSION["company_session"]);
-		$content 	= 'reports.php';
-		$template	= '../include/dashboard.php';
-		break;
-
 	case 'jobList' :
 		$currentSession = isset($_SESSION["company_session"]);
 		$content 	= 'jobList.php';
