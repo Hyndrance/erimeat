@@ -195,7 +195,7 @@ function __createEmployeeLogin($Id, $jobId){
 	// Create account
 	$user = user();
 	$user->obj['username'] =  "E" . round(microtime(true));
-	$user->obj['password'] = "temppassword";
+	$user->obj['password'] = sha1("temppassword");
 	$user->obj['firstName'] = $resume->firstName;
 	$user->obj['lastName'] = $resume->lastName;
 	$user->obj['level'] = "employee";

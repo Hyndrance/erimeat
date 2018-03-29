@@ -2,6 +2,8 @@
 $Id = $_GET['Id'];
 $resume = resume()->get("Id='$Id'");
 
+$certList = certificates()->list("resumeId='$Id'");
+
 function getJobName($Id){
   $job = job()->get("Id='$Id'");
   return $job->position;
@@ -51,8 +53,10 @@ function getJobName($Id){
                   <p class="text-muted font-13"><strong>Click to view resume :</strong>
                     <span class="m-l-15"><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
                   </p>
-                  <p class="text-muted font-13"><strong>Click to view certificates :</strong>
-                    <span class="m-l-15"><a href="../media/<?=$resume->uploadedCerts;?>" target="blank_">Supporting Documents</a></span>
+                  <p class="text-muted font-13"><strong>Click to view certificates :</strong></br>
+                    <?php foreach($certList as $row){ ?>
+                    <span class="m-l-15"><a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Supporting Documents</a></span><br>
+                    <?php }?>
                   </p>
               </div>
             </div>

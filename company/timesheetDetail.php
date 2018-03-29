@@ -60,7 +60,7 @@ function get_time_difference($record)
 
                         <?php if($ts->status==0) { ?>
                           <button class="btn btn-sm btn-primary" onclick="location.href='process.php?action=verifyTimesheet&Id=<?=$timesheetId;?>'">Verify</button>
-                          <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#dispute-modal">Despute</button>
+                          <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#dispute-modal">Dispute</button>
                         <?php } ?>
                         <?php if($ts->status==2) { ?>
                           <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>

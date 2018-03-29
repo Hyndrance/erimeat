@@ -16,7 +16,7 @@
         <div class="portlet">
             <div class="portlet-heading bg-primary">
                 <h3 class="portlet-title text-center center-page">
-                    EMPLOYEE LOGIN
+                    CLIENT LOGIN
                 </h3>
                 <div class="clearfix"></div>
             </div>
