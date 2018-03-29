@@ -147,8 +147,9 @@ function formatDate($val){
 
                       <div class="form-group">
                         <label>Upload Image</label>
-                        <input type="text" class="form-control" name="upload_file" value="<?=$row->uploadedImage;?>" accept=".png, .jpg, .jpeg">
+                        <input type="file" class="form-control" name="upload_file" value="<?=$row->uploadedImage;?>" accept=".png, .jpg, .jpeg">
                         <span class="help-block"><small>Supported File: .png, .jpg, .jpeg</small></span>
+                        <span><a href="../media/<?=$row->uploadedImage;?>" target="blank_">Click to view image</a></span>
                       </div>
                     </div>
                   </div>
