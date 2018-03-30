@@ -179,20 +179,20 @@ function getPositionName($Id){
 </div>
 </div>
 <!-- Basic Form Wizard -->
-<div class="bgimg-3">
-   <div class="container-80 center-page">
+<div class="bgimg-3" style="min-height: 678px;">
+   <div class="container-80 center-page" >
 
-                                   <ul class="nav nav-tabs navtab-bg nav-justified m-t-30">
+                                   <ul class="nav nav-tabs navtab-bg nav-justified" style="padding-top: 450px;">
                                        <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
                                            <a href="#home1" data-toggle="tab" aria-expanded="false">
                                                <span class="visible-xs"><i class="fa fa-home"></i></span>
-                                               <h3 class="hidden-xs">Four Simple Steps to Hire</h3>
+                                               <span class="hidden-xs text-blue">Four Simple Steps to Hire</span>
                                            </a>
                                        </li>
                                        <li class="" style="background-color: #f2f2f2; border-radius:5px;">
                                            <a href="#profile1" data-toggle="tab" aria-expanded="true">
                                                <span class="visible-xs"><i class="fa fa-user"></i></span>
-                                               <h3 class="hidden-xs">How We Help You Find a Job</h3>
+                                               <span class="hidden-xs text-blue">How We Help You Find a Job</span>
                                            </a>
                                        </li>
 
@@ -202,9 +202,9 @@ function getPositionName($Id){
                                            <form id="wizard-clickable" class="text-blue">
                                        <fieldset title="1">
                                            <legend>Tell us about your hiring needs</legend>
-                                           <div class="row">
+                                           <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img1.png" style="margin-left: 100px;width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img1.png" style="margin-left: 100px;width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 1: Tell us about your hiring needs</strong></h4>
@@ -220,9 +220,9 @@ function getPositionName($Id){
                                        <fieldset title="2">
                                            <legend>Your staffing options</legend>
 
-                                      <div class="row">
+                                      <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img2.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img2.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 2: Your staffing options</strong></h4>
@@ -236,9 +236,9 @@ function getPositionName($Id){
                                        <fieldset title="3">
                                            <legend>Review and select candidates</legend>
 
-                                       <div class="row">
+                                       <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img3.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img3.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 3: Review and select candidates</strong></h4>
@@ -251,9 +251,9 @@ function getPositionName($Id){
                                                 <fieldset title="4">
                                            <legend>Service and your happiness</legend>
 
-                                         <div class="row">
+                                         <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img4.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img4.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 4: Service and your happiness</strong></h4>
@@ -274,9 +274,9 @@ function getPositionName($Id){
                                          <form id="default-wizard" class="text-blue">
                                        <fieldset title="1">
                                               <legend>Search for jobs and apply</legend>
-                                           <div class="row">
+                                           <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img5.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img5.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 1: Search for jobs and apply</strong></h4>
@@ -292,9 +292,9 @@ function getPositionName($Id){
                                        <fieldset title="2">
                                            <legend>Upload your resume</legend>
 
-                                      <div class="row">
+                                      <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img6.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img6.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 2: Upload your resume</strong></h4>
@@ -308,9 +308,9 @@ function getPositionName($Id){
                                        <fieldset title="3">
                                            <legend>Getting to know you</legend>
 
-                                       <div class="row">
+                                       <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img7.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img7.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 3: Getting to know you</strong></h4>
@@ -322,9 +322,9 @@ function getPositionName($Id){
                                        </fieldset>
                                        <fieldset title="4">
                                            <legend>While we find the right fit</legend>
-                                              <div class="row">
+                                              <div class="row" style="height: 170px;">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 50%;height:50%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 4: While we find the right fit</strong></h4>

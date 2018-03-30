@@ -3177,7 +3177,7 @@ textarea.form-control {
    Form wizard
 ============= */
 .-step {
-  padding: 0 20px; }
+  padding: 0 1px; }
 
 .stepy-header {
   list-style: none;
@@ -3191,14 +3191,14 @@ textarea.form-control {
     display: table-cell;
     vertical-align: top;
     width: auto;
-    padding: 15px 0;
+    padding: 1px 0;
     text-align: center;
     position: relative; }
     .stepy-header li:after, .stepy-header li:before {
       content: '';
       display: block;
       position: absolute;
-      top: 33px;
+      top: 15px;
       width: 50%;
       height: 2px;
       background-color: #0064c8;
@@ -3221,22 +3221,22 @@ textarea.form-control {
       color: #ffffff;
       margin-left: auto;
       margin-right: auto;
-      width: 38px;
-      height: 38px;
+      width: 30px;
+      height: 30px;
       border: 2px solid #0064c8;
       z-index: 10;
-      line-height: 33px;
+      line-height: 25px;
       text-align: center;
       border-radius: 50%; }
       .stepy-header li div:after {
         font-family: "Material Design Icons";
         -webkit-font-smoothing: antialiased;
-        line-height: 33px;
+        line-height: 25px;
         -webkit-transition: all 0.15s ease-in-out;
         -moz-osx-font-smoothing: grayscale;
         content: "\F12D";
         display: inline-block;
-        font-size: 24px;
+        font-size: 22px;
         -o-transition: all .15s ease-in-out;
         transition: all .15s ease-in-out; }
   .stepy-header li.stepy-active:after,
