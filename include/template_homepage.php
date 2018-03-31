@@ -209,6 +209,7 @@
                     <ul style="list-style-type:none;">
                       <li><a style="color: white;" href="../home/?view=services">Our Services</a></li>
                       <li><a style="color: white;" href="../home/?view=projects">Projects</a></li>
+                      <li><a style="color: white;" href="../home/?view=downloads">Downloads</a></li>
                     </ul>
                   </div>
                   <div class="container-fluid col-12 col-lg-2">

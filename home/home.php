@@ -16,7 +16,7 @@ function getPositionName($Id){
                     <p class="m-t-30 slideanim" style="font-size: 24px; width: 800px; margin: 0 auto; line-height: 1;font-weight: bold; color: #2a3c71;">
                       It is our Business to Identify your Need, Interest, Concern and Expectation
                     </p>
-                    <p style="color: #2a3c71; font-size: 24px;" class="slideanim">Remote Supply Chain Data driven experts.....
+                    <p style="color: #2a3c71; font-size: 24px;" class="slideanim">We're Remote Supply Chain Data driven experts.....
                     </p>
                     <div class="row m-b-20" style="margin-top: 200px; min-width: 1350px;">
                       <button id="myBtn1" class="btn btn-sm" style="width:300px; height: 50px;">NEED TO HIRE?</button>
