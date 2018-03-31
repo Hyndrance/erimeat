@@ -12,7 +12,7 @@
       <ul class="nav navbar-nav navbar-right nav-menu-right" id="above-nav">
         <li> <a class="m-l-3 m-r-3" href="../home/?view=projects" style="font-size:15px;">Supply Chain Projects</a></li>
         <li> <a class="m-l-3 m-r-3" href="../home/?view=logins" style="font-size:15px;">Timesheets</a></li>
-        <li> <a class="m-l-3 m-r-3" href="../home/?view=downloads" style="font-size:15px;">Downloads</a></li>
+        <li> <a class="m-l-3 m-r-3" href="../home/?view=downloads" style="font-size:15px;">Your Remote Team</a></li>
         <li> <a class="m-l-3 m-r-3" href="../home/?view=hiringForm" style="font-size:15px;">Request Staff</a></li>
         <li><a class="m-l-3 m-r-3" href="../home/?view=contactUs" style="font-size:15px;">Contact Us</a></li>
       </ul>
