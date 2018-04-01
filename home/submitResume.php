@@ -113,7 +113,7 @@ $ptList = position_type()->list();
                           </div>
 
                           <div class="form-group">
-                            <label for="username">Cover Letter<span style="color: red;">*</span></label>
+                            <label for="username">Cover Letter <span style="color: red;">*</span></label>
                             <textarea id="message" class="form-control" name="coverLetter"
                                               data-parsley-trigger="keyup" data-parsley-minlength="20"
                                               data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
@@ -122,22 +122,22 @@ $ptList = position_type()->list();
 
                           <div class="p-r-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label>Attach Computer Specification</label>
-                            <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg"/>
+                            <label>Attach Computer Specification <span style="color: red;">*</span></label>
+                            <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg" required/>
                             <span class="help-block"><small>Supported File: .png, .jpg, .jpeg</small></span>
                           </div>
                           </div>
 
                           <div class="p-l-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label>Attach Other Files</label>
-                            <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg,">
+                            <label>Attach Other Files <span style="color: red;">*</span></label>
+                            <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg," required>
                             <span class="help-block"><small>Supported File: .pdf, .png, .jpg, .jpeg</small></span>
                           </div>
                           </div>
 
 
-                          <div class="text-center"><h3>Attach Resume</h3>
+                          <div class="text-center"><h3>Attach Resume <span style="color: red;">*</span></h3>
                           <p>Choose one of the following options:</p></div>
                           <div class="col-md-4">
                          <a id="myBtnShowResume" style="border-radius: 50%;height: 90px;width: 90px; " class="btn btn-danger btn-file btn-circle btn-lg pull-right"><i class="fa fa-file-text-o fa-2x text-white p-t-10"></i> </a>
@@ -148,7 +148,7 @@ $ptList = position_type()->list();
                           <p>Supported File Types: .pdf, .doc, .docx</p>
                         </div>
                         <div class="form-group">
-                        <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx, .txt"></div>
+                        <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx, .txt" required></div>
                      </div>
 
                     </div>

@@ -65,7 +65,7 @@ function formatDate($val){
         <!--  This button only shows if job is approved -->
         <?php if($job->isApproved==0) {?>
           <button class="btn btn-lg btn-blue" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
-          <button class="btn btn-lg btn-warning" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Ask for more info</button>
+          <button class="btn btn-lg btn-warning" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Request for more info</button>
           <button class="btn btn-lg btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
         <?php } ?>
         <?php if($job->isApproved==-1) {?>

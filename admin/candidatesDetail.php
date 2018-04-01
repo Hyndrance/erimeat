@@ -53,7 +53,7 @@ function getCity($Id){
           <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#schedule-modal">
             Set an Interview
           </button>
-          <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-default">More Info</button>
+          <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-default">Request for More Info</button>
           <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-danger">Delete</button>
       </div>
       <?php } ?>

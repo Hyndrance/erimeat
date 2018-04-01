@@ -131,7 +131,7 @@ function __createClientLogin($Id){
 							Username: " . $user->obj['username'] . " <br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='www.bandbajabaraath.kovasaf.com/company/index.php?view=changepassword'>www.bandbajabaraath.kovasaf.com</a><br><br>
+							<a href='http://bandbajabaraath.com/company/index.php?view=login'>www.teamire.com/company/</a><br><br>
 							Teamire";
 
 	sendEmail($company->email, $content);

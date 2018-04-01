@@ -64,7 +64,7 @@ function getJobName($Id){
         <!-- Personal-Information -->
         <div class="card-box">
         <button type="button" class="btn btn-info waves-effect waves-light" data-toggle="modal" data-target="#schedule-modal">Schedule an Interview</button>
-          <button class="btn btn-default stepy-finish" onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">More Info</button>
+          <button class="btn btn-default stepy-finish" onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">Request for More Info</button>
         </div>
     </div>
   </div>
