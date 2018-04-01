@@ -33,7 +33,7 @@ $jfList = job_function()->list();
 
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
-                                <label for="username">Employer's Name <span style="color: red;">*</span></label>
+                                <label for="username">Employer's Company Name <span style="color: red;">*</span></label>
                                 <input type="text" class="form-control" name="name" required>
                               </div>
                               </div>
