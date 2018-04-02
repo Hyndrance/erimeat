@@ -255,7 +255,7 @@ function jobRequest()
 /* ======================== Email Messages ==============================*/
 
 function __approvedJobRequestEmailMessage(){
-	return "We have approved your request.<br><br>
+	return "We have approved your talent request.<br><br>
 					Teamire";
 }
 

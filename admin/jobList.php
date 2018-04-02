@@ -1,5 +1,5 @@
 <?php
-$email = $_GET['email'];
+$email = (isset($_GET['email']) && $_GET['email'] != '') ? $_GET['email'] : '';
 $isApproved = (isset($_GET['isApproved']) && $_GET['isApproved'] != '') ? 'isApproved=\''.$_GET['isApproved'].'\' and ' : '';
 $workEmail = (isset($_GET['email']) && $_GET['email'] != '') ?  'workEmail=\''.$_GET['email'].'\' and '  : '';
 

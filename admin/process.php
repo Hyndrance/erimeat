@@ -522,7 +522,7 @@ function setInterviewDate()
 	$resume->update("Id='$Id'");
 
 	$content = "We have considered your application. Please be available on the schedule below<br>
-							for your interview.<br><br>
+							for your interview. Someone from our team will contact you.<br><br>
 							Date = $date<br>
 							Time = $time<br><br>
 							Teamire";
@@ -605,7 +605,7 @@ function __createEmployeeLogin($Id, $jobId){
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='www.bandbajabaraath.kovasaf.com/employee/index.php?view=changepassword'>www.bandbajabaraath.kovasaf.com</a><br><br>
+							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
 							Teamire";
 	sendEmail($resume->email, $content);
 }
@@ -771,13 +771,7 @@ function removeCity()
 /* ======================== Email Messages ==============================*/
 
 function __approvedJobRequestEmailMessage(){
-	return "We have approved your request.<br><br>
-					Teamire";
-}
-
-function __infoJobRequestEmailMessage(){
-	return "Hi, we need more information regarding your request. Someone from our team<br>
-					will contact you.<br><br>
+	return "We have approved your talent request.<br><br>
 					Teamire";
 }
 
