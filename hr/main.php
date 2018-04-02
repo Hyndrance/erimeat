@@ -88,7 +88,7 @@ function getJobFunction($Id){
                     <thead>
                     <tr>
                         <th>Job</th>
-                        <th>Required Experience</th>
+                        <th>Address</th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>

@@ -133,7 +133,7 @@ function sendEmail($email, $content){
 
 	$mailer = Swift_Mailer::newInstance($transport);
 
-	
+
 
 	try{
 	 $message = Swift_Message::newInstance("No Reply")
@@ -143,7 +143,7 @@ function sendEmail($email, $content){
 	$message->setBody($content, 'text/html');
 	}
 	catch (Swift_RfcComplianceException $e){
-	    print('Email address not valid:' . $e->getMessage());
+	    print('Sorry for the inconvenience. Could not connect to email server. Try again.:' . $e->getMessage());
 	}
 
 	if(!empty($targetpath)) {
