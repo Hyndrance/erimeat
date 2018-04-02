@@ -40,6 +40,23 @@ function getJobCategory($Id){
                     <p class="text-muted font-13"><strong>Phone Number :</strong>
                       <span class="m-l-15"><?=$resume->phoneNumber;?></span>
                     </p>
+                    <p>
+                      <label class="text-muted font-13">Status :</label>
+                      <?php if($resume->isHired==0 && $resume->isApproved==1){ ?>
+                      <div class=" btn btn-default btn-xs tooltips">
+                        Waiting for Interview
+                      </div>
+                      <?php }elseif($resume->isHired==1 && $resume->isApproved==1){ ?>
+                      <div class=" btn btn-success btn-xs tooltips">
+                        Hired
+                      </div>
+                      <?php }else{ ?>
+                      <div class=" btn btn-warning btn-xs tooltips">
+                        Pending
+                      </div>
+                      <?php } ?>
+                    </p>
+                    <br>
                     <p class="text-muted font-13"><strong>Click to view resume :</strong>
                       <span class="m-l-15"><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
                     </p>

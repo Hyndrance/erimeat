@@ -42,6 +42,22 @@ function getJobName($Id){
                   <p class="text-muted font-13"><strong>Speedtest :</strong>
                     <span class="m-l-15"><?=$resume->speedtest;?></span>
                   </p>
+                  <p>
+                    <label class="text-muted font-13">Status :</label>
+                    <?php if($resume->isHired==0 && $resume->isApproved==1){ ?>
+                    <div class=" btn btn-default btn-xs tooltips">
+                      Waiting for Interview
+                    </div>
+                    <?php }elseif($resume->isHired==1 && $resume->isApproved==1){ ?>
+                    <div class=" btn btn-success btn-xs tooltips">
+                      Hired
+                    </div>
+                    <?php }else{ ?>
+                    <div class=" btn btn-warning btn-xs tooltips">
+                      Pending
+                    </div>
+                    <?php } ?>
+                  </p>
                   <br>
                   <p class="text-muted font-13"><strong>Cover Letter :</strong>
                     <span class="m-l-15"><?=$resume->coverLetter;?></span>
