@@ -3,8 +3,12 @@ $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 $resume = resume()->list();
 
 function getJobName($Id){
+  if($Id=='0'){
+    echo 'N/A';
+  }else{
   $job = job()->get("Id='$Id'");
   echo $job->position;
+  }
 }
 
 function getInterviewDate($Id){
@@ -37,7 +41,7 @@ function getInterviewTime($Id){
                 <tbody>
 
                 <?php foreach($resume as $row) {
-                  if ($row->jobId!=0 && $row->isApproved==1 && $row->isHired==0) {?>
+                  if ($row->isApproved==1 && $row->isHired==0) {?>
                 <tr>
                     <td><?=getJobName($row->jobId); ?></td>
                     <td><?=$row->refNum; ?></td>

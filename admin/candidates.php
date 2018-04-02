@@ -22,20 +22,23 @@ $resumeList = resume()->list("isDeleted=0");
           </thead>
           <tbody>
             <?php foreach($resumeList as $row) {
-              if($row->jobId==0){
             ?>
             <tr>
               <td><?=$row->refNum;?></td>
               <td><?=$row->firstName;?> <?=$row->lastName;?></td>
               <td><?=$row->email;?></td>
               <td>
-                <?php if($row->isHired==0){ ?>
-                <div class=" btn btn-warning btn-xs tooltips">
-                  Pending
+                <?php if($row->isHired==0 && $row->isApproved==1){ ?>
+                <div class=" btn btn-default btn-xs tooltips">
+                  Waiting for Interview
                 </div>
-                <?php }else{ ?>
+              <?php }elseif($row->isHired==1 && $row->isApproved==1){ ?>
                 <div class=" btn btn-success btn-xs tooltips">
                   Hired
+                </div>
+                <?php }else{ ?>
+                <div class=" btn btn-warning btn-xs tooltips">
+                  Pending
                 </div>
                 <?php } ?>
               </td>
@@ -44,7 +47,7 @@ $resumeList = resume()->list("isDeleted=0");
               </td>
             </tr>
             <?php
-          } }
+            }
             ?>
           </tbody>
         </table>

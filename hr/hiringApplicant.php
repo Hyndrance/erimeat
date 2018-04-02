@@ -48,8 +48,15 @@ function getJobCategory($Id){
         </div>
         <!-- Personal-Information -->
         <div class="card-box">
+          <?php if($resume->isApproved==1 && $resume->jobId!=0){?>
           <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$jobId;?>'">Hire</button>
           <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=deny&Id=<?=$resume->Id;?>'">Deny</button>
+          <?php } ?>
+          <?php if($resume->isApproved==1 && $resume->isHired==0 && $resume->jobId==0){?>
+          <button onclick="location.href='?view=openJobs&Id=<?=$resume->Id;?>'" class="btn btn-info" style="width:350px;">
+            Assign Job
+          </button>
+          <?php } ?>
         </div>
     </div>
   </div>

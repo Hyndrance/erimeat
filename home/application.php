@@ -110,7 +110,7 @@ $ptList = position_type()->list();
                               <label for="username">Speedtest</label>
                               <input type="text" class="form-control" name="speedtest">
                               <span class="help-block"><small>To access speedtest. Click the link <a href="http://www.bandwidthplace.com/" target="blank_">www.bandwidthplace.com</a></small></span>
-
+                              <span class="help-block"><small>Click start speedtest. Click Share Results, Copy URL and paste on the speedtest form.</small></span>
                           <div class="form-group">
                             <label for="username">Cover Letter <span style="color: red;">*</span></label>
                             <textarea id="message" class="form-control" name="coverLetter"

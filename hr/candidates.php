@@ -21,11 +21,11 @@ function getCity($Id){
             <table id="datatable" class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>Job Function</th>
-                    <th>Full Name</th>
-                    <th>City, State</th>
+                    <th>Candidate Reference #</th>
+                    <th>Candidate Name</th>
+                    <th>Candidate Email</th>
                     <th>Status</th>
-                    <th>Review</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,19 +33,23 @@ function getCity($Id){
                 <?php foreach($resume as $row) {
                 ?>
                 <tr>
-                    <td><?=getJobFunction($row->jobFunctionId); ?></td>
+                    <td><?=$row->refNum; ?></td>
                     <td><?=$row->firstName; ?> <?=$row->lastName; ?></td>
-                    <td><?=getCity($row->city);?>, <?=$row->state; ?></td>
+                    <td><?=$row->email;?></td>
                     <td>
-                      <?php if($row->isHired==0){ ?>
-                      <div class=" btn btn-warning btn-xs tooltips">
-                        Pending
+                      <?php if($row->isHired==0 && $row->isApproved==1){ ?>
+                      <div class=" btn btn-default btn-xs tooltips">
+                        Waiting for Interview
                       </div>
-                      <?php }else{ ?>
+                      <?php }elseif($row->isHired==1 && $row->isApproved==1){ ?>
                       <div class=" btn btn-success btn-xs tooltips">
                         Hired
                       </div>
-                      <?php } ?>
+                    <?php }else{ ?>
+                      <div class=" btn btn-warning btn-xs tooltips">
+                        Pending
+                      </div>
+                    <?php } ?>
                     </td>
                     <td><a href="?view=candidateDetail&Id=<?=$row->Id;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> Review</a>
                     </td>

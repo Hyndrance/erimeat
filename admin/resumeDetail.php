@@ -75,7 +75,7 @@ function getCity($Id){
                 </div>
               </div>
         <?php } ?>
-        <?php if($resume->isApproved==1){?>
+        <?php if($resume->isApproved==1 && $resume->jobId!=0){?>
             <div class="col-12">
               <div class="col-lg-6">
                 <button class="btn btn-success pull-right" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$resume->jobId;?>'">
@@ -88,6 +88,15 @@ function getCity($Id){
                 </button>
               </div>
             </div>
+        <?php } ?>
+        <?php if($resume->isApproved==1 && $resume->jobId==0){?>
+        <div class="col-12">
+          <div class="text-center">
+            <button class="btn btn-success" style="width:350px;" onclick="location.href='?view=openJobs&Id=<?=$resume->Id;?>'">
+              AssignJob
+            </button>
+          </div>
+        </div>
         <?php } ?>
       </div>
 

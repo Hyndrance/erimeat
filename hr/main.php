@@ -144,12 +144,12 @@ function getJobFunction($Id){
                             <p class="m-b-0"><small><?=__setJob($row->jobId)['company'];?></small></p>
                         </td>
                         <td>
-                            <a class="table-action-btn">view</a>
+                            <a href="?view=candidateDetail&Id=<?=$row->Id;?>" class="table-action-btn">view</a>
                         </td>
                     </tr>
                   <?php } ?>
                     <tr>
-                        <td colspan="3"><a>View all</a>
+                        <td colspan="3"><a href="?view=candidates">View all</a>
                     </tr>
                 </tbody>
             </table>

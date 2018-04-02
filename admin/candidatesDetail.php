@@ -66,6 +66,20 @@ function getCity($Id){
         </div>
       </div>
       <?php } ?>
+      <?php if($resume->isApproved==1 && $resume->jobId!=0){?>
+      <div class="col-12 m-t-30">
+        <div class="col-lg-6">
+          <button class="btn btn-success pull-right" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$resume->jobId;?>'">
+            Hire
+          </button>
+        </div>
+        <div class="col-lg-6">
+          <button class="btn btn-danger pull-left" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$resume->Id;?>'">
+            Reject
+          </button>
+        </div>
+      </div>
+      <?php } ?>
   </div>
 </div>
 

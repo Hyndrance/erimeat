@@ -63,12 +63,27 @@ function getJobName($Id){
         </div>
         <!-- Personal-Information -->
         <div class="card-box">
+        <?php if($resume->isApproved==0){?>
         <button type="button" class="btn btn-info waves-effect waves-light" data-toggle="modal" data-target="#schedule-modal">Schedule an Interview</button>
-          <button class="btn btn-default stepy-finish" onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">Request for More Info</button>
-          <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-danger">Delete</button>
-        </div>
-    </div>
+        <button class="btn btn-default stepy-finish" onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">Request for More Info</button>
+        <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-danger">Delete</button>
+        <?php } ?>
+        <?php if($resume->isApproved==1 && $resume->isHired==0 && $resume->jobId==0){?>
+        <button onclick="location.href='?view=openJobs&Id=<?=$resume->Id;?>'" class="btn btn-info" style="width:350px;">
+          Assign Job
+        </button>
+        <?php } ?>
+        <?php if($resume->isApproved==1 && $resume->jobId!=0){?>
+        <button class="btn btn-success" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$resume->jobId;?>'">
+          Hire
+        </button>
+        <button class="btn btn-danger" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$resume->Id;?>'">
+          Reject
+        </button>
+        <?php } ?>
+      </div>
   </div>
+</div>
 
   <!-- Signup modal content -->
   <div id="schedule-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
