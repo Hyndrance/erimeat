@@ -47,6 +47,10 @@ switch ($action) {
 		approveTimesheet();
 		break;
 
+	case 'deleteCandidateResume' :
+		deleteCandidateResume();
+		break;
+
 	default :
 }
 
@@ -105,6 +109,15 @@ session_start();
 session_destroy();
 header('Location: index.php');
 	exit;
+}
+
+function deleteCandidateResume()
+{
+	$Id=$_GET['Id'];
+	$resume = resume();
+	$resume->obj['isDeleted'] = "1";
+	$resume->update("Id='$Id'");
+	header('Location: index.php?view=candidates&message=Resume has been deleted');
 }
 
 function updateRequest()

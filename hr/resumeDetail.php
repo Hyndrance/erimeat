@@ -62,18 +62,15 @@ function getCity($Id){
           <h3 class="text-center">Detail</h3>
           <?php if($resume->isApproved==0){?>
             <div class="row  text-center m-b-30">
-              <div class="col-12">
-                <div class="col-lg-6">
-                  <button class="btn btn-success pull-right" style="width:350px;" data-toggle="modal" data-target="#schedule-modal">
+                  <button class="btn btn-lg btn-info" style="width:300px;" data-toggle="modal" data-target="#schedule-modal">
                     Schedule an Interview
                   </button>
-                </div>
-                <div class="col-lg-6">
-                  <button class="btn btn-danger pull-left" style="width:350px;"onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">
-                    Deny
+                  <button class="btn btn-lg btn-default" style="width:300px;" onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">
+                    Request for more info
                   </button>
-                </div>
-              </div>
+                  <button style="width:300px;" onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-danger">
+                    Delete
+                  </button>
         <?php } ?>
         <?php if($resume->isApproved==1){?>
             <div class="col-12">
@@ -90,6 +87,7 @@ function getCity($Id){
             </div>
         <?php } ?>
       </div>
+    </div>
 
 <!-- Schedule and interview modal content -->
 <div id="schedule-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
