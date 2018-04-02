@@ -46,8 +46,8 @@ function create()
 
 	// Send email
 	$content = __talentRequestEmailMessage();
-	$hrmessage = __hrEmailMessage();
-	$adminmessage = __adminEmailMessage();
+	$hrmessage = __hrTalentMessage();
+	$adminmessage = __adminTalentMessage();
 
 	sendEmail($job->obj['workEmail'], $content);
 	//for HR
@@ -86,8 +86,8 @@ function clientRequest()
 		$adminList = admin()->list("level='admin'");
 
 		// Send email
-		$hrmessage = __hrEmailMessage();
-		$adminmessage = __adminEmailMessage();
+		$hrmessage = __hrClientMessage();
+		$adminmessage = __adminClientMessage();
 
 		//for HR
 		foreach($hrList as $row){
@@ -131,7 +131,7 @@ function __createClientLogin($Id){
 							Username: " . $user->obj['username'] . " <br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='http://bandbajabaraath.com/company/index.php?view=login'>www.teamire.com/company/</a><br><br>
+							<a href='http://bandbajabaraath.com/company/index.php?view=login'>www.bandbajabaraath.com/company/</a><br><br>
 							Teamire";
 
 	sendEmail($company->email, $content);
@@ -170,8 +170,8 @@ function submitResume(){
 
 			// Send email
 			$content = __submitResumeEmailMessage();
-			$hrmessage = __hrEmailMessage();
-			$adminmessage = __adminEmailMessage();
+			$hrmessage = __hrResumeMessage();
+			$adminmessage = __adminResumeMessage();
 
 			//for candidate
 			sendEmail($res->obj['email'] , $content);
@@ -238,8 +238,8 @@ function submitApplication()
 
 			// Send Email
 			$content = __submitApplicationEmailMessage();
-			$hrmessage = __hrEmailMessage();
-			$adminmessage = __adminEmailMessage();
+			$hrmessage = __hrApplicationMessage();
+			$adminmessage = __adminApplicationMessage();
 
 			//for candidate
 			sendEmail($resume->email,$hrmessage);
@@ -311,15 +311,51 @@ function __submitApplicationEmailMessage(){
 					Teamire";
 }
 
-function __hrEmailMessage(){
-	return "A new request has been created. Please login to <a href='www.bandbajabaraath.kovasaf.com/hr'>www.teamire.com</a><br>
-					and check the new request.<br><br>
+function __hrTalentMessage(){
+	return "A new talent request has been created. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+					and check the new talent request.<br><br>
 					Teamire";
 }
 
-function __adminEmailMessage(){
-	return "A new request has been created. Please login to <a href='www.bandbajabaraath.kovasaf.com/admin'>www.teamire.com</a><br>
-					and check the new request.<br><br>
+function __adminTalentMessage(){
+	return "A new talent request has been created. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+					and check the new talent request.<br><br>
+					Teamire";
+}
+
+function __hrClientMessage(){
+	return "A new client has registered. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+					and check the new client.<br><br>
+					Teamire";
+}
+
+function __adminClientMessage(){
+	return "A new client has registered. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+					and check the new client.<br><br>
+					Teamire";
+}
+
+function __hrResumeMessage(){
+	return "A new resume has been submitted. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+					and check the new resume.<br><br>
+					Teamire";
+}
+
+function __adminResumeMessage(){
+	return "A new resume has been submitted. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+					and check the new resume.<br><br>
+					Teamire";
+}
+
+function __hrApplicationMessage(){
+	return "A new application has been submitted. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+					and check the new application.<br><br>
+					Teamire";
+}
+
+function __adminApplicationMessage(){
+	return "A new application has been submitted. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+					and check the new application.<br><br>
 					Teamire";
 }
 ?>
