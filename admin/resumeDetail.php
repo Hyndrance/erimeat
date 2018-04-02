@@ -41,6 +41,23 @@ function getCity($Id){
       <p><label class="m-r-5 m-t-15">City: </label><?=getCity($resume->city);?></p>
       <p><label class="m-r-5">State: </label><?=$resume->state;?></p>
       <p><label class="m-r-5">Postal Code: </label><?=$resume->zipCode;?></p>
+
+      <p>
+        <label class="m-r-5">Status :</label>
+        <?php if($resume->isHired==0 && $resume->isApproved==1){ ?>
+        <div class=" btn btn-default btn-xs tooltips">
+          Waiting for Interview
+        </div>
+        <?php }elseif($resume->isHired==1 && $resume->isApproved==1){ ?>
+        <div class=" btn btn-success btn-xs tooltips">
+          Hired
+        </div>
+        <?php }else{ ?>
+        <div class=" btn btn-warning btn-xs tooltips">
+          Pending
+        </div>
+        <?php } ?>
+      </p>
       <hr>
       <p><label class="m-r-5">Cover Letter: </label><?=$resume->coverLetter;?><p>
       <p><label class="m-r-5">Speedtest: </label><?=$resume->speedtest;?><p>
