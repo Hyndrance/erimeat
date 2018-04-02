@@ -38,6 +38,22 @@ function getCity($Id){
       <p><label class="m-r-5">City :</label><?=getCity($resume->city);?></p>
       <p><label class="m-r-5">State :</label><?=$resume->state;?></p>
       <p><label class="m-r-5">Postal Code :</label><?=$resume->zipCode;?></p>
+      <p>
+        <label class="m-r-5">Status :</label>
+        <?php if($resume->isHired==0 && $resume->isApproved==1){ ?>
+        <div class=" btn btn-default btn-xs tooltips">
+          Waiting for Interview
+        </div>
+        <?php }elseif($resume->isHired==1 && $resume->isApproved==1){ ?>
+        <div class=" btn btn-success btn-xs tooltips">
+          Hired
+        </div>
+        <?php }else{ ?>
+        <div class=" btn btn-warning btn-xs tooltips">
+          Pending
+        </div>
+        <?php } ?>
+      </p>
       <hr>
       <div class="col-12 text-center">
         <div class="col-lg-6">
@@ -57,7 +73,7 @@ function getCity($Id){
           <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-danger">Delete</button>
       </div>
       <?php } ?>
-      <?php if($resume->isApproved==1 && $resume->isHired==0){?>
+      <?php if($resume->isApproved==1 && $resume->isHired==0 && $resume->jobId==0){?>
       <div class="col-12 m-t-30">
         <div class="col-lg-12 text-center">
           <button onclick="location.href='?view=openJobs&Id=<?=$resume->Id;?>'" class="btn btn-info" style="width:350px;">
@@ -66,7 +82,7 @@ function getCity($Id){
         </div>
       </div>
       <?php } ?>
-      <?php if($resume->isApproved==1 && $resume->jobId!=0){?>
+      <?php if($resume->isApproved==1 && $resume->jobId!=0 && $resume->isHired==0){?>
       <div class="col-12 m-t-30">
         <div class="col-lg-6">
           <button class="btn btn-success pull-right" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$resume->jobId;?>'">
@@ -78,6 +94,10 @@ function getCity($Id){
             Reject
           </button>
         </div>
+      </div>
+      <?php } ?>
+      <?php if($resume->isApproved==1 && $resume->jobId!=0 && $resume->isHired==1){?>
+      <div class="col-12 m-t-30">
       </div>
       <?php } ?>
   </div>
@@ -121,4 +141,6 @@ function getCity($Id){
 
                 </form>
   </div>
+</div>
+</div>
 </div>

@@ -32,7 +32,7 @@ $resumeList = resume()->list("isDeleted=0");
                 <div class=" btn btn-default btn-xs tooltips">
                   Waiting for Interview
                 </div>
-              <?php }elseif($row->isHired==1 && $row->isApproved==1){ ?>
+                <?php }elseif($row->isHired==1 && $row->isApproved==1){ ?>
                 <div class=" btn btn-success btn-xs tooltips">
                   Hired
                 </div>
