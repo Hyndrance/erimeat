@@ -133,11 +133,18 @@ function sendEmail($email, $content){
 
 	$mailer = Swift_Mailer::newInstance($transport);
 
-	$message = Swift_Message::newInstance("No Reply")
+	
+
+	try{
+	 $message = Swift_Message::newInstance("No Reply")
 										->setFrom(array('samplehr2k18@gmail.com' => 'Teamire'))
 										->setTo(array($email));
 
 	$message->setBody($content, 'text/html');
+	}
+	catch (Swift_RfcComplianceException $e){
+	    print('Email address not valid:' . $e->getMessage());
+	}
 
 	if(!empty($targetpath)) {
 		 $message->attach(Swift_Attachment::fromPath($targetpath));
@@ -147,6 +154,8 @@ function sendEmail($email, $content){
 		echo "Error:";
 		print_r($errors);
 	}
+
+
 }
 
 ?>
