@@ -177,7 +177,13 @@ $(document).keypress(function(e) {
 
 <script>
 $( "#myBtnShowResume" ).click(function() {
-  $( "#fileInput" ).show( "slow" );
+  $( "#fileInput" ).show( "fast" );
+});
+</script>
+
+<script>
+$( "#myLinkShowResume" ).click(function() {
+  $( "#fileInput" ).show( "fast" );
 });
 </script>
 
