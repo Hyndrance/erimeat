@@ -142,7 +142,7 @@ $ptList = position_type()->list();
                          <br><br><br>
                           </div>
                           <div class="col-md-8">
-                          <h4>Upload Your Resume</h4>
+                          <h4><a id="myLinkShowResume" style="color:black;">Upload Your Resume</a></h4>
                           <p>Supported File Types: .pdf, .doc, .docx</p>
                         </div>
                         <div class="form-group">
