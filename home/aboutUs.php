@@ -143,8 +143,8 @@ function getPositionName($Id){
                 <form class="form-inline" method="GET">
                 <div class="form-group">
                   <input type="hidden" name="view" value="searchJob">
-                  <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:350px;">
-                  <select name="c" class="form-control" style="height: 67px; width:293px;" required>
+                  <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:340px; margin-left: 5px;">
+                  <select name="c" class="form-control" style="height: 67px; width:290px;" required>
                     <option value="">Select Category</option>
                     <?php foreach($jobFunctionList as $row){ ?>
                       <option value="<?=$row->Id;?>"><?=$row->option;?></option>
