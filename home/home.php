@@ -170,7 +170,7 @@ function getPositionName($Id){
 </div>
 </div>
 <!-- Basic Form Wizard -->
-<div class="bgimg-3" style="min-height: 678px;">
+<div class="bgimg-3" style="min-height: 910px;">
    <div class="container-80 center-page" >
 
                                    <ul class="nav nav-tabs navtab-bg nav-justified" style="padding-top: 450px;">
@@ -193,7 +193,7 @@ function getPositionName($Id){
                                            <form id="wizard-clickable" class="text-blue">
                                        <fieldset title="1">
                                            <legend>Tell us about your hiring needs</legend>
-                                           <div class="row" style="height: 170px;">
+                                           <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img1.png" style="margin-left: 100px;width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
@@ -211,7 +211,7 @@ function getPositionName($Id){
                                        <fieldset title="2">
                                            <legend>Your staffing options</legend>
 
-                                      <div class="row" style="height: 170px;">
+                                      <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img2.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
@@ -227,7 +227,7 @@ function getPositionName($Id){
                                        <fieldset title="3">
                                            <legend>Review and select candidates</legend>
 
-                                       <div class="row" style="height: 170px;">
+                                       <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img3.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
@@ -242,7 +242,7 @@ function getPositionName($Id){
                                                 <fieldset title="4">
                                            <legend>Service and your happiness</legend>
 
-                                         <div class="row" style="height: 170px;">
+                                         <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img4.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
@@ -265,7 +265,7 @@ function getPositionName($Id){
                                          <form id="default-wizard" class="text-blue">
                                        <fieldset title="1">
                                               <legend>Search for jobs and apply</legend>
-                                           <div class="row" style="height: 170px;">
+                                           <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img5.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
@@ -283,7 +283,7 @@ function getPositionName($Id){
                                        <fieldset title="2">
                                            <legend>Upload your resume</legend>
 
-                                      <div class="row" style="height: 170px;">
+                                      <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img6.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
@@ -299,7 +299,7 @@ function getPositionName($Id){
                                        <fieldset title="3">
                                            <legend>Getting to know you</legend>
 
-                                       <div class="row" style="height: 170px;">
+                                       <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img7.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
@@ -313,7 +313,7 @@ function getPositionName($Id){
                                        </fieldset>
                                        <fieldset title="4">
                                            <legend>While we find the right fit</legend>
-                                              <div class="row" style="height: 170px;">
+                                              <div class="row"  >
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
