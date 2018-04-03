@@ -85,15 +85,15 @@ function formatDate($val){
     </div>
     <div class="clearfix"></div>
     <p class="p-b-10">
-      OfficeTeam is the world's leader in professional staffing for office support jobs, focusing exclusively on the temporary and temporary-to-full-time placement of professionals in the administrative field. We are faster at finding you work because of the depth of our client network. Specifically, our professional staffing managers connect with thousands of hiring managers in North America every week to find your office support job opportunities. We evaluate all of our OfficeTeam temporaries' skills and match them with the needs of top employers in their area.
+      Teamire is the world's leader in professional staffing for office support jobs, focusing exclusively on the temporary and temporary-to-full-time placement of professionals in the supply chain field. We are faster at finding you work because of the depth of our client network. Specifically, our professional staffing managers connect with thousands of hiring managers all over the world every week to find your office support job opportunities. We evaluate all of our Teamire temporaries' skills and match them with the needs of top employers in their area.
       <br><br>
-      Apply for this job now or contact us today at 888.981.6731 for additional information.
+      Apply for this job now or contact us today at +61 452 364 793 for additional information.
       <br><br>
-      All applicants applying for U.S. job openings must be authorized to work in the United States. All applicants applying for Canadian job openings must be authorized to work in Canada.
+      All applicants applying for job openings must be authorized to work in their respective areas.
       <br><br>
-      © 2018 OfficeTeam. A Robert Half Company. An Equal Opportunity Employer M/F/Disability/Veterans.
+      © 2018 Teamire. Catalyst in Continous Improvement.
       <br><br>
-      By clicking 'Apply Now' you are agreeing to Robert <a href="#">Half Terms of Use</a>.
+      By clicking 'Apply Now' you are agreeing to Teamire <a href="#">Half Terms of Use</a>.
   </p>
     <div class="clearfix"></div>
     <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>

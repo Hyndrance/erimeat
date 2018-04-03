@@ -8,12 +8,16 @@
           <div class="member-card">
               <div class="">
                   <h3 class="m-b-5"><?=$row->name;?></h3>
-                  <p class="text-muted"><?=$row->contactPerson;?> <span> | </span> <span> <a href="#" class="text-pink"><?=$row->email;?></a> </span></p>
+                  <hr>
+                  <p><i class="fa fa-user m-r-5"></i><b><?=$row->contactPerson;?></b><br>
+                  <i class="fa fa-envelope m-r-5"></i><a href="#" class="text-blue"><?=$row->email;?></a></p>
               </div>
 
-              <p class="text-muted font-13">
+              <div style="height: 100px;">
+                <p class="truncate">
                 <?=$row->description;?>
-              </p>
+                </p>
+              </div>
 
               <h4>Jobs</h4>
               <button style="width: 140px;" class="btn btn-sm btn-success" onclick="location.href='?view=jobList&email=<?=$row->email;?>&isApproved=1'">

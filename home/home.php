@@ -28,16 +28,7 @@ function getPositionName($Id){
                   <form class="form-inline" method="GET">
                     <div class="form-group">
                     <input type="hidden" name="view" value="searchResume">
-                    <select name="c" class="form-control" style="height: 50px; width:230px; border: none;" required>
-                        <option>Select City</option>
-                        <?php foreach(country_option()->list() as $country){ ?>
-                        <optgroup label="<?=$country->country;?>">
-                            <?php foreach(city_option()->list("countryId=$country->Id") as $city){ ?>
-                                <option value="<?=$city->Id;?>"><?=$city->city;?></option>
-                            <?php } ?>
-                        <?php } ?>
-                    </select>
-                    <select name="j" class="form-control" style="height: 50px; width:203px; border: none;" required>
+                    <select name="j" class="form-control" style="height: 50px; width:435px; border: none;" required>
                       <option value="">Select Category</option>
                       <?php foreach($jobFunctionList as $row){ ?>
                         <option value="<?=$row->Id;?>"><?=$row->option;?></option>
@@ -55,7 +46,7 @@ function getPositionName($Id){
               <form class="form-inline" method="GET">
               <div class="form-group">
                 <input type="hidden" name="view" value="searchJob">
-                <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 50px;width:230px; border: none;">
+                <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 50px;width:226px; border: none;">
                 <select name="c" class="form-control" style="height: 50px; width:203px; border: none;" required>
                   <option value="">Select Category</option>
                   <?php foreach($jobFunctionList as $row){ ?>

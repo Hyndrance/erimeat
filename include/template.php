@@ -45,7 +45,7 @@
                     <label for="drop-2" class="toggle2 footer-res"> <a style="color: white;" href="../home/?view=aboutUs#ourVision">Our Vision</a></label>
                 </li>
                  <li>
-                    <label for="drop-2" class="toggle2 footer-res"> <a  href="../home/?view=downloads" >Downloads</a></label>
+                    <label for="drop-2" class="toggle2 footer-res"> <a style="color: white;" href="../home/?view=downloads" >Downloads</a></label>
                 </li>
                  <li>
                     <label for="drop-2" class="toggle2 footer-res"><a style="color: white;" href="../home/?view=aboutUs#ourObjectives">Our Objectives</a></label>
@@ -67,6 +67,9 @@
                 </li>
                 <li>
                     <label for="drop-2" class="toggle23 footer-res"><a class="text-white" href="../home/?view=projects">Projects</a></label>
+                </li>
+                <li>
+                    <label for="drop-3" class="toggle23 footer-res"><a class="text-white" href="../home/?view=downloads">Downloads</a></label>
                 </li>
             </ul>
           </nav>
@@ -124,7 +127,7 @@
 
                           <div class="p-l-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label for="username"><span class="text-white">Work Email </span><span style="color: red;">*</span></label>
+                            <label for="username"><span class="text-white">Business Email </span><span style="color: red;">*</span></label>
                             <input type="text" class="form-control  font-13" style="height: 33px;" name="workEmail" required>
                           </div>
                           </div>
@@ -235,7 +238,7 @@
 
                           <div class="p-l-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label for="username"><span class="text-white">Work Email </span><span style="color: red;">*</span></label>
+                            <label for="username"><span class="text-white">Business Email </span><span style="color: red;">*</span></label>
                             <input type="text" class="form-control  font-13" style="height: 33px;" name="workEmail" required>
                           </div>
                           </div>
