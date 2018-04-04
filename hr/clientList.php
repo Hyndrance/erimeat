@@ -21,7 +21,7 @@
 
               <h4>Jobs</h4>
               <button style="width: 140px;" class="btn btn-sm btn-success" onclick="location.href='?view=jobList&email=<?=$row->email;?>&isApproved=1'">
-                Ongoing:<br> <?=job()->count("workEmail='$row->email' and isApproved=1")?>
+                Ongoing:<br> <?=job()->count("workEmail='$row->email' and isApproved=1 and isDeleted=0")?>
               </button>
               <button style="width: 140px;" class="btn btn-sm btn-warning" onclick="location.href='?view=jobList&email=<?=$row->email;?>&isApproved=0'">
                 Requests:<br> <?=job()->count("workEmail='$row->email' and isApproved!=1")?>
