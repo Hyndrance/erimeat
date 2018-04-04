@@ -124,7 +124,6 @@ $ptList = position_type()->list();
                             <label>Attach Computer Specification <span style="color: red;">*</span></label>
                             <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg"/>
                             <span class="help-block"><small>Please attach a screenshot of your computer specification.</small></span>
-                            <span class="help-block"><small>Supported File: .png, .jpg, .jpeg</small></span>
                           </div>
                           </div>
 
@@ -132,10 +131,9 @@ $ptList = position_type()->list();
                           <div class="form-group">
                             <label>Attach Other Files <span style="color: red;">*</span></label>
                             <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg">
-                            <span class="help-block"><small>Supported File: .pdf, .png, .jpg, .jpeg</small></span>
                           </div>
                           </div>
-                          <br><br><br><br><br><br><br>
+                          <br><br><br><br><br><br>
                           <div class="text-center"><h3>Attach Resume <span style="color: red;">*</span></h3></div>
                           <div class="col-sm-4">
                          <a id="myBtnShowResume" style="border-radius: 50%;height: 90px;width: 90px;" class="btn btn-danger btn-file btn-circle btn-lg pull-right"><i class="fa fa-file-text-o fa-2x text-white p-t-10 "></i> </a>
@@ -143,7 +141,6 @@ $ptList = position_type()->list();
                           </div>
                           <div class="col-md-8">
                           <h4><a id="myLinkShowResume" style="color:black;">Upload Your Resume</a></h4>
-                          <p>Supported File Types: .pdf, .doc, .docx</p>
                         </div>
                         <div class="form-group">
                         <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx, .txt"></div>
