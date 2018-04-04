@@ -50,7 +50,7 @@ function __getName($username){
   <div id="delete-alert-modal<?=$row->Id;?>" class="modal-demo">
       <div class="custom-modal-text">
           Are you sure you want to terminate <?=__getName($row->username);?>? <br>
-          <button class="btn btn-sm btn-danger" onclick="location.href='process.php?action=terminateEmployee&username=<?=$row->username;?>'">Terminate</button>
+          <button class="btn btn-sm btn-danger" onclick="location.href='process.php?action=terminateEmployee&username=<?=$row->username;?>&jobId=<?=$row->jobId;?>&status=1'">Terminate</button>
           <button class="btn btn-sm btn-warning" onclick="Custombox.close();">Cancel</button>
       </div>
   </div>
