@@ -123,6 +123,7 @@ $ptList = position_type()->list();
                           <div class="form-group">
                             <label>Attach Computer Specification <span style="color: red;">*</span></label>
                             <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg"/>
+                            <span class="help-block"><small>Please attach a screenshot of your computer specification.</small></span>
                             <span class="help-block"><small>Supported File: .png, .jpg, .jpeg</small></span>
                           </div>
                           </div>
@@ -134,9 +135,8 @@ $ptList = position_type()->list();
                             <span class="help-block"><small>Supported File: .pdf, .png, .jpg, .jpeg</small></span>
                           </div>
                           </div>
-
-                          <div class="text-center"><h3>Attach Resume <span style="color: red;">*</span></h3>
-                          <p>Choose one of the following options:</p></div>
+                          <br><br><br><br><br><br><br>
+                          <div class="text-center"><h3>Attach Resume <span style="color: red;">*</span></h3></div>
                           <div class="col-sm-4">
                          <a id="myBtnShowResume" style="border-radius: 50%;height: 90px;width: 90px;" class="btn btn-danger btn-file btn-circle btn-lg pull-right"><i class="fa fa-file-text-o fa-2x text-white p-t-10 "></i> </a>
                          <br><br><br>
@@ -149,15 +149,15 @@ $ptList = position_type()->list();
                         <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx, .txt"></div>
                      </div>
                     </div>
-                    <br><br><br><br>
+                    <br><br><br>
                     </div>
                   <div class="text-center m-t-30">
                       <button type="submit" class="btn btn-primary stepy-finish"> SUBMIT RESUME </button>
                   </div>
             </form>
           </div>
-          <br>
     </div>
+    <br>
 </div>
 
 <!-- End row -->

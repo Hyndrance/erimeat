@@ -132,6 +132,7 @@ function __createClientLogin($Id){
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='http://bandbajabaraath.com/company/index.php?view=login'>www.bandbajabaraath.com/company/</a><br><br>
+							or go to the Timesheet page<br><br>
 							Teamire";
 
 	sendEmail($company->email, $content);

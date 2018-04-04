@@ -230,7 +230,8 @@ function __createEmployeeLogin($Id, $jobId){
 							Username: " . $user->obj['username'] . "<br>
 							Password: " . $user->obj['password'] . "<br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='www.bandbajabaraath.kovasaf.com/employee/index.php?view=changepassword'>www.bandbajabaraath.kovasaf.com</a><br><br>
+							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
+							or go to the Timesheet page<br><br>
 							Teamire";
 	sendEmail($resume->email, $content);
 }

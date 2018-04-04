@@ -606,6 +606,7 @@ function __createEmployeeLogin($Id, $jobId){
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
+							or go to the Timesheet page<br><br>
 							Teamire";
 	sendEmail($resume->email, $content);
 }
