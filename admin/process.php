@@ -189,9 +189,30 @@ function deleteCompany()
 {
 	$Id = $_GET['Id'];
 
-	$job = company();
+	$company = company();
+	$company->obj['isDeleted'] = "1";
+	$company->update("Id=$Id");
+
+	$company = company()->get("Id=$Id");
+
+	$job = job();
 	$job->obj['isDeleted'] = "1";
-	$job->update("Id=$Id");
+	$job->update("workEmail='$company->email'");
+
+	$jobList = job()->list("workEmail='$company->email'");
+	foreach($jobList as $row){
+		$resume = resume();
+		$resume->obj['jobId'] = "0";
+		$resume->obj['isApproved'] = "0";
+		$resume->obj['isHired'] = "0";
+		$resume->update("jobId='$row->Id'");
+	}
+
+	foreach($jobList as $row){
+		$emp = employee();
+		$emp->obj['status'] = "0";
+		$emp->update("jobId='$row->Id'");
+	}
 
 	header('Location: index.php?view=clientList&success=You have deleted a company');
 }

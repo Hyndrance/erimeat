@@ -28,7 +28,7 @@ function getJobFunction($Id){
        <i class="mdi mdi-clipboard-text widget-two-icon"></i>
           <div class="wigdet-two-content">
           <h2 class="font-600">
-            <span data-plugin="counterup"><?=company()->count();?></span></h2>
+            <span data-plugin="counterup"><?=company()->count("isDeleted=0");?></span></h2>
               <p class="m-0">Total Clients</p>
           </div>
       </div>
@@ -39,7 +39,7 @@ function getJobFunction($Id){
        <i class="mdi mdi-account-network widget-two-icon"></i>
           <div class="wigdet-two-content">
               <h2 class="font-600">
-              <span data-plugin="counterup"><?=job()->count("isApproved=1");?></span></h2>
+              <span data-plugin="counterup"><?=job()->count("isApproved=1 and isDeleted=0");?></span></h2>
               <p class="m-0">Total Jobs</p>
           </div>
       </div>
@@ -50,7 +50,7 @@ function getJobFunction($Id){
        <i class="mdi mdi-account widget-two-icon"></i>
           <div class="wigdet-two-content">
               <h2 class="font-600">
-                <span data-plugin="counterup"><?=employee()->count();?></span></h2>
+                <span data-plugin="counterup"><?=employee()->count("status=1");?></span></h2>
               <p class="m-0">Total Employees</p>
           </div>
       </div>
@@ -61,7 +61,7 @@ function getJobFunction($Id){
        <i class="mdi mdi-account widget-two-icon"></i>
           <div class="wigdet-two-content">
               <h2 class="font-600">
-                <span data-plugin="counterup"><?=resume()->count("isApproved=0");?></span></h2>
+                <span data-plugin="counterup"><?=resume()->count("jobId!=0 and isApproved=0");?></span></h2>
               <p class="m-0">Total Applicants</p>
           </div>
       </div>
