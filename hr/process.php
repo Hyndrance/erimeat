@@ -286,6 +286,9 @@ function terminateEmployee()
 	$resume->obj['isHired'] = "0";
 	$resume->update("username='$username'");
 
+	$user = user();
+	$user->delete("username='$username'");
+
 	header('Location: index.php?view=employeeList&jobId='.$jobId.'&status='.$status.'&success=You have terminated an employee&username=' . $username);
 }
 
