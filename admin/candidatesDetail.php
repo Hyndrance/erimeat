@@ -97,7 +97,8 @@ function getCity($Id){
       </div>
       <?php } ?>
       <?php if($resume->isApproved==1 && $resume->jobId!=0 && $resume->isHired==1){?>
-      <div class="col-12 m-t-30">
+      <div class="col-12 m-t-30 text-center">
+        <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$resume->Id;?>'" class="btn btn-lg btn-danger">Delete</button>
       </div>
       <?php } ?>
   </div>

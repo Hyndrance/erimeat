@@ -151,18 +151,6 @@ switch ($action) {
 		logout();
 		break;
 
-	case 'removeCompany' :
-		removeCompany();
-		break;
-
-	case 'removeJob' :
-		removeJob();
-		break;
-
-	case 'removeCandidate' :
-		removeCandidate();
-		break;
-
 	default :
 }
 
@@ -184,6 +172,15 @@ function deleteJob()
 	$job = job();
 	$job->obj['isDeleted'] = "1";
 	$job->update("Id=$Id");
+
+	$resume = resume();
+	$resume->obj['isApproved'] = "0";
+	$resume->obj['isHired'] = "0";
+	$resume->update("jobId=$Id");
+
+	$employee = employee();
+	$employee->obj['status'] = "0";
+	$employee->update("jobId=$Id");
 
 	header('Location: index.php?view=jobList&success=You have deleted a job');
 }
@@ -658,33 +655,10 @@ function deleteCandidateResume()
 	$resume = resume();
 	$resume->obj['isDeleted'] = "1";
 	$resume->update("Id='$Id'");
+
 	header('Location: index.php?view=candidates&message=Resume has been deleted');
 }
 
-function removeCompany()
-{
-	$Id = $_GET['Id'];
-	company()->delete("Id='$Id'");
-
-	header('Location: ../admin/?view=companies&message=Succesfully Deleted');
-}
-
-function removeJob()
-{
-	$Id = $_GET['Id'];
-	job()->delete("Id='$Id'");
-
-	header('Location: ../admin/?view=jobList&message=Succesfully Deleted');
-}
-
-function removeCandidate()
-{
-
-	$Id = $_GET['Id'];
-	resume()->delete("Id='$Id'");
-
-	header('Location: ../admin/?view=candidates&message=Succesfully Deleted');
-}
 function logout()
 
 {
