@@ -7,6 +7,10 @@ $action = $_GET['action'];
 
 switch ($action) {
 
+	case 'terminateEmployee' :
+		terminateEmployee();
+		break;
+
 	case 'login' :
 		login();
 		break;
@@ -264,6 +268,25 @@ function jobRequest()
 	}
 
 	header('Location: index.php?view=talentRequest');
+}
+
+function terminateEmployee()
+{
+	$username = $_GET['username'];
+	$jobId = $_GET['jobId'];
+	$status = $_GET['status'];
+
+	$emp = employee();
+	$emp->obj['status'] = "0";
+	$emp->update("username='$username'");
+
+	$resume = resume();
+	$resume->obj['jobId'] = "0";
+	$resume->obj['isApproved'] = "0";
+	$resume->obj['isHired'] = "0";
+	$resume->update("username='$username'");
+
+	header('Location: index.php?view=employeeList&jobId='.$jobId.'&status='.$status.'&success=You have terminated an employee&username=' . $username);
 }
 
 /* ======================== Email Messages ==============================*/
