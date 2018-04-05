@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-05 12:48:51
+# Date: 2018-04-05 17:01:18
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -61,13 +61,12 @@ CREATE TABLE `application` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "application"
 #
 
-INSERT INTO `application` VALUES (7,7,1,NULL,'37E233FA','Mark','Mendoza','11-11-1111','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','12','Negros Occidental','6100','asdjflsjdflkjdsfkdsjfdsf','1522903523.pdf','asdfsadf.safdsafdsf','1522903523.png',NULL,NULL,'0','0','0');
 
 #
 # Structure for table "candidate"
@@ -100,13 +99,12 @@ CREATE TABLE `candidate` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "candidate"
 #
 
-INSERT INTO `candidate` VALUES (7,4,'375251C4','asdfdsaf','asdfdsaf','12-31-2321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','asfddsafdsfdsfdsfdsfdsfdsfdf','1522903288.pdf','sdvsfasfdsffds','0',NULL,NULL,'0','0','0');
 
 #
 # Structure for table "certificates"
@@ -118,13 +116,13 @@ CREATE TABLE `certificates` (
   `uploadedCerts` varchar(255) DEFAULT NULL,
   `resumeId` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "certificates"
 #
 
-INSERT INTO `certificates` VALUES (6,'28124710_10208529968966877_2081625639_o.png',5),(7,'28308758_10208570203132706_1889430143_n.png',7),(8,'28309122_10208570203092705_882110408_n.png',7),(9,'28308251_10208570202852699_895605723_n.png',7);
+INSERT INTO `certificates` VALUES (6,'28124710_10208529968966877_2081625639_o.png',5),(7,'28308758_10208570203132706_1889430143_n.png',7),(8,'28309122_10208570203092705_882110408_n.png',7),(9,'28308251_10208570202852699_895605723_n.png',7),(10,'28308251_10208570202852699_895605723_n.png',8),(11,'28308549_10208570202892700_985483459_n.png',8);
 
 #
 # Structure for table "city_option"
@@ -231,7 +229,7 @@ CREATE TABLE `dtr` (
   `createDate` date DEFAULT NULL,
   `status` varchar(1) DEFAULT '0' COMMENT '0:login, 1:break, 2:break2, 3:lunch, 4:logout',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "dtr"
@@ -250,12 +248,13 @@ CREATE TABLE `employee` (
   `createDate` datetime DEFAULT NULL,
   `status` varchar(2) DEFAULT '1' COMMENT '1: Employed, 0: Unemployed',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "employee"
 #
 
+INSERT INTO `employee` VALUES (7,7,'E1522918650','2018-04-05 16:57:29','1');
 
 #
 # Structure for table "faq"
@@ -305,17 +304,17 @@ CREATE TABLE `inquiries` (
 DROP TABLE IF EXISTS `interview_date`;
 CREATE TABLE `interview_date` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `resumeId` varchar(10) DEFAULT NULL,
+  `resumeEmail` varchar(100) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
 #
 
-INSERT INTO `interview_date` VALUES (4,'5','2018-04-05','12:59:00');
+INSERT INTO `interview_date` VALUES (13,'torredale1014@gmail.com','2018-01-01','01:00:00'),(14,'torredale1014@gmail.com','2018-01-01','01:00:00');
 
 #
 # Structure for table "invoice"
@@ -328,7 +327,7 @@ CREATE TABLE `invoice` (
   `timesheetId` varchar(11) DEFAULT NULL,
   `owner` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "invoice"
@@ -441,7 +440,7 @@ CREATE TABLE `timesheet` (
   `status` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:verified, 2:dispute, 3:approved',
   `createDate` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "timesheet"
@@ -478,10 +477,10 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (4,'C1522831723','8cb2237d0679ca88db6464eac60da96345513964','Dale Torre','Villacar Transit','company');
+INSERT INTO `user` VALUES (4,'C1522831723','8cb2237d0679ca88db6464eac60da96345513964','Dale Torre','Villacar Transit','company'),(8,'E1522915593','2b8889e80cb6afc64ea9923339183799475b1123','Kevin','Sums','employee'),(9,'E1522917204','2b8889e80cb6afc64ea9923339183799475b1123','Kevin','Sums','employee'),(10,'E1522918650','2b8889e80cb6afc64ea9923339183799475b1123','Kevin','Sums','employee');
