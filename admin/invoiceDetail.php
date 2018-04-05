@@ -29,7 +29,7 @@ function get_time_difference($record)
                 <div class="card-box">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <img src="assets/images/logo_dark.png" alt="" height="30">
+                            <img src="../include/assets/images/teamire-logo.png" alt="" height="30">
                         </div>
                         <div class="pull-right">
                             <h3 class="m-0 hidden-print">Invoice</h3>

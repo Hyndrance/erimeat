@@ -242,7 +242,7 @@ function submitApplication()
 			$adminmessage = __adminApplicationMessage();
 
 			//for candidate
-			sendEmail($appume->email,$hrmessage);
+			sendEmail($application->email,$hrmessage);
 			//for HR
 			foreach($hrList as $row){
 				sendEmail($row->email,$hrmessage);

@@ -132,7 +132,7 @@ function getJobFunction($Id){
                             <?=__setFullName($row->owner);?>
                         </td>
                         <td>
-                            <a class="table-action-btn">view</a>
+                            <a class="table-action-btn" href="?view=invoiceDetail&Id=<?=$row->timesheetId;?>">view</a>
                         </td>
                     </tr>
                   <?php } ?>

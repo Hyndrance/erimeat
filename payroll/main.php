@@ -82,7 +82,7 @@ function __setFullName($owner){
                                 <?=__setFullName($row->employee);?>
                             </td>
                             <td>
-                                <a class="table-action-btn">view</a>
+                                <a class="table-action-btn" href="?view=timesheetDetail&tsId=<?=$row->Id;?>">view</a>
                             </td>
                         </tr>
                       <?php } ?>

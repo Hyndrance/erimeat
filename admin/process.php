@@ -173,10 +173,11 @@ function deleteJob()
 	$job->obj['isDeleted'] = "1";
 	$job->update("Id=$Id");
 
-	$resume = resume();
-	$resume->obj['isApproved'] = "0";
-	$resume->obj['isHired'] = "0";
-	$resume->update("jobId=$Id");
+	$application = application();
+	$application->obj['isApproved'] = "0";
+	$application->obj['isHired'] = "0";
+	$application->obj['isDeleted'] = "1";
+	$application->update("jobId=$Id");
 
 	$employee = employee();
 	$employee->obj['status'] = "0";
@@ -201,11 +202,12 @@ function deleteCompany()
 
 	$jobList = job()->list("workEmail='$company->email'");
 	foreach($jobList as $row){
-		$resume = resume();
-		$resume->obj['jobId'] = "0";
-		$resume->obj['isApproved'] = "0";
-		$resume->obj['isHired'] = "0";
-		$resume->update("jobId='$row->Id'");
+		$application = application();
+		$application->obj['jobId'] = "0";
+		$application->obj['isApproved'] = "0";
+		$application->obj['isHired'] = "0";
+		$application->obj['isDeleted'] = "1";
+		$application->update("jobId='$row->Id'");
 	}
 
 	foreach($jobList as $row){
@@ -543,7 +545,7 @@ function setInterviewDate()
 	$time = $_POST['time'];
 
 	$intDate = interview_date();
-	$intDate->obj['resumeId'] = $Id;
+	$intDate->obj['resumeEmail'] = $email;
 	$intDate->obj['date'] = $date;
 	$intDate->obj['time'] = $time;
 	$intDate->create();
