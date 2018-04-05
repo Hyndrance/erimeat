@@ -131,7 +131,7 @@ function getJobFunction($Id){
                 </tr>
                 </thead>
                 <tbody>
-                  <?php foreach(application()->list("isApproved=0 order by Id desc limit 5") as $row){?>
+                  <?php foreach(application()->list("isDeleted!=1 and isApproved=0 order by Id desc limit 5") as $row){?>
                     <tr>
                         <td width="150">
                           <?=$row->firstName;?> <?=$row->firstName;?>

@@ -11,13 +11,13 @@ function getJobName($Id){
   }
 }
 
-function getInterviewDate($Id){
-  $interviewDate = interview_date()->get("resumeId='$Id'");
+function getInterviewDate($email){
+  $interviewDate = interview_date()->get("resumeEmail='$email'");
   return $interviewDate->date;
 }
 
-function getInterviewTime($Id){
-  $interviewDate = interview_date()->get("resumeId='$Id'");
+function getInterviewTime($email){
+  $interviewDate = interview_date()->get("resumeEmail='$email'");
   return $interviewDate->time;
 }
 ?>
@@ -46,8 +46,8 @@ function getInterviewTime($Id){
                     <td><?=getJobName($row->jobId); ?></td>
                     <td><?=$row->refNum; ?></td>
                     <td><?=$row->firstName; ?> <?=$row->lastName; ?></td>
-                    <td><?=getInterviewDate($row->Id); ?></td>
-                    <td><?=getInterviewTime($row->Id); ?></td>
+                    <td><?=getInterviewDate($row->email); ?></td>
+                    <td><?=getInterviewTime($row->email); ?></td>
                     <td>
                         <a href="?view=hiringApplicant&Id=<?=$row->Id;?>&jobId=<?=$row->jobId;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> View Applicant </a>
                     </td>

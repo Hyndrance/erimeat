@@ -114,7 +114,7 @@ function getJobName($Id){
                       </a>
                   </h2>
 
-                  <form class="form-horizontal" action="process.php?action=setInterViewDate" method="post">
+                  <form class="form-horizontal" action="process.php?action=setCandidateInterview" method="post">
 
                         <input type="hidden" name="resumeId" value="<?=$candidate->Id;?>">
                         <input type="hidden" name="email" value="<?=$candidate->email;?>">

@@ -1,6 +1,6 @@
 <?php
 $Id = $_GET['Id'];
-$resume = resume()->get("Id='$Id'");
+$application = application()->get("Id='$Id'");
 $jobId = $_GET['jobId'];
 
 function getJobName($Id){
@@ -23,30 +23,30 @@ function getJobCategory($Id){
             <div class="panel-body">
                 <div class="text-left">
                     <p class="text-muted font-13"><strong>Applying for :</strong>
-                      <span class="m-l-15"><?=getJobName($resume->jobId);?></span>
+                      <span class="m-l-15"><?=getJobName($application->jobId);?></span>
                     </p>
                     <p class="text-muted font-13"><strong>Candidate Name :</strong>
-                      <span class="m-l-15"><?=$resume->firstName;?> <?=$resume->lastName;?></span>
+                      <span class="m-l-15"><?=$application->firstName;?> <?=$application->lastName;?></span>
                     </p>
                     <p class="text-muted font-13"><strong>Candidate ABN :</strong>
-                      <span class="m-l-15"><?=$resume->abn;?></span>
+                      <span class="m-l-15"><?=$application->abn;?></span>
                     </p>
                     <p class="text-muted font-13"><strong>Candidate Email :</strong>
-                      <span class="m-l-15"><?=$resume->email;?></span>
+                      <span class="m-l-15"><?=$application->email;?></span>
                     </p>
                     <p class="text-muted font-13"><strong>Job Category :</strong>
-                      <span class="m-l-15"><?=getJobCategory($resume->jobFunctionId);?></span>
+                      <span class="m-l-15"><?=getJobCategory($application->jobFunctionId);?></span>
                     </p>
                     <p class="text-muted font-13"><strong>Phone Number :</strong>
-                      <span class="m-l-15"><?=$resume->phoneNumber;?></span>
+                      <span class="m-l-15"><?=$application->phoneNumber;?></span>
                     </p>
                     <p>
                       <label class="text-muted font-13">Status :</label>
-                      <?php if($resume->isHired==0 && $resume->isApproved==1){ ?>
+                      <?php if($application->isHired==0 && $application->isApproved==1){ ?>
                       <div class=" btn btn-default btn-xs tooltips">
                         Waiting for Interview
                       </div>
-                      <?php }elseif($resume->isHired==1 && $resume->isApproved==1){ ?>
+                      <?php }elseif($application->isHired==1 && $application->isApproved==1){ ?>
                       <div class=" btn btn-success btn-xs tooltips">
                         Hired
                       </div>
@@ -58,19 +58,19 @@ function getJobCategory($Id){
                     </p>
                     <br>
                     <p class="text-muted font-13"><strong>Click to view resume :</strong>
-                      <span class="m-l-15"><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
+                      <span class="m-l-15"><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
                     </p>
                 </div>
             </div>
         </div>
         <!-- Personal-Information -->
         <div class="card-box">
-          <?php if($resume->isApproved==1 && $resume->jobId!=0){?>
-          <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$jobId;?>'">Hire</button>
-          <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=deny&Id=<?=$resume->Id;?>'">Deny</button>
+          <?php if($application->isApproved==1 && $application->jobId!=0){?>
+          <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$application->Id;?>&jobId=<?=$jobId;?>'">Hire</button>
+          <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=deny&Id=<?=$application->Id;?>'">Deny</button>
           <?php } ?>
-          <?php if($resume->isApproved==1 && $resume->isHired==0 && $resume->jobId==0){?>
-          <button onclick="location.href='?view=openJobs&Id=<?=$resume->Id;?>'" class="btn btn-info" style="width:350px;">
+          <?php if($application->isApproved==1 && $application->isHired==0 && $application->jobId==0){?>
+          <button onclick="location.href='?view=openJobs&Id=<?=$application->Id;?>'" class="btn btn-info" style="width:350px;">
             Assign Job
           </button>
           <?php } ?>

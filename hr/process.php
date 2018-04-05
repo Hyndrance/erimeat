@@ -19,6 +19,10 @@ switch ($action) {
 		logout();
 		break;
 
+	case 'assignCandidate' :
+		assignCandidate();
+		break;
+
 	case 'updateRequest' :
 		updateRequest();
 		break;
@@ -45,6 +49,10 @@ switch ($action) {
 
 	case 'setInterViewDate' :
 		setInterViewDate();
+		break;
+
+	case 'setCandidateInterview' :
+		setCandidateInterview();
 		break;
 
 	case 'approveTimesheet' :
@@ -187,6 +195,73 @@ function setInterviewDate()
 	header('Location: index.php?view=applicants');
 }
 
+function setCandidateInterview()
+{
+	$email = $_POST['email'];
+	$Id = $_POST['resumeId'];
+	$date = $_POST['date'];
+	$time = $_POST['time'];
+
+	$intDate = interview_date();
+	$intDate->obj['resumeEmail'] = $email;
+	$intDate->obj['date'] = $date;
+	$intDate->obj['time'] = $time;
+	$intDate->create();
+
+	$candidate = candidate()->get("Id=$Id");
+	$refNum = bin2hex(openssl_random_pseudo_bytes(4));
+
+	$application = application();
+	$application->obj['jobId'] = "0";
+	$application->obj['jobFunctionId'] = $candidate->jobFunctionId;
+	$application->obj['refNum'] = strtoupper($refNum);
+	$application->obj['firstName'] = $candidate->firstName;
+	$application->obj['lastName'] = $candidate->lastName;
+	$application->obj['birthdate'] = $candidate->birthdate;
+	$application->obj['abn'] = $candidate->abn;
+	$application->obj['taxNumber'] = $candidate->taxNumber;
+	$application->obj['email'] = $candidate->email;
+	$application->obj['phoneNumber'] = $candidate->phoneNumber;
+	$application->obj['address1'] = $candidate->address1;
+	$application->obj['address2'] = $candidate->address2;
+	$application->obj['city'] = $candidate->city;
+	$application->obj['state'] = $candidate->state;
+	$application->obj['zipCode'] = $candidate->zipCode;
+	$application->obj['coverLetter'] = $candidate->coverLetter;
+	$application->obj['uploadedResume'] = $candidate->uploadedResume;
+	$application->obj['speedtest'] = $candidate->speedtest;
+	$application->obj['uploadedSpecs'] = $candidate->uploadedSpecs;
+	$application->obj['isApproved'] = "1";
+	$application->create();
+
+	$content = "We have considered your application. Please be available on the schedule below<br>
+							for your interview.<br><br>
+							Date = $date<br>
+							Time = $time<br><br>
+							Teamire";
+	sendEmail($email, $content);
+
+	header('Location: index.php?view=candidatesDetail&Id=' . $Id);
+}
+
+function assignCandidate()
+{
+	$Id = $_GET['Id'];
+	$jobId = $_GET['jobId'];
+
+	$application = application();
+	$application->obj['jobId'] = $jobId;
+	$application->update("Id='$Id'");
+
+	__createEmployeeLogin($Id, $jobId);
+
+	$application = application();
+	$application->obj['isHired'] = "1";
+	$application->update("Id='$Id'");
+
+	header('Location: index.php');
+}
+
 function hireApplicant()
 {
 	if ($_GET['result']=="approve"){
@@ -284,6 +359,7 @@ function terminateEmployee()
 	$application->obj['jobId'] = "0";
 	$application->obj['isApproved'] = "0";
 	$application->obj['isHired'] = "0";
+	$application->obj['isDeleted'] = "1";
 	$application->update("username='$username'");
 
 	$user = user();
