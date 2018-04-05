@@ -645,31 +645,31 @@ function __createEmployeeLogin($Id, $jobId){
 function denyResume()
 {
 	$Id=$_GET['Id'];
-	$resume = resume();
-	$resume->obj['isApproved'] = "-1";
-	$resume->update("Id='$Id'");
+	$application = application();
+	$application->obj['isApproved'] = "-1";
+	$application->update("Id='$Id'");
 
-	$resume = resume()->get("Id='$Id'");
+	$application = application()->get("Id='$Id'");
 
 	// Send email
 	$content = __moreInfoEmailMessage();
-	sendEmail($resume->email, $content);
+	sendEmail($application->email, $content);
 
-	header('Location: index.php?view=resumeList&isApproved=0&jobId=' . $resume->jobId);
+	header('Location: index.php?view=resumeList&isApproved=0&jobId=' . $application->jobId);
 }
 
 function denyCandidateResume()
 {
 	$Id=$_GET['Id'];
-	$resume = resume();
-	$resume->obj['isApproved'] = "-1";
-	$resume->update("Id='$Id'");
+	$candidate = candidate();
+	$candidate->obj['isApproved'] = "-1";
+	$candidate->update("Id='$Id'");
 
-	$resume = resume()->get("Id='$Id'");
+	$candidate = resume()->get("Id='$Id'");
 
 	// Send email
 	$content = __moreInfoEmailMessage();
-	sendEmail($resume->email, $content);
+	sendEmail($candidate->email, $content);
 
 	header('Location: index.php?view=candidates');
 }
@@ -677,9 +677,9 @@ function denyCandidateResume()
 function deleteCandidateResume()
 {
 	$Id=$_GET['Id'];
-	$resume = resume();
-	$resume->obj['isDeleted'] = "1";
-	$resume->update("Id='$Id'");
+	$candidate = candidate();
+	$candidate->obj['isDeleted'] = "1";
+	$candidate->update("Id='$Id'");
 
 	header('Location: index.php?view=candidates&message=Resume has been deleted');
 }
