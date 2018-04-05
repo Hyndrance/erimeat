@@ -38,7 +38,7 @@ $candidateList = candidate()->list("isDeleted=0");
                 </div>
                 <?php }else{ ?>
                 <div class=" btn btn-warning btn-xs tooltips">
-                  Pending
+                  Available
                 </div>
                 <?php } ?>
               </td>
