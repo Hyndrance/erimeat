@@ -173,7 +173,14 @@ function deleteJob()
 	$job->obj['isDeleted'] = "1";
 	$job->update("Id=$Id");
 
+	$appList = application()->list("jobId='$Id'");
+	foreach($appList as $app){
+		$user = user();
+		$user->delete("username='$app->username'");
+	}
+
 	$application = application();
+	$application->obj['jobId'] = "0";
 	$application->obj['isApproved'] = "0";
 	$application->obj['isHired'] = "0";
 	$application->obj['isDeleted'] = "1";
@@ -209,7 +216,7 @@ function deleteCompany()
 			$user->delete("username='$app->username'");
 		}
 	}
-	
+
 	foreach($jobList as $row){
 		$application = application();
 		$application->obj['jobId'] = "0";
