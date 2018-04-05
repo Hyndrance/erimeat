@@ -149,18 +149,18 @@ function submitResume(){
 
 		if ($uploadFile && !isset($uploadList['error']))
 		{
-			$res = candidate();
-			$res->obj = $_POST;
-			$res->obj['refNum'] = strtoupper($refNum);
-			$res->obj['uploadedResume'] = $uploadFile;
-			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
-			$res->create();
+			$can = candidate();
+			$can->obj = $_POST;
+			$can->obj['refNum'] = strtoupper($refNum);
+			$can->obj['uploadedResume'] = $uploadFile;
+			$can->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
+			$can->create();
 
-			$resume = candidate()->get("email='$email'");
+			$candidate = candidate()->get("email='$email'");
 
 			foreach($uploadList as $file){
 				$certs = certificates();
-				$certs->obj['resumeId']  = $resume->Id;
+				$certs->obj['resumeId']  = $candidate->Id;
 				$certs->obj['uploadedCerts'] = $file;
 				$certs->create();
 			}
@@ -174,7 +174,7 @@ function submitResume(){
 			$adminmessage = __adminResumeMessage();
 
 			//for candidate
-			sendEmail($res->obj['email'] , $content);
+			sendEmail($can->obj['email'] , $content);
 			//for HR
 			foreach($hrList as $row){
 				sendEmail($row->email,$hrmessage);
@@ -184,7 +184,7 @@ function submitResume(){
 				sendEmail($row->email,$adminmessage);
 			}
 
-			header('Location: ../home/?view=success&Id='.$resume->Id);
+			header('Location: ../home/?view=success&Id='.$candidate->Id);
 		}
 		else{
 			header('Location: ../home/?error=Not uploaded');
@@ -202,33 +202,33 @@ function submitApplication()
 
 		if ($uploadFile && !isset($uploadList['error']))
 		{
-			$res = application();
-			$res->obj['jobId'] = $_POST["jobId"];
-			$res->obj['jobFunctionId'] = $_POST["jobFunctionId"];
-			$res->obj['refNum'] = strtoupper($refNum);
-			$res->obj['firstName'] = $_POST["firstName"];
-			$res->obj['lastName']= $_POST["lastName"];
-			$res->obj['birthdate'] = $_POST["birthdate"];
-			$res->obj['abn'] = $_POST["abn"];
-			$res->obj['taxNumber'] = $_POST["taxNumber"];
-			$res->obj['email'] = $_POST["email"];
-			$res->obj['phoneNumber'] = $_POST["phoneNumber"];
-			$res->obj['address1'] = $_POST["address1"];
-			$res->obj['address2'] = $_POST["address2"];
-			$res->obj['city'] = $_POST["city"];
-			$res->obj['state'] = $_POST["state"];
-			$res->obj['zipCode'] = $_POST["zipCode"];
-			$res->obj['speedtest'] = $_POST["speedtest"];
-			$res->obj['coverLetter'] = $_POST["coverLetter"];
-			$res->obj['uploadedResume'] = $uploadFile;
-			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
-			$res->create();
+			$app = application();
+			$app->obj['jobId'] = $_POST["jobId"];
+			$app->obj['jobFunctionId'] = $_POST["jobFunctionId"];
+			$app->obj['refNum'] = strtoupper($refNum);
+			$app->obj['firstName'] = $_POST["firstName"];
+			$app->obj['lastName']= $_POST["lastName"];
+			$app->obj['birthdate'] = $_POST["birthdate"];
+			$app->obj['abn'] = $_POST["abn"];
+			$app->obj['taxNumber'] = $_POST["taxNumber"];
+			$app->obj['email'] = $_POST["email"];
+			$app->obj['phoneNumber'] = $_POST["phoneNumber"];
+			$app->obj['address1'] = $_POST["address1"];
+			$app->obj['address2'] = $_POST["address2"];
+			$app->obj['city'] = $_POST["city"];
+			$app->obj['state'] = $_POST["state"];
+			$app->obj['zipCode'] = $_POST["zipCode"];
+			$app->obj['speedtest'] = $_POST["speedtest"];
+			$app->obj['coverLetter'] = $_POST["coverLetter"];
+			$app->obj['uploadedResume'] = $uploadFile;
+			$app->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
+			$app->create();
 
-			$resume = application()->get("email='$email'");
+			$application = application()->get("email='$email'");
 
 			foreach($uploadList as $file){
 				$certs = certificates();
-				$certs->obj['resumeId']  = $resume->Id;
+				$certs->obj['resumeId']  = $application->Id;
 				$certs->obj['uploadedCerts'] = $file;
 				$certs->create();
 			}
@@ -242,7 +242,7 @@ function submitApplication()
 			$adminmessage = __adminApplicationMessage();
 
 			//for candidate
-			sendEmail($resume->email,$hrmessage);
+			sendEmail($appume->email,$hrmessage);
 			//for HR
 			foreach($hrList as $row){
 				sendEmail($row->email,$hrmessage);
@@ -251,7 +251,7 @@ function submitApplication()
 			foreach($adminList as $row){
 				sendEmail($row->email,$adminmessage);
 			}
-			header('Location: ../home/?view=success&Id='.$resume->Id);
+			header('Location: ../home/?view=success&Id='.$application->Id);
 		}
 		else{
 			header('Location: ../home/?error=Not uploaded');

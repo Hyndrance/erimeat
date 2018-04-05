@@ -1,6 +1,6 @@
 <?php
 $Id = $_GET['Id'];
-$resume = resume()->get("Id=$Id");
+$application = application()->get("Id=$Id");
 
 function getJobFunction($Id){
   $job = job_function()->get("Id='$Id'");
@@ -15,40 +15,40 @@ function getCity($Id){
 
 <div class="container container-fluid">
   <div class="col-12 m-t-30 m-b-30">
-    <h2 class="text-blue"> <?=$resume->lastName;?>, <?=$resume->firstName;?> </h2>
-    <p><label class="m-r-5 m-t-15">Job Category: </label><?=getJobFunction($resume->jobFunctionId);?><p>
-    <p><label class="m-r-5">Email: </label><?=$resume->email;?></p>
-    <p><label class="m-r-5">Birthdate: </label><?=$resume->birthdate;?></p>
+    <h2 class="text-blue"> <?=$application->lastName;?>, <?=$application->firstName;?> </h2>
+    <p><label class="m-r-5 m-t-15">Job Category: </label><?=getJobFunction($application->jobFunctionId);?><p>
+    <p><label class="m-r-5">Email: </label><?=$application->email;?></p>
+    <p><label class="m-r-5">Birthdate: </label><?=$application->birthdate;?></p>
     <div class="col-12">
       <div class="col-lg-4">
-        <p><label class="m-r-5">Employee Reference: </label><?=$resume->refNum;?></p>
+        <p><label class="m-r-5">Employee Reference: </label><?=$application->refNum;?></p>
       </div>
       <div class="col-lg-4">
-        <p><label class="m-r-5">Employee ABN: </label><?=$resume->abn;?></p>
+        <p><label class="m-r-5">Employee ABN: </label><?=$application->abn;?></p>
       </div>
       <div class="col-lg-4">
-        <p><label class="m-r-5">Tax Number: </label><?=$resume->taxNumber;?></p>
+        <p><label class="m-r-5">Tax Number: </label><?=$application->taxNumber;?></p>
       </div>
     </div>
       <div class="col-12">
         <div class="col-lg-6">
-          <p><label class="m-r-5">Address 1: </label><?=$resume->address1;?></p>
+          <p><label class="m-r-5">Address 1: </label><?=$application->address1;?></p>
         </div>
         <div class="col-lg-6">
-          <p><label class="m-r-5">Address 2: </label><?=$resume->address2;?></p>
+          <p><label class="m-r-5">Address 2: </label><?=$application->address2;?></p>
         </div>
       </div>
-      <p><label class="m-r-5 m-t-15">City: </label><?=getCity($resume->city);?></p>
-      <p><label class="m-r-5">State: </label><?=$resume->state;?></p>
-      <p><label class="m-r-5">Postal Code: </label><?=$resume->zipCode;?></p>
+      <p><label class="m-r-5 m-t-15">City: </label><?=getCity($application->city);?></p>
+      <p><label class="m-r-5">State: </label><?=$application->state;?></p>
+      <p><label class="m-r-5">Postal Code: </label><?=$application->zipCode;?></p>
 
       <p>
         <label class="m-r-5">Status :</label>
-        <?php if($resume->isHired==0 && $resume->isApproved==1){ ?>
+        <?php if($application->isHired==0 && $application->isApproved==1){ ?>
         <div class=" btn btn-default btn-xs tooltips">
           Waiting for Interview
         </div>
-        <?php }elseif($resume->isHired==1 && $resume->isApproved==1){ ?>
+        <?php }elseif($application->isHired==1 && $application->isApproved==1){ ?>
         <div class=" btn btn-success btn-xs tooltips">
           Hired
         </div>
@@ -59,17 +59,17 @@ function getCity($Id){
         <?php } ?>
       </p>
       <hr>
-      <p><label class="m-r-5">Cover Letter: </label><?=$resume->coverLetter;?><p>
-      <p><label class="m-r-5">Speedtest: </label><?=$resume->speedtest;?><p>
+      <p><label class="m-r-5">Cover Letter: </label><?=$application->coverLetter;?><p>
+      <p><label class="m-r-5">Speedtest: </label><?=$application->speedtest;?><p>
         <div class="col-12 text-center">
           <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Specs: </label><br><a href="../media/<?=$resume->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a><p>
+      <p><label class="m-r-5">Uploaded Specs: </label><br><a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a><p>
       </div>
       <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Certificate: </label><br><a href="../media/<?=$resume->uploadedCerts;?>" target="blank_">Click to view Candidate Resume</a><p>
+      <p><label class="m-r-5">Uploaded Certificate: </label><br><a href="../media/<?=$application->uploadedCerts;?>" target="blank_">Click to view Candidate Resume</a><p>
       </div>
       <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Resume: </label><br><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a><p>
+      <p><label class="m-r-5">Uploaded Resume: </label><br><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a><p>
       </div>
     </div>
     </div>
@@ -77,7 +77,7 @@ function getCity($Id){
 </div> <!-- end col -->
 <hr>
           <h3 class="text-center">Detail</h3>
-          <?php if($resume->isApproved==0){?>
+          <?php if($application->isApproved==0){?>
             <div class="row text-center m-b-30">
               <div class="col-12">
                 <div class="col-lg-6">
@@ -86,30 +86,30 @@ function getCity($Id){
                   </button>
                 </div>
                 <div class="col-lg-6">
-                  <button class="btn btn-danger pull-left" style="width:350px;"onclick="location.href='process.php?action=denyResume&Id=<?=$resume->Id;?>'">
+                  <button class="btn btn-danger pull-left" style="width:350px;"onclick="location.href='process.php?action=denyResume&Id=<?=$application->Id;?>'">
                     Deny
                   </button>
                 </div>
               </div>
         <?php } ?>
-        <?php if($resume->isApproved==1 && $resume->jobId!=0){?>
+        <?php if($application->isApproved==1 && $application->jobId!=0){?>
             <div class="col-12">
               <div class="col-lg-6">
-                <button class="btn btn-success pull-right" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$resume->Id;?>&jobId=<?=$resume->jobId;?>'">
+                <button class="btn btn-success pull-right" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$application->Id;?>&jobId=<?=$application->jobId;?>'">
                   Hire
                 </button>
               </div>
               <div class="col-lg-6">
-                <button class="btn btn-danger pull-left" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$resume->Id;?>'">
+                <button class="btn btn-danger pull-left" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$application->Id;?>'">
                   Reject
                 </button>
               </div>
             </div>
         <?php } ?>
-        <?php if($resume->isApproved==1 && $resume->jobId==0){?>
+        <?php if($application->isApproved==1 && $application->jobId==0){?>
         <div class="col-12">
           <div class="text-center">
-            <button class="btn btn-success" style="width:350px;" onclick="location.href='?view=openJobs&Id=<?=$resume->Id;?>'">
+            <button class="btn btn-success" style="width:350px;" onclick="location.href='?view=openJobs&Id=<?=$application->Id;?>'">
               AssignJob
             </button>
           </div>
@@ -132,8 +132,8 @@ function getCity($Id){
 
                 <form class="form-horizontal" action="process.php?action=setInterViewDate" method="post">
 
-                      <input type="hidden" name="resumeId" value="<?=$resume->Id;?>">
-                      <input type="hidden" name="email" value="<?=$resume->email;?>">
+                      <input type="hidden" name="resumeId" value="<?=$application->Id;?>">
+                      <input type="hidden" name="email" value="<?=$application->email;?>">
                                         <div class="form-group account-btn text-center m-t-10">
                   <div class="input-group">
                       <input type="date" name="date" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose" required>

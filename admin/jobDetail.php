@@ -79,7 +79,7 @@ function formatDate($val){
               View <?=timesheet()->count("jobId=$job->Id");?> timesheets
           </button>
           <button class="btn btn-lg btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
-              View <?=resume()->count("jobId=$job->Id and isApproved=0");?> applicants
+              View <?=application()->count("jobId=$job->Id and isApproved=0");?> applicants
           </button>
         <?php } ?>
           <button class="btn btn-lg btn-danger" type="button" onclick="location.href='process.php?action=deleteJob&Id=<?=$job->Id?>'">Delete</button>
