@@ -201,6 +201,15 @@ function deleteCompany()
 	$job->update("workEmail='$company->email'");
 
 	$jobList = job()->list("workEmail='$company->email'");
+
+	foreach($jobList as $row){
+		$appList = application()->list("jobId='$row->Id'");
+		foreach($appList as $app){
+			$user = user();
+			$user->delete("username='$app->username'");
+		}
+	}
+	
 	foreach($jobList as $row){
 		$application = application();
 		$application->obj['jobId'] = "0";
