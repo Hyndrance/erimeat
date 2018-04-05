@@ -15,7 +15,7 @@ function getJobFunction($Id){
 }
 
 function getApplicantCount($Id){
-  $applicantList = resume()->count("jobId='$Id' and isApproved='0'");
+  $applicantList = application()->count("jobId='$Id' and isApproved='0'");
   return $applicantList;
 }
 

@@ -140,7 +140,7 @@ function __createClientLogin($Id){
 
 function submitResume(){
 
-		$abn = $_POST["abn"];
+		$email = $_POST["email"];
 		$jobFunctionId = $_POST['jobFunctionId'];
 		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
@@ -149,15 +149,14 @@ function submitResume(){
 
 		if ($uploadFile && !isset($uploadList['error']))
 		{
-			$res = resume();
+			$res = candidate();
 			$res->obj = $_POST;
-			$res->obj['jobId'] = "0";
 			$res->obj['refNum'] = strtoupper($refNum);
 			$res->obj['uploadedResume'] = $uploadFile;
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
 			$res->create();
 
-			$resume = resume()->get("abn='$abn'");
+			$resume = candidate()->get("email='$email'");
 
 			foreach($uploadList as $file){
 				$certs = certificates();
@@ -194,7 +193,7 @@ function submitResume(){
 
 function submitApplication()
 {
-		$abn = $_POST["abn"];
+		$email = $_POST["email"];
 		$jobFunctionId = $_POST['jobFunctionId'];
 		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
@@ -203,7 +202,7 @@ function submitApplication()
 
 		if ($uploadFile && !isset($uploadList['error']))
 		{
-			$res = resume();
+			$res = application();
 			$res->obj['jobId'] = $_POST["jobId"];
 			$res->obj['jobFunctionId'] = $_POST["jobFunctionId"];
 			$res->obj['refNum'] = strtoupper($refNum);
@@ -225,7 +224,7 @@ function submitApplication()
 			$res->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
 			$res->create();
 
-			$resume = resume()->get("abn='$abn'");
+			$resume = application()->get("email='$email'");
 
 			foreach($uploadList as $file){
 				$certs = certificates();

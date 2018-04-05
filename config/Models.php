@@ -64,9 +64,15 @@ function position_type() {
 }
 
 // User Models
-function resume() {
+function candidate() {
 	$crud = new CRUD;
-	$crud->table = "resume";
+	$crud->table = "candidate";
+	return $crud;
+}
+// User Models
+function application() {
+	$crud = new CRUD;
+	$crud->table = "application";
 	return $crud;
 }
 // User Models
@@ -131,6 +137,6 @@ function invoice() {
 function certificates(){
 	$crud = new CRUD;
 	$crud->table = "certificates";
-	return $crud;	
+	return $crud;
 }
 ?>

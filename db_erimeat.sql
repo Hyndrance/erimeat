@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-03-30 15:27:39
+# Date: 2018-04-05 12:48:51
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -20,13 +20,93 @@ CREATE TABLE `admin` (
   `email` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0');
+INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','torredale1014@gmail.com','0'),(35,'hr','51bd95353aeda6615433bea21896c893ef5e62dc','hr','hr','hr','1','torredale1014@gmail.com','0'),(36,'payroll','4de4727ba00457f7e5330d2c36ed39d9a59714db','payroll','payroll','payroll','0','payroll@payroll.com','0');
+
+#
+# Structure for table "application"
+#
+
+DROP TABLE IF EXISTS `application`;
+CREATE TABLE `application` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobId` int(11) DEFAULT NULL,
+  `jobFunctionId` int(11) DEFAULT NULL,
+  `username` varchar(12) DEFAULT NULL,
+  `refNum` varchar(25) DEFAULT NULL,
+  `firstName` varchar(50) DEFAULT NULL,
+  `lastName` varchar(50) DEFAULT NULL,
+  `birthdate` varchar(10) DEFAULT NULL,
+  `abn` varchar(11) DEFAULT NULL,
+  `taxNumber` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `phoneNumber` varchar(100) DEFAULT NULL,
+  `address1` text,
+  `address2` text,
+  `city` varchar(11) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `zipCode` varchar(20) DEFAULT NULL,
+  `coverLetter` text,
+  `uploadedResume` varchar(100) DEFAULT NULL,
+  `speedtest` varchar(100) DEFAULT NULL,
+  `uploadedSpecs` varchar(100) DEFAULT NULL,
+  `uploadedCerts` varchar(255) DEFAULT NULL,
+  `createDate` datetime DEFAULT NULL,
+  `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
+  `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
+  `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+#
+# Data for table "application"
+#
+
+INSERT INTO `application` VALUES (7,7,1,NULL,'37E233FA','Mark','Mendoza','11-11-1111','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','12','Negros Occidental','6100','asdjflsjdflkjdsfkdsjfdsf','1522903523.pdf','asdfsadf.safdsafdsf','1522903523.png',NULL,NULL,'0','0','0');
+
+#
+# Structure for table "candidate"
+#
+
+DROP TABLE IF EXISTS `candidate`;
+CREATE TABLE `candidate` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobFunctionId` int(11) DEFAULT NULL,
+  `refNum` varchar(25) DEFAULT NULL,
+  `firstName` varchar(50) DEFAULT NULL,
+  `lastName` varchar(50) DEFAULT NULL,
+  `birthdate` varchar(10) DEFAULT NULL,
+  `abn` varchar(11) DEFAULT NULL,
+  `taxNumber` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `phoneNumber` varchar(100) DEFAULT NULL,
+  `address1` text,
+  `address2` text,
+  `city` varchar(11) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `zipCode` varchar(20) DEFAULT NULL,
+  `coverLetter` text,
+  `uploadedResume` varchar(100) DEFAULT NULL,
+  `speedtest` varchar(100) DEFAULT NULL,
+  `uploadedSpecs` varchar(100) DEFAULT NULL,
+  `uploadedCerts` varchar(255) DEFAULT NULL,
+  `createDate` datetime DEFAULT NULL,
+  `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
+  `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
+  `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+#
+# Data for table "candidate"
+#
+
+INSERT INTO `candidate` VALUES (7,4,'375251C4','asdfdsaf','asdfdsaf','12-31-2321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','asfddsafdsfdsfdsfdsfdsfdsfdf','1522903288.pdf','sdvsfasfdsffds','0',NULL,NULL,'0','0','0');
 
 #
 # Structure for table "certificates"
@@ -38,12 +118,13 @@ CREATE TABLE `certificates` (
   `uploadedCerts` varchar(255) DEFAULT NULL,
   `resumeId` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "certificates"
 #
 
+INSERT INTO `certificates` VALUES (6,'28124710_10208529968966877_2081625639_o.png',5),(7,'28308758_10208570203132706_1889430143_n.png',7),(8,'28309122_10208570203092705_882110408_n.png',7),(9,'28308251_10208570202852699_895605723_n.png',7);
 
 #
 # Structure for table "city_option"
@@ -86,12 +167,13 @@ CREATE TABLE `company` (
   `isApproved` varchar(1) DEFAULT '0',
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
 #
 
+INSERT INTO `company` VALUES (3,'BF73A19E','C1522831723','Villacar Transit','11111111111','sdfsdfsdf adsfsdfdsf adsfsdfsdfdsf ','torredale1014@gmail.com','Dale Torre','(+61) 111-111-111','(+61) 111-111-111','lksdjflsdjfljfds dslfjsdlfjldsf','Domestic Transport','1','1','0');
 
 #
 # Structure for table "country_option"
@@ -122,7 +204,7 @@ CREATE TABLE `downloads` (
   `uploadedFile` varchar(255) DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "downloads"
@@ -149,7 +231,7 @@ CREATE TABLE `dtr` (
   `createDate` date DEFAULT NULL,
   `status` varchar(1) DEFAULT '0' COMMENT '0:login, 1:break, 2:break2, 3:lunch, 4:logout',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "dtr"
@@ -187,7 +269,7 @@ CREATE TABLE `faq` (
   `level` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "faq"
@@ -227,12 +309,13 @@ CREATE TABLE `interview_date` (
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
 #
 
+INSERT INTO `interview_date` VALUES (4,'5','2018-04-05','12:59:00');
 
 #
 # Structure for table "invoice"
@@ -278,12 +361,13 @@ CREATE TABLE `job` (
   `contactName` varchar(100) DEFAULT NULL,
   `viewCounter` varchar(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
+INSERT INTO `job` VALUES (7,'CD48A80E',1,1,'Dispatcher','Villacar Transit','11111111111','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','','2018-04-04 17:02:11','1','0','Dale Torre','2'),(8,'2532D286',1,1,'Driver','Villacar Transit','11111111111','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','','2018-04-04 17:03:19','1','0','Dale Torre','1');
 
 #
 # Structure for table "job_function"
@@ -299,7 +383,7 @@ CREATE TABLE `job_function` (
   `description` text,
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job_function"
@@ -337,50 +421,10 @@ CREATE TABLE `projects` (
   `createDate` datetime DEFAULT NULL,
   `isDeleted` varchar(1) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "projects"
-#
-
-
-#
-# Structure for table "resume"
-#
-
-DROP TABLE IF EXISTS `resume`;
-CREATE TABLE `resume` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `jobId` int(11) DEFAULT NULL,
-  `jobFunctionId` int(11) DEFAULT NULL,
-  `username` varchar(12) DEFAULT NULL,
-  `refNum` varchar(25) DEFAULT NULL,
-  `firstName` varchar(50) DEFAULT NULL,
-  `lastName` varchar(50) DEFAULT NULL,
-  `birthdate` varchar(10) DEFAULT NULL,
-  `abn` varchar(11) DEFAULT NULL,
-  `taxNumber` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `phoneNumber` varchar(100) DEFAULT NULL,
-  `address1` text,
-  `address2` text,
-  `city` varchar(11) DEFAULT NULL,
-  `state` varchar(50) DEFAULT NULL,
-  `zipCode` varchar(20) DEFAULT NULL,
-  `coverLetter` text,
-  `uploadedResume` varchar(100) DEFAULT NULL,
-  `speedtest` varchar(100) DEFAULT NULL,
-  `uploadedSpecs` varchar(100) DEFAULT NULL,
-  `uploadedCerts` varchar(255) DEFAULT NULL,
-  `createDate` datetime DEFAULT NULL,
-  `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
-  `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
-  `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
-#
-# Data for table "resume"
 #
 
 
@@ -397,7 +441,7 @@ CREATE TABLE `timesheet` (
   `status` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:verified, 2:dispute, 3:approved',
   `createDate` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "timesheet"
@@ -434,9 +478,10 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
+INSERT INTO `user` VALUES (4,'C1522831723','8cb2237d0679ca88db6464eac60da96345513964','Dale Torre','Villacar Transit','company');
