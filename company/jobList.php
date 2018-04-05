@@ -36,7 +36,7 @@ $company = company()->get("email='$email'");
                       View <?=timesheet()->count("jobId=$row->Id");?> timesheets
                   </button></td>
                   <td><button class="btn btn-sm btn-success" onclick="location.href='?view=resumeList&jobId=<?=$row->Id?>&isApproved=0'">
-                      View <?=resume()->count("jobId=$row->Id and isApproved=0");?> applicants
+                      View <?=application()->count("jobId=$row->Id and isApproved=0");?> applicants
                   </button></td>
               <?php } ?>
               <?php

@@ -1,6 +1,6 @@
 <?php
 $Id = $_GET['Id'];
-$resume = resume()->get("Id='$Id'");
+$candidate = candidate()->get("Id='$Id'");
 
 function getJobFunction($Id){
   $jf = job_function()->get("Id='$Id'");
@@ -16,25 +16,25 @@ function getCity($Id){
 <div class="container-fluid m-t-10">
   <div class="row center-page container">
     <a href="#" onclick="window.history.go(-1); return false;">< Return</a>
-    <h1><?=getJobFunction($resume->jobFunctionId);?></h1>
-    <b>Reference: </b> <?=$resume->refNum;?>
+    <h1><?=getJobFunction($candidate->jobFunctionId);?></h1>
+    <b>Reference: </b> <?=$candidate->refNum;?>
 
     <div class="col-12 row">
       <div class="col-md-4">
-        <i class="fa fa-map-marker"></i> <?=$resume->address1;?>
+        <i class="fa fa-map-marker"></i> <?=$candidate->address1;?>
       </div>
       <!-- College -->
       <div class="col-md-4">
-        <i class="fa fa-map-o"></i> <?=$resume->address2;?>
+        <i class="fa fa-map-o"></i> <?=$candidate->address2;?>
       </div>
       <!-- Experience -->
       <div class="col-md-4 m-b-10">
-        <i class="fa fa-globe"></i> <?=getCity($resume->city);?> <?=$resume->state;?> <?=$resume->zipCode;?>
+        <i class="fa fa-globe"></i> <?=getCity($candidate->city);?> <?=$candidate->state;?> <?=$candidate->zipCode;?>
       </div>
     </div>
       <hr>
       <h3>Cover Letter</h3>
-      <p><?=$resume->coverLetter;?></p>
+      <p><?=$candidate->coverLetter;?></p>
       </div>
     <div align="center" class="m-t-30 m-b-30">
       <div>

@@ -85,7 +85,7 @@ function getPosition($Id){
         </div>
         <div class="col-lg-4">
           <button class="btn btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
-              View <?=resume()->count("jobId=$job->Id and isApproved=0");?> applicants
+              View <?=application()->count("jobId=$job->Id and isApproved=0");?> applicants
           </button>
         </div>
         </div>

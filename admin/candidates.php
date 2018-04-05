@@ -1,7 +1,7 @@
 <?php
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$resumeList = resume()->list("isDeleted=0");
+$candidateList = candidate()->list("isDeleted=0");
 ?>
 <p class="m-b-0">
   <?=$message?></p>
@@ -21,7 +21,7 @@ $resumeList = resume()->list("isDeleted=0");
             </tr>
           </thead>
           <tbody>
-            <?php foreach($resumeList as $row) {
+            <?php foreach($candidateList as $row) {
             ?>
             <tr>
               <td><?=$row->refNum;?></td>

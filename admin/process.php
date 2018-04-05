@@ -227,11 +227,12 @@ function terminateEmployee()
 	$emp->obj['status'] = "0";
 	$emp->update("username='$username'");
 
-	$resume = resume();
-	$resume->obj['jobId'] = "0";
-	$resume->obj['isApproved'] = "0";
-	$resume->obj['isHired'] = "0";
-	$resume->update("username='$username'");
+	$application = application();
+	$application->obj['jobId'] = "0";
+	$application->obj['isApproved'] = "0";
+	$application->obj['isHired'] = "0";
+	$application->obj['isDeleted'] = "1";
+	$application->update("username='$username'");
 
 	$user = user();
 	$user->delete("username='$username'");
@@ -547,9 +548,9 @@ function setInterviewDate()
 	$intDate->obj['time'] = $time;
 	$intDate->create();
 
-	$resume = resume();
-	$resume->obj['isApproved'] = "1";
-	$resume->update("Id='$Id'");
+	$application = application();
+	$application->obj['isApproved'] = "1";
+	$application->update("Id='$Id'");
 
 	$content = "We have considered your application. Please be available on the schedule below<br>
 							for your interview. Someone from our team will contact you.<br><br>
@@ -574,9 +575,9 @@ function setCandidateInterview()
 	$intDate->obj['time'] = $time;
 	$intDate->create();
 
-	$resume = resume();
-	$resume->obj['isApproved'] = "1";
-	$resume->update("Id='$Id'");
+	$application = application();
+	$application->obj['isApproved'] = "1";
+	$application->update("Id='$Id'");
 
 	$content = "We have considered your application. Please be available on the schedule below<br>
 							for your interview.<br><br>
@@ -599,23 +600,23 @@ function hireApplicant()
 	}
 
 	$Id = $_GET['Id'];
-	$resume = resume();
-	$resume->obj['isHired'] = $result;
-	$resume->update("Id='$Id'");
+	$application = application();
+	$application->obj['isHired'] = $result;
+	$application->update("Id='$Id'");
 
 	header('Location: index.php?view=scheduleInterview');
 }
 
 function __createEmployeeLogin($Id, $jobId){
 
-	$resume = resume()->get("Id='$Id'");
+	$application = application()->get("Id='$Id'");
 
 	// Create account
 	$user = user();
 	$user->obj['username'] =  "E" . round(microtime(true));
 	$user->obj['password'] = sha1("temppassword");
-	$user->obj['firstName'] = $resume->firstName;
-	$user->obj['lastName'] = $resume->lastName;
+	$user->obj['firstName'] = $application->firstName;
+	$user->obj['lastName'] = $application->lastName;
 	$user->obj['level'] = "employee";
 	$user->create();
 
@@ -625,9 +626,9 @@ function __createEmployeeLogin($Id, $jobId){
 	$emp->obj['createDate'] = 'NOW()';
 	$emp->create();
 
-	$res = resume();
-	$res->obj['username'] = $user->obj['username'];
-	$res->update("Id='$Id'");
+	$app = application();
+	$app->obj['username'] = $user->obj['username'];
+	$app->update("Id='$Id'");
 
 	// Send email
 	$content = "Congratulations!<br><br>
@@ -638,7 +639,7 @@ function __createEmployeeLogin($Id, $jobId){
 							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
 							or go to the Timesheet page<br><br>
 							Teamire";
-	sendEmail($resume->email, $content);
+	sendEmail($application->email, $content);
 }
 
 function denyResume()

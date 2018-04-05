@@ -8,8 +8,8 @@ $company = company()->get("email='$email' and Id>0");
 $title = $email ?  $company->name  : 'Job Lists';
 
 function __setFullName($owner){
-  $resume = resume()->get("username='$owner'");
-  return $resume->firstName . " " . $resume->lastName;
+  $application = application()->get("username='$owner'");
+  return $application->firstName . " " . $application->lastName;
 }
 
 function getJobFunction($Id){
@@ -61,7 +61,7 @@ function getJobFunction($Id){
        <i class="mdi mdi-account widget-two-icon"></i>
           <div class="wigdet-two-content">
               <h2 class="font-600">
-                <span data-plugin="counterup"><?=resume()->count("jobId!=0 and isApproved=0");?></span></h2>
+                <span data-plugin="counterup"><?=application()->count("isApproved=0");?></span></h2>
               <p class="m-0">Total Applicants</p>
           </div>
       </div>
@@ -177,7 +177,7 @@ function getJobFunction($Id){
                     View <?=timesheet()->count("jobId=$row->Id");?> timesheets
                 </button></td>
                 <td><button class="btn btn-sm btn-success" onclick="location.href='?view=resumeList&jobId=<?=$row->Id?>&isApproved=0'">
-                    View <?=resume()->count("jobId=$row->Id and isApproved=0");?> applicants
+                    View <?=application()->count("jobId=$row->Id and isApproved=0");?> applicants
                 </button></td>
             <?php } ?>
             <?php

@@ -1,6 +1,6 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$resume = resume()->list("isDeleted=0");
+$candidate = candidate()->list("isDeleted=0");
 
 function getJobFunction($Id){
   $jobFunc = job_function()->get("Id='$Id'");
@@ -30,7 +30,7 @@ function getCity($Id){
                 </thead>
                 <tbody>
 
-                <?php foreach($resume as $row) {
+                <?php foreach($candidate as $row) {
                 ?>
                 <tr>
                     <td><?=$row->refNum; ?></td>

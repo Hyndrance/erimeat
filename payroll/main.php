@@ -1,12 +1,12 @@
 <?php
 
 function __setFullName($owner){
-  $resume = resume()->get("username='$owner'");
-  return $resume->firstName . " " . $resume->lastName;
+  $application = application()->get("username='$owner'");
+  return $application->firstName . " " . $application->lastName;
 }
 
 ?>
-<center><h1>Welcome to payroll home page</h1></center>
+<center><h1>Welcome to Payroll home page</h1></center>
 
 <div class="row">
   <!-- Total clients -->
@@ -48,7 +48,7 @@ function __setFullName($owner){
        <i class="mdi mdi-account widget-two-icon"></i>
           <div class="wigdet-two-content">
               <h2 class="font-600">
-                <span data-plugin="counterup"><?=resume()->count("jobId!=0 and isApproved=0");?></span></h2>
+                <span data-plugin="counterup"><?=application()->count("isApproved=0");?></span></h2>
               <p class="m-0">Total Applicants</p>
           </div>
       </div>

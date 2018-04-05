@@ -93,16 +93,16 @@ function forgotPassword()
 	$username = $_POST['username'];
 	$code = round(microtime(true));
 
-	$resume = resume()->get("username='$username'");
+	$application = application()->get("username='$username'");
 
-	if ($resume){
+	if ($application){
 		$_SESSION['temp_session'] = $username;
 		$_SESSION['code_session'] = $code;
 		// Send email
 		$content = "We have received your request. Please use this code to reset your password.<br>
 								Code: " . $_SESSION['code_session'] . " <br><br>
 								Teamire";
-		sendEmail($resume->email, $content);
+		sendEmail($application->email, $content);
 
 		header('Location: ../employee/?view=enterCode');
 	}else{

@@ -1,6 +1,6 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$resume = resume()->list();
+$application = application()->list();
 
 function getJobName($Id){
   if($Id=='0'){
@@ -40,7 +40,7 @@ function getInterviewTime($Id){
                 </thead>
                 <tbody>
 
-                <?php foreach($resume as $row) {
+                <?php foreach($application as $row) {
                   if ($row->isApproved==1 && $row->isHired==0) {?>
                 <tr>
                     <td><?=getJobName($row->jobId); ?></td>

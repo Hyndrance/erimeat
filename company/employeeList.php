@@ -8,7 +8,7 @@ $job = job()->get("Id=$jobId");
 // Functions
 
 function __getName($username){
-    $get = resume()->get("username='$username'");
+    $get = application()->get("username='$username'");
     return $get ? $get->firstName . " " . $get->lastName : "Name not in database";
 }
 ?>

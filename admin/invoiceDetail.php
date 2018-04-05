@@ -2,7 +2,7 @@
 $timesheetId = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
 
 $invoice = invoice()->get("timesheetId='$timesheetId'");
-$resume = resume()->get("username='$invoice->owner'");
+$application = application()->get("username='$invoice->owner'");
 $timesheet = timesheet()->get("Id='$timesheetId'");
 
 $dtrList = dtr()->list("timesheetId='$timesheet->Id' and owner='$invoice->owner'");
@@ -52,9 +52,9 @@ function get_time_difference($record)
                         <div class="col-xs-6">
                             <h5>Employee Detail</h5>
                             <address class="line-h-24">
-                                <?=$resume->refNum;?><br>
-                                <?=$resume->firstName;?> <?=$resume->lastName;?><br>
-                                <?=$resume->abn;?><br>
+                                <?=$application->refNum;?><br>
+                                <?=$application->firstName;?> <?=$application->lastName;?><br>
+                                <?=$application->abn;?><br>
                             </address>
                         </div>
 

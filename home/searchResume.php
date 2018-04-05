@@ -2,7 +2,7 @@
 $j = (isset($_GET['j']) && $_GET['j'] != '') ? $_GET['j'] : '';
 
 $cityList = city_option()->list();
-$resumeList = resume()->list("jobFunctionId=$j and isDeleted=0");
+$candidateList = candidate()->list("jobFunctionId=$j and isDeleted=0");
 $jobFunctionList = job_function()->list("isDeleted=0");
 
 function getJobFunction($Id){
@@ -59,12 +59,12 @@ function getCity($Id){
 <!-- Static Date -->
 
 <div class="container m-t-30 m-b-30">
-  <?php if(!$resumeList && $j && $c){?>
+  <?php if(!$candidateList && $j){?>
     <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px"></i><br>No Candidates Found</h3>
   <?php }else{?>
 
   <ul style="padding-left: 0;">
-    <?php foreach($resumeList as $row) {?>
+    <?php foreach($candidateList as $row) {?>
     <li class="candidates">
 <div class="row m-t-10">
   <div style="width: 100%; padding: 10px; padding-left: 25px;">

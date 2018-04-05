@@ -68,7 +68,7 @@ function getJobFunction($Id){
        <i class="mdi mdi-account widget-two-icon"></i>
           <div class="wigdet-two-content">
               <h2 class="font-600">
-                <span data-plugin="counterup"><?=resume()->count("jobId!=0 and isApproved=0");?></span></h2>
+                <span data-plugin="counterup"><?=application()->count("isApproved=0");?></span></h2>
               <p class="m-0">Total Applicants</p>
           </div>
       </div>
@@ -131,7 +131,7 @@ function getJobFunction($Id){
                 </tr>
                 </thead>
                 <tbody>
-                  <?php foreach(resume()->list("jobId!=0 and isApproved=0 order by Id desc limit 5") as $row){?>
+                  <?php foreach(application()->list("isApproved=0 order by Id desc limit 5") as $row){?>
                     <tr>
                         <td width="150">
                           <?=$row->firstName;?> <?=$row->firstName;?>
@@ -189,7 +189,7 @@ function getJobFunction($Id){
                     View <?=timesheet()->count("jobId=$row->Id");?> timesheets
                 </button></td>
                 <td><button class="btn btn-sm btn-success" onclick="location.href='?view=resumeList&jobId=<?=$row->Id?>&isApproved=0'">
-                    View <?=resume()->count("jobId=$row->Id and isApproved=0");?> applicants
+                    View <?=aplication()->count("jobId=$row->Id and isApproved=0");?> applicants
                 </button></td>
             <?php } ?>
             <?php

@@ -2,7 +2,7 @@
 $jobId = $_GET['jobId'];
 $isApproved = $_GET['isApproved'];
 
-$resumeList = resume()->list("isApproved='$isApproved' and jobId=$jobId");
+$applicationList = application()->list("isApproved='$isApproved' and jobId=$jobId");
 $job = job()->get("Id=$jobId");
 ?>
   <div class="row">
@@ -16,7 +16,7 @@ $job = job()->get("Id=$jobId");
             </tr>
           </thead>
           <tbody>
-            <?php foreach($resumeList as $row) {
+            <?php foreach($applicationList as $row) {
             ?>
             <tr>
               <td><a href="?view=resumeDetail&Id=<?=$row->Id;?>"><?=$row->firstName;?> <?=$row->lastName;?></a></td>

@@ -10,14 +10,14 @@ if ($jobId){
 
 if ($employee){
     $timesheetList = timesheet()->list("employee='$employee'");
-    $resume = resume()->get("username='$employee'");
-    $headerTitle = "Timesheet of " . $resume->firstName . " " . $resume->lastName;
+    $application = application()->get("username='$employee'");
+    $headerTitle = "Timesheet of " . $application->firstName . " " . $application->lastName;
 }
 
 // Functions
 
 function __getName($username){
-    $get = resume()->get("username='$username'");
+    $get = application()->get("username='$username'");
     return $get ? $get->firstName . " " . $get->lastName : "Name not in database";
 }
 
