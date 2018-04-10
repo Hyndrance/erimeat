@@ -1,8 +1,8 @@
 <?php
 $jobId = $_GET['jobId'];
-$isApproved = $_GET['isApproved'];
+$isHired = $_GET['isHired'];
 
-$applicationList = application()->list("isApproved='$isApproved' and jobId=$jobId");
+$applicationList = application()->list("isHired='$isHired' and jobId=$jobId");
 $job = job()->get("Id=$jobId");
 ?>
   <div class="row">

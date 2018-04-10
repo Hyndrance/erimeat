@@ -670,14 +670,16 @@ function __createEmployeeLogin($Id, $jobId){
 	$app->obj['username'] = $user->obj['username'];
 	$app->update("Id='$Id'");
 
+	$job = job()->get("Id='$jobId'");
+
 	// Send email
 	$content = "Congratulations!<br><br>
-							You are hired. We have approved your application. Please use the credentials we have created for you.<br>
+							You are hired. We have approved your application for the position <b>" . $job->position . "</b>. Please use the credentials we have created for you.<br>
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
-							or go to the Timesheet page<br><br>
+							or go to the <a href='http://bandbajabaraath.com/home/?view=logins'>Timesheet</a> page<br><br>
 							Teamire";
 	sendEmail($application->email, $content);
 }

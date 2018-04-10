@@ -128,8 +128,8 @@ function __createClientLogin($Id){
 
 	// Send email
 	$content = "We have approved your request. Please use the credentials we have created for you.<br>
-							Username: " . $user->obj['username'] . " <br>
-							Password: temppassword <br><br>
+							Username: " . $user->obj['username'] . "<br>
+							Password: temppassword<br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='http://bandbajabaraath.com/company/index.php?view=login'>www.bandbajabaraath.com/company/</a><br><br>
 							or go to the Timesheet page<br><br>
@@ -187,7 +187,7 @@ function submitResume(){
 			header('Location: ../home/?view=success&Id='.$candidate->Id);
 		}
 		else{
-			header('Location: ../home/?error=Not uploaded');
+			header('Location: ../submitResume/?error=Not uploaded');
 		}
 }
 
