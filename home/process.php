@@ -143,6 +143,7 @@ function submitResume(){
 		$email = $_POST["email"];
 		$jobFunctionId = $_POST['jobFunctionId'];
 		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
+		$checkEmail = candidate()->get("email='$email'");
 
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
@@ -185,6 +186,8 @@ function submitResume(){
 			}
 
 			header('Location: ../home/?view=success&Id='.$candidate->Id);
+		}else if($checkEmail){
+			header('Location: ../submitResume/?error=Email already exist!');
 		}
 		else{
 			header('Location: ../submitResume/?error=Not uploaded');

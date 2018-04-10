@@ -47,7 +47,7 @@ function getCity($Id){
                       </div>
                     <?php }else{ ?>
                       <div class=" btn btn-warning btn-xs tooltips">
-                        Pending
+                        Available
                       </div>
                     <?php } ?>
                     </td>

@@ -3,9 +3,15 @@ $Id = $_GET['Id'];
 $application = application()->get("Id='$Id'");
 $jobId = $_GET['jobId'];
 
+$certList = certificates()->list("resumeId='$Id'");
+
 function getJobName($Id){
+  if($Id=='0'){
+    echo 'N/A';
+  }else{
   $job = job()->get("Id='$Id'");
   return $job->position;
+  }
 }
 
 function getJobCategory($Id){
@@ -59,6 +65,14 @@ function getJobCategory($Id){
                     <br>
                     <p class="text-muted font-13"><strong>Click to view resume :</strong>
                       <span class="m-l-15"><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
+                    </p>
+                    <p class="text-muted font-13"><strong>Click to view Computer Specification :</strong>
+                      <span class="m-l-15"><a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Candidate Computer Specification</a></span>
+                    </p>
+                    <p class="text-muted font-13"><strong>Click to view other Certificates :</strong>
+                      <?php foreach($certList as $row){ ?>
+                      <span class="m-l-15"><a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Other Certificates</a></span>
+                      <?php } ?>
                     </p>
                 </div>
             </div>

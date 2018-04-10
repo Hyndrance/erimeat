@@ -52,7 +52,7 @@ function getCity($Id){
         </div>
         <?php }else{ ?>
         <div class=" btn btn-warning btn-xs tooltips">
-          Pending
+          Available
         </div>
         <?php } ?>
       </p>
@@ -73,7 +73,7 @@ function getCity($Id){
         <div class="col-lg-6">
             <p><label class="m-r-5"><strong>Other Certificates :</label><br>
               <?php foreach($certList as $row){ ?>
-                <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view other certificates</a>
+                <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view other certificates</a><br>
               <?php }?>
             </p>
         </div>
