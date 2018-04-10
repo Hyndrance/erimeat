@@ -2,6 +2,8 @@
 $Id = $_GET['Id'];
 $candidate = candidate()->get("Id='$Id'");
 
+$certList = certificates()->list("resumeId='$Id'");
+
 function getJobFunction($Id){
   $job = job_function()->get("Id='$Id'");
   echo $job->option;
@@ -57,10 +59,23 @@ function getCity($Id){
       <hr>
       <div class="col-12 text-center">
         <div class="col-lg-6">
+          <p><label class="m-r-5"><strong>Computer Specification :</label><br><a href="../media/<?=$candidate->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a></p>
+        </div>
+        <div class="col-lg-6">
+          <p><label class="m-r-5"><strong>Resume :</label><br><a href="../media/<?=$candidate->uploadedResume;?>" target="blank_">Click to view Resume</a></p>
+        </div>
+      </div>
+
+      <div class="col-12 text-center">
+        <div class="col-lg-6">
           <p><label class="m-r-5">Cover Letter :</label><br><?=$candidate->coverLetter;?></p>
         </div>
         <div class="col-lg-6">
-            <p><label class="m-r-5"><strong>Resume :</label><br><?=$candidate->uploadedResume;?></p>
+            <p><label class="m-r-5"><strong>Other Certificates :</label><br>
+              <?php foreach($certList as $row){ ?>
+                <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view other certificates</a>
+              <?php }?>
+            </p>
         </div>
       </div>
       <div class="clearfix"></div>
