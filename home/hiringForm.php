@@ -1,5 +1,5 @@
 <?php
-$jfList = job_function()->list("isDeleted='0'");
+$jfList = job_function()->list("isDeleted='0' order by option asc");
 $ptList = position_type()->list();
 ?>
 
@@ -7,8 +7,8 @@ $ptList = position_type()->list();
 <div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
-        <h2 style="position: absolute;top: 23%; left: 42%;" class="text-white"> Talent Request </h2>
-        <p class="text-center text-white" style="position:absolute; top: 55%; left: 35%;">We will help you build the workforce you desire – quickly</p>
+        <h2 style="position: absolute;top: 18%; left: 42%;" class="text-white text-center"> Request Talent </h2>
+        <p class="text-center text-white" style="position:absolute; top: 47%; left: 32%;">We will help you build the workforce you desire quickly and effectively</p>
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
      <form  action="process.php?action=create" method="POST" id="default-wizard" data-parsley-validate="">
@@ -54,7 +54,7 @@ $ptList = position_type()->list();
 
                               <div class="p-l-10 w-50-p pull-left">
                               <div class="form-group">
-                                  <label for="username">Job Classification <span style="color: red;">*</span></label>
+                                  <label for="username">Job Position <span style="color: red;">*</span></label>
                                   <input type="text" class="form-control" name="position" required="">
                               </div>
                               </div>
@@ -89,7 +89,7 @@ $ptList = position_type()->list();
 
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
-                                  <label for="username">Job Position <span style="color: red;">*</span></label>
+                                  <label for="username">Company Representative Position <span style="color: red;">*</span></label>
                                   <input type="text" class="form-control" name="jobTitle" required="">
                               </div>
                               </div>

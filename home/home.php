@@ -1,5 +1,5 @@
 <?php
-$jobFunctionList = job_function()->list("isDeleted=0");
+$jobFunctionList = job_function()->list("isDeleted=0 order by option asc");
 $cityList = city_option()->list();
 
 function getPositionName($Id){

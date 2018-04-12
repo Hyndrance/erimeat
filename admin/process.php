@@ -740,20 +740,18 @@ function removeAccounts()
 {
 	$Id = $_GET['Id'];
 	$admin = admin();
-	$admin->obj['isDeleted'] = "1";
-	$admin->update("Id='$Id'");
+	$admin->delete("Id='$Id'");
 
 	$admin = admin()->get("Id='$Id'");
 	$admin->username;
 	$admin->level;
 
 	if($admin->level == "hr"){
-		$hr = hr()->get("username='$admin->username'");
+		$hr = admin()->get("username='$admin->username'");
 		$id = $hr->Id;
 
-		$hr = hr();
-		$hr->obj['isDeleted'] = "1";
-		$hr->update("Id='$id'");
+		$hr = admin();
+		$hr->delete("Id='$id'");
 	}
 
 	header('Location: ../admin/?view=accounts&message=Succesfully Deleted');
