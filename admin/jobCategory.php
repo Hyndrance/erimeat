@@ -79,7 +79,7 @@ $jobFunc = job_function()->list("code='0'");
             <div class="col-sm-12">
               <div class="form-group">
                 <label>Job Function</label>
-                <input type="text" class="form-control" name="option" placeholder="">
+                <input type="text" class="form-control" name="option" placeholder="" required>
               </div>
 
               <div class="form-group">

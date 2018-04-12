@@ -74,15 +74,6 @@ function formatDate($val){
     <p>
       <?=$job->comment;?>
     </p>
-
-    <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
-      <p>Applicants</p>
-    </div>
-    <div class="col-md-2 text-center m-b-30">
-      <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
-      <p>Views</p>
-    </div>
     <div class="clearfix"></div>
     <p class="p-b-10">
       Teamire is the world's leader in professional staffing for office support jobs, focusing exclusively on the temporary and temporary-to-full-time placement of professionals in the supply chain field. We are faster at finding you work because of the depth of our client network. Specifically, our professional staffing managers connect with thousands of hiring managers all over the world every week to find your office support job opportunities. We evaluate all of our Teamire temporaries' skills and match them with the needs of top employers in their area.
@@ -95,6 +86,15 @@ function formatDate($val){
       <br><br>
       By clicking 'Apply Now' you are agreeing to Teamire <a href="#">Half Terms of Use</a>.
   </p>
+    <div class="clearfix"></div>
+    <div class="col-md-2 text-center">
+      <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
+      <p>Applicants</p>
+    </div>
+    <div class="col-md-2 text-center m-b-30">
+      <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
+      <p>Views</p>
+    </div>
     <div class="clearfix"></div>
     <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
     <hr>
