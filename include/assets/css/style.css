@@ -5679,9 +5679,9 @@ ul.sitemap-icon ul li a {
 
 /** Candidate Contact Button **/
   .btn-candidate-contact {
-    width: 155px;
-    height: 100px;
-    border-radius: 5px; }
+    width: 197px;
+    height: 67px;
+    border-radius: 3px; }
 
 /** Text Bold **/
   .text-bold {
@@ -5748,8 +5748,23 @@ ul.sitemap-icon ul li a {
     width: 100%;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical; }
+  .truncate:after{ position:absolute;left:0px; content:"...";}​
+
+  .line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; }
+
+  .module {
+    height: 73px;
+    margin: 0 0 1em 0;
+    overflow: hidden;
+  text-overflow: ellipsis; }
+
+  .module p {
+    margin: 0; }
 
   /** Services Icons Hover **/
   .icons {

@@ -21,7 +21,7 @@ function getCity($Id){
       <p><label class="m-r-5">Email: </label><?=$application->email;?></p>
       <p><label class="m-r-5">Job Category: </label><?=getJobFunction($application->jobFunctionId);?></p>
       <p><label class="m-r-5">Phone Number: </label><?=$application->phoneNumber;?></p>
-      <div class="col-12">
+      <div class="row">
         <div class="col-lg-6">
           <p><label class="m-r-5">Candidate ABN :</label><?=$application->abn;?></p>
         </div>
@@ -29,7 +29,7 @@ function getCity($Id){
           <p><label class="m-r-5">Tax File Number :</label><?=$application->taxNumber;?></p>
         </div>
       </div>
-      <div class="col-12">
+      <div class="row">
         <div class="col-lg-6">
           <p><label class="m-r-5">Address 1 :</label><?=$application->address1;?></p>
         </div>

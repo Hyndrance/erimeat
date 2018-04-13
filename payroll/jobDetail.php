@@ -36,12 +36,12 @@ function formatDate($val){
         <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
         <p class="text-muted">Created at: </label><?=formatDate($job->createDate);?></p>
     <div class="col-12 m-t-30">
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
         <br>
         <?=$job->jobTitle;?>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         <i class="fa fa-envelope m-r-5"></i><?=$job->workEmail;?>
         <br>
         <i class="fa fa-phone m-r-5"></i><?=$job->businessPhone;?>
@@ -50,7 +50,7 @@ function formatDate($val){
       </div>
     </div>
     <div class="clearfix"></div>
-    <div class="col-12 m-t-30">
+    <div class="row m-t-30">
       <div class="col-lg-6">
         ABN: <?=$job->abn;?>
       </div>
