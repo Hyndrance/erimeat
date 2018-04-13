@@ -29,6 +29,7 @@ function getPosition($Id){
           </div>
         </div>
 
+        <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
         <p class="text-muted">Created at: </label><?=$job->createDate;?></p>
     <div class="col-12 m-t-30">
       <div class="col-lg-4">

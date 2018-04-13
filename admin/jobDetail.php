@@ -33,7 +33,7 @@ function formatDate($val){
             <p><label class="m-r-5">Employement Type: </label><?=getPositionName($job->positionTypeId);?></p>
           </div>
         </div>
-
+        <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
         <p class="text-muted">Created at: </label><?=formatDate($job->createDate);?></p>
     <div class="row m-t-20">
       <div class="col-lg-6">
