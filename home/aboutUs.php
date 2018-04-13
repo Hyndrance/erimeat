@@ -80,7 +80,7 @@ function getPositionName($Id){
 
   <div class="row slideanim">
     <div class="col-md-3 slideleft">
-      <img src="../include/assets/images/about-us-img2.jpg" style="width: 80%; border-radius: 50%;">
+      <img src="../include/assets/images/aboutus-img3.png" style="width: 100%; border-radius: 50%;">
     </div>
     <div class="col-md-9 slideleft">
       <h4 id="ourVision">Our Vision</h4>
@@ -121,7 +121,7 @@ function getPositionName($Id){
 
   <div class="row slideanim">
     <div class="col-md-3 slideleft">
-      <img src="../include/assets/images/about-us-img4.jpg" style="width: 80%; border-radius: 50%;">
+      <img src="../include/assets/images/aboutus-img5.png" style="width: 100%; border-radius: 50%;">
     </div>
     <div class="col-md-9 slideleft">
       <h4>Our Services</h4>
