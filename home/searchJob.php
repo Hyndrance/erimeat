@@ -3,7 +3,7 @@ $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 $c = (isset($_GET['c']) && $_GET['c'] != '') ? $_GET['c'] : '';
 $jobList = job()->list("position like '%$s%' and jobFunctionId=$c and isDeleted=0");
 
-$jobFunctionList = job_function()->list("isDeleted=0");
+$jobFunctionList = job_function()->list("isDeleted=0 order by option asc");
 
 function getPositionName($Id){
   $job = position_type()->get("Id='$Id'");
@@ -43,14 +43,14 @@ function formatDate($val){
   <!-- Display contact and email buttons -->
   <div align="center" class="m-t-30">
     <div>
-      <button class="btn-primary btn-candidate-contact" onclick="myFunction()">
-        <i class="fa fa-phone fa-3x"></i><br>
-        <span class="text-center font-13">Call +61 452 364 793</span>
+      <button class="m-r-5 btn-primary btn-candidate-contact" style="line-height: 1.4em;" onclick="myFunction()">
+        <i class="fa fa-phone fa-2x"></i><br>
+        <span class="text-center">Call +61 452 364 793</span>
       </button>
 
-      <button class="btn-primary btn-candidate-contact" onclick="location.href='../home/?view=inquiryForm'">
-        <i class="fa fa-envelope-o fa-3x"></i><br>
-        <span class="text-center font-13">Send an Email</span>
+      <button class="m-l-5 btn-primary btn-candidate-contact" style="line-height: 1.4em;" onclick="location.href='../home/?view=inquiryForm'">
+        <i class="fa fa-envelope-o fa-2x"></i><br>
+        <span class="text-center">Send an Email</span>
       </button>
     </div>
   </div>
