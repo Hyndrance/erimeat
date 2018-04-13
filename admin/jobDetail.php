@@ -49,10 +49,10 @@ function formatDate($val){
     </div>
     <div class="clearfix"></div>
     <div class="row m-t-20">
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         ABN: <?=$job->abn;?>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-6">
         Reference Number: <?=$job->refNum;?>
       </div>
     </div>

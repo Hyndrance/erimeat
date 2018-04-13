@@ -171,6 +171,7 @@ function getPositionName($Id){
 </div>
 <!-- Basic Form Wizard -->
 <div class="bgimg-3" style="min-height: 910px;">
+  <div class="text-center text-blue" style="font-size: 25px; font-weight: 900; padding-top: 18px;">Distributed Teamire Crew</div>
    <div class="container-80 center-page" >
 
                                    <ul class="nav nav-tabs navtab-bg nav-justified" style="padding-top: 450px;">
