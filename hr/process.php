@@ -63,6 +63,10 @@ switch ($action) {
 		deleteCandidateResume();
 		break;
 
+	case 'updateInformation' :
+		updateInformation();
+		break;
+
 	default :
 }
 
@@ -345,6 +349,27 @@ function jobRequest()
 	}
 
 	header('Location: index.php?view=talentRequest');
+}
+
+function updateInformation()
+{
+	$Id = $_GET['Id'];
+
+	$job = job();
+	$job->obj['position'] = $_POST['position'];
+	$job->obj['company'] = $_POST['company'];
+	$job->obj['positionTypeId'] = $_POST['positionTypeId'];
+	$job->obj['jobFunctionId'] = $_POST['jobFunctionId'];
+	$job->obj['contactName'] = $_POST['contactName'];
+	$job->obj['jobTitle'] = $_POST['jobTitle'];
+	$job->obj['workEmail'] = $_POST['workEmail'];
+	$job->obj['businessPhone'] = $_POST['businessPhone'];
+	$job->obj['empLocation'] = $_POST['empLocation'];
+	$job->obj['abn'] = $_POST['abn'];
+	$job->obj['comment'] = $_POST['comment'];
+	$job->update("Id=$Id");
+
+	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
 }
 
 function terminateEmployee()

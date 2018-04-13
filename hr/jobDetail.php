@@ -2,6 +2,9 @@
 $Id = $_GET['Id'];
 $job = job()->get("Id=$Id");
 
+$jfList = job_function()->list("isDeleted='0' order by option asc");
+$ptList = position_type()->list();
+
 function getJobFunction($Id){
   $jf = job_function()->get("Id='$Id'");
   echo $jf->option;
@@ -10,6 +13,11 @@ function getJobFunction($Id){
 function getPosition($Id){
   $pt = position_type()->get("Id='$Id'");
   echo $pt->option;
+}
+
+function formatDate($val){
+  $date = date_create($val);
+  return date_format($date, "F d, Y");
 }
 ?>
 
@@ -30,7 +38,7 @@ function getPosition($Id){
         </div>
 
         <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
-        <p class="text-muted">Created at: </label><?=$job->createDate;?></p>
+        <p class="text-muted">Created at: </label><?=formatDate($job->createDate);?></p>
     <div class="col-12 m-t-30">
       <div class="col-lg-4">
         <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
@@ -113,12 +121,95 @@ function getPosition($Id){
                 </h2>
 
                 <form class="form-horizontal" action="process.php?action=updateInformation&Id=<?=$Id;?>" method="post">
+                  <div class="p-r-10 w-50-p pull-left">
                   <div class="form-group">
-                      <label></label>
-                      <div>
-                          <textarea required="" name="comment" class="form-control"><?=$job->comment;?></textarea>
-                      </div>
+                      <label for="username">Job Position <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="position" value="<?=$job->position;?>" required="">
                   </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Company <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="company" value="<?=$job->company;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                    <div class="form-group">
+                      <label>Employment Type <span style="color:red;">*</span></label>
+                      <select class="form-control" name="positionTypeId" required="">
+                        <option value="<?=$job->positionTypeId;?>"><?=getPosition($job->positionTypeId);?></option>
+                        <?php foreach($ptList as $row){?>
+                          <option value="<?=$row->Id;?>"><?=$row->option;?></option>
+                        <?php } ?>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                    <div class="form-group">
+                        <label for="firstname">Job Category <span style="color: red;">*</span></label>
+                        <select class="form-control" name="jobFunctionId" required="">
+                         <option value="<?=$job->jobFunctionId;?>"><?=getJobFunction($job->jobFunctionId);?></option>
+                          <?php foreach($jfList as $row) {?>
+                            <option value="<?=$row->Id;?>"><?=$row->option;?></option>
+                          <?php } ?>
+                        </select>
+                    </div>
+                  </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Contact Person <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="contactName" value="<?=$job->contactName;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Representative Position <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="jobTitle" value="<?=$job->jobTitle;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Representative Email <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="workEmail" value="<?=$job->workEmail;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Business Phone <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="businessPhone" value="<?=$job->businessPhone;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                    <div class="form-group">
+                        <label for="username">Employee Location <span style="color: red;">*</span></label>
+                        <select class="form-control" name="empLocation" required="">
+                          <option value="<?=$job->empLocation;?>"><?=$job->empLocation;?></option>
+                          <option value="Onsite Staff">Onsite Staff</option>
+                          <option value="Remote Staff">Remote Staff</option>
+                        </select>
+                    </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">ABN </label>
+                      <input type="text" class="form-control" name="abn" value="<?=$job->abn;?>">
+                  </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="username">Company Address <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="address" value="<?=$job->address;?>" required="">
+                  </div>
+
 
                     <div class="form-group account-btn text-center m-t-10">
                         <div class="col-xs-12">
