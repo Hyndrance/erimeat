@@ -54,9 +54,18 @@ $ptList = position_type()->list();
 
                               <div class="p-l-10 w-50-p pull-left">
                               <div class="form-group">
+                                  <label for="username">Employee Location <span style="color: red;">*</span></label>
+                                  <select class="form-control" name="empLocation" required="">
+                                    <option>Please Select</option>
+                                    <option value="Onsite Staff">Onsite Staff</option>
+                                    <option value="Remote Staff">Remote Staff</option>
+                                  </select>
+                              </div>
+                              </div>
+
+                              <div class="form-group">
                                   <label for="username">Job Position <span style="color: red;">*</span></label>
                                   <input type="text" class="form-control" name="position" required="">
-                              </div>
                               </div>
 
                               <div class="p-r-10 w-50-p pull-left">

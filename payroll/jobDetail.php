@@ -11,6 +11,11 @@ function getPosition($Id){
   $pt = position_type()->get("Id='$Id'");
   echo $pt->option;
 }
+
+function formatDate($val){
+  $date = date_create($val);
+  return date_format($date, "F d, Y");
+}
 ?>
 
 <div class="container container-fluid">
@@ -28,9 +33,9 @@ function getPosition($Id){
             <p><label class="m-r-5">Employment Type: </label><?=getPosition($job->positionTypeId);?></p>
           </div>
         </div>
-
-        <p class="text-muted">Created at: </label><?=$job->createDate;?></p>
-    <div class="row m-t-30">
+        <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
+        <p class="text-muted">Created at: </label><?=formatDate($job->createDate);?></p>
+    <div class="col-12 m-t-30">
       <div class="col-lg-6">
         <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
         <br>

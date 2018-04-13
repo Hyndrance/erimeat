@@ -1,6 +1,16 @@
 <?php
 $Id = $_GET['Id'];
 $job = job()->get("Id=$Id");
+
+function getJobFunction($Id){
+  $jf = job_function()->get("Id='$Id'");
+  echo $jf->option;
+}
+
+function getPosition($Id){
+  $pt = position_type()->get("Id='$Id'");
+  echo $pt->option;
+}
 ?>
 
 <div class="container container-fluid">
@@ -12,13 +22,14 @@ $job = job()->get("Id=$Id");
         <p><label class="m-r-5">Zip Code: </label><?=$job->zipCode;?></p>
         <div class="row">
           <div class="col-lg-6">
-            <p><label class="m-r-5">Job Function ID: </label><?=$job->jobFunctionId;?></p>
+            <p><label class="m-r-5">Job Function ID: </label><?=getJobFunction($job->jobFunctionId);?></p>
           </div>
           <div class="col-lg-6">
-            <p><label class="m-r-5">Position Type ID: </label><?=$job->positionTypeId;?></p>
+            <p><label class="m-r-5">Position Type ID: </label><?=getPosition($job->positionTypeId);?></p>
           </div>
         </div>
 
+        <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
         <p class="text-muted">Created at: </label><?=$job->createDate;?></p>
     <div class="col-12 m-t-30">
       <div class="col-lg-4">
@@ -76,8 +87,8 @@ $job = job()->get("Id=$Id");
           </button>
         </div>
         <div class="col-lg-4">
-          <button class="btn btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isApproved=0'">
-              View <?=resume()->count("jobId=$job->Id and isApproved=0");?> applicants
+          <button class="btn btn-success" onclick="location.href='?view=resumeList&jobId=<?=$job->Id?>&isHired=0'">
+              View <?=application()->count("jobId=$job->Id and isHired=0");?> applicants
           </button>
         </div>
         </div>
