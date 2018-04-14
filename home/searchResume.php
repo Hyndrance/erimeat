@@ -3,7 +3,7 @@ $j = (isset($_GET['j']) && $_GET['j'] != '') ? $_GET['j'] : '';
 
 $cityList = city_option()->list();
 $candidateList = candidate()->list("jobFunctionId=$j and isDeleted=0");
-$jobFunctionList = job_function()->list("isDeleted=0 order by option asc");
+$jobFunctionList = job_function()->list("isDeleted=0 order by `option` asc");
 
 function getJobFunction($Id){
   $jf = job_function()->get("Id='$Id'");

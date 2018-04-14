@@ -1,5 +1,5 @@
 <?php
-$jfList = job_function()->list();
+$jfList = job_function()->list("isDeleted=0 order by `option` asc");
 ?>
 
 <div class="row m-b-30">

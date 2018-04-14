@@ -1,5 +1,5 @@
 <?php
-$jfList = job_function()->list("isDeleted='0' order by option asc");
+$jfList = job_function()->list("isDeleted='0' order by `option` asc");
 $ptList = position_type()->list();
 ?>
 

@@ -24,7 +24,7 @@ function formatDate($val){
         <p><label class="m-r-5">Required Experience: </label><?=$job->requiredExperience;?></p>
         <p><label class="m-r-5">Company: </label><?=$job->company;?></p>
         <p><label class="m-r-5">Address: </label><?=$job->address;?></p>
-        <p><label class="m-r-5">Zip Code: </label><?=$job->zipCode;?></p>
+        <p><label class="m-r-5">Postal Code: </label><?=$job->zipCode;?></p>
         <div class="row">
           <div class="col-lg-6">
             <p><label class="m-r-5">Job Category: </label><?=getJobFunction($job->jobFunctionId);?></p>

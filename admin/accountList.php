@@ -3,7 +3,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 
 $adminList = admin()->list();
-$jfList = job_function()->list("isDeleted='0'");
+$jfList = job_function()->list("isDeleted=0 order by `option` asc");
 
 ?>
 

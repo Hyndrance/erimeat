@@ -1,6 +1,6 @@
 <?php
 $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
-$jfList = job_function()->list("isDeleted='0' order by option asc");
+$jfList = job_function()->list("isDeleted='0' order by `option` asc");
 ?>
 
   <div class="row">

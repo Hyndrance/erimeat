@@ -1,5 +1,5 @@
 <?php
-$jobFunctionList = job_function()->list("isDeleted='0' order by option asc");
+$jobFunctionList = job_function()->list("isDeleted='0' order by `option` asc");
 $projectList = projects()->list();
 
 
