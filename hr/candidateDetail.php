@@ -58,6 +58,9 @@ function getJobName($Id){
                     </div>
                     <?php } ?>
                   </p>
+                  <p class="text-muted font-13"><strong>Key Skills :</strong>
+                    <span class="m-l-15"><?=$candidate->keySkills;?></span>
+                  </p>
                   <br>
                   <p class="text-muted font-13"><strong>Cover Letter :</strong>
                     <span class="m-l-15"><?=$candidate->coverLetter;?></span>

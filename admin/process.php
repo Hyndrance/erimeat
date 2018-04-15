@@ -625,6 +625,7 @@ function setCandidateInterview()
 	$application->obj['state'] = $candidate->state;
 	$application->obj['zipCode'] = $candidate->zipCode;
 	$application->obj['coverLetter'] = $candidate->coverLetter;
+	$application->obj['keySkills'] = $candidate->keySkills;
 	$application->obj['uploadedResume'] = $candidate->uploadedResume;
 	$application->obj['speedtest'] = $candidate->speedtest;
 	$application->obj['uploadedSpecs'] = $candidate->uploadedSpecs;

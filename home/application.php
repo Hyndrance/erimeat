@@ -111,12 +111,19 @@ $ptList = position_type()->list();
                               <input type="text" class="form-control" name="speedtest">
                               <span class="help-block"><small>To access speedtest. Click the link <a href="http://www.bandwidthplace.com/" target="blank_">www.bandwidthplace.com</a></small></span>
                               <span class="help-block"><small>Click start speedtest. Click Share Results, Copy URL and paste on the speedtest form.</small></span>
+
                           <div class="form-group">
                             <label for="username">Cover Letter <span style="color: red;">*</span></label>
                             <textarea id="message" class="form-control" name="coverLetter"
                                               data-parsley-trigger="keyup" data-parsley-minlength="20"
                                               data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
                                               data-parsley-validation-threshold="10"></textarea>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="username">Key Skills</label>
+                              <input type="text" class="form-control" name="keySkills">
+                              <span class="help-block"><small>Separate with comma ",".</small></span>
                           </div>
 
                           <div class="p-r-10 w-50-p pull-left">

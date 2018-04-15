@@ -2,7 +2,7 @@
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 $Id = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
 
-$jobList = job()->list();
+$jobList = job()->list("isApproved='1'");
 
 function getJobFunction($Id){
   $jf = job_function()->get("Id='$Id'");

@@ -41,6 +41,7 @@ function getCity($Id){
       <p><label class="m-r-5 m-t-15">City: </label><?=getCity($application->city);?></p>
       <p><label class="m-r-5">State: </label><?=$application->state;?></p>
       <p><label class="m-r-5">Postal Code: </label><?=$application->zipCode;?></p>
+      <p><label class="m-r-5">Key Skills: </label><?=$application->keySkills;?></p>
       <hr>
       <p><label class="m-r-5">Cover Letter: </label><?=$application->coverLetter;?><p>
       <p><label class="m-r-5">Speedtest: </label><?=$application->speedtest;?><p>

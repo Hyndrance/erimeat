@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-15 20:19:38
+# Date: 2018-04-15 20:52:21
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -52,6 +52,7 @@ CREATE TABLE `application` (
   `state` varchar(50) DEFAULT NULL,
   `zipCode` varchar(20) DEFAULT NULL,
   `coverLetter` text,
+  `keySkills` text,
   `uploadedResume` varchar(100) DEFAULT NULL,
   `speedtest` varchar(100) DEFAULT NULL,
   `uploadedSpecs` varchar(100) DEFAULT NULL,
@@ -67,6 +68,7 @@ CREATE TABLE `application` (
 # Data for table "application"
 #
 
+INSERT INTO `application` VALUES (1,3,6,'E1523796462','999DF89D','Sam','Seday','12-31-2321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','sdfsdfsdfsdfdsfdsf adsjflksdflkjlfdjdsjf','sam, kevin, dale\n','1523795540.pdf','','1523795540.png',NULL,NULL,'1','1','0'),(2,3,8,'E1523796673','46CA78B2','asdfsdfdsf','asdfsdf','12-32-1321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','asdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdf','mas, elad, nivek','1523796557.pdf','','1523796557.png',NULL,NULL,'1','1','0');
 
 #
 # Structure for table "candidate"
@@ -90,6 +92,7 @@ CREATE TABLE `candidate` (
   `state` varchar(50) DEFAULT NULL,
   `zipCode` varchar(20) DEFAULT NULL,
   `coverLetter` text,
+  `keySkills` text,
   `uploadedResume` varchar(100) DEFAULT NULL,
   `speedtest` varchar(100) DEFAULT NULL,
   `uploadedSpecs` varchar(100) DEFAULT NULL,
@@ -99,12 +102,13 @@ CREATE TABLE `candidate` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "candidate"
 #
 
+INSERT INTO `candidate` VALUES (1,6,'DC1EA338','Sam','Seday','12-31-2321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','sdfsdfsdfsdfdsfdsf adsjflksdflkjlfdjdsjf','sam, kevin, dale','1523795540.pdf','','1523795540.png',NULL,NULL,'0','0','0');
 
 #
 # Structure for table "certificates"
@@ -122,6 +126,7 @@ CREATE TABLE `certificates` (
 # Data for table "certificates"
 #
 
+INSERT INTO `certificates` VALUES (1,'28308251_10208570202852699_895605723_n.png',1),(2,'28308251_10208570202852699_895605723_n.png',1);
 
 #
 # Structure for table "city_option"
@@ -253,6 +258,7 @@ CREATE TABLE `employee` (
 # Data for table "employee"
 #
 
+INSERT INTO `employee` VALUES (1,3,'E1523796462','2018-04-15 20:47:42','1'),(2,3,'E1523796673','2018-04-15 20:51:12','1');
 
 #
 # Structure for table "faq"
@@ -312,6 +318,7 @@ CREATE TABLE `interview_date` (
 # Data for table "interview_date"
 #
 
+INSERT INTO `interview_date` VALUES (1,'torredale1014@gmail.com','2018-12-31','12:59:00');
 
 #
 # Structure for table "invoice"
@@ -368,7 +375,7 @@ CREATE TABLE `job` (
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (1,'804FD2A9',1,2,'Dispatcher','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','we are looking','2018-04-15 17:58:53',NULL,'1','0','0','Dale Torre','0',NULL),(2,'24B6522F',4,2,'Driver',NULL,'Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:31:36',NULL,'0','0','0','Dale Torre','0','1'),(3,'18B126C6',4,2,'Driver',NULL,'Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:46:48',NULL,'1','0','0','Dale Torre','0','1'),(4,'6BAFD50C',6,1,'asdfdsfsdf',NULL,'Onsite Staff','asdfdsfdsf','','torredale1014@gmail.com','sadfjlsdjfjsldfj','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','','2018-04-15 20:18:36','2018-04-11','0','0','0','asdfsdfsdf','0','hahahahhaha');
+INSERT INTO `job` VALUES (1,'804FD2A9',1,2,'Dispatcher','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','we are looking','2018-04-15 17:58:53',NULL,'1','0','0','Dale Torre','0',NULL),(2,'24B6522F',4,2,'Driver',NULL,'Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:31:36',NULL,'0','0','0','Dale Torre','0','1'),(3,'18B126C6',4,2,'Driver',NULL,'Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:46:48',NULL,'1','0','0','Dale Torre','1','1'),(4,'6BAFD50C',6,1,'asdfdsfsdf',NULL,'Onsite Staff','asdfdsfdsf','','torredale1014@gmail.com','sadfjlsdjfjsldfj','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','','2018-04-15 20:18:36','2018-04-11','0','0','0','asdfsdfsdf','0','hahahahhaha');
 
 #
 # Structure for table "job_function"
@@ -485,4 +492,4 @@ CREATE TABLE `user` (
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'C1523786174','2b8889e80cb6afc64ea9923339183799475b1123','Dale Torre','Villacar Transit','company');
+INSERT INTO `user` VALUES (1,'C1523786174','2b8889e80cb6afc64ea9923339183799475b1123','Dale Torre','Villacar Transit','company'),(2,'E1523796462','2b8889e80cb6afc64ea9923339183799475b1123','Sam','Seday','employee'),(3,'E1523796673','2b8889e80cb6afc64ea9923339183799475b1123','asdfsdfdsf','asdfsdf','employee');

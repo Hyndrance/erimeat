@@ -121,6 +121,12 @@ $ptList = position_type()->list();
                                               data-parsley-validation-threshold="10"></textarea>
                           </div>
 
+                          <div class="form-group">
+                              <label for="username">Key Skills</label>
+                              <input type="text" class="form-control" name="keySkills">
+                              <span class="help-block"><small>Separate with comma ",".</small></span>
+                          </div>
+
                           <div class="p-r-10 w-50-p pull-left">
                           <div class="form-group">
                             <label>Attach Computer Specification <span style="color: red;">*</span></label>

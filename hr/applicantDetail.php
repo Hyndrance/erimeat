@@ -43,6 +43,9 @@ function getJobName($Id){
                     <p class="text-muted font-13"><strong>Speedtest :</strong>
                       <span class="m-l-15"><?=$resume->speedtest;?></span>
                     </p>
+                    <p class="text-muted font-13"><strong>Key Skills :</strong>
+                      <span class="m-l-15"><?=$resume->keySkills;?></span>
+                    </p>
                     <br>
                     <p class="text-muted font-13"><strong>Cover Letter :</strong>
                       <span class="m-l-15"><?=$resume->coverLetter;?></span>

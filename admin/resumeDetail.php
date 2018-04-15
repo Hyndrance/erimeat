@@ -58,6 +58,7 @@ function getCity($Id){
         </div>
         <?php } ?>
       </p>
+      <p><label class="m-r-5">Key Skills: </label><?=$application->keySkills;?></p>
       <hr>
       <p><label class="m-r-5">Cover Letter: </label><?=$application->coverLetter;?><p>
       <p><label class="m-r-5">Speedtest: </label><?=$application->speedtest;?><p>

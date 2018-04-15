@@ -62,6 +62,10 @@ function getJobCategory($Id){
                       </div>
                       <?php } ?>
                     </p>
+
+                    <p class="text-muted font-13"><strong>Key Skills :</strong>
+                      <span class="m-l-15"><?=$application->keySkills;?></span>
+                    </p>
                     <br>
                     <p class="text-muted font-13"><strong>Click to view resume :</strong>
                       <span class="m-l-15"><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Candidate Resume</a></span>

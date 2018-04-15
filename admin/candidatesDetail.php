@@ -56,6 +56,7 @@ function getCity($Id){
         </div>
         <?php } ?>
       </p>
+      <p><label class="m-r-5">Key Skills :</label><?=$candidate->keySkills;?></p>
       <hr>
       <div class="col-12 text-center">
         <div class="col-lg-6">

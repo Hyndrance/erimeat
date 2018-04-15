@@ -223,6 +223,7 @@ function submitApplication()
 			$app->obj['zipCode'] = $_POST["zipCode"];
 			$app->obj['speedtest'] = $_POST["speedtest"];
 			$app->obj['coverLetter'] = $_POST["coverLetter"];
+			$app->obj['keySkills'] = $_POST["keySkills"];
 			$app->obj['uploadedResume'] = $uploadFile;
 			$app->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
 			$app->create();
