@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-15 18:12:35
+# Date: 2018-04-15 18:40:06
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -358,14 +358,15 @@ CREATE TABLE `job` (
   `isDeleted` varchar(2) DEFAULT '0',
   `contactName` varchar(100) DEFAULT NULL,
   `viewCounter` varchar(11) DEFAULT '0',
+  `jobOpening` varchar(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (1,'804FD2A9',1,2,'Dispatcher','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','we are looking','2018-04-15 17:58:53','1','0','Dale Torre','0');
+INSERT INTO `job` VALUES (1,'804FD2A9',1,2,'Dispatcher','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','we are looking','2018-04-15 17:58:53','1','0','Dale Torre','0',NULL),(2,'24B6522F',4,2,'Driver',NULL,'Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:31:36','0','0','Dale Torre','0','1'),(3,'18B126C6',4,2,'Driver',NULL,'Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:36:24','0','0','Dale Torre','0','1');
 
 #
 # Structure for table "job_function"

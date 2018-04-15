@@ -66,7 +66,8 @@ function formatDate($val){
       <div class="col-lg-6">
         Reference Number: <?=$job->refNum;?>
       </div>
-    </div>
+    </div><br>
+    <p><label class="m-r-5">Job Openings: </label><?=$job->jobOpening;?></p>
     <div class="clearfix"></div>
     <hr>
     <h3>Comment</h3>
