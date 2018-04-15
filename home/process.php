@@ -187,10 +187,10 @@ function submitResume(){
 
 			header('Location: ../home/?view=success&Id='.$candidate->Id);
 		}else if($checkEmail){
-			header('Location: ../submitResume/?error=Email already exist!');
+			header('Location: ../?view=submitResume&error=Email already exist!');
 		}
 		else{
-			header('Location: ../submitResume/?error=Not uploaded');
+			header('Location: ../?view=submitResume&error=Not uploaded');
 		}
 }
 
