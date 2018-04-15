@@ -27,7 +27,14 @@ function formatDate($val){
         <p><label class="m-r-5">Required Experience: </label><?=$job->requiredExperience;?></p>
         <p><label class="m-r-5">Company: </label><?=$job->company;?></p>
         <p><label class="m-r-5">Address: </label><?=$job->address;?></p>
-        <p><label class="m-r-5">Postal Code: </label><?=$job->zipCode;?></p>
+        <div class="row">
+          <div class="col-lg-6">
+            <p><label class="m-r-5">Postal Code: </label><?=$job->zipCode;?></p>
+          </div>
+          <div class="col-lg-6">
+            <p><label class="m-r-5">Rate: </label><?=$job->rate;?></p>
+          </div>
+        </div>
         <div class="row">
           <div class="col-lg-6">
             <p><label class="m-r-5">Job Category: </label><?=getJobFunction($job->jobFunctionId);?></p>
@@ -187,6 +194,21 @@ function formatDate($val){
                   <div class="form-group">
                       <label for="username">ABN </label>
                       <input type="text" class="form-control" name="abn" value="<?=$job->abn;?>">
+                  </div>
+                  </div>
+
+
+                  <div class="p-r-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Postal Code <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="zipCode" value="<?=$job->zipCode;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Rate <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="rate" value="<?=$job->rate;?>" required="">
                   </div>
                   </div>
 

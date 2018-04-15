@@ -169,6 +169,8 @@ function updateInformation()
 	$job->obj['businessPhone'] = $_POST['businessPhone'];
 	$job->obj['empLocation'] = $_POST['empLocation'];
 	$job->obj['abn'] = $_POST['abn'];
+	$job->obj['zipCode'] = $_POST['zipCode'];
+	$job->obj['rate'] = $_POST['rate'];
 	$job->obj['comment'] = $_POST['comment'];
 	$job->update("Id=$Id");
 
