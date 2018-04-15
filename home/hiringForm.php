@@ -64,17 +64,22 @@ $ptList = position_type()->list();
                               </div>
 
                               <div class="p-r-10 w-50-p pull-left">
-                              <div class="form-group">
-                                  <label for="username">Job Position <span style="color: red;">*</span></label>
-                                  <input type="text" class="form-control" name="position" required="">
-                              </div>
+                                <div class="form-group">
+                                    <label for="username">Job Openings <span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="jobOpening" required="">
+                                </div>
                               </div>
 
                               <div class="p-l-10 w-50-p pull-left">
-                              <div class="form-group">
-                                  <label for="username">Job Openings <span style="color: red;">*</span></label>
-                                  <input type="text" class="form-control" name="jobOpening" required="">
+                                <div class="form-group">
+                                    <label for="username">End Date </label>
+                                    <input type="text" class="form-control" name="endDate" required="">
+                                </div>
                               </div>
+
+                              <div class="form-group">
+                                  <label for="username">Job Position <span style="color: red;">*</span></label>
+                                  <input type="text" class="form-control" name="position" required="">
                               </div>
 
                               <div class="p-r-10 w-50-p pull-left">

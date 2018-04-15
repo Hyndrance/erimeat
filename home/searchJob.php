@@ -98,9 +98,11 @@ function formatDate($val){
 
             <a href="?view=jobDetail&id=<?=$row->Id;?>" class="job-list-title"><?=$row->position;?></a>
             <br>
-            <span class="m-b-5"><?=$row->address;?></span>
+            <span class="m-b-5"><?=$row->address;?>, PC <?=$row->zipCode;?></span>
             <br>
             <span class="m-b-5"><?=getPositionName($row->positionTypeId);?></span>
+            <br>
+            <span class="m-b-5">Job Openings: <?=$row->jobOpening;?></span>
             <br>
             <span class="job-list-date">Posted <?=formatDate($row->createDate);?></span>
             <br>
