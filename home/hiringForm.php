@@ -73,9 +73,10 @@ $ptList = position_type()->list();
                               <div class="p-l-10 w-50-p pull-left">
                                 <div class="form-group">
                                     <label for="username">End Date </label>
-                                    <input type="text" class="form-control" name="endDate" required="">
+                                    <input type="date" name="endDate" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose" required>
                                 </div>
                               </div>
+
 
                               <div class="form-group">
                                   <label for="username">Job Position <span style="color: red;">*</span></label>
