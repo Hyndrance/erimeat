@@ -100,6 +100,8 @@ function formatDate($val){
             <br>
             <span class="m-b-5"><?=$row->address;?>, PC <?=$row->zipCode;?></span>
             <br>
+            <span class="m-b-5"><?=$row->rate;?></span>
+            <br>
             <span class="m-b-5"><?=getPositionName($row->positionTypeId);?></span>
             <br>
             <span class="m-b-5">Job Openings: <?=$row->jobOpening;?></span>
