@@ -68,6 +68,7 @@ function formatDate($val){
       </div>
     </div><br>
     <p><label class="m-r-5">Job Openings: </label><?=$job->jobOpening;?></p>
+    <p><label class="m-r-5">Key Skills: </label><?=$job->keySkills;?></p>
     <div class="clearfix"></div>
     <hr>
     <h3>Comment</h3>
@@ -228,6 +229,11 @@ function formatDate($val){
                   <div class="form-group">
                       <label for="username">Company Address <span style="color: red;">*</span></label>
                       <input type="text" class="form-control" name="address" value="<?=$job->address;?>" required="">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="username">Key Skills </label>
+                      <input type="text" class="form-control" name="keySkills" value="<?=$job->keySkills;?>">
                   </div>
 
 

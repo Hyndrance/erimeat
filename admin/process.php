@@ -172,6 +172,7 @@ function updateInformation()
 	$job->obj['zipCode'] = $_POST['zipCode'];
 	$job->obj['rate'] = $_POST['rate'];
 	$job->obj['comment'] = $_POST['comment'];
+	$job->obj['keySkills'] = $_POST['keySkills'];
 	$job->update("Id=$Id");
 
 	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);

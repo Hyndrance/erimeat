@@ -64,6 +64,7 @@ function formatDate($val){
       </div>
     </div><br>
     <p><label class="m-r-5">Job Openings: </label><?=$job->jobOpening;?></p>
+    <p><label class="m-r-5">Key Skills: </label><?=$job->keySkills;?></p>
     <div class="clearfix"></div>
     <hr>
     <h3>Comment</h3>
