@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-14 10:10:30
+# Date: 2018-04-15 18:12:35
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -20,13 +20,13 @@ CREATE TABLE `admin` (
   `email` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','admin@admin.com','0');
+INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','admin@admin.com','0'),(35,'hr','51bd95353aeda6615433bea21896c893ef5e62dc','hr','hr','hr','6','hr@hr.com','0'),(36,'payroll','4de4727ba00457f7e5330d2c36ed39d9a59714db','payroll','payroll','payroll','0','payroll@payroll.com','0');
 
 #
 # Structure for table "application"
@@ -99,7 +99,7 @@ CREATE TABLE `candidate` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "candidate"
@@ -116,7 +116,7 @@ CREATE TABLE `certificates` (
   `uploadedCerts` varchar(255) DEFAULT NULL,
   `resumeId` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "certificates"
@@ -164,12 +164,13 @@ CREATE TABLE `company` (
   `isApproved` varchar(1) DEFAULT '0',
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
 #
 
+INSERT INTO `company` VALUES (1,'66412409','C1523786174','Villacar Transit','','We are a domestic transport company.','torredale1014@gmail.com','Dale Torre','(+61) 111-111-111','(+61) 111-111-111','Bacolod City Negros Occidental','Domestic Transport','1','1','0');
 
 #
 # Structure for table "country_option"
@@ -341,6 +342,7 @@ CREATE TABLE `job` (
   `jobFunctionId` int(11) DEFAULT NULL,
   `positionTypeId` int(11) DEFAULT NULL,
   `position` varchar(100) DEFAULT NULL,
+  `rate` varchar(50) DEFAULT NULL,
   `empLocation` varchar(50) DEFAULT NULL,
   `company` varchar(100) DEFAULT NULL,
   `abn` varchar(50) DEFAULT NULL,
@@ -357,12 +359,13 @@ CREATE TABLE `job` (
   `contactName` varchar(100) DEFAULT NULL,
   `viewCounter` varchar(11) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
+INSERT INTO `job` VALUES (1,'804FD2A9',1,2,'Dispatcher','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','we are looking','2018-04-15 17:58:53','1','0','Dale Torre','0');
 
 #
 # Structure for table "job_function"
@@ -378,7 +381,7 @@ CREATE TABLE `job_function` (
   `description` text,
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job_function"
@@ -473,9 +476,10 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
+INSERT INTO `user` VALUES (1,'C1523786174','2b8889e80cb6afc64ea9923339183799475b1123','Dale Torre','Villacar Transit','company');
