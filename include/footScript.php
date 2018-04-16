@@ -182,6 +182,39 @@ $( "#myBtnShowResume" ).click(function() {
 </script>
 
 <script>
+$("#more").hide();
+$("#readMore").click(function(){
+  $("#more").show();
+  $("#readMore").hide();
+});
+
+$("#more1").hide();
+$("#readMore1").click(function(){
+  $("#more1").show();
+  $("#readMore1").hide();
+});
+
+$("#more2").hide();
+$("#readMore2").click(function(){
+  $("#more2").show();
+  $("#readMore2").hide();
+});
+
+$("#more3").hide();
+$("#readMore3").click(function(){
+  $("#more3").show();
+  $("#readMore3").hide();
+});
+
+$("#more4").hide();
+$("#readMore4").click(function(){
+  $("#more4").show();
+  $("#readMore4").hide();
+});
+</script>
+
+
+<script>
 $( "#myLinkShowResume" ).click(function() {
   $( "#fileInput" ).show( "fast" );
 });

@@ -23,10 +23,14 @@ function getPositionName($Id){
     </div>
     <div class="col-md-9 slideleft">
       <h4>About Us</h4>
-      <div class="module line-clamp">
-      <p >Teamire (Aust) Pty Ltd is a consulting business in Supply Chain Management specializing in Synchronization
+      <div>
+      <p>Teamire (Aust) Pty Ltd is a consulting business in Supply Chain Management specializing in Synchronization
          of business activities. In early 2017 Teamire was established by Simon Reddy, founder and CEO as a “go to”
          knowledge box for SME’s struggling that is unable to afford full time employees. demands and challenges
+       </p>
+      </div>
+      <div id="more">
+      <p>
          offered by “vertical channel conflict” (between layers of supply chain) in their Supply Chain. Simon has
          nearly 3 decades of work experience in all aspects of Supply Chain working closely with large corporations
          all around the globe.<br><br>
@@ -38,8 +42,8 @@ function getPositionName($Id){
          of our Group is also a Subject Matter Expert in some area Supply Chain, evaluating and deploying the best
          solution is transparent, speedy and effective.
       </p>
-    </div>
-    <span class="text-blue"><a>Read More</a></span>
+      </div>
+    <span id="readMore" class="text-blue">Read More</span>
     </div>
   </div>
 
@@ -48,9 +52,13 @@ function getPositionName($Id){
   <div class="row slideanim">
     <div class="col-md-9">
       <h4 id="howWeDoThis">How we do this</h4>
-      <div class="module line-clamp">
+      <div>
       <p>Often, vertical channel conflict (i.e. between layers of supply chain) occurs due to ambiguous roles and
          responsibilities.<br><br>
+      </p>
+      </div>
+      <div id="more1">
+      <p>
          With a clear definition of roles and responsibilities, our Synchronization process starts
          by making sure that all supply chain partners are fully aware what tasks they’re expected to perform
          (e.g. storing goods, modifying, reassemble, price marking), when they’re expected to do them
@@ -69,7 +77,7 @@ function getPositionName($Id){
          where TEAMIRE can step in to help you find the right solution to your problems.
        </p>
     </div>
-    <span class="text-blue"><a>Read More</a></span>
+    <span class="text-blue" id="readMore1">Read More</span>
   </div>
     <div class="col-md-3">
       <img src="../include/assets/images/aboutus-img2.png" style="width: 100%; border-radius: 50%;">
@@ -84,15 +92,20 @@ function getPositionName($Id){
     </div>
     <div class="col-md-9 slideleft">
       <h4 id="ourVision">Our Vision</h4>
-      <div class="module line-clamp">
+      <div>
       <p>At Teamire our purpose is to help our client streamline their business processes by synchronizing
          their Production, Inventory and Sales and relisting them as a reliable and competitive source for
          products and services. It is also our goal to become our clients 1st choice every time for resolving
-         all Supply Chain related process issues when it comes to re-alignment with our client’s key business
+         all Supply Chain related
+      </p>
+      </div>
+      <div id="more2">
+      <p>
+         process issues when it comes to re-alignment with our client’s key business
          objectives.
       </p>
-    </div>
-    <span class="text-blue"><a>Read More</a></span>
+      </div>
+    <span id="readMore2" class="text-blue">Read More</span>
     </div>
   </div>
 
@@ -101,16 +114,21 @@ function getPositionName($Id){
   <div class="row slideanim">
     <div class="col-md-9">
       <h4 id="ourObjectives">Our Objectives</h4>
-      <div class="module line-clamp">
+      <div>
       <p>Is to ensure that we always have a realistic plan in restructuring our client’s strategic business
          framework from effective collaboration to evaluation of roles and functions, our PMO’s and Project
          Specialists chart and develop a model that is effective, easy to drive, is sustainable, provides a
-         competitive edge from all aspects to clients but most of all is making them money. Our highly skilled
+         competitive edge from all aspects to clients but
+      </p>
+      </div>
+      <div id="more3">
+      <p>
+         most of all is making them money. Our highly skilled
          Supply Chain Professional are ready to take on all types of challenges from Change Management to the
          ever so demanding and complex Supply Chain Management.
       </p>
     </div>
-    <span class="text-blue"><a>Read More</a></span>
+    <span class="text-blue" id="readMore3">Read More</span>
     </div>
     <div class="col-md-3">
       <img src="../include/assets/images/aboutus-img4.png" style="width: 100%; border-radius: 50%;">
@@ -125,10 +143,14 @@ function getPositionName($Id){
     </div>
     <div class="col-md-9 slideleft">
       <h4>Our Services</h4>
-      <div class="module line-clamp">
+      <div>
       <p>Whilst a customized business solution is what we thrive on, TEAMIRE is also engaged in sourcing,
          Administrative Support Staff, Demand & Forecasting Analysts, Demand Planners, Supply Chain Planners,
          Logistics and Transport Coordinators, executive and management level roles in Business Change and Transformation,
+      </p>
+      </div>
+      <div id="more4">
+      <p>
          Demand Planning, Procurement, Purchasing, Supply Chain, Warehousing & Distribution, Logistics and Freight Management
          as both office based and remote staff.<br><br>
          Co-founder and CEO of Teamire Mr. Simon Reddy has more than 27 years of experience in Supply Chain Management.
@@ -145,7 +167,7 @@ function getPositionName($Id){
          or military status in any of its activities or operations.
       </p>
     </div>
-    <span class="text-blue"><a>Read More</a></span>
+    <span class="text-blue" id="readMore4"><a>Read More</a></span>
   </div>
   </div>
 
