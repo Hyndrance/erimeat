@@ -84,7 +84,7 @@ function formatDate($val){
       <br><br>
       © 2018 Teamire. Catalyst in Continous Improvement.
       <br><br>
-      By clicking 'Apply Now' you are agreeing to Teamire <a href="#">Half Terms of Use</a>.
+      By clicking 'Apply Now' you are agreeing to Teamire Terms of Use.
   </p>
     <div class="clearfix"></div>
     <div class="col-md-2 text-center">
