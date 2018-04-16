@@ -7,9 +7,11 @@ function getPositionName($Id){
   echo $job->option;
 }
 ?>
+
+
 <div>
   <div>
-    <div class="bgimg-1" style="min-height: 678px; margin-top: -147px; z-index:-1; position: relative;"></div>
+    <div class="bgimg-1" style="height: 678px; margin-top: -147px; z-index:-1; position: relative;"></div>
         <div>
         <div class="main-text hidden-xs" style="max-width: 1300px;">
                 <div class="col-md-12 text-center" style="min-width: 1350px;">
@@ -170,7 +172,7 @@ function getPositionName($Id){
 </div>
 </div>
 <!-- Basic Form Wizard -->
-<div class="bgimg-3" style="min-height: 910px;">
+<div class="bgimg-3" style="min-height: 910px; padding: 0px !important;">
   <div class="text-center text-blue" style="font-size: 25px; font-weight: 900; padding-top: 18px;">Distributed Teamire Crew</div>
    <div class="container-80 center-page" >
 
@@ -314,7 +316,7 @@ function getPositionName($Id){
                                        </fieldset>
                                        <fieldset title="4">
                                            <legend>While we find the right fit</legend>
-                                              <div class="row"  >
+                                              <div class="row">
                                                <div class="col-md-4">
                                                    <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>

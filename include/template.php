@@ -92,7 +92,7 @@
             </ul>
           </nav>
           <div id="center_email">
-              <center class="well" style="background-color: #797979;">
+              <center class="well" style="background-color: #000;">
                 <div class="container" id="emai_form">
                  <h4 class="text-center text-white">Send us an email</h4>
                     <div class="row">

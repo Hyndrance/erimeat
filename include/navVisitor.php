@@ -44,7 +44,7 @@
     </div>
 <div class="row">
 
-        <nav style="width: 1350px; margin: 0 auto;">
+        <nav style="width: 1350px; margin: 0 auto;" class="">
         <label for="drop" style="border-bottom: none; background-color: rgba(46, 46, 46, 0.8)" class="toggle"><i class="fa fa-bars"></i> Main Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
@@ -82,7 +82,7 @@
                     </ul>
                 </li>
             </ul>
-      <div class="pull-right m-t-10 hidden-xs" style="padding-right: 2%;">
+      <div class="pull-right m-t-10" style="padding-right: 2%;">
         <span class="text-white pull-left m-r-5" style="margin-top: 1px; text-align: right; line-height: 13px; margin-top: 0px;"><i class="fa fa-phone"></i> +61 452 364 793
           <br><i class="fa fa-envelope"></i> info@teamire.com</span>
         <span class="text-white pull-left m-r-5" style="text-align: right;"> | </span>
