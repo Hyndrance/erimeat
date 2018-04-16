@@ -11,11 +11,19 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
       </div>
       <div class="jumbotron center-page container" style="width: 1139px;">
             <form id="default-wizard" action="process.php?action=clientRequest" method="POST" data-parsley-validate="">
+              <?php if($error){?>
+                <div>
+                  <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"
+                              aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <?=$error;?>
+                  </div>
+                </div>
+              <?php } ?>
                     <div class="row m-t-20">
                         <div class="col-sm-7 center-page">
-                            <p class="m-b-0">
-                              <?=$error?>
-                            </p>
                               <div class="form-group">
                                   <label for="firstname">Industry <span style="color: red;">*</span></label>
                                   <select class="form-control" name="jobFunctionId" required>

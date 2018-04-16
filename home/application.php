@@ -1,4 +1,5 @@
 <?php
+$error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $jfList = job_function()->list("isDeleted=0 order by `option` asc");
 $ptList = position_type()->list();
 ?>
@@ -10,6 +11,17 @@ $ptList = position_type()->list();
       </div>
       <div class="jumbotron center-page" style="width: 1140px;">
             <form id="default-wizard" action="process.php?action=submitApplication" method="POST" enctype="multipart/form-data" data-parsley-validate="">
+              <?php if($error){?>
+                <div>
+                  <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                      <button type="button" class="close" data-dismiss="alert"
+                              aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <?=$error;?>
+                  </div>
+                </div>
+              <?php } ?>
                     <div class="row m-t-20">
                         <div class="col-sm-7 center-page">
 

@@ -258,7 +258,7 @@ function submitApplication()
 			header('Location: ../home/?view=success&Id='.$application->Id);
 		}
 		else{
-			header('Location: ../home/?error=Not uploaded');
+			header('Location: ../home/?view=application&id='. $_POST['jobId'] .'&error=Not uploaded');
 		}
 }
 
