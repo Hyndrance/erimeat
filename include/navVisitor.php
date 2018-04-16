@@ -42,9 +42,9 @@
             </ul>
          </nav>
     </div>
-<div class="row">
+<div class="row" style="max-width: 1350px; margin: 0 auto;">
 
-        <nav style="width: 1350px; margin: 0 auto;" class="">
+        <nav>
         <label for="drop" style="border-bottom: none; background-color: rgba(46, 46, 46, 0.8)" class="toggle"><i class="fa fa-bars"></i> Main Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">

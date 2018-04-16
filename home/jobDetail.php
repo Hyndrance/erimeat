@@ -33,20 +33,22 @@ function formatDate($val){
   <!-- Start Job Detail -->
   <div class="col-md-9">
     <h1><?=$job->position;?></h1>
-    <div class="col-md-6"></div>
-    <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup"><?=$job->jobOpening;?></h2>
-      <p>Openings</p>
+    <div class="row col-lg-12">
+      <div class="col-md-6"></div>
+      <div class="col-md-2 text-center">
+        <h2 data-plugin="counterup"><?=$job->jobOpening;?></h2>
+        <p>Openings</p>
+      </div>
+      <div class="col-md-2 text-center">
+        <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
+        <p>Applicants</p>
+      </div>
+      <div class="col-md-2 text-center">
+        <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
+        <p>Views</p>
+      </div>
     </div>
-    <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
-      <p>Applicants</p>
-    </div>
-    <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
-      <p>Views</p>
-    </div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
+    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
     <hr>
     <!-- Job Information -->
     <div class="row clearfix">
@@ -108,7 +110,7 @@ function formatDate($val){
       <p>Views</p>
     </div>
     <div class="clearfix"></div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
+    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
     <hr>
 
     <div class="m-b-30">
