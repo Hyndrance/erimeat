@@ -33,7 +33,11 @@ function formatDate($val){
   <!-- Start Job Detail -->
   <div class="col-md-9">
     <h1><?=$job->position;?></h1>
-    <div class="col-md-8"></div>
+    <div class="col-md-6"></div>
+    <div class="col-md-2 text-center">
+      <h2 data-plugin="counterup"><?=$job->jobOpening;?></h2>
+      <p>Openings</p>
+    </div>
     <div class="col-md-2 text-center">
       <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
       <p>Applicants</p>
@@ -87,6 +91,10 @@ function formatDate($val){
       By clicking 'Apply Now' you are agreeing to Teamire Terms of Use.
   </p>
     <div class="clearfix"></div>
+    <div class="col-md-2 text-center">
+      <h2 data-plugin="counterup"><?=$job->jobOpening;?></h2>
+      <p>Openings</p>
+    </div>
     <div class="col-md-2 text-center">
       <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
       <p>Applicants</p>
