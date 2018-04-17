@@ -39,18 +39,20 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
                                 <input type="text" class="form-control" name="department" required>
                               </div>
 
-                              <div class="p-r-10 w-50-p pull-left">
-                              <div class="form-group">
-                                <label for="username">Employer's Company Name <span style="color: red;">*</span></label>
-                                <input type="text" class="form-control" name="name" required>
-                              </div>
-                              </div>
+                              <div class="row" style="max-width: 640px; margin: 0 auto;">
+                                <div class="p-r-10 w-50-p pull-left">
+                                <div class="form-group">
+                                  <label for="username">Employer's Company Name <span style="color: red;">*</span></label>
+                                  <input type="text" class="form-control" name="name" required>
+                                </div>
+                                </div>
 
-                              <div class="p-l-10 w-50-p pull-left">
-                              <div class="form-group">
-                                <label for="username">Employer ABN </label>
-                                <input type="text" class="form-control" data-mask="99999999999" name="abn">
-                              </div>
+                                <div class="p-l-10 w-50-p pull-left">
+                                <div class="form-group">
+                                  <label for="username">Employer ABN </label>
+                                  <input type="text" class="form-control" data-mask="99999999999" name="abn">
+                                </div>
+                                </div>
                               </div>
 
                               <div class="p-r-10 w-50-p pull-left">

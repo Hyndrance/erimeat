@@ -295,5 +295,16 @@ background-color:#fff;
   border:1px solid rgb(237,78,110) !important;
 }
 
+  .stepy-navigator a {
+    height: 40px;
+    width: 150px;
+    padding: 7px !important;}
+
+  @media only screen and (max-width: 600px) {
+    .stepy-navigator a {
+      height: 40px;
+      width: 150px;
+      padding: 7px !important;}
+  }
 
 </style>

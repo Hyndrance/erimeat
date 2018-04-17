@@ -33,43 +33,49 @@ function formatDate($val){
   <!-- Start Job Detail -->
   <div class="col-md-9">
     <h1><?=$job->position;?></h1>
-    <div class="col-md-6"></div>
-    <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup"><?=$job->jobOpening;?></h2>
-      <p>Openings</p>
+    <div class="row col-lg-12">
+      <div class="col-md-6"></div>
+      <div class="col-md-2 text-center">
+        <h2 data-plugin="counterup"><?=$job->jobOpening;?></h2>
+        <p>Openings</p>
+      </div>
+      <div class="col-md-2 text-center">
+        <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
+        <p>Applicants</p>
+      </div>
+      <div class="col-md-2 text-center">
+        <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
+        <p>Views</p>
+      </div>
     </div>
-    <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup"><?=getApplicantCount($Id);?></h2>
-      <p>Applicants</p>
-    </div>
-    <div class="col-md-2 text-center">
-      <h2 data-plugin="counterup"><?=$job->viewCounter;?></h2>
-      <p>Views</p>
-    </div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
+    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
     <hr>
     <!-- Job Information -->
-    <div class="row cleafix">
+    <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Required Experience:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=$job->requiredExperience;?></p>
     </div>
-    <div class="row cleafix">
+    <div class="row clearfix">
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Rate</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=$job->rate;?></p>
+    </div>
+    <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Location:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=$job->address;?></p>
     </div>
-    <div class="row cleafix">
+    <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Date Posted:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=formatDate($job->createDate);?></p>
     </div>
-    <div class="row cleafix">
+    <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Reference:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=$job->refNum;?></p>
     </div>
-    <div class="row cleafix">
+    <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Employment Type:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=getPositionName($job->positionTypeId);?></p>
     </div>
-    <div class="row cleafix">
+    <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Category:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=getJobFunction($job->jobFunctionId);?></p>
     </div>
@@ -93,7 +99,7 @@ function formatDate($val){
       <p>Views</p>
     </div>
     <div class="clearfix"></div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 30%;">APPLY NOW</button>
+    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
     <hr>
 
     <div class="m-b-30">

@@ -35,7 +35,7 @@
         <footer>
           <div class="row" style="padding: 0; padding-left: 0 !important; color: #FFFFFF; background-color: #000000;">
             <nav class="foot">
-             <label for="drop2" class="toggle2" style="background-color: #022664;color: #fff; padding: 5px 20px; padding-top: 10px;">ABOUT US <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
+             <label for="drop2" class="toggle2" style="background-color: #022664;color: #fff; padding: 5px 20px; padding-top: 10px; margin-bottom: 0px !important;">ABOUT US <b class="fa fa-chevron-right m-l-15 text-white"></b></label>
               <input type="checkbox" id="drop2" />
               <ul class="menu1">
                 <li>
@@ -92,7 +92,7 @@
             </ul>
           </nav>
           <div id="center_email">
-              <center class="well" style="background-color: #797979;">
+              <center class="well" style="background-color: #000;">
                 <div class="container" id="emai_form">
                  <h4 class="text-center text-white">Send us an email</h4>
                     <div class="row">
@@ -278,12 +278,15 @@
                 </div>
                   </div>
                 </div>
+            </div>
+            <div style="background-color: #000;">
 
-                <div class="col-lg-6">
-                  <b class="text-white m-r-5"><i class="fa fa-phone"></i> +61 452 364 793</b> |
-                  <b class="text-white m-l-5"><i class="fa fa-envelope"></i> info@teamire.com</b><br>
-                  © 2018 Teamire. Catalyst in Continuous Improvement.
-                </div>
+              <div class="row container center-page" style="background-color: #000;">
+                <b class="text-white m-r-5"><i class="fa fa-phone"></i> +61 452 364 793</b> |
+                <b class="text-white m-l-5"><i class="fa fa-envelope"></i> info@teamire.com</b><br>
+                <span class="text-white">© 2018 Teamire. Catalyst in Continuous Improvement.</span>
+              </div>
+
             </div>
             <div style="padding: 30px 0; margin-top: 0; bottom: 0; background-color: #000; flex: 0 0 100%; max-width: 100%;">
               <div style="width: 95%; margin: 0 auto; height: 1px; background-color: #fff;"></div>
