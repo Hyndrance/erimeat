@@ -127,7 +127,8 @@ function __createClientLogin($Id){
 	$comp->update("Id='$Id'");
 
 	// Send email
-	$content = "We have approved your request. Please use the credentials we have created for you.<br>
+	$content = "Hi " . $user->obj['lastName'] . ",<br><br>
+							We have approved your request. Please use the credentials we have created for you.<br>
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword<br><br>
 							To login to our website. Please click the link below:<br>
