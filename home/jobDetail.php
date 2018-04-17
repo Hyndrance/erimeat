@@ -74,22 +74,11 @@ function formatDate($val){
       <p class="col-lg-9 col-md-8 col-6"><?=getJobFunction($job->jobFunctionId);?></p>
     </div>
     <hr>
-    <h2>Description</h2>
+    <h2>Job Description</h2>
     <p>
       <?=$job->comment;?>
     </p>
     <div class="clearfix"></div>
-    <p class="p-b-10">
-      Teamire is the world's leader in professional staffing for office support jobs, focusing exclusively on the temporary and temporary-to-full-time placement of professionals in the supply chain field. We are faster at finding you work because of the depth of our client network. Specifically, our professional staffing managers connect with thousands of hiring managers all over the world every week to find your office support job opportunities. We evaluate all of our Teamire temporaries' skills and match them with the needs of top employers in their area.
-      <br><br>
-      Apply for this job now or contact us today at +61 452 364 793 for additional information.
-      <br><br>
-      All applicants applying for job openings must be authorized to work in their respective areas.
-      <br><br>
-      © 2018 Teamire. Catalyst in Continous Improvement.
-      <br><br>
-      By clicking 'Apply Now' you are agreeing to Teamire Terms of Use.
-  </p>
     <div class="clearfix"></div>
     <div class="col-md-2 text-center">
       <h2 data-plugin="counterup"><?=$job->jobOpening;?></h2>

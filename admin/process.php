@@ -687,8 +687,7 @@ function __createEmployeeLogin($Id, $jobId){
 	$job = job()->get("Id='$jobId'");
 
 	// Send email
-	$content = "Congratulations!<br><br>
-							You are hired. We have approved your application for the position <b>" . $job->position . "</b>. Please use the credentials we have created for you.<br>
+	$content = "We have approved your application for the position <b>" . $job->position . "</b>. Please use the credentials we have created for you.<br>
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
