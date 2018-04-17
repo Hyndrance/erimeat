@@ -12,7 +12,7 @@
       <ul class="nav navbar-nav navbar-right nav-menu-right" id="above-nav">
         <li> <a class="m-l-3 m-r-3" href="../home/?view=projects" style="font-size:15px;">Supply Chain Projects</a></li>
         <li> <a class="m-l-3 m-r-3" href="../home/?view=logins" style="font-size:15px;">Timesheets</a></li>
-        <li> <a class="m-l-3 m-r-3" href="../home/?view=downloads" style="font-size:15px;">Your Remote Team</a></li>
+        <li> <a class="m-l-3 m-r-3" href="../home/?view=remoteTeam" style="font-size:15px;">Your Remote Team</a></li>
         <li> <a class="m-l-3 m-r-3" href="../home/?view=hiringForm" style="font-size:15px;">Request Staff</a></li>
         <li><a class="m-l-3 m-r-3" href="../home/?view=contactUs" style="font-size:15px;">Contact Us</a></li>
       </ul>
@@ -31,7 +31,7 @@
                     <label for="drop-2" class="toggle1"> <a  href="../home/?view=logins" >Timesheets</a></label>
                 </li>
                  <li>
-                    <label for="drop-2" class="toggle1"> <a  href="../home/?view=downloads" >Downloads</a></label>
+                    <label for="drop-2" class="toggle1"> <a  href="../home/?view=remoteTeam" >Your Remote Team</a></label>
                 </li>
                  <li>
                     <label for="drop-2" class="toggle1"> <a  href="../home/?view=hiringForm" >Request Staff</a></label>

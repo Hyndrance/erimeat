@@ -43,6 +43,10 @@ switch ($action) {
 		addProject();
 		break;
 
+	case 'addRemoteTeam' :
+		addRemoteTeam();
+		break;
+
 	case 'addFAQ' :
 		addFAQ();
 		break;
@@ -75,6 +79,10 @@ switch ($action) {
 		updateProjects();
 		break;
 
+	case 'updateRemoteTeam' :
+		updateRemoteTeam();
+		break;
+
 	case 'updateDownloads' :
 		updateDownloads();
 		break;
@@ -105,6 +113,10 @@ switch ($action) {
 
 	case 'removeProjects' :
 		removeProjects();
+		break;
+
+	case 'removeRemoteTeam' :
+		removeRemoteTeam();
 		break;
 
 	case 'removeDownloads' :
@@ -368,6 +380,24 @@ function addProject()
 	}
 }
 
+function addRemoteTeam()
+{
+	$upload = uploadFile($_FILES['upload_file']);
+	if ($upload)
+	{
+		$remoteTeam = remote_team();
+		$remoteTeam->obj['title'] = $_POST['title'];
+		$remoteTeam->obj['content'] = $_POST['content'];
+		$remoteTeam->obj['uploadedImage'] = $upload;
+		$remoteTeam->obj['createDate'] = "NOW()";
+		$remoteTeam->create();
+
+		header('Location: ../admin/?view=remoteTeam&message=You have successfully added a new article.');
+	}else{
+		header('Location: ../admin/?error=Not uploaded');
+	}
+}
+
 function addJobFunction()
 {
 	$jf = job_function();
@@ -452,6 +482,24 @@ function updateProjects()
 		header('Location: ../admin/?view=projects&message=You have succesfully updated a Projects.');
 	}else{
 		header('Location: ../admin/?view=projects&error=File not uploaded.');
+	}
+}
+
+function updateRemoteTeam()
+{
+	$upload = uploadFile($_FILES['upload_file']);
+	if ($upload)
+	{
+		$Id = $_POST['Id'];
+		$remoteTeam = remote_team();
+		$remoteTeam->obj['title'] = $_POST['title'];
+		$remoteTeam->obj['content'] = $_POST['content'];
+		$remoteTeam->obj['uploadedImage'] = $upload;
+		$remoteTeam->update("Id='$Id'");
+
+		header('Location: ../admin/?view=remoteTeam&message=You have succesfully updated an article.');
+	}else{
+		header('Location: ../admin/?view=remoteTeam&error=File not uploaded.');
 	}
 }
 
@@ -813,6 +861,16 @@ function removeProjects()
 	$projects->update("Id='$Id'");
 
 	header('Location: ../admin/?view=projects&message=Succesfully Deleted');
+}
+
+function removeRemoteTeam()
+{
+	$Id = $_GET['Id'];
+	$remoteTeam = remote_team();
+	$remoteTeam->obj['isDeleted'] = "1";
+	$remoteTeam->update("Id='$Id'");
+
+	header('Location: ../admin/?view=remoteTeam&message=Succesfully Deleted');
 }
 
 function removeDownloads()

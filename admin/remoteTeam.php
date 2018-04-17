@@ -3,7 +3,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
 $message = (isset($_GET['message']) && $_GET['message'] != '') ? $_GET['message'] : '';
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
 
-$projectsList = projects()->list("isDeleted='0'");
+$remoteTeamList = remote_team()->list("isDeleted='0'");
 
 function formatDate($val){
   $date = date_create($val);
@@ -30,11 +30,11 @@ function formatDate($val){
         </div>
       <?php }?>
       <div class="card-box table-responsive">
-        <h4 class="page-title">Special Projects</h4><br>
+        <h4 class="page-title">Remote Team</h4><br>
         <table id="datatable" class="table table-striped table-bordered">
           <thead>
             <tr>
-              <th>Project Name</th>
+              <th>Title</th>
               <th>Content</th>
               <th>Posted Date</th>
               <th></th>
@@ -43,7 +43,7 @@ function formatDate($val){
           </thead>
           <tbody>
 
-           <?php foreach($projectsList as $row) {
+           <?php foreach($remoteTeamList as $row) {
 
             if ($row->isDeleted==0){
               $id = $row->Id;
@@ -56,7 +56,7 @@ function formatDate($val){
                   <a href="#" data-toggle="modal" data-target="#update-account-modal-<?=$row->Id?>" class=" btn btn-info btn-xs" title="Click To View"  data-trigger="hover" data-toggle="tooltip"><span class="fa fa-pencil"></span> Edit</a>
                 </td>
                 <td>
-                  <a href="process.php?action=removeProjects&Id=<?=$row->Id;?>"  class=" btn btn-danger btn-xs tooltips" title="Click To Edit"><span class="fa fa-close"></span>Remove</a>
+                  <a href="process.php?action=removeRemoteTeam&Id=<?=$row->Id;?>"  class=" btn btn-danger btn-xs tooltips" title="Click To Edit"><span class="fa fa-close"></span>Remove</a>
                 </td>
               </tr>
           <?php
@@ -77,17 +77,17 @@ function formatDate($val){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="myModalLabel">Add New Project</h4>
+        <h4 class="modal-title" id="myModalLabel">Add New Remote Team</h4>
       </div>
       <div class="modal-body">
-        <form id="default-wizard" action="process.php?action=addProject" method="POST" enctype="multipart/form-data">
+        <form id="default-wizard" action="process.php?action=addRemoteTeam" method="POST" enctype="multipart/form-data">
           <p class="m-b-0">
             <?=$error?>
           </p>
           <div class="row m-t-20">
             <div class="col-sm-12">
               <div class="form-group">
-                <label>Project Title</label>
+                <label>Title</label>
                 <input type="text" class="form-control" name="title" placeholder="">
               </div>
 
@@ -108,7 +108,7 @@ function formatDate($val){
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary stepy-finish">Add Project</button>
+            <button type="submit" class="btn btn-primary stepy-finish">Add Remote Team</button>
           </div>
         </form>
       </div><!-- /.modal-content -->
@@ -116,16 +116,16 @@ function formatDate($val){
   </div><!-- /.modal -->
 </div>
 
-<?php foreach ($projectsList as $row) {?>
+<?php foreach ($remoteTeamList as $row) {?>
   <div id="update-account-modal-<?=$row->Id;?>" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog modal-lg">
           <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                  <h4 class="modal-title" id="myLargeModalLabel">Update Projects</h4>
+                  <h4 class="modal-title" id="myLargeModalLabel">Update Remote Team</h4>
               </div>
               <div class="modal-body">
-                <form id="default-wizard" action="process.php?action=updateProjects" method="POST">
+                <form id="default-wizard" action="process.php?action=updateRemoteTeam" method="POST">
                    <p class="m-b-0">
                       <?=$error?>
                   </p>
@@ -155,7 +155,7 @@ function formatDate($val){
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default waves-effect btn-sm" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary stepy-finish btn-sm">Update Projects</button>
+                    <button type="submit" class="btn btn-primary stepy-finish btn-sm">Update Remote Team</button>
                   </div>
                 </form>
               </div>

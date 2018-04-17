@@ -52,6 +52,16 @@ switch ($view) {
 		$template	= '../include/template.php';
 		break;
 
+	case 'remoteTeam' :
+		$content 	= 'remoteTeam.php';
+		$template	= '../include/template.php';
+		break;
+
+	case 'remoteTeamDetail' :
+		$content 	= 'remoteTeamDetail.php';
+		$template	= '../include/template.php';
+		break;
+
 	case 'services' :
 		$content 	= 'services.php';
 		$template	= '../include/template.php';

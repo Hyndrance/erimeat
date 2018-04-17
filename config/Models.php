@@ -96,6 +96,13 @@ function projects() {
 	return $crud;
 }
 
+// Remote Team Models
+function remote_team() {
+	$crud = new CRUD;
+	$crud->table = "remote_team";
+	return $crud;
+}
+
 // Download Models
 function downloads() {
 	$crud = new CRUD;
