@@ -25,6 +25,7 @@
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=jobCategory">Job Category</a></li>
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=services">Services</a></li>
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=projects">Special Projects</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=remoteTeam">Remote Team</a></li>
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=faq">FAQ</a></li>
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=downloads">Download Files</a></li>
             <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=countries">Countries</a></li>
