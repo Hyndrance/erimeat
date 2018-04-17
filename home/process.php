@@ -132,7 +132,7 @@ function __createClientLogin($Id){
 							view your personalized dashboard.<br><br>
 							Client Username: " . $user->obj['username'] . "<br>
 							Password: temppassword<br><br>
-							To login to our website visit <a href='http://www.teamire.com/company/index.php?view=login'>www.teamire.com/company/</a>";
+							To login to our website visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a>";
 
 	sendEmail($company->email, $content);
 }

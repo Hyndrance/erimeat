@@ -586,7 +586,7 @@ function setInterviewDate()
 	$app = application()->get("Id='$Id'");
 	$job = job()->get("Id='$app->jobId'");
 
-	$content = "We have considered your application for $job->position & $job->refNum thus, would like to proceed to stage 1 of our<br>
+	$content = "We have considered your application for $job->position & Reference Number $job->refNum thus, would like to proceed to stage 1 of our<br>
 							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
 							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
 							date and time is suitable for the scheduled interview.<br><br>
@@ -640,8 +640,13 @@ function setCandidateInterview()
 	$application->obj['isApproved'] = "1";
 	$application->create();
 
-	$content = "We have considered your application. Please be available on the schedule below<br>
-							for your interview.<br><br>
+	$content = "We have considered your application thus, would like to proceed to stage 1 of our<br>
+							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
+							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
+							date and time is suitable for the scheduled interview.<br><br>
+							Kindly advice if the suggested date and time listed in this message is suitable for stage one of the<br>
+							interview and Teamire’s selection criteria.<br><br>
+							Alternatively, please advice of your availability.<br><br>
 							Date = $date<br>
 							Time = $time<br><br>
 							Teamire";
