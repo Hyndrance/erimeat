@@ -12,7 +12,6 @@ $jfList = job_function()->list("isDeleted=0 order by `option` asc");
     <br>
     <div class="pull-right">
       <button type="button" class="btn btn-primary waves-effect waves-light btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Add New</button>
-
     </div>
     <br>
 

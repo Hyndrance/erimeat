@@ -2,6 +2,11 @@
 <?php foreach (company()->list("isDeleted=0") as $row) {
 ?>
 
+<br>
+<div class="pull-right">
+  <button type="button" onclick="location.href='../home/?view=clientForm'" class="btn btn-primary waves-effect waves-light btn-sm"><i class="fa fa-plus"></i> Add New Client</button>
+</div>
+<br>
   <div class="col-md-4">
       <div class="text-center card-box">
           <div class="clearfix"></div>

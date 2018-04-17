@@ -8,6 +8,10 @@ $company = company()->get("email='$email' and Id>0");
 $title = $email ?  $company->name  : 'Job Lists';
 ?>
   <div class="row">
+    <br>
+    <div class="pull-right">
+      <button type="button" onclick="location.href='../home/?view=hiringForm'" class="btn btn-primary waves-effect waves-light btn-sm"><i class="fa fa-plus"></i> Add New Job</button>
+    </div>
     <div class="col-sm-12">
       <div class="card-box table-responsive">
           <h4 class="page-title"><?=$title;?></h4><br>
