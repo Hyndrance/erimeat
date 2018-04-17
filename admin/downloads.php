@@ -75,7 +75,7 @@ $downloadList = downloads()->list();
         <h4 class="modal-title" id="myModalLabel">Add New File</h4>
       </div>
       <div class="modal-body">
-        <form id="default-wizard" action="process.php?action=addFileFunction" method="POST" method="POST" enctype="multipart/form-data">
+        <form id="default-wizard" action="process.php?action=addFileFunction" method="POST" enctype="multipart/form-data">
            <p class="m-b-0">
               <?=$error?>
           </p>
@@ -112,7 +112,7 @@ $downloadList = downloads()->list();
       </div>
       <div class="modal-body">
         <?php $files = array($row->uploadedFile); ?>
-        <form id="default-wizard" action="process.php?action=updateDownloads" method="POST">
+        <form id="default-wizard" action="process.php?action=updateDownloads" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="Id" value="<?=$row->Id;?>">
           <p class="m-b-0">
             <?=$error;?>

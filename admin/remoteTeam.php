@@ -125,7 +125,7 @@ function formatDate($val){
                   <h4 class="modal-title" id="myLargeModalLabel">Update Remote Team</h4>
               </div>
               <div class="modal-body">
-                <form id="default-wizard" action="process.php?action=updateRemoteTeam" method="POST">
+                <form id="default-wizard" action="process.php?action=updateRemoteTeam" method="POST" enctype="multipart/form-data">
                    <p class="m-b-0">
                       <?=$error?>
                   </p>

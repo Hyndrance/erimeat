@@ -525,10 +525,10 @@ function addFileFunction(){
 		$upload = uploadFile($_FILES['upload_file']);
 		if ($upload)
 		{
-			$res = downloads();
-			$res->obj['fileName'] = $_POST["fileName"];
-			$res->obj['uploadedFile'] = $upload;
-			$res->create();
+			$downloads = downloads();
+			$downloads->obj['fileName'] = $_POST["fileName"];
+			$downloads->obj['uploadedFile'] = $upload;
+			$downloads->create();
 			header('Location: ../admin/?view=downloads&message=You have succesfully added a new file.');
 		}
 		else{

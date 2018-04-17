@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-17 15:38:10
+# Date: 2018-04-17 22:43:04
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -427,6 +427,26 @@ CREATE TABLE `projects` (
 
 #
 # Data for table "projects"
+#
+
+
+#
+# Structure for table "remote_team"
+#
+
+DROP TABLE IF EXISTS `remote_team`;
+CREATE TABLE `remote_team` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) DEFAULT NULL,
+  `content` text,
+  `uploadedImage` varchar(50) DEFAULT NULL,
+  `createDate` datetime DEFAULT NULL,
+  `isDeleted` varchar(1) DEFAULT '0',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "remote_team"
 #
 
 
