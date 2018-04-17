@@ -142,13 +142,13 @@ header('Location: index.php');
 /* ======================== Email Messages ==============================*/
 
 function __hrEmailMessage(){
-	return "A new invoice has been created. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new invoice has been created. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new invoice.<br><br>
 					Teamire";
 }
 
 function __adminEmailMessage(){
-	return "A new invoice has been created. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new invoice has been created. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new invoice.<br><br>
 					Teamire";
 }

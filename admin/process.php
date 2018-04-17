@@ -691,8 +691,8 @@ function __createEmployeeLogin($Id, $jobId){
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
-							or go to the <a href='http://bandbajabaraath.com/home/?view=logins'>Timesheet</a> page<br><br>
+							<a href='http://www.teamire.com/employee/?view=login'>www.teamire.com/employee/</a><br><br>
+							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page<br><br>
 							Teamire";
 	sendEmail($application->email, $content);
 }

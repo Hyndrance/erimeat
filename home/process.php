@@ -131,7 +131,7 @@ function __createClientLogin($Id){
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword<br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='http://bandbajabaraath.com/company/index.php?view=login'>www.bandbajabaraath.com/company/</a><br><br>
+							<a href='http://www.teamire.com/company/index.php?view=login'>www.teamire.com/company/</a><br><br>
 							or go to the Timesheet page<br><br>
 							Teamire";
 
@@ -316,49 +316,49 @@ function __submitApplicationEmailMessage(){
 }
 
 function __hrTalentMessage(){
-	return "A new talent request has been created. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new talent request has been created. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new talent request.<br><br>
 					Teamire";
 }
 
 function __adminTalentMessage(){
-	return "A new talent request has been created. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new talent request has been created. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new talent request.<br><br>
 					Teamire";
 }
 
 function __hrClientMessage(){
-	return "A new client has registered. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new client has registered. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new client.<br><br>
 					Teamire";
 }
 
 function __adminClientMessage(){
-	return "A new client has registered. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new client has registered. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new client.<br><br>
 					Teamire";
 }
 
 function __hrResumeMessage(){
-	return "A new resume has been submitted. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new resume has been submitted. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new resume.<br><br>
 					Teamire";
 }
 
 function __adminResumeMessage(){
-	return "A new resume has been submitted. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new resume has been submitted. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new resume.<br><br>
 					Teamire";
 }
 
 function __hrApplicationMessage(){
-	return "A new application has been submitted. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new application has been submitted. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new application.<br><br>
 					Teamire";
 }
 
 function __adminApplicationMessage(){
-	return "A new application has been submitted. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new application has been submitted. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new application.<br><br>
 					Teamire";
 }
