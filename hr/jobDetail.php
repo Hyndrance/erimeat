@@ -1,4 +1,5 @@
 <?php
+$success = (isset($_GET['success']) && $_GET['success'] != '') ? $_GET['success'] : '';
 $Id = $_GET['Id'];
 $job = job()->get("Id=$Id");
 
@@ -22,6 +23,15 @@ function formatDate($val){
 ?>
 
 <div class="container container-fluid">
+  <?php if($success){?>
+  <div class="alert alert-success alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert"
+              aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+      <?=$success;?>
+  </div>
+<?php }?>
   <div class="col-12 m-t-30 m-b-30">
     <h2 class="text-blue"><?=$job->position;?></h2>
         <p><label class="m-r-5">Required Experience: </label><?=$job->requiredExperience;?></p>

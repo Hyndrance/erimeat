@@ -362,7 +362,7 @@ function jobRequest()
 		$result = 1;
 	}
 	else{
-		$result = -1;
+		$result = 0;
 	}
 
 	$Id = $_GET['Id'];
