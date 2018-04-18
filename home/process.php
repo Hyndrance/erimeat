@@ -207,7 +207,7 @@ function submitApplication()
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
 
-		if ($uploadFile && !isset($uploadList['error']))
+		if ($uploadFile)
 		{
 			$app = application();
 			$app->obj['jobId'] = $_POST["jobId"];
@@ -229,16 +229,19 @@ function submitApplication()
 			$app->obj['coverLetter'] = $_POST["coverLetter"];
 			$app->obj['keySkills'] = $_POST["keySkills"];
 			$app->obj['uploadedResume'] = $uploadFile;
-			$app->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
+			$app->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";
 			$app->create();
 
 			$application = application()->get("email='$email'");
 
-			foreach($uploadList as $file){
-				$certs = certificates();
-				$certs->obj['resumeId']  = $application->Id;
-				$certs->obj['uploadedCerts'] = $file;
-				$certs->create();
+
+			if ($uploadList && !$uploadList['error']){
+				foreach($uploadList as $file){
+					$certs = certificates();
+					$certs->obj['resumeId']  = $application->Id;
+					$certs->obj['uploadedCerts'] = $file;
+					$certs->create();
+				}
 			}
 
 			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
