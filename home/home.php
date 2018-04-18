@@ -12,59 +12,61 @@ function getPositionName($Id){
 <div>
   <div>
     <div class="bgimg-1" style="height: 678px; margin-top: -147px; z-index:-1; position: relative;"></div>
-        <div>
-        <div class="main-text hidden-xs" style="max-width: 1300px;">
-                <div class="col-md-12 text-center" style="min-width: 1350px;">
-                    <p class="m-t-30 slideanim" style="font-size: 24px; width: 800px; margin: 0 auto; line-height: 1;font-weight: bold; color: #2a3c71;">
-                      It is our Business to Identify your Need, Interest, Concern and Expectation
-                    </p>
-                    <p style="color: #2a3c71; font-size: 24px;" class="slideanim">We're Remote Supply Chain Data driven experts.....
-                    </p>
-                    <div class="row m-b-20" style="margin-top: 200px; min-width: 1350px;">
-                      <button id="myBtn1" class="btn btn-sm" style="width:300px; height: 50px;">NEED TO HIRE?</button>
-                      <button id="myBtn2" class="btn btn-sm" style="width:300px; height: 50px;">LOOKING FOR A JOB?</button>
-                    </div>
 
-                <div class="">
-                <div id="myDIV">
-                  <form class="form-inline" method="GET">
-                    <div class="form-group">
-                    <input type="hidden" name="view" value="searchResume">
-                    <select name="j" class="form-control" style="height: 50px; width:435px; border: none;" required>
-                      <option value="">Select Category</option>
-                      <?php foreach($jobFunctionList as $row){ ?>
-                        <option value="<?=$row->Id;?>"><?=$row->option;?></option>
-                      <?php } ?>
-                    </select>
-                    <button type="submit" class="btn btn-sm btn-blue pull-right m-l-5 waves-effect waves-light" style="height: 50px;"><i class="fa fa-search m-r-5"></i> Find Candidates</button>
-                    </div>
-                  </form>
+    <div >
+      <div class="main-text top-cont">
+            <div class="text-center container">
+                <p class="m-t-30 slideanim tagline">
+                  It is our Business to Identify your Need, Interest, Concern and Expectation
+                  <br>
+                  We're Remote Supply Chain Data driven experts.....
+                </p>
+
+                <div class="row m-b-20 categ-margin">
+                  <button id="myBtn1" class="btn btn-sm" style="width:300px; height: 50px;">NEED TO HIRE?</button>
+                  <button id="myBtn2" class="btn btn-sm" style="width:300px; height: 50px;">LOOKING FOR A JOB?</button>
                 </div>
 
-
-           <div id="demo1"></div>
-           <div id="demo"></div>
-            <div id="myP" style="visibility:hidden;">
+            <div class="">
+            <div id="myDIV">
               <form class="form-inline" method="GET">
-              <div class="form-group">
-                <input type="hidden" name="view" value="searchJob">
-                <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 50px;width:226px; border: none;">
-                <select name="c" class="form-control" style="height: 50px; width:203px; border: none;" required>
+                <div class="form-group">
+                <input type="hidden" name="view" value="searchResume">
+                <select name="j" class="form-control categ-select" required>
                   <option value="">Select Category</option>
                   <?php foreach($jobFunctionList as $row){ ?>
                     <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                   <?php } ?>
                 </select>
-                    <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue" style="height: 48px; width: 163px;"><i class="fa fa-search m-r-5"></i>Search Job</button>
-
-              </div>
-            </form>
-                    </div>
-                  </div>
+                <button type="submit" class="btn btn-sm btn-blue pull-right m-l-5 waves-effect waves-light categ-btn" style="height: 51px;"><i class="fa fa-search m-r-5"></i> Find Candidates</button>
                 </div>
-                <div class="clearfix"></div>
+              </form>
             </div>
-    </div>
+
+
+       <div id="demo1"></div>
+       <div id="demo"></div>
+        <div id="myP" style="visibility:hidden;">
+          <form class="form-inline" method="GET">
+          <div class="form-group">
+            <input type="hidden" name="view" value="searchJob">
+            <input type="text" name="s" class="form-control job-search" placeholder="Job Title, Skills or Keywords">
+            <select name="c" class="form-control job-categ" required>
+              <option value="">Select Category</option>
+              <?php foreach($jobFunctionList as $row){ ?>
+                <option value="<?=$row->Id;?>"><?=$row->option;?></option>
+              <?php } ?>
+            </select>
+                <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue" style="height: 51px; width: 165px;"><i class="fa fa-search m-r-5"></i>Search Job</button>
+
+          </div>
+        </form>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+</div>
   </div>
   <div>
 <div>

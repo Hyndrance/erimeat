@@ -87,12 +87,12 @@
           <br><i class="fa fa-envelope"></i> info@teamire.com</span>
         <span class="text-white pull-left m-r-5" style="text-align: right;"> | </span>
         <ul>
-        <li><a class="icons" href="https://www.facebook.com/" target="blank_"><img src="../include/assets/images/facebook.png"></a></li>
-        <li><a class="icons" href="https://www.twitter.com/" target="blank_"><img src="../include/assets/images/twitter.png"></a></li>
-        <li><a class="icons" href="https://www.linkedin.com/" target="blank_"><img src="../include/assets/images/linkedin.png"></a></li>
-        <li><a class="icons" href="https://www.google.com/" target="blank_"><img src="../include/assets/images/google.png"></a></li>
-        <li><a class="icons" href="https://www.youtube.com/" target="blank_"><img src="../include/assets/images/youtube.png"></a></li>
-      </ul>
+          <li style="width: 25px;"><a class="icons" href="https://www.facebook.com/" target="blank_"><img src="../include/assets/images/facebook.png"></a></li>
+          <li style="width: 25px;"><a class="icons" href="https://www.twitter.com/" target="blank_"><img src="../include/assets/images/twitter.png"></a></li>
+          <li style="width: 25px;"><a class="icons" href="https://www.linkedin.com/" target="blank_"><img src="../include/assets/images/linkedin.png"></a></li>
+          <li style="width: 25px;"><a class="icons" href="https://www.google.com/" target="blank_"><img src="../include/assets/images/google.png"></a></li>
+          <li style="width: 25px;"><a class="icons" href="https://www.youtube.com/" target="blank_"><img src="../include/assets/images/youtube.png"></a></li>
+        </ul>
       </div>
 
         </nav>
