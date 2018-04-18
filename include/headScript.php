@@ -169,7 +169,7 @@ body {
   border: none;
 }
 
-@media screen (max-width: 420px){
+@media(max-width: 420px){
   .job-search{
     margin-left: 50px;
     margin-bottom: 5px;
