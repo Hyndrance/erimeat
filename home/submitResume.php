@@ -49,8 +49,8 @@ $ptList = position_type()->list();
 
 
                             <div class="form-group w-33-p pull-right">
-                                  <label for="username">Birthdate <span style="color: red;">*</span></label>
-                                  <input type="text" class="form-control" data-mask="99-99-9999" name="birthdate" placeholder="mm-dd-yyyy" required>
+                                  <label for="username">Birthdate</label>
+                                  <input type="date" class="form-control" name="birthdate">
                               </div>
                               </div>
 
@@ -143,16 +143,15 @@ $ptList = position_type()->list();
 
                           <div class="p-r-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label>Attach Computer Specification <span style="color: red;">*</span></label>
-                            <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg" required/>
-                            <span class="help-block"><small>Please attach a screenshot of your computer specification.</small></span>
+                            <label>Attach Computer Specification </label>
+                            <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg" />
                           </div>
                           </div>
 
                           <div class="p-l-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label>Attach Other Files <span style="color: red;">*</span></label>
-                            <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg," required>
+                            <label>Attach Other Files </label>
+                            <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg," />
                           </div>
                           </div>
                           <div class="clearfix"></div>

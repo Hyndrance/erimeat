@@ -103,20 +103,24 @@ function uploadMultipleFile($uploadedFile){
 
 	$countfiles = count($uploadedFile['name']);
 
-	for($i=0;$i<$countfiles;$i++){
-		// File name
-	   	$filename = $uploadedFile['name'][$i];
-	   	// Get extension
-  		 $ext = explode(".", $filename);
-		   if(move_uploaded_file($uploadedFile['tmp_name'][$i],'../media/'.$filename)){
-		   		$filenameList[] = $filename;
-			}
-			else{
-		   		$filenameList['error'] = true;
-			}
+	if (false){
+		for($i=0;$i<$countfiles;$i++){
+			// File name
+		   	$filename = $uploadedFile['name'][$i];
+		   	// Get extension
+	  		 $ext = explode(".", $filename);
+			   if(move_uploaded_file($uploadedFile['tmp_name'][$i],'../media/'.$filename)){
+			   		$filenameList[] = $filename;
+				}
+				else{
+			   		$filenameList['error'] = true;
+				}
+		}
+			return $filenameList;
 	}
-
-	return $filenameList;
+	else{
+			return false;
+	}
 
 }
 

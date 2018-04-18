@@ -147,22 +147,24 @@ function submitResume(){
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
 
-		if ($uploadFile && !isset($uploadList['error']))
+		if ($uploadFile)
 		{
 			$can = candidate();
 			$can->obj = $_POST;
 			$can->obj['refNum'] = strtoupper($refNum);
 			$can->obj['uploadedResume'] = $uploadFile;
-			$can->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
+			$can->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";
 			$can->create();
 
 			$candidate = candidate()->get("email='$email'");
 
-			foreach($uploadList as $file){
-				$certs = certificates();
-				$certs->obj['resumeId']  = $candidate->Id;
-				$certs->obj['uploadedCerts'] = $file;
-				$certs->create();
+			if ($uploadList && !$uploadList['error']){
+				foreach($uploadList as $file){
+					$certs = certificates();
+					$certs->obj['resumeId']  = $candidate->Id;
+					$certs->obj['uploadedCerts'] = $file;
+					$certs->create();
+				}
 			}
 
 			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
