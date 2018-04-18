@@ -110,8 +110,8 @@ $ptList = position_type()->list();
                               </select>
                           </div>
                           <div class="form-group w-33-p pull-left">
-                              <label for="username">State <span style="color: red;">*</span></label>
-                              <input type="text" class="form-control" name="state" required>
+                              <label for="username">State </label>
+                              <input type="text" class="form-control" name="state">
                           </div>
 
                           <div class="form-group w-33-p pull-right">

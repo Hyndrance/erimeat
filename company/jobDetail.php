@@ -51,9 +51,6 @@ function getPosition($Id){
         ABN: <?=$job->abn;?>
       </div>
       <div class="col-lg-4">
-        ID: <?=$job->Id;?>
-      </div>
-      <div class="col-lg-4">
         Reference Number: <?=$job->refNum;?>
       </div>
     </div><br>
