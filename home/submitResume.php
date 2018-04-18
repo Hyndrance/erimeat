@@ -81,7 +81,7 @@ $ptList = position_type()->list();
                               <div class="p-l-10 w-50-p pull-left">
                               <div class="form-group">
                                   <label for="username">Phone Number <span style="color: red;">*</span></label>
-                                  <input type="text" class="form-control" name="phoneNumber" data-mask="(+61) 999-999-999" required>
+                                  <input type="text" class="form-control" name="phoneNumber" required>
                               </div>
                               </div>
 
