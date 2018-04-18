@@ -303,7 +303,7 @@ background-color:#fff;
   @media only screen and (max-width: 600px) {
     .stepy-navigator a {
       height: 40px;
-      width: 150px;
+      width: 120px;
       padding: 7px !important;}
   }
 
