@@ -189,11 +189,18 @@ function setInterviewDate()
 	$application->obj['isApproved'] = "1";
 	$application->update("Id='$Id'");
 
-	$content = "We have considered your application. Please be available on the schedule below<br>
-							for your interview.<br><br>
+	$app = application()->get("Id='$Id'");
+	$job = job()->get("Id='$app->jobId'");
+
+	$content = "We have considered your application for $job->position & $job->refNum thus, would like to proceed to stage 1 of our<br>
+							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
+							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
+							date and time is suitable for the scheduled interview.<br><br>
+							Kindly advice if the suggested date and time listed in this message is suitable for stage one of the<br>
+							interview and Teamire’s selection criteria.<br><br>
+							Alternatively, please advice of your availability.<br><br>
 							Date = $date<br>
-							Time = $time<br><br>
-							Teamire";
+							Time = $time";
 	sendEmail($email, $content);
 
 	header('Location: index.php?view=applicants');
@@ -238,8 +245,13 @@ function setCandidateInterview()
 	$application->obj['isApproved'] = "1";
 	$application->create();
 
-	$content = "We have considered your application. Please be available on the schedule below<br>
-							for your interview.<br><br>
+	$content = "We have considered your application thus, would like to proceed to stage 1 of our<br>
+							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
+							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
+							date and time is suitable for the scheduled interview.<br><br>
+							Kindly advice if the suggested date and time listed in this message is suitable for stage one of the<br>
+							interview and Teamire’s selection criteria.<br><br>
+							Alternatively, please advice of your availability.<br><br>
 							Date = $date<br>
 							Time = $time<br><br>
 							Teamire";
@@ -310,14 +322,16 @@ function __createEmployeeLogin($Id, $jobId){
 	$job = job()->get("Id='$jobId'");
 
 	// Send email
-	$content = "Congratulations!<br><br>
-							You are hired. We have approved your application for <b> " . $job->position . "</b>. Please use the credentials we have created for you.<br>
+	$content = "Application for: $job->position<br><br>
+							Congratulations!<br><br>
+							Welcome to Teamire! Our HR staff will soon be in contact with you to discuss your new contract in detail<br>
+							and provide instructions on how to access our database for completion of weekly timesheets including<br>
+							employee dashboard. Please use the credentials we have created for you.<br><br>
 							Username: " . $user->obj['username'] . "<br>
-							Password: temppassword<br><br>
+							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
-							or go to the <a href='http://bandbajabaraath.com/home/?view=logins'>Timesheet</a> page<br><br>
-							Teamire";
+							<a href='http://www.teamire.com/employee/?view=login'>www.teamire.com/employee/</a><br><br>
+							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.";
 	sendEmail($application->email, $content);
 }
 

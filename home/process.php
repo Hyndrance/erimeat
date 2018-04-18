@@ -127,13 +127,12 @@ function __createClientLogin($Id){
 	$comp->update("Id='$Id'");
 
 	// Send email
-	$content = "We have approved your request. Please use the credentials we have created for you.<br>
-							Username: " . $user->obj['username'] . "<br>
+	$content = "Thank you for considering Teamire as your prospect to search for your contingent workforce.<br>
+							Your new account has been activated which means you can now login with the below credentials and<br>
+							view your personalized dashboard.<br><br>
+							Client Username: " . $user->obj['username'] . "<br>
 							Password: temppassword<br><br>
-							To login to our website. Please click the link below:<br>
-							<a href='http://bandbajabaraath.com/company/index.php?view=login'>www.bandbajabaraath.com/company/</a><br><br>
-							or go to the Timesheet page<br><br>
-							Teamire";
+							To login to our website visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a>";
 
 	sendEmail($company->email, $content);
 }
@@ -198,7 +197,10 @@ function submitApplication()
 {
 		$email = $_POST["email"];
 		$jobFunctionId = $_POST['jobFunctionId'];
+		$jobId = $_POST['jobId'];
 		$refNum = bin2hex(openssl_random_pseudo_bytes(4));
+
+		$job = job()->get("Id='$jobId'");
 
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
@@ -241,12 +243,21 @@ function submitApplication()
 			$adminList = admin()->list("level='admin'");
 
 			// Send Email
-			$content = __submitApplicationEmailMessage();
 			$hrmessage = __hrApplicationMessage();
 			$adminmessage = __adminApplicationMessage();
 
 			//for candidate
-			sendEmail($application->email,$hrmessage);
+			$content = "Thank you for applying and showing interest in our company and responding to our advertisement for<br>
+									" . $job->position . " with reference number " . $job->refNum . "<br><br>
+									At this stage in employment prospect we usually make this one very significant statement to everyone<br>
+									who is looking for an opportunity with our organisation, and that is “if your career profile truly reflects<br>
+									who you are, then you definitely stand a fighting chance in landing a suitable position with our business.<br><br>
+									For your application to proceed to the next stage of the interview process, with a well-structured<br>
+									resume we also need you to provide us with copies of your academic achievements for factual<br>
+									verification. This may include other work-related training certificates, awards, and transcripts of exams<br>
+									and marks scored in university and college that you wish to share with us in support of your application.";
+
+			sendEmail($application->email,$content);
 			//for HR
 			foreach($hrList as $row){
 				sendEmail($row->email,$hrmessage);
@@ -294,71 +305,76 @@ function sendInquiry()
 /* ======================== Email Messages ==============================*/
 
 function __talentRequestEmailMessage(){
-	return "We have received your request. Thank you for showing interest in our company in looking for your candidate.<br>
-					Please be informed that we are in the midst of processing your request and shall get<br>
-					in touch with you again if your request has met our condition.<br><br>
-					Teamire";
+	return "We acknowledge your request for talent acquisition. Our hiring process usually begin with our Certified<br>
+					HR Personnel (our zone level team building manager) who will contact your company representative and<br>
+					go through in detail systems we have in place a vigilant and very efficiently system to engage remote<br>
+					staff/contractor's to your important assignment. Our Rep will explain our extent of involvement and how<br>
+					we will engage and coordinate the complete process from hiring to managing your expectations through<br>
+					to our own individual milestones and KPIs which we maintain for benchmarking through various metrics in<br>
+					collaboration with your team. In addition this above, we will also discuss and assist you with writing up<br>
+					you ideal remote contractor job profile, preferred candidate type, any professional experience, document<br>
+					contractors access to ERP and other means of communication tools via a compatible remote user<br>
+					interface. We will define hours of any mandatory work activity based on your expectations and our<br>
+					business T/Cs related to new assignment.<br><br>
+					At Teamire we value our contribution thus take pride in what we do, when, why and how we find and<br>
+					deploy a talent that is regarded far superior to our closest competitor our industry. In seeking for the best<br>
+					talents and using our non compromising guidelines, we consistently deploy and maintain a very high<br>
+					standard of talent screening process.";
 }
 
 function __submitResumeEmailMessage(){
-	return "Thank you for submiting your resume to Teamire. As of now, we are still reviewing your documents.<br>
-					If we find any of our current opportunities that match your qualifications, we will contact you with the<br>
-					next steps of your application.<br><br>
-					We look forward to assisting you with your job search!<br><br>
-					Teamire";
-}
-
-function __submitApplicationEmailMessage(){
-	return "We have recieved your application. Thank you for the interest shown in our company.<br><br>
-					Please be informed that we are in the midst of processing the applications and shall get<br>
-					in touch with you again if you are shortlisted for an interview.<br><br>
-					Teamire";
+	return "We have received your inquiry regarding employment opportunities at <b>Teamire</b> Employment Services,<br>
+					and we are in the process of reviewing your qualifications against our current requirements. Should your<br>
+					background and experience meet the requirements of one of our job openings, we will contact you to<br>
+					request addition information. If we do not have an appropriate opening at this time, we will retain your<br>
+					inquiry for six months for future consideration.<br><br>
+					Thank you for contacting Teamire Employement Services.<br>";
 }
 
 function __hrTalentMessage(){
-	return "A new talent request has been created. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new talent request has been created. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new talent request.<br><br>
 					Teamire";
 }
 
 function __adminTalentMessage(){
-	return "A new talent request has been created. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new talent request has been created. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new talent request.<br><br>
 					Teamire";
 }
 
 function __hrClientMessage(){
-	return "A new client has registered. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new client has registered. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new client.<br><br>
 					Teamire";
 }
 
 function __adminClientMessage(){
-	return "A new client has registered. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new client has registered. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new client.<br><br>
 					Teamire";
 }
 
 function __hrResumeMessage(){
-	return "A new resume has been submitted. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new resume has been submitted. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new resume.<br><br>
 					Teamire";
 }
 
 function __adminResumeMessage(){
-	return "A new resume has been submitted. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new resume has been submitted. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new resume.<br><br>
 					Teamire";
 }
 
 function __hrApplicationMessage(){
-	return "A new application has been submitted. Please login to <a href='http://bandbajabaraath.com/hr/index.php?view=login'>www.bandbajabaraath.com/hr/</a><br>
+	return "A new application has been submitted. Please login to <a href='http://www.teamire.com/hr/index.php?view=login'>www.teamire.com/hr/</a><br>
 					and check the new application.<br><br>
 					Teamire";
 }
 
 function __adminApplicationMessage(){
-	return "A new application has been submitted. Please login to <a href='http://bandbajabaraath.com/admin/index.php?view=login'>www.bandbajabaraath.com/admin/</a><br>
+	return "A new application has been submitted. Please login to <a href='http://www.teamire.com/admin/index.php?view=login'>www.teamire.com/admin/</a><br>
 					and check the new application.<br><br>
 					Teamire";
 }

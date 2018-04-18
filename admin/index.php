@@ -196,6 +196,12 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
+	case 'remoteTeam' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'remoteTeam.php';
+		$template	= '../include/dashboard.php';
+		break;
+
 	case 'downloads' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'downloads.php';

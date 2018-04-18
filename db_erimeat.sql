@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-15 21:18:10
+# Date: 2018-04-17 22:43:04
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -62,13 +62,12 @@ CREATE TABLE `application` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "application"
 #
 
-INSERT INTO `application` VALUES (1,3,6,'E1523796462','999DF89D','Sam','Seday','12-31-2321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','sdfsdfsdfsdfdsfdsf adsjflksdflkjlfdjdsjf','sam, kevin, dale\n','1523795540.pdf','','1523795540.png',NULL,NULL,'1','1','0'),(2,3,8,'E1523796673','46CA78B2','asdfsdfdsf','asdfsdf','12-32-1321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','asdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdfasdljflsdfsjdfjlsdf','mas, elad, nivek','1523796557.pdf','','1523796557.png',NULL,NULL,'1','1','0');
 
 #
 # Structure for table "candidate"
@@ -108,7 +107,6 @@ CREATE TABLE `candidate` (
 # Data for table "candidate"
 #
 
-INSERT INTO `candidate` VALUES (1,6,'DC1EA338','Sam','Seday','12-31-2321','','Billboard, Billboard','torredale1014@gmail.com','(+61) 234-567-890','Billboard','Billboard','10','Negros Occidental','6100','sdfsdfsdfsdfdsfdsf adsjflksdflkjlfdjdsjf','sam, kevin, dale','1523795540.pdf','','1523795540.png',NULL,NULL,'0','0','0');
 
 #
 # Structure for table "certificates"
@@ -120,13 +118,12 @@ CREATE TABLE `certificates` (
   `uploadedCerts` varchar(255) DEFAULT NULL,
   `resumeId` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "certificates"
 #
 
-INSERT INTO `certificates` VALUES (1,'28308251_10208570202852699_895605723_n.png',1),(2,'28308251_10208570202852699_895605723_n.png',1);
 
 #
 # Structure for table "city_option"
@@ -175,7 +172,6 @@ CREATE TABLE `company` (
 # Data for table "company"
 #
 
-INSERT INTO `company` VALUES (1,'66412409','C1523786174','Villacar Transit','','We are a domestic transport company.','torredale1014@gmail.com','Dale Torre','(+61) 111-111-111','(+61) 111-111-111','Bacolod City Negros Occidental','Domestic Transport','1','1','0');
 
 #
 # Structure for table "country_option"
@@ -252,13 +248,12 @@ CREATE TABLE `employee` (
   `createDate` datetime DEFAULT NULL,
   `status` varchar(2) DEFAULT '1' COMMENT '1: Employed, 0: Unemployed',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "employee"
 #
 
-INSERT INTO `employee` VALUES (1,3,'E1523796462','2018-04-15 20:47:42','1'),(2,3,'E1523796673','2018-04-15 20:51:12','1');
 
 #
 # Structure for table "faq"
@@ -312,13 +307,12 @@ CREATE TABLE `interview_date` (
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
 #
 
-INSERT INTO `interview_date` VALUES (1,'torredale1014@gmail.com','2018-12-31','12:59:00');
 
 #
 # Structure for table "invoice"
@@ -370,13 +364,12 @@ CREATE TABLE `job` (
   `jobOpening` varchar(11) DEFAULT NULL,
   `keySkills` text,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
-INSERT INTO `job` VALUES (1,'804FD2A9',1,2,'Dispatcher','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','we are looking','2018-04-15 17:58:53',NULL,'1','0','0','Dale Torre','0','1','sam, kevin, dale\n\n'),(2,'24B6522F',4,2,'Driver','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:31:36',NULL,'0','0','0','Dale Torre','0','1','sam, kevin, dale\n'),(3,'18B126C6',4,2,'Driver','$14-14/hr','Onsite Staff','Villacar Transit','','torredale1014@gmail.com','Manager','(+61) 111-111-111','1111','Billboard','0-1 Year','','2018-04-15 18:46:48',NULL,'1','0','0','Dale Torre','1','1','sam, kevin, dale\n'),(4,'6BAFD50C',6,1,'asdfdsfsdf','$14-14/hr','Onsite Staff','asdfdsfdsf','','torredale1014@gmail.com','sadfjlsdjfjsldfj','(+61) 234-567-890','6100','Billboard, Billboard','0-1 Year','adsfsdf','2018-04-15 20:18:36','2018-04-11','0','0','0','asdfsdfsdf','0','hahahahhaha','sam, kevin, dale, hehe');
 
 #
 # Structure for table "job_function"
@@ -438,6 +431,26 @@ CREATE TABLE `projects` (
 
 
 #
+# Structure for table "remote_team"
+#
+
+DROP TABLE IF EXISTS `remote_team`;
+CREATE TABLE `remote_team` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) DEFAULT NULL,
+  `content` text,
+  `uploadedImage` varchar(50) DEFAULT NULL,
+  `createDate` datetime DEFAULT NULL,
+  `isDeleted` varchar(1) DEFAULT '0',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "remote_team"
+#
+
+
+#
 # Structure for table "timesheet"
 #
 
@@ -487,10 +500,9 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'C1523786174','2b8889e80cb6afc64ea9923339183799475b1123','Dale Torre','Villacar Transit','company'),(2,'E1523796462','2b8889e80cb6afc64ea9923339183799475b1123','Sam','Seday','employee'),(3,'E1523796673','2b8889e80cb6afc64ea9923339183799475b1123','asdfsdfdsf','asdfsdf','employee');

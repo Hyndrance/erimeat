@@ -43,6 +43,10 @@ switch ($action) {
 		addProject();
 		break;
 
+	case 'addRemoteTeam' :
+		addRemoteTeam();
+		break;
+
 	case 'addFAQ' :
 		addFAQ();
 		break;
@@ -75,6 +79,10 @@ switch ($action) {
 		updateProjects();
 		break;
 
+	case 'updateRemoteTeam' :
+		updateRemoteTeam();
+		break;
+
 	case 'updateDownloads' :
 		updateDownloads();
 		break;
@@ -105,6 +113,10 @@ switch ($action) {
 
 	case 'removeProjects' :
 		removeProjects();
+		break;
+
+	case 'removeRemoteTeam' :
+		removeRemoteTeam();
 		break;
 
 	case 'removeDownloads' :
@@ -368,6 +380,24 @@ function addProject()
 	}
 }
 
+function addRemoteTeam()
+{
+	$upload = uploadFile($_FILES['upload_file']);
+	if ($upload)
+	{
+		$remoteTeam = remote_team();
+		$remoteTeam->obj['title'] = $_POST['title'];
+		$remoteTeam->obj['content'] = $_POST['content'];
+		$remoteTeam->obj['uploadedImage'] = $upload;
+		$remoteTeam->obj['createDate'] = "NOW()";
+		$remoteTeam->create();
+
+		header('Location: ../admin/?view=remoteTeam&message=You have successfully added a new article.');
+	}else{
+		header('Location: ../admin/?error=Not uploaded');
+	}
+}
+
 function addJobFunction()
 {
 	$jf = job_function();
@@ -455,6 +485,24 @@ function updateProjects()
 	}
 }
 
+function updateRemoteTeam()
+{
+	$upload = uploadFile($_FILES['upload_file']);
+	if ($upload)
+	{
+		$Id = $_POST['Id'];
+		$remoteTeam = remote_team();
+		$remoteTeam->obj['title'] = $_POST['title'];
+		$remoteTeam->obj['content'] = $_POST['content'];
+		$remoteTeam->obj['uploadedImage'] = $upload;
+		$remoteTeam->update("Id='$Id'");
+
+		header('Location: ../admin/?view=remoteTeam&message=You have succesfully updated an article.');
+	}else{
+		header('Location: ../admin/?view=remoteTeam&error=File not uploaded.');
+	}
+}
+
 function updateDownloads()
 {
 	$upload = uploadFile($_FILES['upload_file']);
@@ -477,10 +525,10 @@ function addFileFunction(){
 		$upload = uploadFile($_FILES['upload_file']);
 		if ($upload)
 		{
-			$res = downloads();
-			$res->obj['fileName'] = $_POST["fileName"];
-			$res->obj['uploadedFile'] = $upload;
-			$res->create();
+			$downloads = downloads();
+			$downloads->obj['fileName'] = $_POST["fileName"];
+			$downloads->obj['uploadedFile'] = $upload;
+			$downloads->create();
 			header('Location: ../admin/?view=downloads&message=You have succesfully added a new file.');
 		}
 		else{
@@ -583,11 +631,18 @@ function setInterviewDate()
 	$application->obj['isApproved'] = "1";
 	$application->update("Id='$Id'");
 
-	$content = "We have considered your application. Please be available on the schedule below<br>
-							for your interview. Someone from our team will contact you.<br><br>
+	$app = application()->get("Id='$Id'");
+	$job = job()->get("Id='$app->jobId'");
+
+	$content = "We have considered your application for $job->position & Reference Number $job->refNum thus, would like to proceed to stage 1 of our<br>
+							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
+							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
+							date and time is suitable for the scheduled interview.<br><br>
+							Kindly advice if the suggested date and time listed in this message is suitable for stage one of the<br>
+							interview and Teamire’s selection criteria.<br><br>
+							Alternatively, please advice of your availability.<br><br>
 							Date = $date<br>
-							Time = $time<br><br>
-							Teamire";
+							Time = $time";
 	sendEmail($email, $content);
 
 	header('Location: index.php?view=resumeDetail&Id=' . $Id);
@@ -633,8 +688,13 @@ function setCandidateInterview()
 	$application->obj['isApproved'] = "1";
 	$application->create();
 
-	$content = "We have considered your application. Please be available on the schedule below<br>
-							for your interview.<br><br>
+	$content = "We have considered your application thus, would like to proceed to stage 1 of our<br>
+							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
+							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
+							date and time is suitable for the scheduled interview.<br><br>
+							Kindly advice if the suggested date and time listed in this message is suitable for stage one of the<br>
+							interview and Teamire’s selection criteria.<br><br>
+							Alternatively, please advice of your availability.<br><br>
 							Date = $date<br>
 							Time = $time<br><br>
 							Teamire";
@@ -687,14 +747,16 @@ function __createEmployeeLogin($Id, $jobId){
 	$job = job()->get("Id='$jobId'");
 
 	// Send email
-	$content = "Congratulations!<br><br>
-							You are hired. We have approved your application for the position <b>" . $job->position . "</b>. Please use the credentials we have created for you.<br>
+	$content = "Application for: $job->position<br><br>
+							Congratulations!<br><br>
+							Welcome to Teamire! Our HR staff will soon be in contact with you to discuss your new contract in detail<br>
+							and provide instructions on how to access our database for completion of weekly timesheets including<br>
+							employee dashboard. Please use the credentials we have created for you.<br><br>
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
-							<a href='http://bandbajabaraath.com/employee/?view=login'>www.bandbajabaraath.com/employee/</a><br><br>
-							or go to the <a href='http://bandbajabaraath.com/home/?view=logins'>Timesheet</a> page<br><br>
-							Teamire";
+							<a href='http://www.teamire.com/employee/?view=login'>www.teamire.com/employee/</a><br><br>
+							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.";
 	sendEmail($application->email, $content);
 }
 
@@ -799,6 +861,16 @@ function removeProjects()
 	$projects->update("Id='$Id'");
 
 	header('Location: ../admin/?view=projects&message=Succesfully Deleted');
+}
+
+function removeRemoteTeam()
+{
+	$Id = $_GET['Id'];
+	$remoteTeam = remote_team();
+	$remoteTeam->obj['isDeleted'] = "1";
+	$remoteTeam->update("Id='$Id'");
+
+	header('Location: ../admin/?view=remoteTeam&message=Succesfully Deleted');
 }
 
 function removeDownloads()
