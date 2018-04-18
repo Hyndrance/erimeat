@@ -43,6 +43,10 @@ switch ($action) {
 		denyResume();
 		break;
 
+	case 'denyCandidateResume' :
+		denyCandidateResume();
+		break;
+
 	case 'hireApplicant' :
 		hireApplicant();
 		break;
@@ -156,10 +160,26 @@ function denyResume()
 	$candidate = candidate()->get("Id='$Id'");
 
 	// Send email to ask more information
-	$content = __moreInfoEmailMessage();
+	$content = __moreInfoResumeMessage();
 	sendEmail($candidate->email, $content);
 
 	header('Location: index.php?view=resumeList&isApproved=0&jobId=' . $candidate->jobId);
+}
+
+function denyCandidateResume()
+{
+	$Id=$_GET['Id'];
+	$candidate = candidate();
+	$candidate->obj['isApproved'] = "-1";
+	$candidate->update("Id='$Id'");
+
+	$candidate = resume()->get("Id='$Id'");
+
+	// Send email
+	$content = __moreInfoResumeMessage();
+	sendEmail($candidate->email, $content);
+
+	header('Location: index.php?view=candidates');
 }
 
 function approveTimesheet()
@@ -342,7 +362,7 @@ function jobRequest()
 		$result = 1;
 	}
 	else{
-		$result = -1;
+		$result = 0;
 	}
 
 	$Id = $_GET['Id'];
@@ -358,7 +378,7 @@ function jobRequest()
 		sendEmail($job->workEmail, $content);
 	}else{
 		// Send email
-		$content = __moreInfoEmailMessage();
+		$content = __moreInfoTalentMessage();
 		sendEmail($job->workEmail, $content);
 	}
 
@@ -419,9 +439,21 @@ function __approvedJobRequestEmailMessage(){
 					Teamire";
 }
 
-function __moreInfoEmailMessage(){
-	return "Hi, we have received and reviewed your request but we still haven't approved it yet as it did not<br><br>
-					meet our requirements. Someone from our team will contact you through your contact number you provided.<br><br>
-					Teamire";
+function __moreInfoResumeMessage(){
+  return "Dear Job Seeker,<br><br>
+					Thank you for showing interest in our job posting. Your inquiry for employment is<br>
+					important to us. We value your time and effort in sharing your resume and contact details. To better<br>
+					serve both you and our client, a Teamire recruiting staff will go through your application in detail<br>
+					to verify if your profile is the best match for what our client is looking for. A member of Teamire will<br>
+					contact you within 5 working days if we need to interview you for this position.";
+}
+
+function __moreInfoTalentMessage(){
+	return "Dear Client,<br><br>
+					Your request for talent is important to us and therefore to better serve you, we would like to have a short<br>
+					10 minute meeting with you to further understand your requirements in detail of the talent you're searching for.<br>
+					We realize this new talent could be someone you need find to urgently, thus expect to receive a call from a member<br>
+					of our HR team within the next 2 business days. Alternatively you can call us through the number provided on the<br>
+					contact form on our website.";
 }
 ?>

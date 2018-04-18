@@ -71,7 +71,6 @@ $jobFunc = job_function()->list("code='0' and isDeleted='0'");
       </div>
       <div class="modal-body">
         <form id="default-wizard" action="process.php?action=addJobFunction" method="POST">
-          <input type="hidden" name="Id" value="<?=$row->Id;?>">
           <p class="m-b-0">
             <?=$error?>
           </p>

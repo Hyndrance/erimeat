@@ -98,7 +98,7 @@ function clientRequest()
 			sendEmail($row->email,$adminmessage);
 		}
 
-		header('Location: ../home/?view=success&Id='.$company->Id);
+		header('Location: ../home/?view=success&email='.$email);
 	}
 }
 
@@ -147,22 +147,24 @@ function submitResume(){
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
 
-		if ($uploadFile && !isset($uploadList['error']))
+		if ($uploadFile)
 		{
 			$can = candidate();
 			$can->obj = $_POST;
 			$can->obj['refNum'] = strtoupper($refNum);
 			$can->obj['uploadedResume'] = $uploadFile;
-			$can->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
+			$can->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";
 			$can->create();
 
 			$candidate = candidate()->get("email='$email'");
 
-			foreach($uploadList as $file){
-				$certs = certificates();
-				$certs->obj['resumeId']  = $candidate->Id;
-				$certs->obj['uploadedCerts'] = $file;
-				$certs->create();
+			if ($uploadList && !$uploadList['error']){
+				foreach($uploadList as $file){
+					$certs = certificates();
+					$certs->obj['resumeId']  = $candidate->Id;
+					$certs->obj['uploadedCerts'] = $file;
+					$certs->create();
+				}
 			}
 
 			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
@@ -184,7 +186,7 @@ function submitResume(){
 				sendEmail($row->email,$adminmessage);
 			}
 
-			header('Location: ../home/?view=success&Id='.$candidate->Id);
+			header('Location: ../home/?view=success&email='.$email);
 		}else if($checkEmail){
 			header('Location: ../?view=submitResume&error=Email already exist!');
 		}
@@ -205,7 +207,7 @@ function submitApplication()
 		$uploadFile = uploadFile($_FILES['upload_file']);
 		$uploadList = uploadMultipleFile($_FILES["upload_certs"]);
 
-		if ($uploadFile && !isset($uploadList['error']))
+		if ($uploadFile)
 		{
 			$app = application();
 			$app->obj['jobId'] = $_POST["jobId"];
@@ -227,16 +229,19 @@ function submitApplication()
 			$app->obj['coverLetter'] = $_POST["coverLetter"];
 			$app->obj['keySkills'] = $_POST["keySkills"];
 			$app->obj['uploadedResume'] = $uploadFile;
-			$app->obj['uploadedSpecs'] = uploadFile($_FILES["upload_specs"]);
+			$app->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";
 			$app->create();
 
 			$application = application()->get("email='$email'");
 
-			foreach($uploadList as $file){
-				$certs = certificates();
-				$certs->obj['resumeId']  = $application->Id;
-				$certs->obj['uploadedCerts'] = $file;
-				$certs->create();
+
+			if ($uploadList && !$uploadList['error']){
+				foreach($uploadList as $file){
+					$certs = certificates();
+					$certs->obj['resumeId']  = $application->Id;
+					$certs->obj['uploadedCerts'] = $file;
+					$certs->create();
+				}
 			}
 
 			$hrList = admin()->list("jobFunctionId='$jobFunctionId'");
@@ -266,7 +271,7 @@ function submitApplication()
 			foreach($adminList as $row){
 				sendEmail($row->email,$adminmessage);
 			}
-			header('Location: ../home/?view=success&Id='.$application->Id);
+			header('Location: ../home/?view=success&email='.$email);
 		}
 		else{
 			header('Location: ../home/?view=application&id='. $_POST['jobId'] .'&error=Not uploaded');

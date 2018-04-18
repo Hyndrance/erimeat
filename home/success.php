@@ -1,8 +1,8 @@
 <?php
-$Id = (isset($_GET['Id']) && $_GET['Id'] != '') ? $_GET['Id'] : '';
-$comp = company()->get("Id='$Id'");
-$res = candidate()->get("Id='$Id'");
-$app = application()->get("Id='$Id'");
+$email = (isset($_GET['email']) && $_GET['email'] != '') ? $_GET['email'] : '';
+$comp = company()->get("email='$email'");
+$res = candidate()->get("email='$email'");
+$app = application()->get("email='$email'");
 ?>
 
 <?php

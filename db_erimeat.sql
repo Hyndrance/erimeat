@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-17 22:43:04
+# Date: 2018-04-18 21:21:29
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -26,7 +26,7 @@ CREATE TABLE `admin` (
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','admin@admin.com','0'),(35,'hr','51bd95353aeda6615433bea21896c893ef5e62dc','hr','hr','hr','6','hr@hr.com','0'),(36,'payroll','4de4727ba00457f7e5330d2c36ed39d9a59714db','payroll','payroll','payroll','0','payroll@payroll.com','0');
+INSERT INTO `admin` VALUES (34,'admin','d033e22ae348aeb5660fc2140aec35850c4da997','admin','admin','admin','0','admin@admin.com','0');
 
 #
 # Structure for table "application"
@@ -62,7 +62,7 @@ CREATE TABLE `application` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "application"
@@ -101,7 +101,7 @@ CREATE TABLE `candidate` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "candidate"
@@ -118,12 +118,13 @@ CREATE TABLE `certificates` (
   `uploadedCerts` varchar(255) DEFAULT NULL,
   `resumeId` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "certificates"
 #
 
+INSERT INTO `certificates` VALUES (3,'network.png',4);
 
 #
 # Structure for table "city_option"
@@ -248,7 +249,7 @@ CREATE TABLE `employee` (
   `createDate` datetime DEFAULT NULL,
   `status` varchar(2) DEFAULT '1' COMMENT '1: Employed, 0: Unemployed',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "employee"
@@ -307,7 +308,7 @@ CREATE TABLE `interview_date` (
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
@@ -356,7 +357,7 @@ CREATE TABLE `job` (
   `comment` text,
   `createDate` datetime DEFAULT NULL,
   `endDate` date DEFAULT NULL,
-  `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved, -1:denied',
+  `isApproved` varchar(2) DEFAULT '0' COMMENT '0:pending, 1:approved',
   `isDeleted` varchar(2) DEFAULT '0',
   `status` varchar(1) DEFAULT '0' COMMENT '0:open, 1:close',
   `contactName` varchar(100) DEFAULT NULL,
@@ -364,7 +365,7 @@ CREATE TABLE `job` (
   `jobOpening` varchar(11) DEFAULT NULL,
   `keySkills` text,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
@@ -500,7 +501,7 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"

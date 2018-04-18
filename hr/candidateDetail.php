@@ -84,7 +84,7 @@ function getJobName($Id){
         <div class="card-box">
         <?php if($candidate->isApproved==0){?>
         <button type="button" class="btn btn-info waves-effect waves-light" data-toggle="modal" data-target="#schedule-modal">Schedule an Interview</button>
-        <button class="btn btn-default stepy-finish" onclick="location.href='process.php?action=denyResume&Id=<?=$candidate->Id;?>'">Request for More Info</button>
+        <button class="btn btn-default stepy-finish" onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$candidate->Id;?>'">Request for More Info</button>
         <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$candidate->Id;?>'" class="btn btn-danger">Delete</button>
         <?php } ?>
         <?php if($candidate->isApproved==1 && $candidate->isHired==0 && $candidate->jobId==0){?>

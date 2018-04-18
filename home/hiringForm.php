@@ -154,7 +154,7 @@ $ptList = position_type()->list();
 
                               <div class="form-group">
                                   <label for="username">Key Skills </label>
-                                  <input type="text" class="form-control" name="keySkills" required="">
+                                  <input type="text" class="form-control" name="keySkills">
                                   <span class="help-block"><small>Separate with comma ",".</small></span>
                               </div>
 
