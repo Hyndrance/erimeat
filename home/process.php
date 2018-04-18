@@ -98,7 +98,7 @@ function clientRequest()
 			sendEmail($row->email,$adminmessage);
 		}
 
-		header('Location: ../home/?view=success&Id='.$company->Id);
+		header('Location: ../home/?view=success&email='.$email);
 	}
 }
 
@@ -184,7 +184,7 @@ function submitResume(){
 				sendEmail($row->email,$adminmessage);
 			}
 
-			header('Location: ../home/?view=success&Id='.$candidate->Id);
+			header('Location: ../home/?view=success&email='.$email);
 		}else if($checkEmail){
 			header('Location: ../?view=submitResume&error=Email already exist!');
 		}
@@ -266,7 +266,7 @@ function submitApplication()
 			foreach($adminList as $row){
 				sendEmail($row->email,$adminmessage);
 			}
-			header('Location: ../home/?view=success&Id='.$application->Id);
+			header('Location: ../home/?view=success&email='.$email);
 		}
 		else{
 			header('Location: ../home/?view=application&id='. $_POST['jobId'] .'&error=Not uploaded');
