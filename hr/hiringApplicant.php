@@ -85,7 +85,7 @@ function getJobCategory($Id){
         <div class="card-box">
           <?php if($application->isApproved==1 && $application->jobId!=0){?>
           <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$application->Id;?>&jobId=<?=$jobId;?>'">Hire</button>
-          <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=deny&Id=<?=$application->Id;?>'">Deny</button>
+          <button class="btn btn-default" onclick="location.href='process.php?action=hireApplicant&result=deny&Id=<?=$application->Id;?>'">Reject</button>
           <?php } ?>
           <?php if($application->isApproved==1 && $application->isHired==0 && $application->jobId==0){?>
           <button onclick="location.href='?view=openJobs&Id=<?=$application->Id;?>'" class="btn btn-info" style="width:350px;">

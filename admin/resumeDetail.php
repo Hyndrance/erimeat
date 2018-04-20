@@ -88,7 +88,7 @@ function getCity($Id){
                 </div>
                 <div class="col-lg-6">
                   <button class="btn btn-danger pull-left" style="width:350px;"onclick="location.href='process.php?action=denyResume&Id=<?=$application->Id;?>'">
-                    Deny
+                    Request for more info
                   </button>
                 </div>
               </div>

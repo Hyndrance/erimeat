@@ -10,6 +10,11 @@ function getJobFunction($Id){
 ?>
 
 <div class="container container-fluid">
+  <br>
+  <div class="pull-right">
+    <button type="button" onclick="location.href='../home/?view=hiringForm'" class="btn btn-primary waves-effect waves-light btn-sm"><i class="fa fa-plus"></i> Request new Talent</button>
+  </div>
+  <br>
   <div class="col-12 m-t-30">
     <h2><?=$company->name;?></h2>
     <div class="row p-t-10 p-b-10">
