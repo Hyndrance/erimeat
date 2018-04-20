@@ -50,7 +50,7 @@ function getJobCategory($Id){
                       <label class="text-muted font-13">Status :</label>
                       <?php if($application->isHired==0 && $application->isApproved==1){ ?>
                       <div class=" btn btn-default btn-xs tooltips">
-                        Waiting for Interview
+                        Waiting for Interview Results
                       </div>
                       <?php }elseif($application->isHired==1 && $application->isApproved==1){ ?>
                       <div class=" btn btn-success btn-xs tooltips">

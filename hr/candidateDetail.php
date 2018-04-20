@@ -46,7 +46,7 @@ function getJobName($Id){
                     <label class="text-muted font-13">Status :</label>
                     <?php if($candidate->isHired==0 && $candidate->isApproved==1){ ?>
                     <div class=" btn btn-default btn-xs tooltips">
-                      Waiting for Interview
+                      Waiting for Interview Results
                     </div>
                     <?php }elseif($candidate->isHired==1 && $candidate->isApproved==1){ ?>
                     <div class=" btn btn-success btn-xs tooltips">

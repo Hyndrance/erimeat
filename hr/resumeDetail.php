@@ -41,6 +41,22 @@ function getCity($Id){
       <p><label class="m-r-5 m-t-15">City: </label><?=getCity($application->city);?></p>
       <p><label class="m-r-5">State: </label><?=$application->state;?></p>
       <p><label class="m-r-5">Postal Code: </label><?=$application->zipCode;?></p>
+      <p>
+        <label class="m-r-5">Status :</label>
+        <?php if($application->isHired==0 && $application->isApproved==1){ ?>
+        <div class=" btn btn-default btn-xs tooltips">
+          Waiting for Interview Results
+        </div>
+        <?php }elseif($application->isHired==1 && $application->isApproved==1){ ?>
+        <div class=" btn btn-success btn-xs tooltips">
+          Hired
+        </div>
+        <?php }else{ ?>
+        <div class=" btn btn-warning btn-xs tooltips">
+          Pending
+        </div>
+        <?php } ?>
+      </p>
       <p><label class="m-r-5">Key Skills: </label><?=$application->keySkills;?></p>
       <hr>
       <p><label class="m-r-5">Cover Letter: </label><?=$application->coverLetter;?><p>
