@@ -114,8 +114,8 @@ $ptList = position_type()->list();
                           </div>
 
                           <div class="form-group w-33-p pull-right">
-                              <label for="username">Postal Code <span style="color: red;">*</span></label>
-                              <input type="text" class="form-control" data-mask="9999" name="zipCode" required>
+                              <label for="username">Postal Code </label>
+                              <input type="text" class="form-control" data-mask="9999" name="zipCode">
                           </div>
                           </div>
                           <div class="form-group">
@@ -151,7 +151,7 @@ $ptList = position_type()->list();
                             <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg," />
                           </div>
                           </div>
-                          
+
                           <br><br><br><br><br><br>
                           <div class="text-center"><h3>Attach Resume <span style="color: red;">*</span></h3></div>
                           <div class="col-sm-4">

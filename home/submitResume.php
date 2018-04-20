@@ -115,8 +115,8 @@ $ptList = position_type()->list();
                           </div>
 
                           <div class="form-group w-33-p pull-right">
-                              <label for="username">Postal Code <span style="color: red;">*</span></label>
-                              <input type="text" class="form-control" data-mask="9999" name="zipCode" required>
+                              <label for="username">Postal Code </label>
+                              <input type="text" class="form-control" data-mask="9999" name="zipCode">
                           </div>
 
                           </div>

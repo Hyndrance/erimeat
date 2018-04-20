@@ -17,7 +17,7 @@ function getPositionName($Id){
       <div class="main-text top-cont">
             <div class="text-center container">
                 <p class="m-t-30 slideanim tagline">
-                  It is our Business to Identify your Need, Interest, Concern and Expectation
+                  It is our Business to Identify your Needs, Interest, Concern and Expectation
                   <br>
                   We're Remote Supply Chain Data driven experts.....
                 </p>
