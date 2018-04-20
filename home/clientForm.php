@@ -93,7 +93,7 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
                               <textarea id="message" class="form-control" name="description"
                                                 data-parsley-trigger="keyup" data-parsley-minlength="20"
                                                 data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
-                                                data-parsley-validation-threshold="10"></textarea>
+                                                data-parsley-validation-threshold="10" required></textarea>
                             </div>
                           </div>
                     <div class="text-center m-t-30">
