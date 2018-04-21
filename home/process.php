@@ -35,6 +35,8 @@ function create()
 
 	$refNum = bin2hex(openssl_random_pseudo_bytes(4));
 
+	$email = $_POST['workEmail'];
+
 	$job = job();
 	$job->obj = $_POST;
 	$job->obj['refNum'] = strtoupper($refNum);
@@ -59,7 +61,7 @@ function create()
 		sendEmail($row->email,$adminmessage);
 	}
 
-	header('Location: ../company/');
+	header('Location: ../home/?view=requestSuccess&email='.$email);
 }
 
 function clientRequest()
