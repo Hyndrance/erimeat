@@ -65,8 +65,8 @@ $ptList = position_type()->list();
 
                               <div class="p-r-10 w-50-p pull-left">
                                 <div class="form-group">
-                                    <label for="username">Job Openings <span style="color: red;">*</span></label>
-                                    <input type="text" class="form-control" name="jobOpening" required="">
+                                    <label for="username">No. of Job Position <span style="color: red;">*</span></label>
+                                    <input type="number" class="form-control" name="jobOpening" required="">
                                 </div>
                               </div>
 

@@ -28,7 +28,6 @@ $companyList = company()->list("isDeleted=0");
               <div style="height: 100px;">
               <p class="truncate">
                 <?=$row->description;?>
-                eqwewqewqewqewqewqewq qe wqe wqe wq ewqewq ewqewq ewq eq weqwewq e wqe wqewqe qwe wqe wqewq ewqewqqwewqeqwewq ewqewqeqwewq ewqewqewqeqw ewqewqewqewqeqweqwe
               </p>
             </div>
 

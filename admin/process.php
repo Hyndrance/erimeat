@@ -19,6 +19,10 @@ switch ($action) {
 		updateInformation();
 		break;
 
+	case 'updateClientInfo' :
+		updateClientInfo();
+		break;
+
 	case 'jobRequest' :
 		jobRequest();
 		break;
@@ -188,6 +192,25 @@ function updateInformation()
 	$job->update("Id=$Id");
 
 	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
+}
+
+function updateClientInfo()
+{
+	$Id = $_GET['Id'];
+
+	$company = company();
+	$company->obj['name'] = $_POST['name'];
+	$company->obj['abn'] = $_POST['abn'];
+	$company->obj['department'] = $_POST['department'];
+	$company->obj['jobFunctionId'] = $_POST['jobFunctionId'];
+	$company->obj['contactPerson'] = $_POST['contactPerson'];
+	$company->obj['email'] = $_POST['email'];
+	$company->obj['phoneNumber'] = $_POST['phoneNumber'];
+	$company->obj['mobileNumber'] = $_POST['mobileNumber'];
+	$company->obj['description'] = $_POST['description'];
+	$company->update("Id=$Id");
+
+	header('Location: index.php?view=clientDetail&Id='.$Id.'&success=You have updated the information.');
 }
 
 function deleteJob()

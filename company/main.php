@@ -36,6 +36,14 @@ function getJobFunction($Id){
     </div>
     </div>
     <h4 class="m-t-30 m-b-30">Job Category: <?=getJobFunction($company->jobFunctionId);?></h4>
+    <div class="row">
+      <div class="col-lg-6">
+        <label class="m-r-5">Australian Business Number: </label><?=$company->abn;?>
+      </div>
+      <div class="col-lg-6">
+        <label class="m-r-5">Username: </label><?=$company->username;?>
+      </div>
+    </div>
     <hr>
     <?=$company->description;?>
               <!-- // foreach ($company as $key => $value) {
