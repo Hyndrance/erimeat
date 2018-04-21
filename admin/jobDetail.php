@@ -104,6 +104,7 @@ function formatDate($val){
               View <?=application()->count("jobId=$job->Id and isHired=0");?> applicants
           </button>
         <?php } ?>
+          <button class="btn btn-lg btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
           <button class="btn btn-lg btn-danger" type="button" onclick="location.href='process.php?action=deleteJob&Id=<?=$job->Id?>'">Delete</button>
         <br><br><br><br>
   </div>

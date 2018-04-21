@@ -115,6 +115,8 @@ function formatDate($val){
           </button>
         </div>
         </div>
+        <br>
+        <button class="btn btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
         <div class="clearfix"></div>
         <br>
         <br>
