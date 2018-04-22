@@ -204,7 +204,7 @@ function setInterviewDate()
 	$time = $_POST['time'];
 
 	$intDate = interview_date();
-	$intDate->obj['resumeId'] = $Id;
+	$intDate->obj['resumeEmail'] = $Id;
 	$intDate->obj['date'] = $date;
 	$intDate->obj['time'] = $time;
 	$intDate->create();
@@ -217,9 +217,9 @@ function setInterviewDate()
 	$job = job()->get("Id='$app->jobId'");
 
 	$content = "Dear applicant,<br><br>
-							Thank you for showing interest in the position of "$job->position"<br><br>
-							Congratulations! We’re now considering your application for "$job->position" as per job reference<br>
-							number "$job->refNum" thus, would like to promptly proceed to stage 1 of our interview process.<br><br>
+							Thank you for showing interest in the position of '$job->position'<br><br>
+							Congratulations! We’re now considering your application for '$job->position' as per job reference<br>
+							number '$job->refNum' thus, would like to promptly proceed to stage 1 of our interview process.<br><br>
 							This interview will be a short session to assess and rate your communication skills that is mandatory for<br>
 							the above position, hence we would like to hold a 15-20 minute of discussion over Skype as a video<br>
 							conference.<br><br>
@@ -372,7 +372,7 @@ function __createEmployeeLogin($Id, $jobId){
 							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.<br><br><br>
 							Phone No.: +61 452 364 793<br>
 							Email: hrmanager@teamire.com";
-							
+
 	sendEmail($application->email, $content);
 }
 
