@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-18 21:21:29
+# Date: 2018-04-22 22:49:13
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -20,7 +20,7 @@ CREATE TABLE `admin` (
   `email` varchar(50) DEFAULT NULL,
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "admin"
@@ -62,7 +62,7 @@ CREATE TABLE `application` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "application"
@@ -124,7 +124,6 @@ CREATE TABLE `certificates` (
 # Data for table "certificates"
 #
 
-INSERT INTO `certificates` VALUES (3,'network.png',4);
 
 #
 # Structure for table "city_option"
@@ -167,7 +166,7 @@ CREATE TABLE `company` (
   `isApproved` varchar(1) DEFAULT '0',
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
@@ -308,7 +307,7 @@ CREATE TABLE `interview_date` (
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
@@ -365,7 +364,7 @@ CREATE TABLE `job` (
   `jobOpening` varchar(11) DEFAULT NULL,
   `keySkills` text,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
@@ -501,7 +500,7 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
