@@ -131,12 +131,12 @@ function __createClientLogin($Id){
 	// Send email
 	$content = "Thank you for considering Teamire as your prospect to search for your contingent workforce.<br>
 							Your new account has been activated which means you can now login with the below credentials and<br>
-							view your personalized dashboard.<br><br>
+							view your personalized dashboard.<br>
 							Client Username: " . $user->obj['username'] . "<br>
-							Password: temppassword<br><br>
-							To login to our website visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a><br><br>
-							or<br><br>
-							Go to <a href='http://www.teamire.com/home/?view=logins'>Timesheets</a> and then Client Login.";
+							Temporary Password: temppassword<br>
+							To login, visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a><br><br><br>
+							Phone No.: +61 452 364 793<br>
+							Email: hrmanager@teamire.com";
 
 	sendEmail($company->email, $content);
 }
@@ -257,14 +257,16 @@ function submitApplication()
 
 			//for candidate
 			$content = "Thank you for applying and showing interest in our company and responding to our advertisement for<br>
-									" . $job->position . " with reference number " . $job->refNum . "<br><br>
+									(" . $job->position . " with reference number " . $job->refNum . ").<br><br>
 									At this stage in employment prospect we usually make this one very significant statement to everyone<br>
 									who is looking for an opportunity with our organisation, and that is “if your career profile truly reflects<br>
 									who you are, then you definitely stand a fighting chance in landing a suitable position with our business.<br><br>
 									For your application to proceed to the next stage of the interview process, with a well-structured<br>
 									resume we also need you to provide us with copies of your academic achievements for factual<br>
 									verification. This may include other work-related training certificates, awards, and transcripts of exams<br>
-									and marks scored in university and college that you wish to share with us in support of your application.";
+									and marks scored in university and college that you wish to share with us in support of your application.<br><br>
+									Phone No.: +61 452 364 793<br>
+									Email: hrmanager@teamire.com";
 
 			sendEmail($application->email,$content);
 			//for HR
@@ -314,30 +316,19 @@ function sendInquiry()
 /* ======================== Email Messages ==============================*/
 
 function __talentRequestEmailMessage(){
-	return "We acknowledge your request for talent acquisition. Our hiring process usually begin with our Certified<br>
-					HR Personnel (our zone level team building manager) who will contact your company representative and<br>
-					go through in detail systems we have in place a vigilant and very efficiently system to engage remote<br>
-					staff/contractor's to your important assignment. Our Rep will explain our extent of involvement and how<br>
-					we will engage and coordinate the complete process from hiring to managing your expectations through<br>
-					to our own individual milestones and KPIs which we maintain for benchmarking through various metrics in<br>
-					collaboration with your team. In addition this above, we will also discuss and assist you with writing up<br>
-					you ideal remote contractor job profile, preferred candidate type, any professional experience, document<br>
-					contractors access to ERP and other means of communication tools via a compatible remote user<br>
-					interface. We will define hours of any mandatory work activity based on your expectations and our<br>
-					business T/Cs related to new assignment.<br><br>
-					At Teamire we value our contribution thus take pride in what we do, when, why and how we find and<br>
-					deploy a talent that is regarded far superior to our closest competitor our industry. In seeking for the best<br>
-					talents and using our non compromising guidelines, we consistently deploy and maintain a very high<br>
-					standard of talent screening process.";
+	return "Thank you for submitting your request. Our HR team will now contact you within 2 business<br>
+					days to further review and help with processing of your application.<br><br><br>
+					Phone No.: +61 452 364 793<br>
+					Email: hrmanager@teamire.com";
 }
 
 function __submitResumeEmailMessage(){
-	return "We have received your inquiry regarding employment opportunities at <b>Teamire</b> Employment Services,<br>
-					and we are in the process of reviewing your qualifications against our current requirements. Should your<br>
-					background and experience meet the requirements of one of our job openings, we will contact you to<br>
-					request addition information. If we do not have an appropriate opening at this time, we will retain your<br>
-					inquiry for six months for future consideration.<br><br>
-					Thank you for contacting Teamire Employement Services.<br>";
+	return "We have received you resume with regards to employment opportunities with Teamire. An HR team<br>
+					member will be in touch should a suitable position become available matching your skills and<br>
+					qualifications.<br><br>
+					Thank you for contacting Teamire Employment Services<br><br>
+					Phone No.: +61 452 364 793<br>
+					Email: hrmanager@teamire.com";
 }
 
 function __hrTalentMessage(){

@@ -216,15 +216,23 @@ function setInterviewDate()
 	$app = application()->get("Id='$Id'");
 	$job = job()->get("Id='$app->jobId'");
 
-	$content = "We have considered your application for $job->position & $job->refNum thus, would like to proceed to stage 1 of our<br>
-							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
-							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
-							date and time is suitable for the scheduled interview.<br><br>
-							Kindly advice if the suggested date and time listed in this message is suitable for stage one of the<br>
-							interview and Teamire’s selection criteria.<br><br>
-							Alternatively, please advice of your availability.<br><br>
+	$content = "Dear applicant,<br><br>
+							Thank you for showing interest in the position of "$job->position"<br><br>
+							Congratulations! We’re now considering your application for "$job->position" as per job reference<br>
+							number "$job->refNum" thus, would like to promptly proceed to stage 1 of our interview process.<br><br>
+							This interview will be a short session to assess and rate your communication skills that is mandatory for<br>
+							the above position, hence we would like to hold a 15-20 minute of discussion over Skype as a video<br>
+							conference.<br><br>
+							Whilst our key objective is to take this opportunity to familiarize you for what to expect in this role in<br>
+							assignments and responsibilities, during the interview we will take note and follow up on any queries you<br>
+							may raise directly related to this position.<br><br>
+							Please advise if the suggested date and time is suitable for stage 1 of the interview process and<br>
+							Teamire’s selection criteria.<br><br>
 							Date = $date<br>
-							Time = $time";
+							Time = $time<br><br>
+							Alternatively send our HR team an email on “hrmanager@teamire.com” quoting the above job reference<br>
+							and your availability for an interview within 2 business days of this message.";
+
 	sendEmail($email, $content);
 
 	header('Location: index.php?view=applicants');
@@ -269,16 +277,22 @@ function setCandidateInterview()
 	$application->obj['isApproved'] = "1";
 	$application->create();
 
-	$content = "We have considered your application thus, would like to proceed to stage 1 of our<br>
-							interview process. To further seek your interest and assess your capability for the above role, we ask for<br>
-							15 minutes of meeting time to be held as a video conference over Skype. Kindly advise if the suggested<br>
-							date and time is suitable for the scheduled interview.<br><br>
-							Kindly advice if the suggested date and time listed in this message is suitable for stage one of the<br>
-							interview and Teamire’s selection criteria.<br><br>
-							Alternatively, please advice of your availability.<br><br>
+	$content = "Dear applicant,<br><br>
+							Congratulations! We’re now considering your application thus,<br>
+							we would like to promptly proceed to stage 1 of our interview process.<br><br>
+							This interview will be a short session to assess and rate your communication skills that is mandatory for<br>
+							the above position, hence we would like to hold a 15-20 minute of discussion over Skype as a video<br>
+							conference.<br><br>
+							Whilst our key objective is to take this opportunity to familiarize you for what to expect in this role in<br>
+							assignments and responsibilities, during the interview we will take note and follow up on any queries you<br>
+							may raise directly related to this position.<br><br>
+							Please advise if the suggested date and time is suitable for stage 1 of the interview process and<br>
+							Teamire’s selection criteria.<br><br>
 							Date = $date<br>
 							Time = $time<br><br>
-							Teamire";
+							Alternatively send our HR team an email on “hrmanager@teamire.com” quoting your availability for an interview<br>
+							within 2 business days of this message.";
+
 	sendEmail($email, $content);
 
 	header('Location: index.php?view=candidatesDetail&Id=' . $Id);
@@ -346,16 +360,19 @@ function __createEmployeeLogin($Id, $jobId){
 	$job = job()->get("Id='$jobId'");
 
 	// Send email
-	$content = "Application for: $job->position<br><br>
+	$content = "Re: $job->position<br><br>
 							Congratulations!<br><br>
 							Welcome to Teamire! Our HR staff will soon be in contact with you to discuss your new contract in detail<br>
 							and provide instructions on how to access our database for completion of weekly timesheets including<br>
-							employee dashboard. Please use the credentials we have created for you.<br><br>
+							employee dashboard. Please use the credentials we have created for you.<br>
 							Username: " . $user->obj['username'] . "<br>
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='http://www.teamire.com/employee/?view=login'>www.teamire.com/employee/</a><br><br>
-							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.";
+							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.<br><br><br>
+							Phone No.: +61 452 364 793<br>
+							Email: hrmanager@teamire.com";
+							
 	sendEmail($application->email, $content);
 }
 
