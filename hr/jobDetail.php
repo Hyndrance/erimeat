@@ -3,6 +3,8 @@ $success = (isset($_GET['success']) && $_GET['success'] != '') ? $_GET['success'
 $Id = $_GET['Id'];
 $job = job()->get("Id=$Id");
 
+$checkAccount = company()->get("email='$job->workEmail'");
+
 $jfList = job_function()->list("isDeleted='0' order by `option` asc");
 $ptList = position_type()->list();
 
@@ -86,7 +88,11 @@ function formatDate($val){
     <hr>
         <!--  This button only shows if job is approved -->
         <?php if($job->isApproved==0) {?>
-          <button class="btn btn-blue" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
+          <?php if($checkAccount) { ?>
+            <button class="btn btn-blue" type="button" onclick="location.href='process.php?action=jobRequest&result=approve&Id=<?=$job->Id?>'">Approve</button>
+          <?php } else { ?>
+            <button class="btn btn-default" type="button">No Account Yet</button>
+          <?php } ?>
           <button class="btn btn-warning" type="button" onclick="location.href='process.php?action=jobRequest&result=moreInfo&Id=<?=$job->Id?>'">Request for more info</button>
           <button class="btn btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
         <?php } ?>

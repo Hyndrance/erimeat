@@ -8,6 +8,7 @@ $companyList = company()->list("isDeleted=0");
     <button type="button" onclick="location.href='../home/?view=clientForm'" class="btn btn-primary waves-effect waves-light btn-sm"><i class="fa fa-plus"></i> Add New Client</button>
   </div>
   <br>
+  <br>
 <?php if(empty($companyList)) {?>
   <h2 class="text-muted text-center" style="margin-top:18%;"><i class="mdi mdi-account-off mdi-48px"></i><br>No Clients Available</h2>
 <?php }else {?>

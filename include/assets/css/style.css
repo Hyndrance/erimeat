@@ -5925,7 +5925,7 @@ ul.sitemap-icon ul li a {
 
       @media (max-width:420px){
       .truncate-xs {
-        width: 150px;
+        width: 130px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }

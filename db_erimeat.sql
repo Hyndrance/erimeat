@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.1.30-MariaDB)
-# Date: 2018-04-22 22:49:13
+# Date: 2018-04-23 22:45:05
 # Generator: MySQL-Front 5.4  (Build 1.40)
 
 /*!40101 SET NAMES utf8 */;
@@ -62,7 +62,7 @@ CREATE TABLE `application` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "application"
@@ -101,12 +101,13 @@ CREATE TABLE `candidate` (
   `isHired` varchar(2) DEFAULT '0' COMMENT '0:no, 1:yes',
   `isDeleted` varchar(1) DEFAULT '0' COMMENT '0:no, 1:yes',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "candidate"
 #
 
+INSERT INTO `candidate` VALUES (9,9,'ADE81198','sample','sample','1231-12-31','21321321321','Sample Address','sample@email.com','1111111','Sample Address','Sample Address','10','Sample State','1111','sample cover letter to pass','sample','1524494468.pdf','https://www.bandwidthplace.com/results/5addeb8d496037.99596025-70483048/?source=copy','',NULL,NULL,'0','0','0'),(10,3,'F2F3AF11','testing','testing','123213-12-','12321321321','123213123','testing@testing.com','123123213','testing','testing','10','testing','1231','testing testing testing testing','testing','1524494592.pdf','testing','',NULL,NULL,'0','0','0'),(11,2,'D7549ECA','test1','test1','1123-12-31','','','test1@test1.com','12321321','test1','','Select City','','','test1 test1 test1 test1','','1524494649.pdf','','',NULL,NULL,'0','0','0');
 
 #
 # Structure for table "certificates"
@@ -166,12 +167,13 @@ CREATE TABLE `company` (
   `isApproved` varchar(1) DEFAULT '0',
   `isDeleted` varchar(2) DEFAULT '0',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "company"
 #
 
+INSERT INTO `company` VALUES (8,'B60BA450','C1524492098','Villacar Transit','11111111111','We are a domestic transport company.','villacar.transit@gmail.com','John Doe','(+61) 111-111-111','(+61) 111-111-111','Bacolod City, Negros Occidental','Domestic Transport','1','1','0'),(9,'946A5D20','C1524492166','ACE Hardware','22222222222','We are a hardware parts supplier company.','ace.hardware@gmail.com','Alex Doe','(+61) 222-222-222','(+61) 222-222-222','Bacolod City, Negros Occidental','Hardware Supplier','9','1','0');
 
 #
 # Structure for table "country_option"
@@ -248,7 +250,7 @@ CREATE TABLE `employee` (
   `createDate` datetime DEFAULT NULL,
   `status` varchar(2) DEFAULT '1' COMMENT '1: Employed, 0: Unemployed',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "employee"
@@ -307,7 +309,7 @@ CREATE TABLE `interview_date` (
   `date` date DEFAULT NULL,
   `time` time DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "interview_date"
@@ -364,12 +366,13 @@ CREATE TABLE `job` (
   `jobOpening` varchar(11) DEFAULT NULL,
   `keySkills` text,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "job"
 #
 
+INSERT INTO `job` VALUES (16,'1ED293F0',1,2,'Bus Driver','50.00/hr','Onsite Staff','Villacar Transit','11111111111','villacar.transit@gmail.com','Operations Manager','(+61) 111-111-111','1111','Bacolod City, Negros Occidental','3-5 Years','We are looking for an experienced driver for our buses.','2018-04-23 22:08:08','2018-04-30','1','0','0','John Doe','0','2','Good eyesight, 20 years old'),(17,'66CA5E06',1,2,'Dispatcher',NULL,'Onsite Staff','Villacar Transit','11111111111','villacar.transit@gmail.com','Operations Manager','(+61) 111-111-111','1111','Bacolod City, Negros Occidental','0-1 Year','We are looking for an experienced dispatcher for our company.','2018-04-23 22:07:23','2018-04-30','0','0','0','John Doe','0','2','Good with numbers, can travel'),(18,'EFBD70DE',5,4,'Online Teacher',NULL,'Remote Staff','Tesda','33333333333','tesda.online@gmail.com','Principal','(+61) 333-333-33','3333','Talisay City, Negros occidental','1-3 Years','We are looking for teachers who can work from home.','2018-04-23 22:11:44','2018-04-30','0','0','0','Johnny Boy','0','1','good, teacher'),(19,'6B61DCC3',9,1,'Cashier','55.00/hr','Onsite Staff','ACE Hardware','22222222222','ace.hardware@gmail.com','Supervisor','(+61) 222-222-222','2222','Bacolod, Negros Occidental','0-1 Year','We are looking for temporary cashier who can work for 4 hours a day.','2018-04-23 22:16:22','2018-04-30','1','0','0','Alex Doe','0','3',''),(20,'2F40397A',9,1,'Service',NULL,'Onsite Staff','ACE Hardware','22222222222','ace.hardware@gmail.com','Supervisor','(+61) 222-222-222','2222','Bacolod, Negros Occidental','0-1 Year','We are looking for temporary service who can work for 4 hours a day.','2018-04-23 22:18:20','2018-04-30','1','0','0','Alex Doe','0','3','');
 
 #
 # Structure for table "job_function"
@@ -500,9 +503,10 @@ CREATE TABLE `user` (
   `lastName` varchar(50) DEFAULT NULL,
   `level` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "user"
 #
 
+INSERT INTO `user` VALUES (9,'C1524492098','2b8889e80cb6afc64ea9923339183799475b1123','John Doe','Villacar Transit','company'),(10,'C1524492166','2b8889e80cb6afc64ea9923339183799475b1123','Alex Doe','ACE Hardware','company');

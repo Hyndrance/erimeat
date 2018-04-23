@@ -18,20 +18,17 @@
     </li>
 
     <li>
-        <a href="../hr/?view=candidates">
-            <i class="mdi mdi-comment-account"></i><span>Candidates</span>
-        </a>
+        <a href="javascript: void(0);"><i class="fi-briefcase"></i> <span> Application </span> <span class="menu-arrow"></span></a>
+        <ul class="nav-second-level nav" aria-expanded="false">
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=applicants">Applicants</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=candidates">Candidates</a></li>
+            <li style="list-style-type: none;" class="p-t-5 m-b-5"><a class="text-white" href="?view=scheduleInterview">Scheduled Interview</a></li>
+        </ul>
     </li>
 
     <li>
         <a href="../hr/?view=invoiceList">
             <i class="mdi mdi-note-text"></i><span>Invoice</span>
-        </a>
-    </li>
-
-    <li>
-        <a href="../hr/?view=scheduleInterview">
-            <i class="mdi mdi-alarm-check"></i><span>Scheduled Interview</span>
         </a>
     </li>
 </ul>
