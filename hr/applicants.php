@@ -1,6 +1,6 @@
 <?php
 $s = (isset($_GET['s']) && $_GET['s'] != '') ? $_GET['s'] : '';
-$resume = resume()->list();
+$app = application()->list();
 
 function getJobName($Id){
   $job = job()->get("Id='$Id'");
@@ -22,25 +22,21 @@ function getJobFunction($Id){
                 <thead>
                 <tr>
                     <th>Applying For</th>
-                    <th>Job Function</th>
                     <th>Candidate Reference #</th>
                     <th>Full Name</th>
-                    <th>City, State</th>
                     <th>Review</th>
                 </tr>
                 </thead>
                 <tbody>
 
-                <?php foreach($resume as $row) {
+                <?php foreach($app as $row) {
                   if ($row->jobId!=0 && $row->isApproved==0) {?>
                 <tr>
                     <td><?=getJobName($row->jobId);?></td>
-                    <td><?=getJobFunction($row->jobFunctionId);?></td>
                     <td><?=$row->refNum;?></td>
                     <td><?=$row->firstName; ?> <?=$row->lastName; ?></td>
-                    <td><?=$row->city; ?>, <?=$row->state; ?></td>
                     <td>
-                      <a href="?view=applicantDetail&Id=<?=$row->Id;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> Review</a>
+                      <a href="?view=resumeDetail&Id=<?=$row->Id;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> Review</a>
                     </td>
                 </tr>
 

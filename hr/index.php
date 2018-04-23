@@ -32,6 +32,12 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
+	case 'applicants' :
+		$currentSession = isset($_SESSION["hr_session"]);
+		$content 	= 'applicants.php';
+		$template	= '../include/dashboard.php';
+		break;
+
 	case 'candidates' :
 		$currentSession = isset($_SESSION["hr_session"]);
 		$content 	= 'candidates.php';

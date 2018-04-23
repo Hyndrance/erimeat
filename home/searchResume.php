@@ -42,12 +42,12 @@ function getCity($Id){
   <!-- Display contact and email buttons -->
   <div align="center" class="m-t-30">
     <div>
-      <button class="btn-primary btn-candidate-contact" style="line-height: 1.4em;" onclick="myFunction()">
+      <button class="m-r-5 btn-primary btn-candidate-contact" style="line-height: 1.4em;" onclick="myFunction()">
         <i class="fa fa-phone fa-2x"></i><br>
         <span class="text-center">Call +61 452 364 793</span>
       </button>
 
-      <button class="btn-primary btn-candidate-contact"  style="line-height: 1.4em;" onclick="location.href='../home/?view=inquiryForm'">
+      <button class="m-l-5 btn-primary btn-candidate-contact" style="line-height: 1.4em;" onclick="location.href='../home/?view=inquiryForm'">
         <i class="fa fa-envelope-o fa-2x"></i><br>
         <span class="text-center">Send an Email</span>
       </button>
