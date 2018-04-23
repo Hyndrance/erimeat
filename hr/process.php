@@ -373,9 +373,9 @@ function __createEmployeeLogin($Id, $jobId){
 							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='http://www.teamire.com/employee/?view=login'>www.teamire.com/employee/</a><br><br>
-							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.<br><br><br>
-							Phone No.: +61 452 364 793<br>
-							Email: hrmanager@teamire.com";
+							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.<br><br><br>".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"."+61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"."hrmanager@teamire.com";
 
 	sendEmail($application->email, $content);
 }
