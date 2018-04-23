@@ -378,8 +378,8 @@ function __createEmployeeLogin($Id, $jobId){
 							To login to our website. Please click the link below:<br>
 							<a href='http://www.teamire.com/employee/?view=login'>www.teamire.com/employee/</a><br><br>
 							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.<br><br><br>".
-					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"."+61 452 364 793<br>".
-					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"."hrmanager@teamire.com";
+							"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"."+61 452 364 793<br>".
+							"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"."hrmanager@teamire.com";
 
 	sendEmail($application->email, $content);
 }
@@ -540,7 +540,9 @@ function __moreInfoResumeMessage(){
 					important to us. We value your time and effort in sharing your resume and contact details. To better<br>
 					serve both you and our client, a Teamire recruiting staff will go through your application in detail<br>
 					to verify if your profile is the best match for what our client is looking for. A member of Teamire will<br>
-					contact you within 5 working days if we need to interview you for this position.";
+					contact you within 5 working days if we need to interview you for this position.<br><br><br>".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 }
 
 function __moreInfoTalentMessage(){
@@ -549,6 +551,8 @@ function __moreInfoTalentMessage(){
 					10 minute meeting with you to further understand your requirements in detail of the talent you're searching for.<br>
 					We realize this new talent could be someone you need find to urgently, thus expect to receive a call from a member<br>
 					of our HR team within the next 2 business days. Alternatively you can call us through the number provided on the<br>
-					contact form on our website.";
+					contact form on our website.<br><br><br>".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 }
 ?>
