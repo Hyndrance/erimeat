@@ -208,15 +208,15 @@ function getCity($Id){
                   </div>
                   </div>
 
-                    <div class="form-group">
-                        <label for="firstname">Job Category <span style="color: red;">*</span></label>
-                        <select class="form-control" name="jobFunctionId" required="">
-                         <option value="<?=$candidate->jobFunctionId;?>"><?=getJobFunction($candidate->jobFunctionId);?></option>
-                          <?php foreach($jfList as $row) {?>
-                            <option value="<?=$row->Id;?>"><?=$row->option;?></option>
-                          <?php } ?>
-                        </select>
-                    </div>
+                  <div class="form-group">
+                      <label for="firstname">Job Category <span style="color: red;">*</span></label>
+                      <select class="form-control" name="jobFunctionId" required="">
+                       <option value="<?=$candidate->jobFunctionId;?>"><?=getJobFunction($candidate->jobFunctionId);?></option>
+                        <?php foreach($jfList as $row) {?>
+                          <option value="<?=$row->Id;?>"><?=$row->option;?></option>
+                        <?php } ?>
+                      </select>
+                  </div>
 
                   <div class="p-r-10 w-50-p pull-left">
                   <div class="form-group">

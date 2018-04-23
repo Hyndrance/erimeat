@@ -60,10 +60,18 @@ function getCity($Id){
       <hr>
       <div class="col-12 text-center">
         <div class="col-lg-6">
-          <p><label class="m-r-5"><strong>Computer Specification :</label><br><a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a></p>
+          <p><label class="m-r-5"><strong>Computer Specification :</label><br>
+            <?php if($application->uploadedSpecs){?>
+              <a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a>
+            <?php } ?>
+          </p>
         </div>
         <div class="col-lg-6">
-          <p><label class="m-r-5"><strong>Resume :</label><br><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Resume</a></p>
+          <p><label class="m-r-5"><strong>Resume :</label><br>
+            <?php if($application->uploadedResume){?>
+              <a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Resume</a>
+            <?php } ?>
+          </p>
         </div>
       </div>
 
