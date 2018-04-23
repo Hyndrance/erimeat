@@ -114,6 +114,53 @@ $(function() {
     });
 });
 </script>
+<!--left to right input masking-->
+<script type="text/javascript">
+  function moveCaretToStart(el) {
+    if (typeof el.selectionStart == "number") {
+        el.selectionStart = el.selectionEnd = 0;
+    } else if (typeof el.createTextRange != "undefined") {
+        el.focus();
+        var range = el.createTextRange();
+        range.collapse(true);
+        range.select();
+    }
+}
+
+var textBox = document.getElementById("ltr");
+
+
+textBox.onfocus = function() {
+    moveCaretToStart(textBox);
+
+    // Work around Chrome's little problem
+    window.setTimeout(function() {
+        moveCaretToStart(textBox);
+    }, 1);
+};
+var textBox2 = document.getElementById("ltr2");
+
+
+textBox2.onfocus = function() {
+    moveCaretToStart(textBox2);
+
+    // Work around Chrome's little problem
+    window.setTimeout(function() {
+        moveCaretToStart(textBox2);
+    }, 1);
+};
+var textBox3 = document.getElementById("ltr3");
+
+
+textBox3.onfocus = function() {
+    moveCaretToStart(textBox3);
+
+    // Work around Chrome's little problem
+    window.setTimeout(function() {
+        moveCaretToStart(textBox3);
+    }, 1);
+};
+</script>
 <!--script for triggering chatbot-->
 <!-- <script type="text/javascript">
 $(document).ready(function(){
