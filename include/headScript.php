@@ -90,7 +90,7 @@ body {
   top: 200px;
   color: #fff; }
 
-@media (max-width: 420px){
+@media (max-width: 400px){
   .main-text {
     position: absolute;
     top: 220px;
@@ -103,9 +103,9 @@ body {
   margin: 0 auto;
   line-height: 1;
   font-weight: bold;
-  color: #2a3c71;}
+  color: #2a3c71; }
 
-@media (max-width: 420px){
+@media (max-width: 400px){
   .tagline{
     font-size: 20px;
     margin: 0 auto;
@@ -123,13 +123,13 @@ body {
   margin-top: 200px;
 }
 
-@media(max-width: 420px){
+@media(max-width: 400px){
   .categ-margin{
     margin-top: 140px;
   }
 }
 
-@media (max-width: 420px){
+@media (max-width: 400px){
   .top-cont {
     width: 370px;
     margin: 0 auto;
@@ -140,7 +140,7 @@ body {
   width: 603px;
 }
 
-@media (max-width: 420px){
+@media (max-width: 400px){
   .categ-cont{
     width: 400px;
     background-color: blue;
@@ -153,7 +153,7 @@ body {
   border: none;
 }
 
-@media (max-width: 420px){
+@media (max-width: 400px){
   .categ-select{
     height: 50px;
     width:298px !important;
@@ -169,7 +169,7 @@ body {
   border: none;
 }
 
-@media(max-width: 420px){
+@media(max-width: 400px){
   .job-search{
     margin-left: 50px;
     margin-bottom: 5px;
@@ -182,7 +182,7 @@ body {
   border: none;
 }
 
-@media(max-width: 420px){
+@media(max-width: 400px){
   .job-categ{
     margin: 0 auto;
   }
@@ -192,7 +192,7 @@ body {
   width: 165px;
 }
 
-@media(max-width: 420px){
+@media(max-width: 400px){
   .categ-btn{
     width: 165px;
     left: -85px;

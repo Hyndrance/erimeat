@@ -5916,3 +5916,17 @@ ul.sitemap-icon ul li a {
 		          transform: translate3d(0, 0, 0);
           }
       }
+
+      .truncate-xs {
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+
+      @media (max-width:420px){
+      .truncate-xs {
+        width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+}

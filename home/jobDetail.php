@@ -79,6 +79,34 @@ function formatDate($val){
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Category:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=getJobFunction($job->jobFunctionId);?></p>
     </div>
+    <div class="container">
+      <ul class="nav nav-tabs navtab-bg nav-justified">
+          <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
+              <a href="#home1" data-toggle="tab" aria-expanded="false">
+                  <span class="visible-xs"><i class="fa fa-home"></i></span>
+                  <span class="hidden-xs text-blue">Skills</span>
+              </a>
+          </li>
+          <li style="background-color: #f2f2f2; border-radius:5px;">
+              <a href="#profile1" data-toggle="tab" aria-expanded="true">
+                  <span class="visible-xs"><i class="fa fa-user"></i></span>
+                  <span class="hidden-xs text-blue">Description</span>
+              </a>
+          </li>
+
+      </ul>
+      <div class="tab-content" style="border: 1px solid #d2d2d2; border-top: none;">
+
+            <div class="tab-pane active" id="home1" style="padding: 10px;">
+            WEQWEWQE
+          </div>
+
+          <div class="tab-pane" id="profile1" style="padding: 10px;">
+            abcd
+          </div>
+
+      </div>
+    </div>
     <hr>
     <h2>Job Description</h2>
     <p>

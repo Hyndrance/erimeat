@@ -143,7 +143,7 @@ $ptList = position_type()->list();
 
                           <div class="p-r-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label>Attach Computer Specification </label>
+                            <div class="truncate-xs"><label>Attach Computer Specification </label></div>
                             <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg" />
                           </div>
                           </div>

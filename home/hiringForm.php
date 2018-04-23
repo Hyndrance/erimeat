@@ -113,7 +113,7 @@ $ptList = position_type()->list();
 
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
-                                  <label for="username">Company Representative Position <span style="color: red;">*</span></label>
+                                  <div class="truncate-xs"><label for="username">Company Representative Position <span style="color: red;">*</span></label></div>
                                   <input type="text" class="form-control" name="jobTitle" required="">
                               </div>
                               </div>
