@@ -2393,6 +2393,9 @@ textarea.form-control {
   margin-bottom: 0;
   margin-top: 0px;
 }
+.stepy-navigator .button-next{
+  height: 10px;
+  }
 /* Summernote */
 .note-editor {
   position: relative;
