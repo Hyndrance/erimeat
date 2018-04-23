@@ -264,7 +264,7 @@ function submitApplication()
 									For your application to proceed to the next stage of the interview process, with a well-structured<br>
 									resume we also need you to provide us with copies of your academic achievements for factual<br>
 									verification. This may include other work-related training certificates, awards, and transcripts of exams<br>
-									and marks scored in university and college that you wish to share with us in support of your application.<br><br>
+									and marks scored in university and college that you wish to share with us in support of your application.<br><br><br>
 									Phone No.: +61 452 364 793<br>
 									Email: hrmanager@teamire.com";
 
@@ -326,7 +326,7 @@ function __submitResumeEmailMessage(){
 	return "We have received you resume with regards to employment opportunities with Teamire. An HR team<br>
 					member will be in touch should a suitable position become available matching your skills and<br>
 					qualifications.<br><br>
-					Thank you for contacting Teamire Employment Services<br><br>
+					Thank you for contacting Teamire Employment Services<br><br><br>
 					Phone No.: +61 452 364 793<br>
 					Email: hrmanager@teamire.com";
 }

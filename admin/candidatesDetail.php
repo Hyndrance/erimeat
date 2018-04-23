@@ -1,8 +1,11 @@
 <?php
+$success = (isset($_GET['success']) && $_GET['success'] != '') ? $_GET['success'] : '';
 $Id = $_GET['Id'];
 $candidate = candidate()->get("Id='$Id'");
 
 $certList = certificates()->list("resumeId='$Id'");
+
+$jfList = job_function()->list("isDeleted='0' order by `option` asc");
 
 function getJobFunction($Id){
   $job = job_function()->get("Id='$Id'");
@@ -16,6 +19,15 @@ function getCity($Id){
 ?>
 
 <div class="container container-fluid">
+  <?php if($success){?>
+  <div class="alert alert-success alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert"
+              aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+      <?=$success;?>
+  </div>
+<?php }?>
   <div class="col-12 m-t-30 m-b-30">
       <h2 class="text-blue"><?=$candidate->firstName;?> <?=$candidate->lastName;?></h2>
       <p><label class="m-r-5">Email: </label><?=$candidate->email;?></p>
@@ -40,6 +52,7 @@ function getCity($Id){
       <p><label class="m-r-5">City :</label><?=getCity($candidate->city);?></p>
       <p><label class="m-r-5">State :</label><?=$candidate->state;?></p>
       <p><label class="m-r-5">Postal Code :</label><?=$candidate->zipCode;?></p>
+      <p><label class="m-r-5">Speed Test :</label><a href="<?=$candidate->speedtest;?>" target="_blank"><?=$candidate->speedtest;?></a></p>
       <p>
         <label class="m-r-5">Status :</label>
         <?php if($candidate->isHired==0 && $candidate->isApproved==1){ ?>
@@ -60,7 +73,11 @@ function getCity($Id){
       <hr>
       <div class="col-12 text-center">
         <div class="col-lg-6">
-          <p><label class="m-r-5"><strong>Computer Specification :</label><br><a href="../media/<?=$candidate->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a></p>
+          <p><label class="m-r-5"><strong>Computer Specification :</label><br>
+            <?php if($candidate->uploadedSpecs){?>
+              <a href="../media/<?=$candidate->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a>
+            <?php } ?>
+          </p>
         </div>
         <div class="col-lg-6">
           <p><label class="m-r-5"><strong>Resume :</label><br><a href="../media/<?=$candidate->uploadedResume;?>" target="blank_">Click to view Resume</a></p>
@@ -86,6 +103,7 @@ function getCity($Id){
             Set an Interview
           </button>
           <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$candidate->Id;?>'" class="btn btn-lg btn-default">Request for More Info</button>
+          <button class="btn btn-lg btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
           <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$candidate->Id;?>'" class="btn btn-lg btn-danger">Delete</button>
       </div>
       <?php } ?>
@@ -161,3 +179,130 @@ function getCity($Id){
 </div>
 </div>
 </div>
+
+<div id="update-information-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div style="width:700px;" class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+            <div class="modal-body">
+                <h2 class="text-uppercase text-center m-b-30">
+                    <a href="index.html" class="text-success">
+                        <span><img src="assets/images/logo_dark.png" alt="" height="30"></span>
+                    </a>
+                </h2>
+
+                <form class="form-horizontal" action="process.php?action=updateCandidateInfo&Id=<?=$Id;?>" method="post">
+
+                  <div class="p-r-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">First Name <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="firstName" value="<?=$candidate->firstName;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Last Name <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="lastName" value="<?=$candidate->lastName;?>" required>
+                  </div>
+                  </div>
+
+                    <div class="form-group">
+                        <label for="firstname">Job Category <span style="color: red;">*</span></label>
+                        <select class="form-control" name="jobFunctionId" required="">
+                         <option value="<?=$candidate->jobFunctionId;?>"><?=getJobFunction($candidate->jobFunctionId);?></option>
+                          <?php foreach($jfList as $row) {?>
+                            <option value="<?=$row->Id;?>"><?=$row->option;?></option>
+                          <?php } ?>
+                        </select>
+                    </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">ABN </label>
+                      <input type="text" class="form-control" name="abn" value="<?=$candidate->abn;?>">
+                  </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                    <div class="form-group">
+                        <label for="firstname">Tax File Number </label>
+                        <input type="text" class="form-control" name="taxNumber" value="<?=$candidate->taxNumber;?>">
+                    </div>
+                  </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Email <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="email" value="<?=$candidate->email;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Phone Number <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="phoneNumber" value="<?=$candidate->phoneNumber;?>" required="">
+                  </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="username">Primary Address <span style="color: red;">*</span></label>
+                      <input type="text" class="form-control" name="address1" value="<?=$candidate->address1;?>" required="">
+                  </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                    <div class="form-group">
+                      <label for="username">City</label>
+                      <select class="form-control select2" name="city">
+                          <option value="<?=$candidate->city;?>"><?=getCity($candidate->city);?></option>
+                          <?php foreach(country_option()->list() as $country){ ?>
+                          <optgroup label="<?=$country->country;?>">
+                              <?php foreach(city_option()->list("countryId=$country->Id") as $city){ ?>
+                                  <option value="<?=$city->Id;?>"><?=$city->city;?></option>
+                              <?php } ?>
+                          <?php } ?>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                    <div class="form-group">
+                      <label for="username">State </label>
+                      <input type="text" class="form-control" name="state" value="<?=$candidate->state;?>">
+                    </div>
+                  </div>
+
+                  <div class="p-r-10 w-50-p pull-left">
+                    <div class="form-group">
+                      <label for="username">Postal Code </label>
+                      <input type="text" class="form-control" data-mask="9999" name="zipCode" value="<?=$candidate->zipCode;?>">
+                    </div>
+                  </div>
+
+                  <div class="p-l-10 w-50-p pull-left">
+                  <div class="form-group">
+                      <label for="username">Key Skills </label>
+                      <input type="text" class="form-control" name="keySkills" value="<?=$candidate->keySkills;?>">
+                  </div>
+                </div>
+
+                  <div class="form-group">
+                      <label>Cover Letter</label>
+                      <div>
+                          <textarea name="coverLetter" class="form-control" required><?=$candidate->coverLetter;?></textarea>
+                      </div>
+                  </div>
+
+                  <div class="form-group account-btn text-center m-t-10">
+                      <div class="col-xs-12">
+                          <button class="btn w-lg btn-rounded btn-lg btn-custom waves-effect waves-light" type="submit">Submit</button>
+                      </div>
+                  </div>
+
+                </form>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

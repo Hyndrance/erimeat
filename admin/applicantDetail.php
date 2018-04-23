@@ -51,9 +51,21 @@ function getJobName($Id){
                       <span class="m-l-15"><?=$resume->coverLetter;?></span>
                     </p>
                     <br><br>
-                    <p class="text-muted font-13"><strong><a href="../media/<?=$resume->uploadedSpecs;?>" target="blank_">Click to view computer specification</a></strong></p>
-                    <p class="text-muted font-13"><strong><a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Click to view resume</a></strong></p>
-                    <p class="text-muted font-13"><strong><a href="../media/<?=$resume->uploadedCerts;?>" target ="blank_">Click to view certificates</a></strong></p>
+                    <p class="text-muted font-13"><strong>
+                      <?php if($resume->uploadedSpecs) {?>
+                      <a href="../media/<?=$resume->uploadedSpecs;?>" target="blank_">Click to view computer specification</a>
+                      <?php } ?>
+                    </strong></p>
+                    <p class="text-muted font-13"><strong>
+                        <?php if($resume->uploadedResume) {?>
+                          <a href="../media/<?=$resume->uploadedResume;?>" target="blank_">Click to view resume</a>
+                        <?php } ?>
+                    </strong></p>
+                    <p class="text-muted font-13"><strong>
+                        <?php if($resume->uploadedResume) {?>
+                          <a href="../media/<?=$resume->uploadedCerts;?>" target ="blank_">Click to view certificates</a>
+                        <?php } ?>
+                    </strong></p>
                 </div>
             </div>
         </div>

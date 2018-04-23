@@ -27,7 +27,7 @@ $ptList = position_type()->list();
 
                               <input type="hidden" name="jobId" value=<?=$_GET['id']?>>
                               <div class="form-group">
-                                  <label for="firstname">Job Function <span style="color: red;">*</span></label>
+                                  <label for="firstname">Job Category <span style="color: red;">*</span></label>
                                   <select class="form-control" name="jobFunctionId" required>
                                     <option>Please Select</option>
                                     <?php foreach($jfList as $row) {?>

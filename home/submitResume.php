@@ -26,7 +26,7 @@ $ptList = position_type()->list();
                         <div class="col-sm-7 center-page container" style="width: 60%;">
 
                               <div class="form-group">
-                                  <label for="firstname">Job Function <span style="color: red;">*</span></label>
+                                  <label for="firstname">Job Category <span style="color: red;">*</span></label>
                                   <select class="form-control" name="jobFunctionId" required>
                                     <option>Please Select</option>
                                     <?php foreach($jfList as $row) {?>

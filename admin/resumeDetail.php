@@ -64,13 +64,25 @@ function getCity($Id){
       <p><label class="m-r-5">Speedtest: </label><?=$application->speedtest;?><p>
         <div class="col-12 text-center">
           <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Specs: </label><br><a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a><p>
+      <p><label class="m-r-5">Uploaded Specs: </label><br>
+      <?php if($application->uploadedSpecs) { ?>
+        <a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a>
+      <?php } ?>
+      <p>
       </div>
       <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Certificate: </label><br><a href="../media/<?=$application->uploadedCerts;?>" target="blank_">Click to view Candidate Resume</a><p>
+      <p><label class="m-r-5">Uploaded Certificate: </label><br>
+        <?php if($application->uploadedCerts) { ?>
+          <a href="../media/<?=$application->uploadedCerts;?>" target="blank_">Click to view Candidate Resume</a>
+        <?php } ?>
+      <p>
       </div>
       <div class="col-lg-4">
-      <p><label class="m-r-5">Uploaded Resume: </label><br><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a><p>
+      <p><label class="m-r-5">Uploaded Resume: </label><br>
+        <?php if($application->uploadedResume) { ?>
+        <a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a>
+        <?php } ?>
+      <p>
       </div>
     </div>
     </div>
@@ -111,7 +123,7 @@ function getCity($Id){
         <div class="col-12">
           <div class="text-center">
             <button class="btn btn-success" style="width:350px;" onclick="location.href='?view=openJobs&Id=<?=$application->Id;?>'">
-              AssignJob
+              Assign Job
             </button>
           </div>
         </div>

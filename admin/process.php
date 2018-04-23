@@ -23,6 +23,10 @@ switch ($action) {
 		updateClientInfo();
 		break;
 
+	case 'updateCandidateInfo' :
+		updateCandidateInfo();
+		break;
+
 	case 'jobRequest' :
 		jobRequest();
 		break;
@@ -211,6 +215,29 @@ function updateClientInfo()
 	$company->update("Id=$Id");
 
 	header('Location: index.php?view=clientDetail&Id='.$Id.'&success=You have updated the information.');
+}
+
+function updateCandidateInfo()
+{
+	$Id = $_GET['Id'];
+
+	$candidate = candidate();
+	$candidate->obj['firstName'] = $_POST['firstName'];
+	$candidate->obj['lastName'] = $_POST['lastName'];
+	$candidate->obj['jobFunctionId'] = $_POST['jobFunctionId'];
+	$candidate->obj['abn'] = $_POST['abn'];
+	$candidate->obj['taxNumber'] = $_POST['taxNumber'];
+	$candidate->obj['email'] = $_POST['email'];
+	$candidate->obj['phoneNumber'] = $_POST['phoneNumber'];
+	$candidate->obj['address1'] = $_POST['address1'];
+	$candidate->obj['city'] = $_POST['city'];
+	$candidate->obj['state'] = $_POST['state'];
+	$candidate->obj['zipCode'] = $_POST['zipCode'];
+	$candidate->obj['keySkills'] = $_POST['keySkills'];
+	$candidate->obj['coverLetter'] = $_POST['coverLetter'];
+	$candidate->update("Id=$Id");
+
+	header('Location: index.php?view=candidatesDetail&Id='.$Id.'&success=You have updated the information.');
 }
 
 function deleteJob()
