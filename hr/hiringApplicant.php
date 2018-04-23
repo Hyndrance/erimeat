@@ -68,10 +68,14 @@ function getJobCategory($Id){
                     </p>
                     <br>
                     <p class="text-muted font-13"><strong>Click to view resume :</strong>
-                      <span class="m-l-15"><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
+                      <?php if($application->uploadedResume) { ?>
+                        <span class="m-l-15"><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Candidate Resume</a></span>
+                      <?php } ?>
                     </p>
                     <p class="text-muted font-13"><strong>Click to view Computer Specification :</strong>
-                      <span class="m-l-15"><a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Candidate Computer Specification</a></span>
+                      <?php if($application->uploadedSpecs) { ?>
+                        <span class="m-l-15"><a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Candidate Computer Specification</a></span>
+                      <?php } ?>
                     </p>
                     <p class="text-muted font-13"><strong>Click to view other Certificates :</strong>
                       <?php foreach($certList as $row){ ?>

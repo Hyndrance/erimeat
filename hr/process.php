@@ -79,6 +79,10 @@ switch ($action) {
 		updateCandidateInfo();
 		break;
 
+	case 'updateEmployeeInfo' :
+		updateEmployeeInfo();
+		break;
+
 	default :
 }
 
@@ -474,6 +478,30 @@ function updateCandidateInfo()
 	$candidate->update("Id=$Id");
 
 	header('Location: index.php?view=candidateDetail&Id='.$Id.'&success=You have updated the information.');
+}
+
+function updateEmployeeInfo()
+{
+	$username = $_GET['username'];
+	$Id = $_GET['Id'];
+
+	$application = application();
+	$application->obj['firstName'] = $_POST['firstName'];
+	$application->obj['lastName'] = $_POST['lastName'];
+	$application->obj['jobFunctionId'] = $_POST['jobFunctionId'];
+	$application->obj['abn'] = $_POST['abn'];
+	$application->obj['taxNumber'] = $_POST['taxNumber'];
+	$application->obj['email'] = $_POST['email'];
+	$application->obj['phoneNumber'] = $_POST['phoneNumber'];
+	$application->obj['address1'] = $_POST['address1'];
+	$application->obj['city'] = $_POST['city'];
+	$application->obj['state'] = $_POST['state'];
+	$application->obj['zipCode'] = $_POST['zipCode'];
+	$application->obj['keySkills'] = $_POST['keySkills'];
+	$application->obj['coverLetter'] = $_POST['coverLetter'];
+	$application->update("Id=$Id");
+
+	header('Location: index.php?view=employeeDetail&username='.$username.'&success=You have updated the information.');
 }
 
 function terminateEmployee()

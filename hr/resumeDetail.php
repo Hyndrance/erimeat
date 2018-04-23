@@ -2,6 +2,8 @@
 $Id = $_GET['Id'];
 $application = application()->get("Id=$Id");
 
+$certList = certificates()->list("resumeId='$application->Id'");
+
 function getJobFunction($Id){
   $job = job_function()->get("Id='$Id'");
   echo $job->option;
@@ -41,6 +43,7 @@ function getCity($Id){
       <p><label class="m-r-5 m-t-15">City: </label><?=getCity($application->city);?></p>
       <p><label class="m-r-5">State: </label><?=$application->state;?></p>
       <p><label class="m-r-5">Postal Code: </label><?=$application->zipCode;?></p>
+      <p><label class="m-r-5">Speedtest: </label><a href="<?=$application->speedtest;?>" target="_blank"><?=$application->speedtest;?></a><p>
       <p>
         <label class="m-r-5">Status :</label>
         <?php if($application->isHired==0 && $application->isApproved==1){ ?>
@@ -60,16 +63,26 @@ function getCity($Id){
       <p><label class="m-r-5">Key Skills: </label><?=$application->keySkills;?></p>
       <hr>
       <p><label class="m-r-5">Cover Letter: </label><?=$application->coverLetter;?><p>
-      <p><label class="m-r-5">Speedtest: </label><?=$application->speedtest;?><p>
         <div class="col-12 text-center">
           <div class="col-lg-4">
-        <p><label class="m-r-5">Uploaded Specs: </label><br><a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a><p>
+        <p><label class="m-r-5">Uploaded Specification: </label><br>
+          <?php if($application->uploadedSpecs) { ?>
+            <a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a>
+          <?php } ?>
+        <p>
         </div>
         <div class="col-lg-4">
-        <p><label class="m-r-5">Uploaded Certificate: </label><br><a href="../media/<?=$application->uploadedCerts;?>" target="blank_">Click to view Candidate Resume</a><p>
+        <p><label class="m-r-5">Uploaded Certificate: </label><br>
+          <?php foreach($certList as $row){ ?>
+            <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view Other Certificates</a>
+          <?php } ?>
+        <p>
         </div>
         <div class="col-lg-4">
-        <p><label class="m-r-5">Uploaded Resume: </label><br><a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a><p>
+        <p><label class="m-r-5">Uploaded Resume: </label><br>
+          <?php if($application->uploadedResume) { ?>
+            <a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a>
+          <?php } ?><p>
         </div>
     </div>
     </div>

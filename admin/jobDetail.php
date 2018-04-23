@@ -220,8 +220,8 @@ function formatDate($val){
 
                   <div class="p-l-10 w-50-p pull-left">
                   <div class="form-group">
-                      <label for="username">Rate <span style="color: red;">*</span></label>
-                      <input type="text" class="form-control" name="rate" value="<?=$job->rate;?>" required="">
+                      <label for="username">Rate </label>
+                      <input type="text" class="form-control" name="rate" value="<?=$job->rate;?>">
                   </div>
                   </div>
 
