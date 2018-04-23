@@ -79,7 +79,7 @@ function getCity($Id){
       </div>
     </div>
     <!-- Reference -->
-    <span>Candidate Reference #: <?=$row->refNum;?></span>
+    <span>Reference: <?=$row->refNum;?></span>
     <div class="clearfix"></div>
     <!-- Location -->
     <div class="col-md-4">
