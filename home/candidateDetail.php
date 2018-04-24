@@ -37,7 +37,7 @@ function getCity($Id){
       </div>
     </div>
       <hr>
-      <div class="container">
+      <div>
         <ul class="nav nav-tabs navtab-bg nav-justified">
             <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
                 <a href="#home1" data-toggle="tab" aria-expanded="false">

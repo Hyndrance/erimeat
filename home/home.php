@@ -14,7 +14,7 @@ function getPositionName($Id){
     <div class="bgimg-1" style="height: 678px; margin-top: -147px; z-index:-1; position: relative;"></div>
 
     <div >
-      <div class="main-text top-cont">
+      <div class="main-text top-cont" style="z-index: -1;">
             <div class="text-center container">
                 <p class="m-t-30 slideanim tagline">
                   It is our Business to Identify your Needs, Interests, Concerns and Expectations
