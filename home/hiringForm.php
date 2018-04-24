@@ -107,7 +107,7 @@ $ptList = position_type()->list();
                               <div class="p-l-10 w-50-p pull-left">
                               <div class="form-group">
                                   <label for="username">Company ABN</label>
-                                  <input type="text" class="form-control" data-mask="99999999999" name="abn">
+                                  <input type="text" class="form-control" id="ltr" data-mask="99999999999" name="abn">
                               </div>
                               </div>
 
@@ -121,14 +121,14 @@ $ptList = position_type()->list();
                               <div class="p-l-10 w-50-p pull-left">
                               <div class="form-group">
                                   <label for="username">Business Phone <span style="color: red;">*</span></label>
-                                  <input type="text" placeholder="" data-mask="(+61) 999-999-999" class="form-control" name="businessPhone" required="">
+                                  <input type="text" placeholder="" id="ltr2" data-mask="(+61) 999-999-999" class="form-control" name="businessPhone" required="">
                               </div>
                               </div>
 
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
                                   <label for="username">Postal Code <span style="color: red;">*</span></label>
-                                  <input type="text" placeholder="" data-mask="9999" class="form-control" name="zipCode" required="">
+                                  <input type="text" placeholder="" id="ltr3" data-mask="9999" class="form-control" name="zipCode" required="">
                               </div>
                               </div>
 
