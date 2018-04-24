@@ -40,7 +40,7 @@ $error = (isset($_GET['error']) && $_GET['error'] != '') ? $_GET['error'] : '';
                 <div class="row">
                     <div class="col-md-12">
                       <div class="account-pages">
-                              <div class="login-left-box" >
+                              <div class="login-left-box">
                                 <div class="account-box" style="">
                                     <div class="account-logo-box">
                                       <h5 class="text-uppercase text-center text-white">
