@@ -45,7 +45,7 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
               <div id="hire" class="display-none">
               <div class="p-r-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Employment Type <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Employment Type <span style="color: red;">*</span></label></div>
                   <select class="form-control" name="positionTypeId" required="">
                   <option>Please Select</option>
                     <?php foreach($ptList as $row) {?>
@@ -57,35 +57,35 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
 
               <div class="p-l-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Job Classification <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Job Classification <span style="color: red;">*</span></label></div>
                   <input type="text" class="form-control" name="position" required="">
               </div>
               </div>
 
               <div class="p-r-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Company Representative <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Company Representative <span style="color: red;">*</span></label></div>
                   <input type="text" class="form-control" name="contactName" required="">
               </div>
               </div>
 
               <div class="p-l-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Company Representative Email <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Company Representative Email <span style="color: red;">*</span></label></div>
                   <input type="email" class="form-control" name="workEmail" data-parsley-trigger="change" required="">
               </div>
               </div>
 
               <div class="p-r-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Company Name <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Company Name <span style="color: red;">*</span></label></div>
                   <input type="text" class="form-control" name="company" required="" >
               </div>
               </div>
 
               <div class="p-l-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Company ABN <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Company ABN <span style="color: red;">*</span></label></div>
                   <input type="text" class="form-control" data-mask="99999999999" name="abn" required="">
               </div>
               </div>
@@ -99,7 +99,7 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
 
               <div class="p-l-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Business Phone <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Business Phone <span style="color: red;">*</span></label></div>
                   <input type="text" placeholder="" data-mask="(+61) 999-999-999" class="form-control" name="businessPhone" required="">
               </div>
               </div>
@@ -113,7 +113,7 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
 
               <div class="p-l-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Required Experience <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Required Experience <span style="color: red;">*</span></label></div>
                   <select class="form-control" name="requiredExperience" required="">
                     <option>Please Select</option>
                     <option value="0-1 Year">0-1 Year</option>
@@ -140,7 +140,7 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
                                       data-parsley-validation-threshold="10"></textarea>
               </div>
             <div class="text-center m-t-30">
-                <button type="submit" class="btn btn-primary stepy-finish"> SEND REQUEST </button>
+                <button type="submit" class="btn btn-primary stepy-finish btn-xs-mobile"> SEND REQUEST </button>
             </div>
             <div class="text-center m-t-30">
               <p style="color: #000000;">Or call us at <strong style="color: #4489e4;">+61452 364 793</strong></p>
@@ -149,7 +149,7 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
 
           </div>
           <div class="text-center m-t-30">
-            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish">REQUEST TALENT</button>
+            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-xs-mobile">REQUEST TALENT</button>
           </div>
 
         </div>
@@ -162,14 +162,14 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
                 <form class="form-inline" method="GET">
                 <div class="form-group">
                   <input type="hidden" name="view" value="searchJob">
-                  <input type="text" name="s" class="m-r-5 form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:500px;">
-                  <select name="c" class="form-control m-r-5" style="height: 67px; width:265px;" required>
+                  <input type="text" name="s" class="m-r-5 form-control select-xs-mobile" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:500px;">
+                  <select name="c" class="form-control m-r-5 select-xs-mobile" style="height: 67px; width:265px;" required>
                     <option value="">Select Category</option>
                     <?php foreach($jobFunctionList as $row){ ?>
                       <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                     <?php } ?>
                   </select>
-                      <button type="submit" class="btn waves-effect waves-light btn-primary">Search</button>
+                      <button type="submit" class="btn waves-effect waves-light btn-primary btn-search-xs-mobile">Search</button>
 
                 </div>
               </form>

@@ -201,7 +201,7 @@ body {
 
 @media(max-width: 400px){
   .btn-mobile {
-    width: 210px;
+    width: 260px;
     height: 70px;
     margin-left: 35px;
     margin-top: 10px;
@@ -210,9 +210,19 @@ body {
 
 @media(max-width: 400px){
   .btn-search-mobile {
-    width: 210px;
+    width: 260px;
     height: 70px;
-    margin-left: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+@media(max-width: 400px){
+  .btn-search-xs-mobile {
+    width: 220px;
+    height: 70px;
+    margin: 0 auto;
+    margin-left: -5px;
     margin-top: 10px;
   }
 }
@@ -228,7 +238,7 @@ body {
 
 @media(max-width: 400px){
   .btn-xs-mobile{
-    width: 220px !important;
+    width: 210px !important;
     padding: 15px !important;
     margin-top: 10px;
     margin: 0 auto;
@@ -237,7 +247,7 @@ body {
 
 @media(max-width: 400px){
   .btn-sm-mobile{
-    width: 290px !important;
+    width: 280px !important;
     padding: 15px !important;
     margin-top: 10px;
     margin: 0 auto;
@@ -246,7 +256,7 @@ body {
 
 @media(max-width: 400px){
   .select-xs-mobile{
-    width: 234px !important;
+    width: 225px !important;
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left: -7px;

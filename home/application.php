@@ -6,10 +6,10 @@ $ptList = position_type()->list();
 <div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
-        <h2 style="position: absolute;top: 25%; left: 42%;" class="text-white"> Submit Resume </h2>
+        <h2 style="position: absolute;top: 25%; width: 900px; left: 17%;" class="text-white text-mobile"> Submit Resume </h2>
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
-      <div class="jumbotron center-page" style="width: 1140px;">
+      <div class="jumbotron center-page jumbotron-w container" style="width: 1139px;">
             <form id="default-wizard" action="process.php?action=submitApplication" method="POST" enctype="multipart/form-data" data-parsley-validate="">
               <?php if($error){?>
                 <div>
@@ -23,7 +23,7 @@ $ptList = position_type()->list();
                 </div>
               <?php } ?>
                     <div class="row m-t-20">
-                        <div class="col-sm-7 center-page">
+                        <div class="col-sm-7 center-page container" style="width: 60%;">
 
                               <input type="hidden" name="jobId" value=<?=$_GET['id']?>>
                               <div class="form-group">
@@ -36,7 +36,7 @@ $ptList = position_type()->list();
                                   </select>
                               </div>
 
-                              <div>
+                              <div class="row" style="max-width: 660px; margin: 0 auto;">
                               <div class="form-group w-33-p pull-left p-r-10">
                                   <label for="username">First Name <span style="color: red;">*</span></label>
                                   <input type="text" class="form-control" name="firstName" required>
@@ -55,6 +55,7 @@ $ptList = position_type()->list();
                                 </div>
                                 </div>
 
+                              <div class="row" style="max-width: 660px; margin: 0 auto;">
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
                                   <label for="username">Contractor ABN</label>
@@ -69,6 +70,7 @@ $ptList = position_type()->list();
                                   <span class="help-block"><small>For Australia based only</small></span>
                               </div>
                               </div>
+                            </div>
 
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
@@ -140,7 +142,7 @@ $ptList = position_type()->list();
 
                           <div class="p-r-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label>Attach Computer Specification </label>
+                            <div class="truncate-xs"><label>Attach Computer Specification </label></div>
                             <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg" />
                           </div>
                           </div>
@@ -151,21 +153,18 @@ $ptList = position_type()->list();
                             <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg," />
                           </div>
                           </div>
-
-                          <br><br><br><br><br><br>
-                          <div class="text-center"><h3>Attach Resume <span style="color: red;">*</span></h3></div>
-                          <div class="col-sm-4">
-                         <a id="myBtnShowResume" style="border-radius: 50%;height: 90px;width: 90px;" class="btn btn-danger btn-file btn-circle btn-lg pull-right"><i class="fa fa-file-text-o fa-2x text-white p-t-10 "></i> </a>
-                         <br><br><br>
+                          <div class="clearfix"></div>
+                          <div class="row">
+                          <div class="text-center m-b-30" style="margin: 0 auto;"><h3>Attach Resume <span style="color: red;">*</span></h3></div>
+                          <div class="text-center m-b-10">
+                            <a id="myBtnShowResume" style="border-radius: 50%;height: 70px;width: 70px;" class="btn btn-danger btn-file btn-circle btn-lg"><i class="fa fa-file-text-o fa-2x text-white"></i> </a>
+                            <a id="myLinkShowResume" style="color:black; font-size: 20px; font-weight: bold;">Upload Your Resume</a>
                           </div>
-                          <div class="col-md-8">
-                          <h4><a id="myLinkShowResume" style="color:black;">Upload Your Resume</a></h4>
                         </div>
                         <div class="form-group">
                         <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx, .txt"></div>
                      </div>
                     </div>
-                    <br><br><br>
                     </div>
                   <div class="text-center m-t-30">
                       <button type="submit" class="btn btn-primary stepy-finish"> SUBMIT RESUME </button>
