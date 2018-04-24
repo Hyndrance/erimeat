@@ -12,9 +12,8 @@ function getPositionName($Id){
 <div>
   <div>
     <div class="bgimg-1" style="height: 678px; margin-top: -147px; z-index:-1; position: relative;"></div>
-
-    <div >
-      <div class="main-text top-cont">
+    <div>
+      <div class="main-text">
             <div class="text-center container">
                 <p class="m-t-30 slideanim tagline">
                   It is our Business to Identify your Needs, Interests, Concerns and Expectations
@@ -57,14 +56,13 @@ function getPositionName($Id){
                 <option value="<?=$row->Id;?>"><?=$row->option;?></option>
               <?php } ?>
             </select>
-                <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue" style="height: 51px; width: 165px;"><i class="fa fa-search m-r-5"></i>Search Job</button>
+                <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue search-job-btn"><i class="fa fa-search m-r-5"></i>Search Job</button>
 
           </div>
         </form>
                 </div>
               </div>
             </div>
-            <div class="clearfix"></div>
         </div>
 </div>
   </div>

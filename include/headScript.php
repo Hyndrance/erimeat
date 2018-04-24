@@ -92,14 +92,22 @@ body {
 
 @media (max-width: 400px){
   .main-text {
-    position: absolute;
-    top: 220px;
+    position: relative;
+    margin-top: -800px;
+    margin-bottom: 50px;
     color: #fff;}
+}
+
+@media (max-width:400px){
+  .bgimg-1{
+    min-height: 678px;
+    margin-top: 0px !important;
+  }
 }
 
 .tagline{
   font-size: 24px;
-  width: 800px;
+  width: 1350px;
   margin: 0 auto;
   line-height: 1;
   font-weight: bold;
@@ -171,8 +179,9 @@ body {
 
 @media(max-width: 400px){
   .job-search{
-    margin-left: 50px;
+    margin-left: 25px;
     margin-bottom: 5px;
+    width: 300px !important;
   }
 }
 
@@ -185,6 +194,7 @@ body {
 @media(max-width: 400px){
   .job-categ{
     margin: 0 auto;
+    width: 300px;
   }
 }
 
@@ -194,9 +204,17 @@ body {
 
 @media(max-width: 400px){
   .categ-btn{
-    width: 165px;
-    left: -85px;
+    width: 300px;
+    left: -25px;
   }
+}
+
+@media(max-width: 400px){
+.search-job-btn{
+  height: 51px;
+  width: 300px;
+  margin-top: 10px;
+}
 }
 
 @media(max-width: 400px){
