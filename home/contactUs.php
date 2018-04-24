@@ -52,7 +52,7 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
     </div>
 
     <!-- Start Form Container -->
-    <div class="form-container container center-page">
+    <div class="contact-form-container container center-page">
       <h3 class="text-center m-b-30">Still have questions?</h3>
       <h3 class="text-center">Payroll and time reporting assistance</h3>
       <div class="row">

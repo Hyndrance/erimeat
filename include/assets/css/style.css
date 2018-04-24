@@ -5639,6 +5639,16 @@ ul.sitemap-icon ul li a {
       height: 600px;}
   }
 
+  .contact-form-container{
+    background-color: #eeeeee;
+    padding: 30px; }
+  @media (max-width: 400px){
+    .contact-form-container{
+      background-color: #eeeeee;
+      padding: 10px;
+      height: 100%;}
+  }
+
 /** Blue Form Panel **/
   .faq-container{
     background-color: #022664;
