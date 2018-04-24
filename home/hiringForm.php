@@ -7,8 +7,8 @@ $ptList = position_type()->list();
 <div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
-        <h2 style="position: absolute;top: 18%; left: 42%;" class="text-white text-center"> Request Talent </h2>
-        <p class="text-center text-white" style="position:absolute; top: 47%; left: 32%;">We will help you build the workforce you desire quickly and effectively</p>
+        <h2 style="position: absolute;top: 18%; width: 900px; left: 17%;" class="text-white text-center text-mobile"> Request Talent </h2>
+        <p class="text-center text-white text-xs-mobile" style="position:absolute; top: 47%; width: 900px; left: 17%;">We will help you build the workforce you desire quickly and effectively</p>
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
      <form  action="process.php?action=create" method="POST" id="default-wizard" data-parsley-validate="">

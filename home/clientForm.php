@@ -6,7 +6,7 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
   <div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
-        <h2 style="position: absolute;top: 25%; left: 36%;" class="text-white"> Employer Registration Form </h2>
+        <h2 style="position: absolute;top: 25%; width: 900px; left: 17%;" class="text-white text-mobile"> Employer Registration Form </h2>
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
       <div class="jumbotron center-page container" style="width: 1139px;">

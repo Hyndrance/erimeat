@@ -6,7 +6,7 @@ $ptList = position_type()->list();
 <div class="row">
     <div class="col-md-12">
       <div class="text-center" style="position:relative;">
-        <h2 style="position: absolute;top: 25%; left: 42%;" class="text-white"> Submit Resume </h2>
+        <h2 style="position: absolute;top: 25%; width: 900px; left: 17%;" class="text-white text-mobile"> Submit Resume </h2>
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
       <div class="jumbotron center-page jumbotron-w container" style="width:1139px;">

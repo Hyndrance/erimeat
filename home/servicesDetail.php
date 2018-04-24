@@ -145,7 +145,7 @@ $jobFunc = job_function()->get("code='$code'");
 
           </div>
           <div class="text-center m-t-30">
-            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish">REQUEST TALENT</button>
+            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-xs-mobile">REQUEST TALENT</button>
           </div>
 
         </div>
@@ -158,14 +158,14 @@ $jobFunc = job_function()->get("code='$code'");
                 <form class="form-inline" method="GET">
                 <div class="form-group">
                   <input type="hidden" name="view" value="searchJob">
-                  <input type="text" name="s" class="m-r-5 form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:500px;">
-                  <select name="c" class="form-control m-r-5" style="height: 67px; width:265px;" required>
+                  <input type="text" name="s" class="m-r-5 form-control select-xs-mobile" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:500px;">
+                  <select name="c" class="form-control m-r-5 select-xs-mobile" style="height: 67px; width:265px;" required>
                     <option value="">Select Category</option>
                     <?php foreach($jobFunctionList as $row){ ?>
                       <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                     <?php } ?>
                   </select>
-                      <button type="submit" class="btn waves-effect waves-light btn-primary">Search</button>
+                      <button type="submit" class="btn waves-effect waves-light btn-primary btn-xs-mobile">Search</button>
 
                 </div>
               </form>

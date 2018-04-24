@@ -52,7 +52,7 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
     </div>
 
     <!-- Start Form Container -->
-    <div class="form-container container-80 center-page">
+    <div class="form-container container center-page">
       <h3 class="text-center m-b-30">Still have questions?</h3>
       <h3 class="text-center">Payroll and time reporting assistance</h3>
       <div class="row">
@@ -72,7 +72,7 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
       <hr class="h-line m-b-30 m-t-30" width="90%">
 
       <h3 class="text-center">Send us an email</h3>
-      <div class="col-md-8 center-page">
+      <div class="col-md-12 center-page">
         <form id="default-wizard" action="process.php?action=sendInquiry" method="POST" data-parsley-validate="">
         <div class="row">
             <!-- Start Dropdown-->
@@ -104,14 +104,14 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
 
             <div class="p-l-10 w-50-p pull-left">
             <div class="form-group">
-              <label for="username">Business Email <span style="color: red;">*</span></label>
+              <div class="truncate-xs"><label for="username">Business Email <span style="color: red;">*</span></label></div>
               <input type="text" class="form-control" name="workEmail" required>
             </div>
             </div>
 
             <div class="p-r-10 w-50-p pull-left">
             <div class="form-group">
-              <label for="username">Business Phone <span style="color: red;">*</span></label>
+              <div class="truncate-xs"><label for="username">Business Phone <span style="color: red;">*</span></label></div>
               <input type="text" class="form-control" name="phoneNumber"  data-mask="(02) 9999-9999" required>
             </div>
             </div>

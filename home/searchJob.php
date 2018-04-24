@@ -17,7 +17,7 @@ function formatDate($val){
 ?>
 
 <div style="position: relative;">
-  <img class="pages-bg-grey" src="../include/assets/images/homepage-bg-1.png">
+  <img class="pages-bg-grey" src="../include/assets/images/homepage-bg-1.png" style="z-index: -1;">
 <div class="container-fluid">
   <div class="container-80 center-page">
   <div class="col-md-10 center-page p-b-30">
@@ -25,14 +25,14 @@ function formatDate($val){
     <form class="form-inline" method="GET">
     <div class="form-group">
       <input type="hidden" name="view" value="searchJob">
-      <input type="text" name="s" class="form-control" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:450px;">
-      <select name="c" class="form-control" style="height: 67px; width:200px;" required>
+      <input type="text" name="s" class="form-control select-sm-mobile" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:450px;">
+      <select name="c" class="form-control select-sm-mobile" style="height: 67px; width:200px;" required>
         <option value="">Select Category</option>
         <?php foreach($jobFunctionList as $row){ ?>
           <option value="<?=$row->Id;?>"><?=$row->option;?></option>
         <?php } ?>
       </select>
-          <button type="submit" class="btn waves-effect waves-light btn-primary">Search</button>
+          <button type="submit" class="btn waves-effect waves-light btn-primary btn-search-mobile">Search</button>
 
     </div>
   </form>
@@ -43,12 +43,12 @@ function formatDate($val){
   <!-- Display contact and email buttons -->
   <div align="center" class="m-t-30">
     <div>
-      <button class="m-r-5 btn-primary btn-candidate-contact" style="line-height: 1.4em;" onclick="myFunction()">
+      <button class="m-r-5 btn-primary btn-candidate-contact btn-mobile" style="margin-left: 9px; line-height: 1.4em;" onclick="myFunction()">
         <i class="fa fa-phone fa-2x"></i><br>
         <span class="text-center">Call +61 452 364 793</span>
       </button>
 
-      <button class="m-l-5 btn-primary btn-candidate-contact" style="line-height: 1.4em;" onclick="location.href='../home/?view=inquiryForm'">
+      <button class="m-l-5 btn-primary btn-candidate-contact btn-mobile" style="line-height: 1.4em;" onclick="location.href='../home/?view=inquiryForm'">
         <i class="fa fa-envelope-o fa-2x"></i><br>
         <span class="text-center">Send an Email</span>
       </button>
