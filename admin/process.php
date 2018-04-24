@@ -820,9 +820,9 @@ function __createEmployeeLogin($Id, $jobId){
 							Congratulations!<br><br>
 							Welcome to Teamire! Our HR staff will soon be in contact with you to discuss your new contract in detail<br>
 							and provide instructions on how to access our database for completion of weekly timesheets including<br>
-							employee dashboard. Please use the credentials we have created for you.<br><br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: " . $user->obj['username'] . "<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: temppassword <br><br>
+							employee dashboard. Please use the credentials we have created for you.<br>
+							Username: " . $user->obj['username'] . "<br>
+							Password: temppassword <br><br>
 							To login to our website. Please click the link below:<br>
 							<a href='http://www.teamire.com/employee/?view=login'>www.teamire.com/employee/</a><br><br>
 							or go to the <a href='http://www.teamire.com/home/?view=logins'>Timesheet</a> page.<br><br><br>".
