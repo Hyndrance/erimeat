@@ -50,7 +50,7 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
                                 <div class="p-l-10 w-50-p pull-left">
                                 <div class="form-group">
                                   <label for="username">Employer ABN </label>
-                                  <input type="text" class="form-control" data-mask="99999999999" name="abn">
+                                  <input type="text" class="form-control" id="ltr" data-mask="99999999999" name="abn">
                                 </div>
                                 </div>
                               </div>
@@ -77,14 +77,14 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
                             <div class="p-r-10 w-50-p pull-left">
                             <div class="form-group">
                               <label for="username">Business Phone Registration <span style="color: red;">*</span></label>
-                              <input type="text" class="form-control" name="phoneNumber"  data-mask="(+61) 999-999-999" required>
+                              <input type="text" class="form-control" name="phoneNumber" id="ltr2"  data-mask="(+61) 999-999-999" required>
                             </div>
                             </div>
 
                             <div class="p-l-10 w-50-p pull-left">
                             <div class="form-group">
                               <label for="username">Business Mobile Number <span style="color: red;">*</span></label>
-                              <input type="text" class="form-control" name="mobileNumber" placeholder=""  data-mask="(+61) 999-999-999" required="">
+                              <input type="text" class="form-control" name="mobileNumber" id="ltr3" placeholder=""  data-mask="(+61) 999-999-999" required="">
                             </div>
                             </div>
 
