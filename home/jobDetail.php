@@ -52,16 +52,16 @@ function formatDate($val){
     <hr>
     <!-- Job Information -->
     <div class="row clearfix">
-      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Required Experience:</p>
-      <p class="col-lg-9 col-md-8 col-6"><?=$job->requiredExperience;?></p>
-    </div>
-    <div class="row clearfix">
-      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Rate</p>
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Salary</p>
       <p class="col-lg-9 col-md-8 col-6"><?=$job->rate;?></p>
     </div>
     <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Location:</p>
-      <p class="col-lg-9 col-md-8 col-6"><?=$job->address;?></p>
+      <p class="col-lg-9 col-md-8 col-6"><?=$job->address;?> PC <?=$job->zipCode;?></p>
+    </div>
+    <div class="row clearfix">
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Employment Type:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=getPositionName($job->positionTypeId);?></p>
     </div>
     <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Date Posted:</p>
@@ -72,15 +72,19 @@ function formatDate($val){
       <p class="col-lg-9 col-md-8 col-6"><?=$job->refNum;?></p>
     </div>
     <div class="row clearfix">
-      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Employment Type:</p>
-      <p class="col-lg-9 col-md-8 col-6"><?=getPositionName($job->positionTypeId);?></p>
-    </div>
-    <div class="row clearfix">
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Category:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=getJobFunction($job->jobFunctionId);?></p>
     </div>
+    <div class="row clearfix">
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Required Experience:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=$job->requiredExperience;?></p>
+    </div>
+    <div class="row clearfix">
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Key Skills:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=$job->keySkills;?></p>
+    </div>
     <hr>
-    <h2>Job Description</h2>
+    <h2>Description</h2>
     <p>
       <?=$job->comment;?>
     </p>
@@ -104,7 +108,7 @@ function formatDate($val){
 
     <div class="m-b-30">
     <h3><?=$job->address;?></h3>
-    <?=$job->zipCode;?>
+    PC <?=$job->zipCode;?>
   </div>
   </div> <!-- End Job Detail -->
 
