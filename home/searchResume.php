@@ -11,8 +11,12 @@ function getJobFunction($Id){
 }
 
 function getCity($Id){
-  $city = city_option()->get("Id='$Id'");
-  echo $city->city;
+  if($Id!=0){
+    $city = city_option()->get("Id='$Id'");
+    echo $city->city;
+  }else{
+    echo "N/A";
+  }
 }
 ?>
 

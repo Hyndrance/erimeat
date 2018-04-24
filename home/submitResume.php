@@ -100,7 +100,7 @@ $ptList = position_type()->list();
                           <div class="form-group w-33-p pull-left p-r-10">
                               <label for="username">City</label>
                               <select class="form-control select2" name="city">
-                                  <option>Select City</option>
+                                  <option value="">Select City</option>
                                   <?php foreach(country_option()->list() as $country){ ?>
                                   <optgroup label="<?=$country->country;?>">
                                       <?php foreach(city_option()->list("countryId=$country->Id") as $city){ ?>

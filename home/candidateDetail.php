@@ -8,8 +8,12 @@ function getJobFunction($Id){
 }
 
 function getCity($Id){
+  if ($Id!=0){
   $city = city_option()->get("Id='$Id'");
   echo $city->city;
+  }else{
+    echo "N/A";
+  }
 }
 ?>
 
@@ -33,8 +37,34 @@ function getCity($Id){
       </div>
     </div>
       <hr>
-      <h3>Cover Letter</h3>
-      <p><?=$candidate->coverLetter;?></p>
+      <div class="container">
+        <ul class="nav nav-tabs navtab-bg nav-justified">
+            <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
+                <a href="#home1" data-toggle="tab" aria-expanded="false">
+                    <span class="visible-xs"><i class="fa fa-home"></i></span>
+                    <span class="hidden-xs text-blue">Skills</span>
+                </a>
+            </li>
+            <li style="background-color: #f2f2f2; border-radius:5px;">
+                <a href="#profile1" data-toggle="tab" aria-expanded="true">
+                    <span class="visible-xs"><i class="fa fa-user"></i></span>
+                    <span class="hidden-xs text-blue">Description</span>
+                </a>
+            </li>
+
+        </ul>
+        <div class="tab-content" style="border: 1px solid #d2d2d2; border-top: none;">
+
+              <div class="tab-pane active" id="home1" style="padding: 10px;">
+              <?=$candidate->keySkills;?>
+            </div>
+
+            <div class="tab-pane" id="profile1" style="padding: 10px;">
+              <?=$candidate->coverLetter;?>
+            </div>
+
+        </div>
+      </div>
       </div>
     <div align="center" class="m-t-30 m-b-30">
       <div align="center" class="m-t-30">
