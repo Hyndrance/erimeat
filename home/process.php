@@ -134,9 +134,9 @@ function __createClientLogin($Id){
 							view your personalized dashboard.<br>
 							Client Username: " . $user->obj['username'] . "<br>
 							Temporary Password: temppassword<br>
-							To login, visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a><br><br><br>
-							Phone No.: +61 452 364 793<br>
-							Email: hrmanager@teamire.com";
+							To login, visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a><br><br><br>".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"."+61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"."hrmanager@teamire.com";
 
 	sendEmail($company->email, $content);
 }
@@ -264,10 +264,9 @@ function submitApplication()
 									For your application to proceed to the next stage of the interview process, with a well-structured<br>
 									resume we also need you to provide us with copies of your academic achievements for factual<br>
 									verification. This may include other work-related training certificates, awards, and transcripts of exams<br>
-									and marks scored in university and college that you wish to share with us in support of your application.<br><br><br>
-									Phone No.: +61 452 364 793<br>
-									Email: hrmanager@teamire.com";
-
+									and marks scored in university and college that you wish to share with us in support of your application.<br><br><br>".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"."+61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"."hrmanager@teamire.com";
 			sendEmail($application->email,$content);
 			//for HR
 			foreach($hrList as $row){
@@ -317,18 +316,18 @@ function sendInquiry()
 
 function __talentRequestEmailMessage(){
 	return "Thank you for submitting your request. Our HR team will now contact you within 2 business<br>
-					days to further review and help with processing of your application.<br><br><br>
-					Phone No.: +61 452 364 793<br>
-					Email: hrmanager@teamire.com";
+					days to further review and help with processing of your application.<br><br><br>".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 }
 
 function __submitResumeEmailMessage(){
 	return "We have received you resume with regards to employment opportunities with Teamire. An HR team<br>
 					member will be in touch should a suitable position become available matching your skills and<br>
 					qualifications.<br><br>
-					Thank you for contacting Teamire Employment Services<br><br><br>
-					Phone No.: +61 452 364 793<br>
-					Email: hrmanager@teamire.com";
+					Thank you for contacting Teamire Employment Services<br><br><br".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 }
 
 function __hrTalentMessage(){
