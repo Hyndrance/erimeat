@@ -131,10 +131,10 @@ function __createClientLogin($Id){
 	// Send email
 	$content = "Thank you for considering Teamire as your prospect to search for your contingent workforce.<br>
 							Your new account has been activated which means you can now login with the below credentials and<br>
-							view your personalized dashboard.<br>
-							Client Username: " . $user->obj['username'] . "<br>
-							Temporary Password: temppassword<br>
-							To login, visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a><br><br><br>".
+							view your personalized dashboard.<br><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Client Username: " . $user->obj['username'] . "<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temporary Password: temppassword<br><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To login, visit <a href='http://www.teamire.com/company/?view=login'>www.teamire.com/company/</a><br><br><br>".
 							"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
 							"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 

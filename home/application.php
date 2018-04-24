@@ -58,7 +58,7 @@ $ptList = position_type()->list();
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
                                   <label for="username">Contractor ABN</label>
-                                  <input type="text" class="form-control" name="abn" data-mask="99999999999">
+                                  <input type="text" class="form-control" id="ltr" name="abn" data-mask="99999999999">
                               </div>
                               </div>
 
@@ -115,7 +115,7 @@ $ptList = position_type()->list();
 
                           <div class="form-group w-33-p pull-right">
                               <label for="username">Postal Code </label>
-                              <input type="text" class="form-control" data-mask="9999" name="zipCode">
+                              <input type="text" class="form-control" id="ltr2" data-mask="9999" name="zipCode">
                           </div>
                           </div>
                           <div class="form-group">

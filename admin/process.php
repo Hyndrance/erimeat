@@ -700,7 +700,9 @@ function setInterviewDate()
 							Date = $date<br>
 							Time = $time<br><br>
 							Alternatively send our HR team an email on “hrmanager@teamire.com” quoting the above job reference<br>
-							and your availability for an interview within 2 business days of this message.";
+							and your availability for an interview within 2 business days of this message.<br><br><br>".
+							"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
+							"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 
 	sendEmail($email, $content);
 
@@ -761,7 +763,9 @@ function setCandidateInterview()
 							Date = $date<br>
 							Time = $time<br><br>
 							Alternatively send our HR team an email on “hrmanager@teamire.com” quoting your availability for an interview<br>
-							within 2 business days of this message.";
+							within 2 business days of this message.<br><br><br>".
+							"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
+							"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 
 	sendEmail($email, $content);
 
@@ -974,8 +978,9 @@ function removeCity()
 /* ======================== Email Messages ==============================*/
 
 function __approvedJobRequestEmailMessage(){
-	return "We have approved your talent request.<br><br>
-					Teamire";
+	return "We have approved your talent request.<br><br><br>".
+					"<img src='http://ictadmin.com.au/images/page_art/fa-phone_256_20_0077bb_none.png' style='width:15px;height:15px;'>"." +61 452 364 793<br>".
+					"<img src='http://www.myiconfinder.com/uploads/iconsets/256-256-791373a6801d994466b6c7e8bd45289d-email.png' style='width:15px;height:15px;'>"." hrmanager@teamire.com";
 }
 
 function __moreInfoResumeMessage(){
