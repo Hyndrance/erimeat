@@ -115,7 +115,8 @@ function getPositionName($Id){
   <div class="col-md-8 center-page text-center">
   <h3 class="m-b-30 m-t-30 slideanim">More from Teamire</h3>
   </div>
-  <div class="center-page container-fluid container-80 slideanim">
+  <div class="clearfix"></div>
+  <div class="center-page container-fluid container-80 slideanim row col-lg-12">
   <div class="col-md-4 services-panel">
     <img src="../include/assets/images/aboutus-img.png" style="width: 100%;">
     <div>

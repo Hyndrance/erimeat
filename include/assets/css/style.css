@@ -5667,10 +5667,20 @@ ul.sitemap-icon ul li a {
     border-top:1px solid #ffffff; }
 
   .services-panel {
-    width: 325px;
+    width: 330px;
     margin: 10px;
     font-size: 16px;
     background-color: #f7f7f7; }
+
+@media (max-width: 400px){
+  .services-panel {
+    width: 270px;
+    margin: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7; }
+
+}
 
   /** Job List **/
   .job-list-row {

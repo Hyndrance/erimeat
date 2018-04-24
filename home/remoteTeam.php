@@ -18,7 +18,7 @@ $remoteTeamList = remote_team()->list();
   <div class="col-lg-3" style="height: 300px;">
     <ul style="list-style-type: none; padding-left: 10px !important; padding: 10px;">
       <?php foreach($remoteTeamList as $row){?>
-      <li style="border-bottom: 1.5px solid #e9e9e9; padding: 8px;"><a href="../home/?view=remoteTeam&Id=<?=$row->Id;?>"><?=$row->title;?></li>
+      <li style="border-bottom: 1.5px solid #e9e9e9; padding: 8px;"><a href="../home/?view=remoteTeam&Id=<?=$row->Id;?>"><?=$row->title;?></a></li>
     <?php } ?>
     </ul>
   </div>

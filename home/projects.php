@@ -1,6 +1,7 @@
 <?php
 $jobFunctionList = job_function()->list("isDeleted='0' order by `option` asc");
 $projectList = projects()->list();
+
 ?>
 
 <div style="position: relative;">
@@ -12,8 +13,8 @@ $projectList = projects()->list();
     <div class="col-lg-12 row">
       <div class="col-lg-3">
         <ul style="list-style-type: none; padding-left: 10px !important; padding: 10px;">
-          <?php foreach($projectList as $row){?>
-          <li class="project-list"><a href="../home/?view=projects&Id=<?=$row->Id;?>"><?=$row->title;?></li>
+          <?php foreach($projectList as $row) {?>
+          <li class="project-list"><a href="../home/?view=projects&Id=<?=$row->Id;?>"><?=$row->title;?></a></li>
           <?php } ?>
         </ul>
       </div>
