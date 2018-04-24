@@ -198,7 +198,7 @@ function getPositionName($Id){
                                            <legend>Tell us about your hiring needs</legend>
                                            <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img1.png" style="margin-left: 100px;width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img1.png" style="margin-left: 80px;width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 1: Tell us about your hiring needs</strong></h4>
@@ -216,7 +216,7 @@ function getPositionName($Id){
 
                                       <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img2.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img2.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 2: Your staffing options</strong></h4>
@@ -232,7 +232,7 @@ function getPositionName($Id){
 
                                        <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img3.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img3.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 3: Review and select candidates</strong></h4>
@@ -247,7 +247,7 @@ function getPositionName($Id){
 
                                          <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img4.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img4.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 4: Service and your happiness</strong></h4>
@@ -270,7 +270,7 @@ function getPositionName($Id){
                                               <legend>Search for jobs and apply</legend>
                                            <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img5.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img5.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 1: Search for jobs and apply</strong></h4>
@@ -288,7 +288,7 @@ function getPositionName($Id){
 
                                       <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img6.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img6.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 2: Upload your resume</strong></h4>
@@ -304,7 +304,7 @@ function getPositionName($Id){
 
                                        <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img7.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img7.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 3: Getting to know you</strong></h4>
@@ -318,7 +318,7 @@ function getPositionName($Id){
                                            <legend>While we find the right fit</legend>
                                               <div class="row">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img8.png" style="margin-left: 100px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img8.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 4: While we find the right fit</strong></h4>

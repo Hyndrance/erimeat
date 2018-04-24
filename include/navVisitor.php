@@ -2,7 +2,7 @@
 
 <div style="width: 1300px; margin: 0 auto;">
   <div class="row" style="padding-top: 5px; padding-bottom: 5px;">
-      <a href="index.php" class="logo m-t-5 pull-left">
+      <a href="index.php" class="logo logo-mobile m-t-5 pull-left">
         <img src="../include/assets/images/teamire-logo.png" style="width: 237px; height: 80px;">
       </a>
 

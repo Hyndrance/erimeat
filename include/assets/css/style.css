@@ -4985,6 +4985,12 @@ h3.timeline-title {
       right: 0; }
 }
 
+@media (max-width: 400px){
+  .logo-mobile{
+    margin-left: 10px;
+  }
+}
+
 .account-logo-box {
   padding: 30px 30px 0 30px; }
 
