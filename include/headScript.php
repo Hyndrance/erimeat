@@ -179,7 +179,6 @@ body {
 
 @media(max-width: 400px){
   .job-search{
-    margin-left: 25px;
     margin-bottom: 5px;
     width: 300px !important;
   }
@@ -204,9 +203,7 @@ body {
 
 @media(max-width: 400px){
   .categ-btn{
-    width: 300px;
-    left: -25px;
-  }
+    width: 300px; }
 }
 
 @media(max-width: 400px){
@@ -237,11 +234,12 @@ body {
 
 @media(max-width: 400px){
   .btn-search-xs-mobile {
-    width: 220px;
+    width: 100%;
     height: 70px;
     margin: 0 auto;
-    margin-left: -5px;
+    margin-left: 1px;
     margin-top: 10px;
+    padding: 15px !important;
   }
 }
 
@@ -265,7 +263,7 @@ body {
 
 @media(max-width: 400px){
   .btn-sm-mobile{
-    width: 280px !important;
+    width: 100% !important;
     padding: 15px !important;
     margin-top: 10px;
     margin: 0 auto;
@@ -274,10 +272,9 @@ body {
 
 @media(max-width: 400px){
   .select-xs-mobile{
-    width: 225px !important;
+    width: 110% !important;
     margin-bottom: 5px;
     margin-top: 5px;
-    margin-left: -7px;
   }
 }
 

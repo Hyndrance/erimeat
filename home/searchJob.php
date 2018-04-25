@@ -32,7 +32,7 @@ function formatDate($val){
           <option value="<?=$row->Id;?>"><?=$row->option;?></option>
         <?php } ?>
       </select>
-          <button type="submit" class="btn waves-effect waves-light btn-primary btn-search-mobile">Search</button>
+          <button type="submit" class="btn waves-effect waves-light btn-primary btn-sm-mobile">Search</button>
 
     </div>
   </form>

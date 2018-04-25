@@ -149,7 +149,7 @@ $jobFunc = job_function()->list("isDeleted=0 and code='0'");
 
           </div>
           <div class="text-center m-t-30">
-            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-xs-mobile">REQUEST TALENT</button>
+            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-sm-mobile">REQUEST TALENT</button>
           </div>
 
         </div>

@@ -23,7 +23,7 @@ $jobFunc = job_function()->get("code='$code'");
       <?=$jobFunc->description;?>
     </p>
 
-    <div class="form-container m-b-30 m-t-30">
+    <div class="form-container m-b-30 m-t-30" style="height: 100%;">
       <div class="row">
         <form action="process.php?action=create" method="POST" id="default-wizard" data-parsley-validate="">
         <div class="col-sm-8 center-page">
@@ -88,7 +88,7 @@ $jobFunc = job_function()->get("code='$code'");
 
               <div class="p-r-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Job Position <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Job Position <span style="color: red;">*</span></label></div>
                   <input type="text" class="form-control" name="jobTitle" required="">
               </div>
               </div>
@@ -102,7 +102,7 @@ $jobFunc = job_function()->get("code='$code'");
 
               <div class="p-r-10 w-50-p pull-left">
               <div class="form-group">
-                  <label for="username">Postal Code <span style="color: red;">*</span></label>
+                  <div class="truncate-xxs"><label for="username">Postal Code <span style="color: red;">*</span></label></div>
                   <input type="text" placeholder="" data-mask="9999" class="form-control" name="zipCode" required="">
               </div>
               </div>
@@ -136,7 +136,7 @@ $jobFunc = job_function()->get("code='$code'");
                                       data-parsley-validation-threshold="10"></textarea>
               </div>
             <div class="text-center m-t-30">
-                <button type="submit" class="btn btn-primary stepy-finish btn-xs-mobile"> SEND REQUEST </button>
+                <button type="submit" class="btn btn-primary stepy-finish btn-sm-mobile"> SEND REQUEST </button>
             </div>
             <div class="text-center m-t-30">
               <p style="color: #000000;">Or call us at <strong style="color: #4489e4;">+61452 364 793</strong></p>
@@ -145,7 +145,7 @@ $jobFunc = job_function()->get("code='$code'");
 
           </div>
           <div class="text-center m-t-30">
-            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-xs-mobile">REQUEST TALENT</button>
+            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-sm-mobile">REQUEST TALENT</button>
           </div>
 
         </div>
@@ -165,7 +165,7 @@ $jobFunc = job_function()->get("code='$code'");
                       <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                     <?php } ?>
                   </select>
-                      <button type="submit" class="btn waves-effect waves-light btn-primary btn-xs-mobile">Search</button>
+                      <button type="submit" class="btn waves-effect waves-light btn-primary btn-search-xs-mobile">Search</button>
 
                 </div>
               </form>
