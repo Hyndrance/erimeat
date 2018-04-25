@@ -203,6 +203,7 @@ body {
 
 @media(max-width: 400px){
   .categ-btn{
+    margin-right: 25px;
     width: 300px; }
 }
 

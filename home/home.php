@@ -252,7 +252,7 @@ function getPositionName($Id){
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 4: Service and your happiness</strong></h4>
                                                    <p>
-                                                     Ensuring you are happy with your hiring experience is what defines Robert Half. We are committed to the highest level of customer service, and we back it up with a satisfaction guarantee. Our communication, expert advice and recruiting support is provided on your terms, not just during the hiring process but beyond, creating a lasting relationship with you.
+                                                     Ensuring you are happy with your hiring experience is what defines Teamire. We are committed to the highest level of customer service, and we back it up with a satisfaction guarantee. Our communication, expert advice and recruiting support is provided on your terms, not just during the hiring process but beyond, creating a lasting relationship with you.
                                                    </p>
                                                </div>
                                            </div>
@@ -293,7 +293,7 @@ function getPositionName($Id){
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 2: Upload your resume</strong></h4>
                                                    <p>
-                                                   Our online form makes it easy to send us your resume or upload the details of your LinkedIn profile. We’ll then contact you if your qualifications meet the requirements of an open position or match what our clients typically look for.
+                                                   Our online form makes it easy to send us your resume. We’ll then contact you if your qualifications meet the requirements of an open position or match what our clients typically look for.
                                                    </p>
                                                </div>
                                            </div>
