@@ -77,14 +77,14 @@ $jfList = job_function()->list("isDeleted='0' order by `option` asc");
                             <div class="p-r-10 w-50-p pull-left">
                             <div class="form-group">
                               <div class="truncate-xs"><label for="username">Business Phone Registration <span style="color: red;">*</span></label></div>
-                              <input type="text" class="form-control" name="phoneNumber"  data-mask="(+61) 999-999-999" required>
+                              <input type="text" class="form-control" id="ltr2" name="phoneNumber"  data-mask="(+61) 999-999-999" required>
                             </div>
                             </div>
 
                             <div class="p-l-10 w-50-p pull-left">
                             <div class="form-group">
                               <div class="truncate-xs"><label for="username">Business Mobile Number <span style="color: red;">*</span></label></div>
-                              <input type="text" class="form-control" name="mobileNumber" placeholder=""  data-mask="(+61) 999-999-999" required="">
+                              <input type="text" class="form-control" id="ltr3" name="mobileNumber" placeholder=""  data-mask="(+61) 999-999-999" required="">
                             </div>
                             </div>
 
