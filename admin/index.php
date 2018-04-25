@@ -160,6 +160,12 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
+	case 'employees' :
+		$currentSession = isset($_SESSION["admin_session"]);
+		$content 	= 'employees.php';
+		$template	= '../include/dashboard.php';
+		break;
+
 	case 'candidatesDetail' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'candidatesDetail.php';
