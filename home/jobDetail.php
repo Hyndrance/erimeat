@@ -75,6 +75,10 @@ function formatDate($val){
       <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Job Category:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=getJobFunction($job->jobFunctionId);?></p>
     </div>
+    <div class="row clearfix">
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">End Date:</p>
+      <p class="col-lg-9 col-md-8 col-6"><?=formatDate($job->endDate);?></p>
+    </div>
     <hr>
     <h2>Description</h2>
     <p>

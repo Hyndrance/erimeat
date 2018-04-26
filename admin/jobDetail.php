@@ -56,7 +56,6 @@ function formatDate($val){
           </div>
         </div>
         <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
-        <p class="text-muted">Created at: </label><?=formatDate($job->createDate);?></p>
     <div class="row m-t-20">
       <div class="col-lg-6">
         <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
@@ -72,14 +71,22 @@ function formatDate($val){
     <div class="clearfix"></div>
     <div class="row m-t-20">
       <div class="col-lg-6">
-        ABN: <?=$job->abn;?>
+        <p><label class="m-r-5">ABN:</label> <?=$job->abn;?></p>
       </div>
       <div class="col-lg-6">
-        Reference Number: <?=$job->refNum;?>
+        <p><label class="m-r-5">Reference Number:</label> <?=$job->refNum;?></p>
       </div>
-    </div><br>
+    </div>
     <p><label class="m-r-5">Job Openings: </label><?=$job->jobOpening;?></p>
     <p><label class="m-r-5">Key Skills: </label><?=$job->keySkills;?></p>
+    <div class="row m-t-20">
+      <div class="col-lg-6">
+        <p><label class="m-r-5">Created at: </label><?=formatDate($job->createDate);?></p>
+      </div>
+      <div class="col-lg-6">
+        <p><label class="m-r-5">End Date: </label><?=formatDate($job->endDate);?></p>
+      </div>
+    </div>
     <div class="clearfix"></div>
     <hr>
     <h3>Hiring Needs</h3>
