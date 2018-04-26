@@ -60,14 +60,14 @@ function getCity($Id){
       <hr>
       <div class="col-12 text-center">
         <div class="col-lg-6">
-          <p><label class="m-r-5"><strong>Computer Specification :</label><br>
+          <p><label class="m-r-5"><strong>Computer Specification :</strong></label><br>
             <?php if($application->uploadedSpecs){?>
               <a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a>
             <?php } ?>
           </p>
         </div>
         <div class="col-lg-6">
-          <p><label class="m-r-5"><strong>Resume :</label><br>
+          <p><label class="m-r-5"><strong>Resume :</strong></label><br>
             <?php if($application->uploadedResume){?>
               <a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Resume</a>
             <?php } ?>
@@ -80,7 +80,7 @@ function getCity($Id){
           <p><label class="m-r-5">Cover Letter :</label><br><?=$application->coverLetter;?></p>
         </div>
         <div class="col-lg-6">
-            <p><label class="m-r-5"><strong>Other Certificates :</label><br>
+            <p><label class="m-r-5"><strong>Other Certificates :</strong></label><br>
               <?php foreach($certList as $row){ ?>
                 <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view other certificates</a><br>
               <?php }?>
