@@ -22,8 +22,8 @@ function getPositionName($Id){
                 </p>
 
                 <div class="row m-b-20 categ-margin">
-                  <button id="myBtn1" class="btn btn-sm" style="width:300px; height: 50px;">NEED TO HIRE?</button>
-                  <button id="myBtn2" class="btn btn-sm" style="width:300px; height: 50px;">LOOKING FOR A JOB?</button>
+                  <button id="myBtn1" class="btn btn-sm xs-btn" style="width:300px; height: 50px;">NEED TO HIRE?</button>
+                  <button id="myBtn2" class="btn btn-sm xs-btn" style="width:300px; height: 50px;">LOOKING FOR A JOB?</button>
                 </div>
 
             <div class="">
@@ -56,7 +56,7 @@ function getPositionName($Id){
                 <option value="<?=$row->Id;?>"><?=$row->option;?></option>
               <?php } ?>
             </select>
-                <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue search-job-btn"><i class="fa fa-search m-r-5"></i>Search Job</button>
+                <button type="submit" class="btn btn-sm waves-effect waves-light btn-blue search-job-btn" style="height: 51px;"><i class="fa fa-search m-r-5"></i>Search Job</button>
 
           </div>
         </form>
@@ -198,11 +198,11 @@ function getPositionName($Id){
                                            <legend>Tell us about your hiring needs</legend>
                                            <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img1.png" style="margin-left: 80px;width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img1.png" style="width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 1: Tell us about your hiring needs</strong></h4>
-                                                   <p>
+                                                   <p class="wizard-content-mobile">
                                                        Submit your job opening online in just minutes, or simply call us. Either way, our recruiting specialists will evaluate the skills, experience and corporate culture fit you require. We are 100% committed to finding employees who are the best fit for your company. Need someone today, or even weeks from now? No problem, we have you covered.
                                                    </p>
                                                </div>
@@ -216,11 +216,11 @@ function getPositionName($Id){
 
                                       <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img2.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img2.png" style=" width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 2: Your staffing options</strong></h4>
-                                                   <p>
+                                                   <p class="wizard-content-mobile">
                                                      Teamire is known for providing a selection of highly skilled professionals, and our staffing professionals can provide you with temporary, temporary-to-full-time, project and full-time staffing solutions. We even have our own full-time specialized employees, who you can hire on an interim or recurring basis. Wondering how to make the most of your hiring budget? There is no cost until you hire, so let’s talk.
                                                    </p>
                                                </div>
@@ -232,11 +232,11 @@ function getPositionName($Id){
 
                                        <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img3.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img3.png" style=" width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 3: Review and select candidates</strong></h4>
-                                                   <p>
+                                                   <p class="wizard-content-mobile">
                                                      Finding candidates who are just the right fit for your role is our top priority. We will provide you with your choice of well-matched candidates, and our recommendations will be tailored to the nuances of your role and business. Then, once you select the best candidate, we’ll coordinate all aspects of the recruiting process, working hard to ensure a smooth start for you and your new employee.
                                                    </p>
                                                </div>
@@ -247,12 +247,12 @@ function getPositionName($Id){
 
                                          <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img4.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img4.png" style=" width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 4: Service and your happiness</strong></h4>
-                                                   <p>
-                                                     Ensuring you are happy with your hiring experience is what defines Teamire. We are committed to the highest level of customer service, and we back it up with a satisfaction guarantee. Our communication, expert advice and recruiting support is provided on your terms, not just during the hiring process but beyond, creating a lasting relationship with you.
+                                                   <p class="wizard-content-mobile">
+                                                     Ensuring you are happy with your hiring experience is what defines Robert Half. We are committed to the highest level of customer service, and we back it up with a satisfaction guarantee. Our communication, expert advice and recruiting support is provided on your terms, not just during the hiring process but beyond, creating a lasting relationship with you.
                                                    </p>
                                                </div>
                                            </div>
@@ -270,11 +270,11 @@ function getPositionName($Id){
                                               <legend>Search for jobs and apply</legend>
                                            <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img5.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img5.png" style=" width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 1: Search for jobs and apply</strong></h4>
-                                                   <p>
+                                                   <p class="wizard-content-mobile">
                                                       Quickly and easily search our open positions to find one that fits your skills and experience. We have jobs with top local companies in your area.
                                                    </p>
                                                </div>
@@ -288,12 +288,12 @@ function getPositionName($Id){
 
                                       <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img6.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img6.png" style=" width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 2: Upload your resume</strong></h4>
-                                                   <p>
-                                                   Our online form makes it easy to send us your resume. We’ll then contact you if your qualifications meet the requirements of an open position or match what our clients typically look for.
+                                                   <p class="wizard-content-mobile">
+                                                   Our online form makes it easy to send us your resume or upload the details of your LinkedIn profile. We’ll then contact you if your qualifications meet the requirements of an open position or match what our clients typically look for.
                                                    </p>
                                                </div>
                                            </div>
@@ -304,11 +304,11 @@ function getPositionName($Id){
 
                                        <div class="row"  >
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img7.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img7.png" style=" width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 3: Getting to know you</strong></h4>
-                                                   <p>
+                                                   <p class="wizard-content-mobile">
                                                     You are more than just a resume or an application. That is why we work so hard to understand your career goals, so that we can help you find a job that is just the right fit for you.
                                                    </p>
                                                </div>
@@ -318,11 +318,11 @@ function getPositionName($Id){
                                            <legend>While we find the right fit</legend>
                                               <div class="row">
                                                <div class="col-md-4">
-                                                   <img src="../include/assets/images/wizard-img8.png" style="margin-left: 80px; width: 40%;height:40%;" class="img-circle img-thumbnail">
+                                                   <img src="../include/assets/images/wizard-img8.png" style=" width: 40%;height:40%;" class="img-circle img-circle-mobile img-thumbnail">
                                                </div>
                                                <div class="col-md-8">
                                                    <h4 class="text-blue"><strong>Step 4: While we find the right fit</strong></h4>
-                                                   <p>
+                                                   <p class="wizard-content-mobile">
                                                     In addition to helping find your next career move, we are also here to help you with refining your resume, prepping you for interviews, and sharing local salary and hiring trends.
                                                    </p>
                                                </div>

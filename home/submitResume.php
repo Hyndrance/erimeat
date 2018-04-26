@@ -37,13 +37,13 @@ $ptList = position_type()->list();
 
                               <div class="row" style="max-width: 660px; margin: 0 auto;">
                               <div class="form-group w-33-p pull-left p-r-10">
-                                  <label for="username">First Name <span style="color: red;">*</span></label>
+                                  <div class="truncate-xxs"><label for="username">First Name <span style="color: red;">*</span></label></div>
                                   <input type="text" class="form-control" name="firstName" required>
                               </div>
 
 
                               <div class="form-group w-33-p pull-left">
-                                  <label for="username">Last Name <span style="color: red;">*</span></label>
+                                  <div class="truncate-xxs"><label for="username">Last Name <span style="color: red;">*</span></label></div>
                                   <input type="text" class="form-control" name="lastName" required>
                               </div>
 
@@ -143,14 +143,14 @@ $ptList = position_type()->list();
 
                           <div class="p-r-10 w-50-p pull-left">
                           <div class="form-group">
-                            <div class="truncate-xs"><label>Attach Computer Specification </label></div>
+                            <div class="truncate-xxs"><label>Attach Computer Specification </label></div>
                             <input type="file" class="filestyle form-control" name="upload_specs" accept=".png, .jpg, .jpeg" />
                           </div>
                           </div>
 
                           <div class="p-l-10 w-50-p pull-left">
                           <div class="form-group">
-                            <label>Attach Other Files </label>
+                            <div class="truncate-xxs"><label>Attach Other Files </label></div>
                             <input type="file" name="upload_certs[]" multiple="multiple" class="form-control" accept=".pdf, .png, .jpg, .jpeg," />
                           </div>
                           </div>

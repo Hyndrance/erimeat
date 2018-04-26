@@ -20,7 +20,7 @@
               </div>
 
               <div style="height: 100px;">
-                <p class="truncate">
+                <p class="truncate" style="height: 80px;">
                 <?=$row->description;?>
                 </p>
               </div>

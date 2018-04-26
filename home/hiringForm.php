@@ -44,7 +44,7 @@ $ptList = position_type()->list();
                               <div class="row">
                               <div class="p-r-10 w-50-p pull-left">
                               <div class="form-group">
-                                  <label for="username">Employment Type <span style="color: red;">*</span></label>
+                                  <div class="truncate-xs"><label for="username">Employment Type <span style="color: red;">*</span></label></div>
                                   <select class="form-control" name="positionTypeId" required="">
                                   <option>Please Select</option>
                                     <?php foreach($ptList as $row) {?>
@@ -56,7 +56,7 @@ $ptList = position_type()->list();
 
                               <div class="p-l-10 w-50-p pull-left">
                               <div class="form-group">
-                                  <label for="username">Employee Location <span style="color: red;">*</span></label>
+                                  <div class="truncate-xs"><label for="username">Employee Location <span style="color: red;">*</span></label></div>
                                   <select class="form-control" name="empLocation" required="">
                                     <option>Please Select</option>
                                     <option value="Onsite Staff">Onsite Staff</option>
@@ -69,7 +69,7 @@ $ptList = position_type()->list();
                             <div class="row">
                               <div class="p-r-10 w-50-p pull-left">
                                 <div class="form-group">
-                                    <label for="username">No. of Job Position <span style="color: red;">*</span></label>
+                                    <div class="truncate-xs"><label for="username">No. of Job Position <span style="color: red;">*</span></label></div>
                                     <input type="number" class="form-control" name="jobOpening" required="">
                                 </div>
                               </div>
@@ -84,7 +84,7 @@ $ptList = position_type()->list();
 
                             <div class="row">
                               <div class="form-group">
-                                  <label for="username">Job Position <span style="color: red;">*</span></label>
+                                  <div class="truncate-xs"><label for="username">Job Position <span style="color: red;">*</span></label></div>
                                   <input type="text" class="form-control" name="position" required="">
                               </div>
                             </div>

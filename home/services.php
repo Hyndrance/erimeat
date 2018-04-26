@@ -111,13 +111,15 @@ function getPositionName($Id){
   </div> <!-- container -->
 </div>
   <hr class="m-b-30 m-t-30" width="75%">
-  <div class="m-b-30">
   <div class="col-md-8 center-page text-center">
   <h3 class="m-b-30 m-t-30 slideanim">More from Teamire</h3>
   </div>
   <div class="clearfix"></div>
-  <div class="center-page container-fluid container-80 slideanim row col-lg-12">
-  <div class="col-md-4 services-panel">
+
+  <div class="m-b-30 row">
+  <div class="container-80 center-page slideanim row">
+  <div class="col-lg-12" style="padding: 0px !important; margin: 0px !important;">
+  <div class="col-md-4 " style="background-color: #f7f7f7;">
     <img src="../include/assets/images/aboutus-img.png" style="width: 100%;">
     <div>
     <h3>
@@ -139,7 +141,7 @@ function getPositionName($Id){
     </p>
   </div>
   </div>
-  <div class="col-md-4 services-panel">
+  <div class="col-md-4 " style="background-color: #f7f7f7;">
     <img src="../include/assets/images/projects-img.png" style="width: 100%;">
     <div>
     <h3>
@@ -159,7 +161,7 @@ function getPositionName($Id){
     </p>
   </div>
   </div>
-  <div class="col-md-4 services-panel">
+  <div class="col-md-4" style="background-color: #f7f7f7;">
     <img src="../include/assets/images/contactus-img.png" style="width:100%;">
     <div>
     <h3>
@@ -179,6 +181,7 @@ function getPositionName($Id){
     </p>
   </div>
   </div>
+</div>
 </div>
 </div>
 </div>
