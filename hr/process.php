@@ -156,7 +156,7 @@ function updateRequest()
 {
 	$Id = $_POST['Id'];
 	$job = job();
-	$job->obj['comment'] = $_POST['comment'];
+	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
 	$job->update("Id='$Id'");
 
 	header('Location: ../hr/?view=jobDetail&Id='. $Id . '&message=You have successfully updated a Request');
@@ -423,20 +423,21 @@ function updateInformation()
 	$Id = $_GET['Id'];
 
 	$job = job();
-	$job->obj['position'] = $_POST['position'];
-	$job->obj['company'] = $_POST['company'];
+	$job->obj['position'] =  htmlspecialchars($_POST['position'], ENT_QUOTES);
+	$job->obj['company'] =  htmlspecialchars($_POST['company'], ENT_QUOTES);
 	$job->obj['positionTypeId'] = $_POST['positionTypeId'];
 	$job->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$job->obj['contactName'] = $_POST['contactName'];
-	$job->obj['jobTitle'] = $_POST['jobTitle'];
+	$job->obj['contactName'] = htmlspecialchars($_POST['contactName'], ENT_QUOTES);
+	$job->obj['jobTitle'] = htmlspecialchars($_POST['jobTitle'], ENT_QUOTES);
 	$job->obj['workEmail'] = $_POST['workEmail'];
 	$job->obj['businessPhone'] = $_POST['businessPhone'];
 	$job->obj['empLocation'] = $_POST['empLocation'];
 	$job->obj['abn'] = $_POST['abn'];
 	$job->obj['zipCode'] = $_POST['zipCode'];
-	$job->obj['rate'] = $_POST['rate'];
-	$job->obj['comment'] = $_POST['comment'];
-	$job->obj['keySkills'] = $_POST['keySkills'];
+	$job->obj['rate'] = htmlspecialchars($_POST['rate'], ENT_QUOTES);
+	$job->obj['address'] =  htmlspecialchars($_POST['address'], ENT_QUOTES);
+	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
+	$job->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
 	$job->update("Id=$Id");
 
 	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
@@ -447,15 +448,15 @@ function updateClientInfo()
 	$Id = $_GET['Id'];
 
 	$company = company();
-	$company->obj['name'] = $_POST['name'];
+	$company->obj['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES);
 	$company->obj['abn'] = $_POST['abn'];
-	$company->obj['department'] = $_POST['department'];
+	$company->obj['department'] = htmlspecialchars($_POST['department'], ENT_QUOTES);
 	$company->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$company->obj['contactPerson'] = $_POST['contactPerson'];
+	$company->obj['contactPerson'] = htmlspecialchars($_POST['contactPerson'], ENT_QUOTES);
 	$company->obj['email'] = $_POST['email'];
 	$company->obj['phoneNumber'] = $_POST['phoneNumber'];
 	$company->obj['mobileNumber'] = $_POST['mobileNumber'];
-	$company->obj['description'] = $_POST['description'];
+	$company->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 	$company->update("Id=$Id");
 
 	header('Location: index.php?view=clientDetail&Id='.$Id.'&success=You have updated the information.');
@@ -466,19 +467,19 @@ function updateCandidateInfo()
 	$Id = $_GET['Id'];
 
 	$candidate = candidate();
-	$candidate->obj['firstName'] = $_POST['firstName'];
-	$candidate->obj['lastName'] = $_POST['lastName'];
+	$candidate->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+	$candidate->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
 	$candidate->obj['jobFunctionId'] = $_POST['jobFunctionId'];
 	$candidate->obj['abn'] = $_POST['abn'];
 	$candidate->obj['taxNumber'] = $_POST['taxNumber'];
 	$candidate->obj['email'] = $_POST['email'];
 	$candidate->obj['phoneNumber'] = $_POST['phoneNumber'];
-	$candidate->obj['address1'] = $_POST['address1'];
+	$candidate->obj['address1'] = htmlspecialchars($_POST['address1'], ENT_QUOTES);
 	$candidate->obj['city'] = $_POST['city'];
 	$candidate->obj['state'] = $_POST['state'];
 	$candidate->obj['zipCode'] = $_POST['zipCode'];
-	$candidate->obj['keySkills'] = $_POST['keySkills'];
-	$candidate->obj['coverLetter'] = $_POST['coverLetter'];
+	$candidate->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
+	$candidate->obj['coverLetter'] = htmlspecialchars($_POST['coverLetter'], ENT_QUOTES);
 	$candidate->update("Id=$Id");
 
 	header('Location: index.php?view=candidateDetail&Id='.$Id.'&success=You have updated the information.');
@@ -490,19 +491,19 @@ function updateEmployeeInfo()
 	$Id = $_GET['Id'];
 
 	$application = application();
-	$application->obj['firstName'] = $_POST['firstName'];
-	$application->obj['lastName'] = $_POST['lastName'];
+	$application->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+	$application->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
 	$application->obj['jobFunctionId'] = $_POST['jobFunctionId'];
 	$application->obj['abn'] = $_POST['abn'];
 	$application->obj['taxNumber'] = $_POST['taxNumber'];
 	$application->obj['email'] = $_POST['email'];
 	$application->obj['phoneNumber'] = $_POST['phoneNumber'];
-	$application->obj['address1'] = $_POST['address1'];
+	$application->obj['address1'] = htmlspecialchars($_POST['address1'], ENT_QUOTES);
 	$application->obj['city'] = $_POST['city'];
 	$application->obj['state'] = $_POST['state'];
 	$application->obj['zipCode'] = $_POST['zipCode'];
-	$application->obj['keySkills'] = $_POST['keySkills'];
-	$application->obj['coverLetter'] = $_POST['coverLetter'];
+	$application->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
+	$application->obj['coverLetter'] = htmlspecialchars($_POST['coverLetter'], ENT_QUOTES);
 	$application->update("Id=$Id");
 
 	header('Location: index.php?view=employeeDetail&username='.$username.'&success=You have updated the information.');

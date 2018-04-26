@@ -179,21 +179,21 @@ function updateInformation()
 	$Id = $_GET['Id'];
 
 	$job = job();
-	$job->obj['position'] = $_POST['position'];
-	$job->obj['company'] = $_POST['company'];
+	$job->obj['position'] =  htmlspecialchars($_POST['position'], ENT_QUOTES);
+	$job->obj['company'] =  htmlspecialchars($_POST['company'], ENT_QUOTES);
 	$job->obj['positionTypeId'] = $_POST['positionTypeId'];
 	$job->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$job->obj['contactName'] = $_POST['contactName'];
-	$job->obj['jobTitle'] = $_POST['jobTitle'];
+	$job->obj['contactName'] = htmlspecialchars($_POST['contactName'], ENT_QUOTES);
+	$job->obj['jobTitle'] = htmlspecialchars($_POST['jobTitle'], ENT_QUOTES);
 	$job->obj['workEmail'] = $_POST['workEmail'];
 	$job->obj['businessPhone'] = $_POST['businessPhone'];
 	$job->obj['empLocation'] = $_POST['empLocation'];
 	$job->obj['abn'] = $_POST['abn'];
 	$job->obj['zipCode'] = $_POST['zipCode'];
-	$job->obj['rate'] = $_POST['rate'];
-	$job->obj['address'] = $_POST['address'];
-	$job->obj['comment'] = $_POST['comment'];
-	$job->obj['keySkills'] = $_POST['keySkills'];
+	$job->obj['rate'] = htmlspecialchars($_POST['rate'], ENT_QUOTES);
+	$job->obj['address'] =  htmlspecialchars($_POST['address'], ENT_QUOTES);
+	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
+	$job->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
 	$job->update("Id=$Id");
 
 	header('Location: index.php?view=jobDetail&success=You have updated the information&Id=' . $Id);
@@ -204,15 +204,15 @@ function updateClientInfo()
 	$Id = $_GET['Id'];
 
 	$company = company();
-	$company->obj['name'] = $_POST['name'];
+	$company->obj['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES);
 	$company->obj['abn'] = $_POST['abn'];
-	$company->obj['department'] = $_POST['department'];
+	$company->obj['department'] = htmlspecialchars($_POST['department'], ENT_QUOTES);
 	$company->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$company->obj['contactPerson'] = $_POST['contactPerson'];
+	$company->obj['contactPerson'] = htmlspecialchars($_POST['contactPerson'], ENT_QUOTES);
 	$company->obj['email'] = $_POST['email'];
 	$company->obj['phoneNumber'] = $_POST['phoneNumber'];
 	$company->obj['mobileNumber'] = $_POST['mobileNumber'];
-	$company->obj['description'] = $_POST['description'];
+	$company->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 	$company->update("Id=$Id");
 
 	header('Location: index.php?view=clientDetail&Id='.$Id.'&success=You have updated the information.');
@@ -223,19 +223,19 @@ function updateCandidateInfo()
 	$Id = $_GET['Id'];
 
 	$candidate = candidate();
-	$candidate->obj['firstName'] = $_POST['firstName'];
-	$candidate->obj['lastName'] = $_POST['lastName'];
+	$candidate->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+	$candidate->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
 	$candidate->obj['jobFunctionId'] = $_POST['jobFunctionId'];
 	$candidate->obj['abn'] = $_POST['abn'];
 	$candidate->obj['taxNumber'] = $_POST['taxNumber'];
 	$candidate->obj['email'] = $_POST['email'];
 	$candidate->obj['phoneNumber'] = $_POST['phoneNumber'];
-	$candidate->obj['address1'] = $_POST['address1'];
+	$candidate->obj['address1'] = htmlspecialchars($_POST['address1'], ENT_QUOTES);
 	$candidate->obj['city'] = $_POST['city'];
 	$candidate->obj['state'] = $_POST['state'];
 	$candidate->obj['zipCode'] = $_POST['zipCode'];
-	$candidate->obj['keySkills'] = $_POST['keySkills'];
-	$candidate->obj['coverLetter'] = $_POST['coverLetter'];
+	$candidate->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
+	$candidate->obj['coverLetter'] = htmlspecialchars($_POST['coverLetter'], ENT_QUOTES);
 	$candidate->update("Id=$Id");
 
 	header('Location: index.php?view=candidatesDetail&Id='.$Id.'&success=You have updated the information.');
@@ -354,7 +354,7 @@ function assignCandidate()
 
 function addCountry(){
 	$country = country_option();
-	$country->obj['country'] = $_POST['country'];
+	$country->obj['country'] = htmlspecialchars($_POST['country'], ENT_QUOTES);
 	$country->create();
 
 	header('Location: ../admin/?view=countries&message=You have successfully added a country.');
@@ -363,7 +363,7 @@ function addCountry(){
 function addCity(){
 	$city = city_option();
 	$city->obj['countryId'] = $_POST['countryId'];
-	$city->obj['city'] = $_POST['city'];
+	$city->obj['city'] = htmlspecialchars($_POST['city'], ENT_QUOTES);
 	$city->create();
 
 	header('Location: ../admin/?view=cities&message=You have successfully added a city.');
@@ -378,9 +378,9 @@ function addAccount()
 	if($checkUser != 1){
 		if($level == 'hr'){
 			$admin = admin();
-			$admin->obj['firstName'] = $_POST['firstName'];
-			$admin->obj['lastName'] = $_POST['lastName'];
-			$admin->obj['username'] = $_POST['username'];
+			$admin->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+			$admin->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
+			$admin->obj['username'] = htmlspecialchars($_POST['username'], ENT_QUOTES);
 			$admin->obj['password'] = sha1('temppassword');
 			$admin->obj['level'] = $_POST['level'];
 			$admin->obj['jobFunctionId'] = $_POST['jobFunctionId'];
@@ -388,9 +388,9 @@ function addAccount()
 			$admin->create();
 		}else{
 			$admin = admin();
-			$admin->obj['firstName'] = $_POST['firstName'];
-			$admin->obj['lastName'] = $_POST['lastName'];
-			$admin->obj['username'] = $_POST['username'];
+			$admin->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+			$admin->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
+			$admin->obj['username'] = htmlspecialchars($_POST['username'], ENT_QUOTES);
 			$admin->obj['password'] = sha1('temppassword');
 			$admin->obj['level'] = $_POST['level'];
 			$admin->obj['email'] = $_POST['email'];
@@ -405,8 +405,8 @@ function addAccount()
 function addFAQ()
 {
 	$faq = faq();
-	$faq->obj['question'] = $_POST['question'];
-	$faq->obj['answer'] = $_POST['answer'];
+	$faq->obj['question'] = htmlspecialchars($_POST['question'], ENT_QUOTES);
+	$faq->obj['answer'] = htmlspecialchars($_POST['answer'], ENT_QUOTES);
 	$faq->obj['level'] = $_POST['level'];
 	$faq->create();
 
@@ -419,8 +419,8 @@ function addProject()
 	if ($upload)
 	{
 		$projects = projects();
-		$projects->obj['title'] = $_POST['title'];
-		$projects->obj['content'] = $_POST['content'];
+		$projects->obj['title'] = htmlspecialchars($_POST['title'], ENT_QUOTES);
+		$projects->obj['content'] = htmlspecialchars($_POST['content'], ENT_QUOTES);
 		$projects->obj['uploadedImage'] = $upload;
 		$projects->obj['createDate'] = "NOW()";
 		$projects->create();
@@ -437,8 +437,8 @@ function addRemoteTeam()
 	if ($upload)
 	{
 		$remoteTeam = remote_team();
-		$remoteTeam->obj['title'] = $_POST['title'];
-		$remoteTeam->obj['content'] = $_POST['content'];
+		$remoteTeam->obj['title'] = htmlspecialchars($_POST['title'], ENT_QUOTES);
+		$remoteTeam->obj['content'] = htmlspecialchars($_POST['content'], ENT_QUOTES);
 		$remoteTeam->obj['uploadedImage'] = $upload;
 		$remoteTeam->obj['createDate'] = "NOW()";
 		$remoteTeam->create();
@@ -452,8 +452,8 @@ function addRemoteTeam()
 function addJobFunction()
 {
 	$jf = job_function();
-	$jf->obj['option'] = $_POST['option'];
-	$jf->obj['description'] = $_POST['description'];
+	$jf->obj['option'] = htmlspecialchars($_POST['option'], ENT_QUOTES);
+	$jf->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 	$jf->create();
 
 	header('Location: ../admin/?view=jobCategory&message=You have succesfully added a new Job Category.');
@@ -463,8 +463,8 @@ function updateJobFunction()
 {
 	$Id = $_POST['Id'];
 	$jf = job_function();
-	$jf->obj['option'] = $_POST['option'];
-	$jf->obj['description'] = $_POST['description'];
+	$jf->obj['option'] = htmlspecialchars($_POST['option'], ENT_QUOTES);
+	$jf->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 	$jf->update("Id='$Id'");
 
 	header('Location: ../admin/?view=jobCategory&message=You have succesfully added a new Job Category.');
@@ -474,9 +474,9 @@ function updateAccounts()
 {
 	$Id = $_POST['Id'];
 	$admin = admin();
-	$admin->obj['username'] = $_POST['username'];
-	$admin->obj['firstName'] = $_POST['firstName'];
-	$admin->obj['lastName'] = $_POST['lastName'];
+	$admin->obj['username'] = htmlspecialchars($_POST['username'], ENT_QUOTES);
+	$admin->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+	$admin->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
 	$admin->obj['level'] = $_POST['level'];
 	$admin->update("Id='$Id'");
 
@@ -487,7 +487,7 @@ function updateRequest()
 {
 	$Id = $_POST['Id'];
 	$job = job();
-	$job->obj['comment'] = $_POST['comment'];
+	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
 	$job->update("Id='$Id'");
 
 	header('Location: ../admin/?view=talentDetail&Id='. $Id . '&message=You have successfully updated a Request');
@@ -497,10 +497,10 @@ function updateServices()
 {
 	$Id = $_POST['Id'];
 	$jf = job_function();
-	$jf->obj['option'] = $_POST['option'];
-	$jf->obj['title'] = $_POST['title'];
-	$jf->obj['header'] = $_POST['header'];
-	$jf->obj['description'] = $_POST['description'];
+	$jf->obj['option'] = htmlspecialchars($_POST['option'], ENT_QUOTES);
+	$jf->obj['title'] = htmlspecialchars($_POST['title'], ENT_QUOTES);
+	$jf->obj['header'] = htmlspecialchars($_POST['header'], ENT_QUOTES);
+	$jf->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 	$jf->update("Id='$Id'");
 
 	header('Location: ../admin/?view=services&message=You have succesfully updated a Service.');
@@ -510,8 +510,8 @@ function updateFaq()
 {
 	$Id = $_POST['Id'];
 	$faq = faq();
-	$faq->obj['question'] = $_POST['question'];
-	$faq->obj['answer'] = $_POST['answer'];
+	$faq->obj['question'] = htmlspecialchars($_POST['question'], ENT_QUOTES);
+	$faq->obj['answer'] = htmlspecialchars($_POST['answer'], ENT_QUOTES);
 	$faq->obj['level'] = $_POST['level'];
 	$faq->update("Id='$Id'");
 
@@ -525,8 +525,8 @@ function updateProjects()
 	{
 		$Id = $_POST['Id'];
 		$projects = projects();
-		$projects->obj['title'] = $_POST['title'];
-		$projects->obj['content'] = $_POST['content'];
+		$projects->obj['title'] = htmlspecialchars($_POST['title'], ENT_QUOTES);
+		$projects->obj['content'] = htmlspecialchars($_POST['content'], ENT_QUOTES);
 		$projects->obj['uploadedImage'] = $upload;
 		$projects->update("Id='$Id'");
 
@@ -543,8 +543,8 @@ function updateRemoteTeam()
 	{
 		$Id = $_POST['Id'];
 		$remoteTeam = remote_team();
-		$remoteTeam->obj['title'] = $_POST['title'];
-		$remoteTeam->obj['content'] = $_POST['content'];
+		$remoteTeam->obj['title'] = htmlspecialchars($_POST['title'], ENT_QUOTES);
+		$remoteTeam->obj['content'] = htmlspecialchars($_POST['content'], ENT_QUOTES);
 		$remoteTeam->obj['uploadedImage'] = $upload;
 		$remoteTeam->update("Id='$Id'");
 
@@ -561,7 +561,7 @@ function updateDownloads()
 	{
 		$Id = $_POST['Id'];
 		$downloads = downloads();
-		$downloads->obj['fileName'] = $_POST['fileName'];
+		$downloads->obj['fileName'] =  htmlspecialchars($_POST['fileName'], ENT_QUOTES);
 		$downloads->obj['uploadedFile'] = $upload;
 		$downloads->update("Id='$Id'");
 
@@ -577,7 +577,7 @@ function addFileFunction(){
 		if ($upload)
 		{
 			$downloads = downloads();
-			$downloads->obj['fileName'] = $_POST["fileName"];
+			$downloads->obj['fileName'] = htmlspecialchars($_POST['fileName'], ENT_QUOTES);
 			$downloads->obj['uploadedFile'] = $upload;
 			$downloads->create();
 			header('Location: ../admin/?view=downloads&message=You have succesfully added a new file.');

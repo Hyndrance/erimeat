@@ -7,7 +7,7 @@
 
     <li>
         <a href="?view=clientList">
-            <i class="mdi mdi-account-plus"></i><span>Clients</span>
+            <i class="mdi mdi-tie"></i><span>Clients</span>
         </a>
     </li>
 

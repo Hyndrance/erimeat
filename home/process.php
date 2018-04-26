@@ -39,8 +39,13 @@ function create()
 
 	$job = job();
 	$job->obj = $_POST;
-	
+	$job->obj['position'] = htmlspecialchars($_POST['position'], ENT_QUOTES);
 	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
+	$job->obj['contactName'] = htmlspecialchars($_POST['contactName'], ENT_QUOTES);
+	$job->obj['company'] = htmlspecialchars($_POST['company'], ENT_QUOTES);
+	$job->obj['jobTitle'] = htmlspecialchars($_POST['jobTitle'], ENT_QUOTES);
+	$job->obj['address'] = htmlspecialchars($_POST['address'], ENT_QUOTES);
+	$job->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
 	$job->obj['refNum'] = strtoupper($refNum);
 	$job->obj['createDate'] = "NOW()";
 	$job->create();
@@ -79,6 +84,10 @@ function clientRequest()
 		$comp = company();
 		$comp->obj = $_POST;
 		$comp->obj['refNum'] = strtoupper($refNum);
+		$comp->obj['department'] = htmlspecialchars($_POST['department'], ENT_QUOTES);
+		$comp->obj['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES);
+		$comp->obj['contactPerson'] = htmlspecialchars($_POST['contactPerson'], ENT_QUOTES);
+		$comp->obj['address'] = htmlspecialchars($_POST['address'], ENT_QUOTES);
 		$comp->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 		$comp->obj['isApproved '] = "1";
 		$comp->create();
@@ -158,7 +167,13 @@ function submitResume(){
 		{
 			$can = candidate();
 			$can->obj = $_POST;
+			$can->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+			$can->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
+			$can->obj['address1'] = htmlspecialchars($_POST['address1'], ENT_QUOTES);
+			$can->obj['address2'] = htmlspecialchars($_POST['address2'], ENT_QUOTES);
+			$can->obj['speedtest'] = htmlspecialchars($_POST['speedtest'], ENT_QUOTES);
 			$can->obj['coverLetter'] = htmlspecialchars($_POST['coverLetter'], ENT_QUOTES);
+			$can->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
 			$can->obj['refNum'] = strtoupper($refNum);
 			$can->obj['uploadedResume'] = $uploadFile;
 			$can->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";
@@ -221,21 +236,21 @@ function submitApplication()
 			$app->obj['jobId'] = $_POST["jobId"];
 			$app->obj['jobFunctionId'] = $_POST["jobFunctionId"];
 			$app->obj['refNum'] = strtoupper($refNum);
-			$app->obj['firstName'] = $_POST["firstName"];
-			$app->obj['lastName']= $_POST["lastName"];
+			$app->obj['firstName'] = htmlspecialchars($_POST["firstName"], ENT_QUOTES);
+			$app->obj['lastName']= htmlspecialchars($_POST["lastName"], ENT_QUOTES);
 			$app->obj['birthdate'] = $_POST["birthdate"];
 			$app->obj['abn'] = $_POST["abn"];
 			$app->obj['taxNumber'] = $_POST["taxNumber"];
 			$app->obj['email'] = $_POST["email"];
 			$app->obj['phoneNumber'] = $_POST["phoneNumber"];
-			$app->obj['address1'] = $_POST["address1"];
-			$app->obj['address2'] = $_POST["address2"];
+			$app->obj['address1'] = htmlspecialchars($_POST["address1"], ENT_QUOTES);
+			$app->obj['address2'] = htmlspecialchars($_POST["address2"], ENT_QUOTES);
 			$app->obj['city'] = $_POST["city"];
 			$app->obj['state'] = $_POST["state"];
 			$app->obj['zipCode'] = $_POST["zipCode"];
-			$app->obj['speedtest'] = $_POST["speedtest"];
-			$app->obj['coverLetter'] = $_POST["coverLetter"];
-			$app->obj['keySkills'] = $_POST["keySkills"];
+			$app->obj['speedtest'] = htmlspecialchars($_POST["speedtest"], ENT_QUOTES);
+			$app->obj['coverLetter'] = htmlspecialchars($_POST["coverLetter"], ENT_QUOTES);
+			$app->obj['keySkills'] = htmlspecialchars($_POST["keySkills"], ENT_QUOTES);
 			$app->obj['uploadedResume'] = $uploadFile;
 			$app->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";
 			$app->create();
@@ -293,13 +308,13 @@ function sendInquiry()
 		$email = $_POST['workEmail'];
 
 		$inq = inquiries();
-		$inq->obj['firstName'] = $_POST["firstName"];
-		$inq->obj['lastName'] = $_POST["lastName"];
+		$inq->obj['firstName'] = htmlspecialchars($_POST["firstName"], ENT_QUOTES);
+		$inq->obj['lastName'] = htmlspecialchars($_POST["lastName"], ENT_QUOTES);
 		$inq->obj['phoneNumber'] = $_POST["phoneNumber"];
 		$inq->obj['jobFunctionId'] = $_POST["jobFunctionId"];
 		$inq->obj['workEmail'] = $_POST["workEmail"];
 		$inq->obj['zipCode'] =  $_POST["zipCode"];
-		$inq->obj['message'] 	 = $message;
+		$inq->obj['message'] 	 = htmlspecialchars($message, ENT_QUOTES);
 		$inq->create();
 
 		$content = "From: $email<br><br>
