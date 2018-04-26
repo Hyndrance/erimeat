@@ -190,7 +190,7 @@ function updateInformation()
 	$job->obj['empLocation'] = $_POST['empLocation'];
 	$job->obj['abn'] = $_POST['abn'];
 	$job->obj['zipCode'] = $_POST['zipCode'];
-	$job->obj['rate'] = $_POST['rate'];
+	$job->obj['rate'] = htmlspecialchars($_POST['rate'], ENT_QUOTES);
 	$job->obj['address'] =  htmlspecialchars($_POST['address'], ENT_QUOTES);
 	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
 	$job->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
@@ -208,7 +208,7 @@ function updateClientInfo()
 	$company->obj['abn'] = $_POST['abn'];
 	$company->obj['department'] = htmlspecialchars($_POST['department'], ENT_QUOTES);
 	$company->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$company->obj['contactPerson'] = $_POST['contactPerson'];
+	$company->obj['contactPerson'] = htmlspecialchars($_POST['contactPerson'], ENT_QUOTES);
 	$company->obj['email'] = $_POST['email'];
 	$company->obj['phoneNumber'] = $_POST['phoneNumber'];
 	$company->obj['mobileNumber'] = $_POST['mobileNumber'];
@@ -354,7 +354,7 @@ function assignCandidate()
 
 function addCountry(){
 	$country = country_option();
-	$country->obj['country'] = $_POST['country'];
+	$country->obj['country'] = htmlspecialchars($_POST['country'], ENT_QUOTES);
 	$country->create();
 
 	header('Location: ../admin/?view=countries&message=You have successfully added a country.');
@@ -363,7 +363,7 @@ function addCountry(){
 function addCity(){
 	$city = city_option();
 	$city->obj['countryId'] = $_POST['countryId'];
-	$city->obj['city'] = $_POST['city'];
+	$city->obj['city'] = htmlspecialchars($_POST['city'], ENT_QUOTES);
 	$city->create();
 
 	header('Location: ../admin/?view=cities&message=You have successfully added a city.');
@@ -378,9 +378,9 @@ function addAccount()
 	if($checkUser != 1){
 		if($level == 'hr'){
 			$admin = admin();
-			$admin->obj['firstName'] = $_POST['firstName'];
-			$admin->obj['lastName'] = $_POST['lastName'];
-			$admin->obj['username'] = $_POST['username'];
+			$admin->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+			$admin->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
+			$admin->obj['username'] = htmlspecialchars($_POST['username'], ENT_QUOTES);
 			$admin->obj['password'] = sha1('temppassword');
 			$admin->obj['level'] = $_POST['level'];
 			$admin->obj['jobFunctionId'] = $_POST['jobFunctionId'];
@@ -388,9 +388,9 @@ function addAccount()
 			$admin->create();
 		}else{
 			$admin = admin();
-			$admin->obj['firstName'] = $_POST['firstName'];
-			$admin->obj['lastName'] = $_POST['lastName'];
-			$admin->obj['username'] = $_POST['username'];
+			$admin->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+			$admin->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
+			$admin->obj['username'] = htmlspecialchars($_POST['username'], ENT_QUOTES);
 			$admin->obj['password'] = sha1('temppassword');
 			$admin->obj['level'] = $_POST['level'];
 			$admin->obj['email'] = $_POST['email'];
@@ -474,9 +474,9 @@ function updateAccounts()
 {
 	$Id = $_POST['Id'];
 	$admin = admin();
-	$admin->obj['username'] = $_POST['username'];
-	$admin->obj['firstName'] = $_POST['firstName'];
-	$admin->obj['lastName'] = $_POST['lastName'];
+	$admin->obj['username'] = htmlspecialchars($_POST['username'], ENT_QUOTES);
+	$admin->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+	$admin->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
 	$admin->obj['level'] = $_POST['level'];
 	$admin->update("Id='$Id'");
 
