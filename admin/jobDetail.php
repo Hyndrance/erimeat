@@ -244,7 +244,7 @@ function formatDate($val){
                   <div class="form-group">
                       <label>Hiring Needs</label>
                       <div>
-                          <textarea required="" name="comment" class="form-control"><?=$job->comment;?></textarea>
+                          <textarea name="comment" class="summernote" required=""><?=$job->comment;?></textarea>
                       </div>
                   </div>
 

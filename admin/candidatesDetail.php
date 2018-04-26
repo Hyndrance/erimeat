@@ -71,24 +71,24 @@ function getCity($Id){
       </p>
       <p><label class="m-r-5">Key Skills :</label><?=$candidate->keySkills;?></p>
       <hr>
-      <div class="col-12 text-center">
-        <div class="col-lg-6">
+      <div class="col-12 row">
+        <div class="col-lg-6 row">
           <p><label class="m-r-5"><strong>Computer Specification :</label><br>
             <?php if($candidate->uploadedSpecs){?>
               <a href="../media/<?=$candidate->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a>
             <?php } ?>
           </p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 row">
           <p><label class="m-r-5"><strong>Resume :</label><br><a href="../media/<?=$candidate->uploadedResume;?>" target="blank_">Click to view Resume</a></p>
         </div>
       </div>
 
-      <div class="col-12 text-center">
-        <div class="col-lg-6">
+      <div class="col-12 row">
+        <div class="col-lg-6 row">
           <p><label class="m-r-5">Cover Letter :</label><br><?=$candidate->coverLetter;?></p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 row">
             <p><label class="m-r-5"><strong>Other Certificates :</label><br>
               <?php foreach($certList as $row){ ?>
                 <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view other certificates</a><br>
@@ -254,7 +254,7 @@ function getCity($Id){
                   <div class="p-r-10 w-50-p pull-left">
                     <div class="form-group">
                       <label for="username">City</label>
-                      <select class="form-control select2" name="city">
+                      <select class="form-control" name="city">
                           <option value="<?=$candidate->city;?>"><?=getCity($candidate->city);?></option>
                           <?php foreach(country_option()->list() as $country){ ?>
                           <optgroup label="<?=$country->country;?>">
@@ -290,7 +290,7 @@ function getCity($Id){
                   <div class="form-group">
                       <label>Cover Letter</label>
                       <div>
-                          <textarea name="coverLetter" class="form-control" required><?=$candidate->coverLetter;?></textarea>
+                          <textarea name="coverLetter" class="summernote" required><?=$candidate->coverLetter;?></textarea>
                       </div>
                   </div>
 
