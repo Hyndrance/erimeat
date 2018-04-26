@@ -41,13 +41,13 @@ function getCity($Id){
         <ul class="nav nav-tabs navtab-bg nav-justified">
             <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
                 <a href="#home1" data-toggle="tab" aria-expanded="false">
-                    <span class="visible-xs"><i class="fa fa-home"></i></span>
+                    <span class="visible-xs"><i class="mdi mdi-account-star"></i></span>
                     <span class="hidden-xs text-blue">Skills</span>
                 </a>
             </li>
             <li style="background-color: #f2f2f2; border-radius:5px;">
                 <a href="#profile1" data-toggle="tab" aria-expanded="true">
-                    <span class="visible-xs"><i class="fa fa-user"></i></span>
+                    <span class="visible-xs"><i class="mdi mdi-comment-text"></i></span>
                     <span class="hidden-xs text-blue">Description</span>
                 </a>
             </li>
