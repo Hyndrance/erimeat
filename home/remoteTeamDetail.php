@@ -7,7 +7,7 @@ $remoteTeam = remote_team()->get("Id='$Id'");
   <p>Remote Team Graphs
   </p>
 <?php }else{?>
-  <img class="pull-right" src="../media/<?=$remoteTeam->uploadedImage;?>">
+  <img class="pull-right" width="30%" height="30%" src="../media/<?=$remoteTeam->uploadedImage;?>">
   <h3 class="text-blue"><?=$remoteTeam->title;?></h3>
 
   <p><?=$remoteTeam->content;?></p>

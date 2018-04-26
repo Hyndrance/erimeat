@@ -179,13 +179,13 @@ function getPositionName($Id){
                                    <ul class="nav nav-tabs navtab-bg nav-justified" style="padding-top: 450px;">
                                        <li class="active" style="background-color:#f2f2f2; border-radius: 5px; color: #fff;">
                                            <a href="#home1" data-toggle="tab" aria-expanded="false">
-                                               <span class="visible-xs"><i class="fa fa-home"></i></span>
+                                               <span class="visible-xs"><i class="mdi mdi-format-list-bulleted-type"></i></span>
                                                <span class="hidden-xs text-blue">Four Simple Steps to Hire</span>
                                            </a>
                                        </li>
                                        <li class="" style="background-color: #f2f2f2; border-radius:5px;">
                                            <a href="#profile1" data-toggle="tab" aria-expanded="true">
-                                               <span class="visible-xs"><i class="fa fa-user"></i></span>
+                                               <span class="visible-xs"><i class="mdi mdi-account-search"></i></span>
                                                <span class="hidden-xs text-blue">How We Help You Find a Job</span>
                                            </a>
                                        </li>
