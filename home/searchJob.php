@@ -110,7 +110,7 @@ function formatDate($val){
 
         <div class="col-lg-8 job-list-desc m-b-10">
           <div class="truncate">
-            <p><?=$row->comment;?></p>
+            <p><?=nl2br($row->comment);?></p>
           </div>
           <br>
           <span>

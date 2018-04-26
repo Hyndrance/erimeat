@@ -60,7 +60,7 @@ function getCity($Id){
             </div>
 
             <div class="tab-pane" id="profile1" style="padding: 10px;">
-              <?=$candidate->coverLetter;?>
+              <?=nl2br($candidate->coverLetter);?>
             </div>
 
         </div>

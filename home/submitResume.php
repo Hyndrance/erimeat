@@ -164,7 +164,7 @@ $ptList = position_type()->list();
                           </div>
 
                         <div class="form-group">
-                        <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx, .txt" required></div>
+                        <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx" required></div>
                      </div>
                     </div>
                   </div>

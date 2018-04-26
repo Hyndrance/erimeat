@@ -62,7 +62,7 @@ $jobFunc = job_function()->list("code!='0' and isDeleted='0'");
         <h4 class="modal-title" id="myModalLabel">Update Services</h4>
       </div>
       <div class="modal-body">
-        <form id="default-wizard" action="process.php?action=updateServices" method="POST">
+        <form id="default-wizard" action="process_test.php?action=updateServices" method="POST">
           <p class="m-b-0">
             <?=$error?>
           </p>
