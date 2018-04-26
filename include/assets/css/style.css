@@ -4970,21 +4970,6 @@ h3.timeline-title {
     left: 0;
     right: 0; }
 
-@media (max-width:400px){
-  .account-box {
-    position: relative;
-    max-width: 355px;
-    margin-left: 10px;
-    background-color: #ffffff;
-    border-radius: 5px; }
-    .account-box .account-content {
-      padding: 10px; }
-    .account-box .account-btn {
-      position: absolute;
-      left: 0;
-      right: 0; }
-}
-
 .account-logo-box {
   padding: 30px 30px 0 30px; }
 
@@ -4998,15 +4983,6 @@ h3.timeline-title {
   height: 300px;
   position: absolute;
   margin-top: 10%; }
-
-@media (max-width: 400px){
-  .login-left-box {
-    width: 500px;
-    height: 300px;
-    position: absolute;
-    margin-top: 30%; }
-
-}
 
 .login-label {
   line-height: 30px;
@@ -5631,14 +5607,6 @@ ul.sitemap-icon ul li a {
     background-color: #eeeeee;
     padding: 30px; }
 
-/** Grey Form Panel **/
-  @media (max-width: 400px){
-    .form-container{
-      background-color: #eeeeee;
-      padding: 30px;
-      height: 600px;}
-  }
-
   .contact-form-container{
     background-color: #eeeeee;
     padding: 30px; }
@@ -5675,22 +5643,6 @@ ul.sitemap-icon ul li a {
     background-color: #ffffff;
     color: #ffffff;
     border-top:1px solid #ffffff; }
-
-  .services-panel {
-    width: 330px;
-    margin: 10px;
-    font-size: 16px;
-    background-color: #f7f7f7; }
-
-@media (max-width: 400px){
-  .services-panel {
-    width: 270px;
-    margin: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    background-color: #f7f7f7; }
-
-}
 
   /** Job List **/
   .job-list-row {
@@ -6026,6 +5978,31 @@ ul.sitemap-icon ul li a {
         .wizard-content-mobile{
           height: 350px !important;
         }
+
+        .form-container{
+          background-color: #eeeeee;
+          padding: 30px;
+          min-height: 600px !important; }
+
+        .login-left-box {
+          width: 90% !important;
+          height: 300px;
+          position: absolute;
+          margin-top: 20%; }
+
+        .account-box {
+          position: relative;
+          max-width: 355px;
+          margin-left: 10px;
+          background-color: #ffffff;
+          border-radius: 5px; }
+          .account-box .account-content {
+            padding: 10px; }
+          .account-box .account-btn {
+            position: absolute;
+            left: 0;
+            right: 0; }
+
       }
 
       .wizard-content-mobile{
