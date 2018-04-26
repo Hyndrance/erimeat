@@ -24,12 +24,32 @@
 <script src="../include/plugins/datatables/dataTables.colVis.js"></script>
 <script src="../include/plugins/datatables/dataTables.fixedColumns.min.js"></script>
 
+
+<script src="../include/plugins/summernote/summernote.min.js"></script>
+
 <!-- Jquery-Ui -->
 <script src="../include/plugins/jquery-ui/jquery-ui.min.js"></script>
  <!-- page specific js -->
 <script src="../include/assets/pages/jquery.fileuploads.init.js"></script>
 
 <script src="../include/assets/pages/jquery.datatables.init.js"></script>
+
+<script>
+    jQuery(document).ready(function(){
+
+        $('.summernote').summernote({
+            height: 350,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: false                 // set focus to editable area after initializing summernote
+        });
+
+        $('.inline-editor').summernote({
+            airMode: true
+        });
+
+    });
+</script>
 
 <script type="text/javascript">
             $(document).ready(function () {

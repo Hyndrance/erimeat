@@ -24,6 +24,7 @@
 <link href="../include/plugins/datatables/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="../include/plugins/datatables/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css"/>
 <link href="../include/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet" />
+<link href="../include/plugins/summernote/summernote.css" rel="stylesheet" />
 
 
 

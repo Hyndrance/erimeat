@@ -39,6 +39,12 @@ function create()
 
 	$job = job();
 	$job->obj = $_POST;
+
+	$comment = $_POST['comment'];;
+	$comment = preg_replace("/[b\]","<b>", $comment);
+	$comment = preg_replace("/[/b\]","</b>", $comment);
+
+	$job->obj['comment'] = $comment;
 	$job->obj['refNum'] = strtoupper($refNum);
 	$job->obj['createDate'] = "NOW()";
 	$job->create();
