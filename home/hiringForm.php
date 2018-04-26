@@ -180,7 +180,7 @@ $ptList = position_type()->list();
                               <div class="form-group">
                                   <label for="username">Tell us your hiring needs</label>
 
-                                    <textarea id="message" class="form-group" name="comment"
+                                    <textarea id="message" class="form-control" name="comment"
                                                       data-parsley-trigger="keyup" data-parsley-minlength="20"
                                                       data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
                                                       data-parsley-validation-threshold="10"></textarea>
@@ -194,6 +194,7 @@ $ptList = position_type()->list();
                       <p style="color: #000000;">Or call us at <strong class="text-blue">+61 452 364 793</strong></p>
                   </div>
             </form>
+
           </div>
     </div>
 </div>
