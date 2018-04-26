@@ -74,7 +74,7 @@ $countryList = country_option()->list();
             <div class="col-sm-12">
               <div class="form-group">
                 <label>Country</label>
-                <input type="text" class="form-control" name="country" placeholder="">
+                <input type="text" class="form-control" name="country" required="">
               </div>
             </div>
           </div>

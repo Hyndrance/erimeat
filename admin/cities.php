@@ -81,9 +81,9 @@ function getCountry($Id){
             <div class="col-sm-12">
 
               <div class="form-group">
-                <label>Level</label>
-                <select class="form-control select2" name="countryId">
-                  <option>Select Country</option>
+                <label>Country</label>
+                <select class="form-control select2" name="countryId" required="">
+                  <option selected disabled>Select Country</option>
                   <?php
                     foreach($countryList as $row) {
                   ?>
@@ -94,7 +94,7 @@ function getCountry($Id){
 
               <div class="form-group">
                 <label>City</label>
-                <input type="text" class="form-control" name="city" placeholder="">
+                <input type="text" class="form-control" name="city" required="">
               </div>
             </div>
           </div>

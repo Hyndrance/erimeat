@@ -15,8 +15,8 @@ switch ($action) {
 
 function addJobFunction()
 {
-	$option = $_POST["option"];
-	$desc = $_POST["description"];
+	$option = htmlspecialchars($_POST["option"], ENT_QUOTES);
+	$desc = htmlspecialchars($_POST["description"], ENT_QUOTES);
 
 	$db = Database::connect();
 	$pdo = $db->prepare("INSERT INTO job_function (`option`, `description`) VALUES (?, ?)");
