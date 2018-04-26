@@ -90,7 +90,7 @@ function formatDate($val){
     <div class="clearfix"></div>
     <hr>
     <h3>Hiring Needs</h3>
-    <?=$job->comment;?>
+    <?=nl2br($job->comment);?>
     <hr>
 
         <!--  This button only shows if job is approved -->
@@ -251,7 +251,7 @@ function formatDate($val){
                   <div class="form-group">
                       <label>Hiring Needs</label>
                       <div>
-                          <textarea name="comment" class="summernote" required=""><?=$job->comment;?></textarea>
+                          <textarea name="comment" class="form-control" required=""><?=$job->comment;?></textarea>
                       </div>
                   </div>
 

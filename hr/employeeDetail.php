@@ -72,15 +72,15 @@ function getCity($Id){
       </p>
       <p><label class="m-r-5">Key Skills :</label><?=$application->keySkills;?></p>
       <hr>
-      <div class="col-12 text-center">
-        <div class="col-lg-6">
+      <div class="col-12 row">
+        <div class="col-lg-6 row">
           <p><label class="m-r-5"><strong>Computer Specification :</label><br>
             <?php if($application->uploadedSpecs) { ?>
               <a href="../media/<?=$application->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a>
             <?php } ?>
           </p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 row">
           <p><label class="m-r-5"><strong>Resume :</label><br>
             <?php if($application->uploadedResume) {?>
               <a href="../media/<?=$application->uploadedResume;?>" target="blank_">Click to view Resume</a>
@@ -88,11 +88,11 @@ function getCity($Id){
         </div>
       </div>
 
-      <div class="col-12 text-center">
-        <div class="col-lg-6">
-          <p><label class="m-r-5">Cover Letter :</label><br><?=$application->coverLetter;?></p>
+      <div class="col-12 row">
+        <div class="col-lg-6 row">
+          <p><label class="m-r-5">Cover Letter :</label><br><?=nl2br($application->coverLetter);?></p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 row">
             <p><label class="m-r-5"><strong>Other Certificates :</label><br>
               <?php foreach($certList as $row){ ?>
                 <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view other certificates</a><br>
@@ -187,7 +187,7 @@ function getCity($Id){
                   <div class="p-r-10 w-50-p pull-left">
                     <div class="form-group">
                       <label for="username">City</label>
-                      <select class="form-control select2" name="city">
+                      <select class="form-control" name="city">
                           <option value="<?=$application->city;?>"><?=getCity($application->city);?></option>
                           <?php foreach(country_option()->list() as $country){ ?>
                           <optgroup label="<?=$country->country;?>">

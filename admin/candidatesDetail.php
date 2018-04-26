@@ -86,7 +86,7 @@ function getCity($Id){
 
       <div class="col-12 row">
         <div class="col-lg-6 row">
-          <p><label class="m-r-5">Cover Letter :</label><br><?=$candidate->coverLetter;?></p>
+          <p><label class="m-r-5">Cover Letter :</label><br><?=nl2br($candidate->coverLetter);?></p>
         </div>
         <div class="col-lg-6 row">
             <p><label class="m-r-5"><strong>Other Certificates :</label><br>
@@ -290,7 +290,7 @@ function getCity($Id){
                   <div class="form-group">
                       <label>Cover Letter</label>
                       <div>
-                          <textarea name="coverLetter" class="summernote" required><?=$candidate->coverLetter;?></textarea>
+                          <textarea name="coverLetter" class="form-control" required><?=$candidate->coverLetter;?></textarea>
                       </div>
                   </div>
 

@@ -52,7 +52,7 @@ function getJobFunction($Id){
     </div>
     <div class="clearfix"></div>
     <hr>
-    <?=$company->description;?>
+    <?=nl2br($company->description);?>
               <!-- // foreach ($company as $key => $value) {
               //   echo $key . ": " . $value . "<br>";
               // } -->
@@ -159,7 +159,7 @@ function getJobFunction($Id){
                   <div class="form-group">
                       <label>Company Description</label>
                       <div>
-                          <textarea name="description" class="summernote" required=""><?=$company->description;?></textarea>
+                          <textarea name="description" class="form-control" required=""><?=$company->description;?></textarea>
                       </div>
                   </div>
 

@@ -171,6 +171,10 @@ switch ($action) {
 		logout();
 		break;
 
+	case 'updateEmployeeInfo' :
+		updateEmployeeInfo();
+		break;
+
 	default :
 }
 
@@ -239,6 +243,30 @@ function updateCandidateInfo()
 	$candidate->update("Id=$Id");
 
 	header('Location: index.php?view=candidatesDetail&Id='.$Id.'&success=You have updated the information.');
+}
+
+function updateEmployeeInfo()
+{
+	$username = $_GET['username'];
+	$Id = $_GET['Id'];
+
+	$application = application();
+	$application->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+	$application->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
+	$application->obj['jobFunctionId'] = $_POST['jobFunctionId'];
+	$application->obj['abn'] = $_POST['abn'];
+	$application->obj['taxNumber'] = $_POST['taxNumber'];
+	$application->obj['email'] = $_POST['email'];
+	$application->obj['phoneNumber'] = $_POST['phoneNumber'];
+	$application->obj['address1'] = htmlspecialchars($_POST['address1'], ENT_QUOTES);
+	$application->obj['city'] = $_POST['city'];
+	$application->obj['state'] = $_POST['state'];
+	$application->obj['zipCode'] = $_POST['zipCode'];
+	$application->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
+	$application->obj['coverLetter'] = htmlspecialchars($_POST['coverLetter'], ENT_QUOTES);
+	$application->update("Id=$Id");
+
+	header('Location: index.php?view=employeeDetail&username='.$username.'&success=You have updated the information.');
 }
 
 function deleteJob()

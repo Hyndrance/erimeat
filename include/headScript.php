@@ -25,9 +25,6 @@
 <link href="../include/plugins/datatables/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css"/>
 <link href="../include/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet" />
 
-<!--Summernote-->
-<link href="../include/plugins/summernote/summernote.css" rel="stylesheet" />
-
      <!-- Plugins css-->
 <link href="../include/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
 <link href="../include/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />

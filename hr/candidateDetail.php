@@ -85,7 +85,7 @@ function getCity($Id){
                   </p>
                   <br>
                   <p class="text-muted font-13"><strong>Cover Letter :</strong>
-                    <span class="m-l-15"><?=$candidate->coverLetter;?></span>
+                    <span class="m-l-15"><?=nl2br($candidate->coverLetter);?></span>
                   </p>
                   <br><br>
                   <p class="text-muted font-13"><strong>Computer Specification :</strong>
@@ -288,7 +288,7 @@ function getCity($Id){
                     <div class="form-group">
                         <label>Cover Letter</label>
                         <div>
-                            <textarea name="coverLetter" class="summernote" required><?=$candidate->coverLetter;?></textarea>
+                            <textarea name="coverLetter" class="form-control" required><?=$candidate->coverLetter;?></textarea>
                         </div>
                     </div>
 
