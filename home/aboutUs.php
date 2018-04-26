@@ -10,7 +10,7 @@ function getPositionName($Id){
 <div class="m-b-30" style="position:relative;">
   <img src="../include/assets/images/teamire-aboutus-img.png" style="width: 100%;">
   <div class="homepage-top-text text-center m-t-50 container-fluid">
-    <h2 class="text-white">About Teamire</h2>
+    <h2 class="text-white services-mobile">About Teamire</h2>
   </div>
 </div>
 <div class="container-fluid m-b-30">
