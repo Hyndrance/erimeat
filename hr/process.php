@@ -156,7 +156,7 @@ function updateRequest()
 {
 	$Id = $_POST['Id'];
 	$job = job();
-	$job->obj['comment'] = $_POST['comment'];
+	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
 	$job->update("Id='$Id'");
 
 	header('Location: ../hr/?view=jobDetail&Id='. $Id . '&message=You have successfully updated a Request');
@@ -434,7 +434,7 @@ function updateInformation()
 	$job->obj['empLocation'] = $_POST['empLocation'];
 	$job->obj['abn'] = $_POST['abn'];
 	$job->obj['zipCode'] = $_POST['zipCode'];
-	$job->obj['rate'] = $_POST['rate'];
+	$job->obj['rate'] = htmlspecialchars($_POST['rate'], ENT_QUOTES);
 	$job->obj['address'] =  htmlspecialchars($_POST['address'], ENT_QUOTES);
 	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
 	$job->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
@@ -452,7 +452,7 @@ function updateClientInfo()
 	$company->obj['abn'] = $_POST['abn'];
 	$company->obj['department'] = htmlspecialchars($_POST['department'], ENT_QUOTES);
 	$company->obj['jobFunctionId'] = $_POST['jobFunctionId'];
-	$company->obj['contactPerson'] = $_POST['contactPerson'];
+	$company->obj['contactPerson'] = htmlspecialchars($_POST['contactPerson'], ENT_QUOTES);
 	$company->obj['email'] = $_POST['email'];
 	$company->obj['phoneNumber'] = $_POST['phoneNumber'];
 	$company->obj['mobileNumber'] = $_POST['mobileNumber'];
