@@ -52,7 +52,7 @@ function formatDate($val){
     <hr>
     <!-- Job Information -->
     <div class="row clearfix">
-      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Salary</p>
+      <p class="col-lg-3 col-6 col-md-4 text-bold m-b-20">Salary:</p>
       <p class="col-lg-9 col-md-8 col-6"><?=$job->rate;?></p>
     </div>
     <div class="row clearfix">

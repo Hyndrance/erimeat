@@ -252,7 +252,7 @@ function getCity($Id){
                     <div class="p-r-10 w-50-p pull-left">
                       <div class="form-group">
                         <label for="username">City</label>
-                        <select class="form-control select2" name="city">
+                        <select class="form-control" name="city">
                             <option value="<?=$candidate->city;?>"><?=getCity($candidate->city);?></option>
                             <?php foreach(country_option()->list() as $country){ ?>
                             <optgroup label="<?=$country->country;?>">
@@ -288,7 +288,7 @@ function getCity($Id){
                     <div class="form-group">
                         <label>Cover Letter</label>
                         <div>
-                            <textarea name="coverLetter" class="form-control" required><?=$candidate->coverLetter;?></textarea>
+                            <textarea name="coverLetter" class="summernote" required><?=$candidate->coverLetter;?></textarea>
                         </div>
                     </div>
 

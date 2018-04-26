@@ -39,6 +39,8 @@ function create()
 
 	$job = job();
 	$job->obj = $_POST;
+	
+	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
 	$job->obj['refNum'] = strtoupper($refNum);
 	$job->obj['createDate'] = "NOW()";
 	$job->create();
@@ -77,6 +79,7 @@ function clientRequest()
 		$comp = company();
 		$comp->obj = $_POST;
 		$comp->obj['refNum'] = strtoupper($refNum);
+		$comp->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 		$comp->obj['isApproved '] = "1";
 		$comp->create();
 
@@ -155,6 +158,7 @@ function submitResume(){
 		{
 			$can = candidate();
 			$can->obj = $_POST;
+			$can->obj['coverLetter'] = htmlspecialchars($_POST['coverLetter'], ENT_QUOTES);
 			$can->obj['refNum'] = strtoupper($refNum);
 			$can->obj['uploadedResume'] = $uploadFile;
 			$can->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";

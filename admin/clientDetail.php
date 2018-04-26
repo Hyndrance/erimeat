@@ -159,7 +159,7 @@ function getJobFunction($Id){
                   <div class="form-group">
                       <label>Company Description</label>
                       <div>
-                          <textarea required="" name="description" class="form-control"><?=$company->description;?></textarea>
+                          <textarea name="description" class="summernote" required=""><?=$company->description;?></textarea>
                       </div>
                   </div>
 
