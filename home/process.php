@@ -39,8 +39,13 @@ function create()
 
 	$job = job();
 	$job->obj = $_POST;
-	
+	$job->obj['position'] = htmlspecialchars($_POST['position'], ENT_QUOTES);
 	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
+	$job->obj['contactName'] = htmlspecialchars($_POST['contactName'], ENT_QUOTES);
+	$job->obj['company'] = htmlspecialchars($_POST['company'], ENT_QUOTES);
+	$job->obj['jobTitle'] = htmlspecialchars($_POST['jobTitle'], ENT_QUOTES);
+	$job->obj['address'] = htmlspecialchars($_POST['address'], ENT_QUOTES);
+	$job->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
 	$job->obj['refNum'] = strtoupper($refNum);
 	$job->obj['createDate'] = "NOW()";
 	$job->create();
@@ -79,6 +84,10 @@ function clientRequest()
 		$comp = company();
 		$comp->obj = $_POST;
 		$comp->obj['refNum'] = strtoupper($refNum);
+		$comp->obj['department'] = htmlspecialchars($_POST['department'], ENT_QUOTES);
+		$comp->obj['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES);
+		$comp->obj['contactPerson'] = htmlspecialchars($_POST['contactPerson'], ENT_QUOTES);
+		$comp->obj['address'] = htmlspecialchars($_POST['address'], ENT_QUOTES);
 		$comp->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
 		$comp->obj['isApproved '] = "1";
 		$comp->create();
@@ -158,7 +167,12 @@ function submitResume(){
 		{
 			$can = candidate();
 			$can->obj = $_POST;
+			$can->obj['firstName'] = htmlspecialchars($_POST['firstName'], ENT_QUOTES);
+			$can->obj['lastName'] = htmlspecialchars($_POST['lastName'], ENT_QUOTES);
+			$can->obj['address1'] = htmlspecialchars($_POST['address1'], ENT_QUOTES);
+			$can->obj['address2'] = htmlspecialchars($_POST['address2'], ENT_QUOTES)
 			$can->obj['coverLetter'] = htmlspecialchars($_POST['coverLetter'], ENT_QUOTES);
+			$can->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
 			$can->obj['refNum'] = strtoupper($refNum);
 			$can->obj['uploadedResume'] = $uploadFile;
 			$can->obj['uploadedSpecs'] = $_FILES["upload_specs"]['name'] ? uploadFile($_FILES["upload_specs"]) : "";
