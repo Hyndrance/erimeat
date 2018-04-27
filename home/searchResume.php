@@ -98,7 +98,9 @@ function getCity($Id){
       <i class="fa fa-globe"></i> <?=getCity($row->city);?>&nbsp;<?=$row->state;?>&nbsp;<?=$row->zipCode;?>
     </div>
 
-    <span ><?=$row->coverLetter;?></span>
+    <div class="truncate">
+      <span><?=$row->coverLetter;?></span>
+    </div>
   </div>
 </div>
 </li>

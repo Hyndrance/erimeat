@@ -24,7 +24,7 @@
 <script src="../include/plugins/datatables/dataTables.colVis.js"></script>
 <script src="../include/plugins/datatables/dataTables.fixedColumns.min.js"></script>
 
-
+<!--summernote-->
 <script src="../include/plugins/summernote/summernote.min.js"></script>
 
 <!-- Jquery-Ui -->
@@ -38,7 +38,7 @@
     jQuery(document).ready(function(){
 
         $('.summernote').summernote({
-            height: 350,                 // set editor height
+            height: 250,                 // set editor height
             minHeight: null,             // set minimum height of editor
             maxHeight: null,             // set maximum height of editor
             focus: false                 // set focus to editable area after initializing summernote

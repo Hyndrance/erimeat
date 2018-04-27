@@ -194,7 +194,7 @@ $ptList = position_type()->list();
                       <p style="color: #000000;">Or call us at <strong class="text-blue">+61 452 364 793</strong></p>
                   </div>
             </form>
-            
+
           </div>
     </div>
 </div>

@@ -109,7 +109,9 @@ function formatDate($val){
         </div>
 
         <div class="col-lg-8 job-list-desc m-b-10">
-          <p class="truncate"><?=$row->comment;?></p>
+          <div class="truncate">
+            <p><?=$row->comment;?></p>
+          </div>
           <br>
           <span>
             <a style="font-weight: 600;" class="job-list-link" href="?view=jobDetail&id=<?=$row->Id;?>">Read More &gt;</a>
