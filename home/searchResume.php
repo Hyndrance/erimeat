@@ -99,7 +99,7 @@ function getCity($Id){
     </div>
 
     <div class="truncate">
-      <span><?=$row->coverLetter;?></span>
+      <span><?=nl2br($row->coverLetter);?></span>
     </div>
   </div>
 </div>

@@ -75,10 +75,6 @@ switch ($action) {
 		updateRequest();
 		break;
 
-	case 'updateServices' :
-		updateServices();
-		break;
-
 	case 'updateFaq' :
 		updateFaq();
 		break;
@@ -519,19 +515,6 @@ function updateRequest()
 	$job->update("Id='$Id'");
 
 	header('Location: ../admin/?view=talentDetail&Id='. $Id . '&message=You have successfully updated a Request');
-}
-
-function updateServices()
-{
-	$Id = $_POST['Id'];
-	$jf = job_function();
-	$jf->obj['option'] = htmlspecialchars($_POST['option'], ENT_QUOTES);
-	$jf->obj['title'] = htmlspecialchars($_POST['title'], ENT_QUOTES);
-	$jf->obj['header'] = htmlspecialchars($_POST['header'], ENT_QUOTES);
-	$jf->obj['description'] = htmlspecialchars($_POST['description'], ENT_QUOTES);
-	$jf->update("Id='$Id'");
-
-	header('Location: ../admin/?view=services&message=You have succesfully updated a Service.');
 }
 
 function updateFaq()

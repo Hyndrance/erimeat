@@ -1,5 +1,5 @@
 <?php
-$faqList = faq()->list("level='employee'");
+$faqList = faq()->list("level='employee' and isDeleted=0");
 ?>
 <div style="position:relative;" class="container">
   <img style="position: absolute; top:0; width: 100%; z-index: -1;" src="../include/assets/images/our-services-bg.png">

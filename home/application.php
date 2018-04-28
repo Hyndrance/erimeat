@@ -29,7 +29,7 @@ $ptList = position_type()->list();
                               <div class="form-group">
                                   <label for="firstname">Job Category <span style="color: red;">*</span></label>
                                   <select class="form-control" name="jobFunctionId" required>
-                                    <option>Please Select</option>
+                                    <option selected disabled>Please Select</option>
                                     <?php foreach($jfList as $row) {?>
                                       <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                                     <?php } ?>
@@ -101,9 +101,9 @@ $ptList = position_type()->list();
                                 <label for="username">City</label>
                                 <select class="form-control select2" name="city">
                                     <option>Select City</option>
-                                    <?php foreach(country_option()->list() as $country){ ?>
+                                    <?php foreach(country_option()->list("isDeleted=0") as $country){ ?>
                                     <optgroup label="<?=$country->country;?>">
-                                        <?php foreach(city_option()->list("countryId=$country->Id") as $city){ ?>
+                                        <?php foreach(city_option()->list("countryId=$country->Id and isDeleted=0") as $city){ ?>
                                             <option value="<?=$city->Id;?>"><?=$city->city;?></option>
                                         <?php } ?>
                                     <?php } ?>
@@ -162,7 +162,7 @@ $ptList = position_type()->list();
                           </div>
                         </div>
                         <div class="form-group">
-                        <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx, .txt"></div>
+                        <div id="fileInput" style="display: none;"><input type="file" name="upload_file" class="filestyle form-control" data-input="false" accept=".pdf, .doc, .docx"></div>
                      </div>
                     </div>
                     </div>

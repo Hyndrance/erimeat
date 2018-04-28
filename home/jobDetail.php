@@ -82,7 +82,7 @@ function formatDate($val){
     <hr>
     <h2>Description</h2>
     <p>
-      <?=$job->comment;?>
+      <?=nl2br($job->comment);?>
     </p>
     <div class="clearfix"></div>
     <div class="clearfix"></div>

@@ -341,6 +341,10 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left: 25px;}
+
+  .img-circle-md-mobile{
+    margin-left: 32% !important;
+  }
 }
 .tagline{
   font-size: 24px;
