@@ -5987,8 +5987,7 @@ ul.sitemap-icon ul li a {
         .login-left-box {
           width: 90% !important;
           height: 300px;
-          position: absolute;
-          margin-top: 20%; }
+          margin-top: 30% !important; }
 
         .account-box {
           position: relative;
@@ -6008,6 +6007,29 @@ ul.sitemap-icon ul li a {
           }
 
       }
+
+    @media (min-width: 800px) and (max-width: 1280px) {
+      .account-box {
+        position: relative;
+        max-width: 355px;
+        margin-top: 100px;
+        margin-left: 10px;
+        background-color: #ffffff;
+        border-radius: 5px; }
+        .account-box .account-content {
+          padding: 10px; }
+        .account-box .account-btn {
+          position: absolute;
+          left: 0;
+          right: 0; }
+
+        .login-left-box {
+          width: 90% !important;
+          height: 300px;
+          position: absolute;
+          margin-top: 30% !important; }
+    }
+
 
       .wizard-content-mobile{
         min-height: 130px; }

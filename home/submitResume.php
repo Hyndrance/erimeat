@@ -9,7 +9,7 @@ $ptList = position_type()->list();
         <h2 style="position: absolute;top: 25%; width: 900px; left: 17%;" class="text-white text-mobile"> Submit Resume </h2>
         <img style="top:0;" src="../include/assets/images/submit-header.png">
       </div>
-      <div class="jumbotron center-page jumbotron-w container" style="width:1139px;">
+      <div class="jumbotron center-page container" style="width:1139px;">
             <form id="default-wizard" action="process.php?action=submitResume" method="POST" enctype="multipart/form-data" data-parsley-validate="">
               <?php if($error){?>
                 <div>
@@ -23,7 +23,7 @@ $ptList = position_type()->list();
                 </div>
               <?php } ?>
                     <div class="row m-t-20">
-                        <div class="col-sm-7 center-page container" style="width: 60%;">
+                        <div class="col-sm-7 center-page">
 
                               <div class="form-group">
                                   <label for="firstname">Job Category <span style="color: red;">*</span></label>

@@ -30,13 +30,13 @@ function getCity($Id){
     <form class="form-inline" method="GET">
     <div class="form-group">
       <input type="hidden" name="view" value="searchResume">
-      <select name="j" class="form-control select-sm-mobile" style="height: 67px; width:650px;" required>
+      <select name="j" class="form-control select-md-mobile select-sm-mobile" style="height: 67px; width:650px;" required>
         <option value="">Select Category</option>
         <?php foreach($jobFunctionList as $row){ ?>
           <option value="<?=$row->Id;?>"><?=$row->option;?></option>
         <?php } ?>
       </select>
-      <button type="submit" class="btn waves-effect waves-light btn-primary btn-sm-mobile">Search</button>
+      <button type="submit" class="btn waves-effect waves-light btn-primary btn-md-mobile btn-sm-mobile">Search</button>
     </div>
   </form>
   </div>

@@ -199,6 +199,149 @@ body {
     margin-top: 5px;
     margin-left: 0px !important; }
 }
+
+@media (min-width: 800px) and (max-width: 1280px) {
+  .main-text {
+    position: relative;
+    margin-top: -800px;
+    margin-bottom: 50px;
+    color: #fff; }
+
+  .bgimg-1{
+    min-height: 678px;
+    margin-top: 0px !important; }
+
+  .tagline{
+    font-size: 40px;
+    margin: 0 auto;
+    line-height: 1;
+    font-weight: bold;
+    color: #2a3c71;
+    width: 100% !important; }
+
+  .categ-margin{
+    margin-top: 90px; }
+
+  .top-cont {
+    width: 370px;
+    margin: 0 auto; }
+
+  .categ-cont{
+    width: 400px;
+    background-color: blue; }
+
+  .categ-select{
+    height: 50px;
+    min-width: 100% !important;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 10px; }
+
+  .job-search{
+    margin-bottom: 5px;
+    min-width: 100%; }
+
+  .job-categ{
+    margin: 0 auto;
+    min-width: 100%; }
+
+  .xs-btn{
+    width: 100% !important; }
+
+  .categ-btn{
+    width: 100% !important; }
+
+  .search-job-btn{
+    height: 51px;
+    width: 100%;
+    margin-top: 10px; }
+
+  .btn-mobile {
+    width: 260px;
+    height: 70px;
+    margin-left: 35px;
+    margin-top: 10px; }
+
+  .btn-search-mobile {
+    width: 260px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 10px; }
+
+  .btn-search-xs-mobile {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    margin-left: 1px;
+    margin-top: 10px;
+    padding: 15px !important; }
+
+  .text-mobile{
+    max-width: 300px !important;
+    font-size: 23px;
+    margin-left: 15%;
+    text-shadow: 1px 1px 1px #000; }
+
+  .text-xs-mobile{
+    max-width: 300px;
+    height: 50px;
+    margin-left: 15%;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px #000; }
+
+  .btn-xs-mobile{
+    width: 210px !important;
+    padding: 15px !important;
+    margin-top: 10px;
+    margin: 0 auto; }
+
+  .btn-sm-mobile{
+    width: 100% !important;
+    padding: 15px !important;
+    margin-top: 10px;
+    margin-left: 35px !important;}
+
+  .btn-md-mobile{
+    width: 600px !important;
+    padding: 15px !important;
+    margin-top: 10px;
+    margin-left: 35px !important;}
+
+  .btn-lg-mobile{
+    width: 100% !important;
+    padding: 15px !important;
+    margin-top: 10px;
+    margin-left: 0px !important;}
+
+  .btn-lg-search-mobile{
+    width: 100% !important;
+    padding: 15px !important;
+    margin-top: 10px;
+    margin-left: 25px !important;}
+
+  .select-xs-mobile{
+    width: 110% !important;
+    margin-bottom: 5px;
+    margin-top: 5px; }
+
+  .select-sm-mobile{
+    width: 100% !important;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 35px !important; }
+
+  .select-md-mobile{
+    width: 600px !important;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 20px;}
+
+  .select-lg-mobile{
+    width: 100% !important;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 25px;}
+}
 .tagline{
   font-size: 24px;
   width: 1350px;

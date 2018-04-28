@@ -136,7 +136,7 @@ $jobFunc = job_function()->get("code='$code'");
                                       data-parsley-validation-threshold="10"></textarea>
               </div>
             <div class="text-center m-t-30">
-                <button type="submit" class="btn btn-primary stepy-finish btn-sm-mobile"> SEND REQUEST </button>
+                <button type="submit" class="btn btn-primary stepy-finish btn-sm-mobile btn-md-mobile btn-lg-mobile"> SEND REQUEST </button>
             </div>
             <div class="text-center m-t-30">
               <p style="color: #000000;">Or call us at <strong style="color: #4489e4;">+61452 364 793</strong></p>
@@ -145,7 +145,7 @@ $jobFunc = job_function()->get("code='$code'");
 
           </div>
           <div class="text-center m-t-30">
-            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-sm-mobile">REQUEST TALENT</button>
+            <button type="button" id="requestBtn" class="btn btn-primary stepy-finish btn-sm-mobile btn-lg-mobile">REQUEST TALENT</button>
           </div>
 
         </div>
@@ -158,14 +158,14 @@ $jobFunc = job_function()->get("code='$code'");
                 <form class="form-inline" method="GET">
                 <div class="form-group">
                   <input type="hidden" name="view" value="searchJob">
-                  <input type="text" name="s" class="m-r-5 form-control select-xs-mobile" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:500px; border-radius: 5px;">
-                  <select name="c" class="form-control m-r-5 select-xs-mobile" style="height: 67px; width:265px; border-radius: 5px;" required>
+                  <input type="text" name="s" class="m-r-5 form-control select-xs-mobile select-lg-mobile" placeholder="Job Title, Skills or Keywords" style="height: 67px;width:500px; border-radius: 5px;">
+                  <select name="c" class="form-control m-r-5 select-xs-mobile select-lg-mobile" style="height: 67px; width:265px; border-radius: 5px;" required>
                     <option value="">Select Category</option>
                     <?php foreach($jobFunctionList as $row){ ?>
                       <option value="<?=$row->Id;?>"><?=$row->option;?></option>
                     <?php } ?>
                   </select>
-                      <button type="submit" class="btn waves-effect waves-light btn-primary btn-search-xs-mobile">Search</button>
+                      <button type="submit" class="btn waves-effect waves-light btn-primary btn-search-xs-mobile btn-lg-search-mobile">Search</button>
 
                 </div>
               </form>
