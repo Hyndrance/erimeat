@@ -82,6 +82,12 @@ body {
     }
 }
 
+.button-back {
+background-color: #477cbd !important;
+border: 1px solid #477cbd !important;
+color: #ffffff !important;
+}
+
 .main-text{
   position: absolute;
   top: 200px;
