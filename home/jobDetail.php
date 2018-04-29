@@ -48,7 +48,11 @@ function formatDate($val){
         <p>Views</p>
       </div>
     </div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
+    <?php if($job->endDate < date("Y-m-d")) { ?>
+      <button class="btn" style="width: 200px; padding: 15px 15px 15px  15px!important;">JOB CLOSED</button>
+    <?php }else{?>
+      <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
+    <?php } ?>
     <hr>
     <!-- Job Information -->
     <div class="row clearfix">
@@ -99,7 +103,11 @@ function formatDate($val){
       <p>Views</p>
     </div>
     <div class="clearfix"></div>
-    <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
+    <?php if($job->endDate < date("Y-m-d")) { ?>
+      <button class="btn" style="width: 200px; padding: 15px 15px 15px  15px!important;">JOB CLOSED</button>
+    <?php }else{?>
+      <button onclick="location.href='../home/?view=application&id=<?=$job->Id;?>'" class="btn btn-primary" style="width: 200px; padding: 15px 15px 15px  15px!important;">APPLY NOW</button>
+    <?php } ?>
     <hr>
 
     <div class="m-b-30">

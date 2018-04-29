@@ -86,7 +86,7 @@ function formatDate($val){
         <option>Select City</option>
     </select> -->
     <!-- </div> -->
-<?php if(!$jobList && $s && $c){?>
+<?php if(!$jobList && !$s && $c){?>
   <h3 class="text-center text-muted"><i class="mdi mdi-account-off mdi-48px m-t-30"></i><br>No Jobs Found</h3>
 <?php }else{?>
   <?php foreach($jobList as $row) {
