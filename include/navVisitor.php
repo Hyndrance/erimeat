@@ -233,7 +233,7 @@ li > a:only-child:after { content: ''; }
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width : 768px) {
+@media all and (max-width : 1200px) {
 
     #logo {
         display: block;
@@ -511,7 +511,7 @@ li > a:only-child:after { content: ''; }
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width : 768px) {
+@media all and (max-width : 1200px) {
     #above-nav{
         display: none;
     }
