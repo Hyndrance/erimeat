@@ -192,6 +192,7 @@ function updateInformation()
 	$job->obj['zipCode'] = $_POST['zipCode'];
 	$job->obj['rate'] = htmlspecialchars($_POST['rate'], ENT_QUOTES);
 	$job->obj['address'] =  htmlspecialchars($_POST['address'], ENT_QUOTES);
+	$job->obj['endDate'] =  htmlspecialchars($_POST['endDate'], ENT_QUOTES);
 	$job->obj['comment'] = htmlspecialchars($_POST['comment'], ENT_QUOTES);
 	$job->obj['keySkills'] = htmlspecialchars($_POST['keySkills'], ENT_QUOTES);
 	$job->update("Id=$Id");

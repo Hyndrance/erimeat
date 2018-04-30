@@ -65,6 +65,21 @@ function formatDate($val){
     </div><br>
     <p><label class="m-r-5">Job Openings: </label><?=$job->jobOpening;?></p>
     <p><label class="m-r-5">Key Skills: </label><?=$job->keySkills;?></p>
+    <div class="row m-t-20">
+      <div class="col-lg-6">
+        <p><label class="m-r-5">Created at: </label><?=formatDate($job->createDate);?></p>
+      </div>
+      <div class="col-lg-6">
+        <p><label class="m-r-5">End Date: </label><?=formatDate($job->endDate);?></p>
+      </div>
+    </div>
+    <div>
+      <?php if($job->endDate > date("Y-m-d")) { ?>
+        <label>Job Status</label>: <span class=" btn btn-success btn-xs tooltips">Open</span>
+      <?php }else{ ?>
+        <label>Job Status</label>: <span class=" btn btn-danger btn-xs tooltips">Closed</span>
+      <?php } ?>
+    </div>
     <div class="clearfix"></div>
     <hr>
     <h3>Comment</h3>
