@@ -90,9 +90,9 @@ function formatDate($val){
     </div>
     <div>
       <?php if($job->endDate < date("Y-m-d")) { ?>
-        <label>Job Status</label>: <span class=" btn btn-success btn-xs tooltips">Open</span>
-      <?php }else{ ?>
         <label>Job Status</label>: <span class=" btn btn-danger btn-xs tooltips">Closed</span>
+      <?php }else{ ?>
+        <label>Job Status</label>: <span class=" btn btn-success btn-xs tooltips">Open</span>
       <?php } ?>
     </div>
     <div class="clearfix"></div>
