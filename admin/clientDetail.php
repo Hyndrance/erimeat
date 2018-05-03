@@ -26,37 +26,33 @@ function getJobFunction($Id){
     <div class="row p-t-10 p-b-10">
     <div>
       <div class="col-lg-4">
-        <label class="m-r-5">Department: </label><?=$company->department;?>
+        <label class="m-r-5">Department: </label><span class="text-black"><?=$company->department;?></span>
         <br>
-        <i class="fa fa-phone m-r-5"></i><?=$company->phoneNumber;?>
+        <span class="text-black"><i class="fa fa-phone m-r-5"></i><?=$company->phoneNumber;?></span>
       </div>
       <div class="col-lg-4">
-        <label class="m-r-5">Contact Person: </label><?=$company->contactPerson;?><br>
-        <i class="fa fa-mobile-phone m-r-5"></i><?=$company->mobileNumber;?>
+        <label class="m-r-5">Contact Person: </label><span class="text-black"><?=$company->contactPerson;?></span><br>
+        <span class="text-black"><i class="fa fa-mobile-phone m-r-5"></i><?=$company->mobileNumber;?></span>
       </div>
       <div class="col-lg-4">
-        <label class="m-r-5">Email: </label><?=$company->email;?><br>
-        <i class="fa fa-map-marker m-r-5"></i><?=$company->address;?>
+        <label class="m-r-5">Email: </label><span class="text-black"><?=$company->email;?></span><br>
+        <span class="text-black"><i class="fa fa-map-marker m-r-5"></i><?=$company->address;?></span>
 
       </div>
     </div>
     </div>
-    <h4 class="m-t-20 m-b-30">Job Category: <?=getJobFunction($company->jobFunctionId);?></h4>
+    <label class="m-t-20 m-b-30">Job Category: </label> <span class="text-black"><?=getJobFunction($company->jobFunctionId);?></span>
     <div class="row">
       <div class="col-lg-6">
-        <label class="m-r-5">Australian Business Number: </label><?=$company->abn;?>
+        <label class="m-r-5">Australian Business Number: </label><span class="text-black"><?=$company->abn;?></span>
       </div>
       <div class="col-lg-6">
-        <label class="m-r-5">Username: </label><?=$company->username;?>
+        <label class="m-r-5">Username: </label><span class="text-black"><?=$company->username;?></span>
       </div>
     </div>
     <div class="clearfix"></div>
     <hr>
-    <?=nl2br($company->description);?>
-              <!-- // foreach ($company as $key => $value) {
-              //   echo $key . ": " . $value . "<br>";
-              // } -->
-
+    <p class="text-black"><?=nl2br($company->description);?></p>
   </div> <!-- end col -->
   <div class="center-page text-center p-t-10 m-b-30">
     <h4>Jobs</h4>

@@ -21,13 +21,13 @@ $companyList = company()->list("isDeleted=0");
               <div class="">
                   <h3 class="m-b-5"><?=$row->name;?></h3>
                   <hr>
-                  <p><i class="fa fa-user m-r-5"></i><b><?=$row->contactPerson;?></b><br>
+                  <p class="text-black"><i class="fa fa-user m-r-5"></i><b><?=$row->contactPerson;?></b><br>
                   <i class="fa fa-envelope m-r-5 text-blue"></i><a href="#" class="text-blue"><?=$row->email;?></a>
                   </p>
               </div>
 
               <div style="height: 100px;">
-              <p class="truncate" style="height: 80px;">
+              <p class="truncate text-black" style="height: 80px;">
                 <?=$row->description;?>
               </p>
             </div>

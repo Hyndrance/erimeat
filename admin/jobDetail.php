@@ -36,55 +36,55 @@ function formatDate($val){
 <?php }?>
   <div class="col-12 m-t-30 m-b-30">
     <h2 class="text-blue"><?=$job->position;?></h2>
-        <p><label class="m-r-5">Required Experience: </label><?=$job->requiredExperience;?></p>
-        <p><label class="m-r-5">Company: </label><?=$job->company;?></p>
-        <p><label class="m-r-5">Address: </label><?=$job->address;?></p>
+        <p><label class="m-r-5">Required Experience: </label><span class="text-black"><?=$job->requiredExperience;?></span></p>
+        <p><label class="m-r-5">Company: </label><span class="text-black"><?=$job->company;?></span></p>
+        <p><label class="m-r-5">Address: </label><span class="text-black"><?=$job->address;?></span></p>
         <div class="row">
           <div class="col-lg-6">
-            <p><label class="m-r-5">Postal Code: </label><?=$job->zipCode;?></p>
+            <p><label class="m-r-5">Postal Code: </label><span class="text-black"><?=$job->zipCode;?></span></p>
           </div>
           <div class="col-lg-6">
-            <p><label class="m-r-5">Rate: </label><?=$job->rate;?></p>
+            <p><label class="m-r-5">Rate: </label><span class="text-black"><?=$job->rate;?></span></p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <p><label class="m-r-5">Job Category: </label><?=getJobFunction($job->jobFunctionId);?></p>
+            <p><label class="m-r-5">Job Category: </label><span class="text-black"><?=getJobFunction($job->jobFunctionId);?></span></p>
           </div>
           <div class="col-lg-6">
-            <p><label class="m-r-5">Employement Type: </label><?=getPositionName($job->positionTypeId);?></p>
+            <p><label class="m-r-5">Employement Type: </label><span class="text-black"><?=getPositionName($job->positionTypeId);?></span></p>
           </div>
         </div>
-        <p><label class="m-r-5">Employment Location: </label><?=$job->empLocation;?></p>
+        <p><label class="m-r-5">Employment Location: </label><span class="text-black"><?=$job->empLocation;?></span></p>
     <div class="row m-t-20">
       <div class="col-lg-6">
-        <label class="m-r-5">Contact Person: </label><?=$job->contactName;?>
+        <label class="m-r-5">Contact Person: </label><span class="text-black"><?=$job->contactName;?></span>
         <br>
-        <?=$job->jobTitle;?>
+        <span class="text-black"><?=$job->jobTitle;?></span>
       </div>
       <div class="col-lg-6">
-        <i class="fa fa-envelope m-r-5"></i><?=$job->workEmail;?>
+        <i class="fa fa-envelope m-r-5"></i><span class="text-black"><?=$job->workEmail;?></span>
         <br>
-        <i class="fa fa-phone m-r-5"></i><?=$job->businessPhone;?>
+        <i class="fa fa-phone m-r-5"></i><span class="text-black"><?=$job->businessPhone;?></span>
       </div>
     </div>
     <div class="clearfix"></div>
     <div class="row m-t-20">
       <div class="col-lg-6">
-        <p><label class="m-r-5">ABN:</label> <?=$job->abn;?></p>
+        <p><label class="m-r-5">ABN:</label><span class="text-black"><?=$job->abn;?></span></p>
       </div>
       <div class="col-lg-6">
-        <p><label class="m-r-5">Reference Number:</label> <?=$job->refNum;?></p>
+        <p><label class="m-r-5">Reference Number:</label><span class="text-black"><?=$job->refNum;?></span></p>
       </div>
     </div>
-    <p><label class="m-r-5">Job Openings: </label><?=$job->jobOpening;?></p>
-    <p><label class="m-r-5">Key Skills: </label><?=$job->keySkills;?></p>
+    <p><label class="m-r-5">Job Openings: </label><span class="text-black"><?=$job->jobOpening;?></span></p>
+    <p><label class="m-r-5">Key Skills: </label><span class="text-black"><?=$job->keySkills;?></span></p>
     <div class="row m-t-20">
       <div class="col-lg-6">
-        <p><label class="m-r-5">Created at: </label><?=formatDate($job->createDate);?></p>
+        <p><label class="m-r-5">Created at: </label><span class="text-black"><?=formatDate($job->createDate);?></span></p>
       </div>
       <div class="col-lg-6">
-        <p><label class="m-r-5">End Date: </label><?=formatDate($job->endDate);?></p>
+        <p><label class="m-r-5">End Date: </label><span class="text-black"><?=formatDate($job->endDate);?></span></p>
       </div>
     </div>
     <div>
@@ -97,7 +97,7 @@ function formatDate($val){
     <div class="clearfix"></div>
     <hr>
     <h3>Hiring Needs</h3>
-    <?=nl2br($job->comment);?>
+    <p class="text-black"><?=nl2br($job->comment);?></p>
     <hr>
 
         <!--  This button only shows if job is approved -->

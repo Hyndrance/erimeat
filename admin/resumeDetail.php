@@ -15,32 +15,32 @@ function getCity($Id){
 
 <div class="container container-fluid">
   <div class="col-12 m-t-30 m-b-30">
-    <h2 class="text-blue"> <?=$application->lastName;?>, <?=$application->firstName;?> </h2>
-    <p><label class="m-r-5 m-t-15">Job Category: </label><?=getJobFunction($application->jobFunctionId);?><p>
-    <p><label class="m-r-5">Email: </label><?=$application->email;?></p>
-    <p><label class="m-r-5">Birthdate: </label><?=$application->birthdate;?></p>
+    <h2 class="text-black"> <?=$application->lastName;?>, <?=$application->firstName;?> </h2>
+    <p><label class="m-r-5 m-t-15">Job Category: </label><span class="text-black"><?=getJobFunction($application->jobFunctionId);?></span><p>
+    <p><label class="m-r-5">Email: </label><span class="text-black"><?=$application->email;?></span></p>
+    <p><label class="m-r-5">Birthdate: </label><span class="text-black"><?=$application->birthdate;?></span></p>
     <div class="row">
       <div class="col-lg-4">
-        <p><label class="m-r-5">Employee Reference: </label><?=$application->refNum;?></p>
+        <p><label class="m-r-5">Employee Reference: </label><span class="text-black"><?=$application->refNum;?></span></p>
       </div>
       <div class="col-lg-4">
-        <p><label class="m-r-5">Employee ABN: </label><?=$application->abn;?></p>
+        <p><label class="m-r-5">Employee ABN: </label><span class="text-black"><?=$application->abn;?></span></p>
       </div>
       <div class="col-lg-4">
-        <p><label class="m-r-5">Tax Number: </label><?=$application->taxNumber;?></p>
+        <p><label class="m-r-5">Tax Number: </label><span class="text-black"><?=$application->taxNumber;?></span></p>
       </div>
     </div>
       <div class="row">
         <div class="col-lg-6">
-          <p><label class="m-r-5">Address 1: </label><?=$application->address1;?></p>
+          <p><label class="m-r-5">Address 1: </label><span class="text-black"><?=$application->address1;?></span></p>
         </div>
         <div class="col-lg-6">
-          <p><label class="m-r-5">Address 2: </label><?=$application->address2;?></p>
+          <p><label class="m-r-5">Address 2: </label><span class="text-black"><?=$application->address2;?></span></p>
         </div>
       </div>
-      <p><label class="m-r-5 m-t-15">City: </label><?=getCity($application->city);?></p>
-      <p><label class="m-r-5">State: </label><?=$application->state;?></p>
-      <p><label class="m-r-5">Postal Code: </label><?=$application->zipCode;?></p>
+      <p><label class="m-r-5 m-t-15">City: </label><span class="text-black"><?=getCity($application->city);?></span></p>
+      <p><label class="m-r-5">State: </label><span class="text-black"><?=$application->state;?></span></p>
+      <p><label class="m-r-5">Postal Code: </label><span class="text-black"><?=$application->zipCode;?></span></p>
       <p><label class="m-r-5">Speed Test :</label><a href="<?=$application->speedtest;?>" target="_blank"><?=$application->speedtest;?></a></p>
 
       <p>
@@ -59,9 +59,9 @@ function getCity($Id){
         </div>
         <?php } ?>
       </p>
-      <p><label class="m-r-5">Key Skills: </label><?=$application->keySkills;?></p>
+      <p><label class="m-r-5">Key Skills: </label><span class="text-black"><?=$application->keySkills;?></span></p>
       <hr>
-      <p><label class="m-r-5">Cover Letter: </label><?=$application->coverLetter;?><p>
+      <p><label class="m-r-5">Cover Letter: </label><span class="text-black"><?=$application->coverLetter;?></span><p>
         <div class="col-12 text-center">
           <div class="col-lg-4">
       <p><label class="m-r-5">Uploaded Specs: </label><br>

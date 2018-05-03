@@ -70,12 +70,6 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'hiringApplicant' :
-		$currentSession = isset($_SESSION["admin_session"]);
-		$content 	= 'hiringApplicant.php';
-		$template	= '../include/dashboard.php';
-		break;
-
 	case 'jobList' :
 		$currentSession = isset($_SESSION["admin_session"]);
 		$content 	= 'jobList.php';

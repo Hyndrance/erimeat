@@ -29,29 +29,29 @@ function getCity($Id){
   </div>
 <?php }?>
   <div class="col-12 m-t-30 m-b-30">
-      <h2 class="text-blue"><?=$candidate->firstName;?> <?=$candidate->lastName;?></h2>
-      <p><label class="m-r-5">Email: </label><?=$candidate->email;?></p>
-      <p><label class="m-r-5">Job Category: </label><?=getJobFunction($candidate->jobFunctionId);?></p>
-      <p><label class="m-r-5">Phone Number: </label><?=$candidate->phoneNumber;?></p>
+      <h2 class="text-black"><?=$candidate->firstName;?> <?=$candidate->lastName;?></h2>
+      <p><label class="m-r-5">Email: </label><span class="text-black"><?=$candidate->email;?></span></p>
+      <p><label class="m-r-5">Job Category: </label><span class="text-black"><?=getJobFunction($candidate->jobFunctionId);?></span></p>
+      <p><label class="m-r-5">Phone Number: </label><span class="text-black"><?=$candidate->phoneNumber;?></span></p>
       <div class="row">
         <div class="col-lg-6">
-          <p><label class="m-r-5">Candidate ABN :</label><?=$candidate->abn;?></p>
+          <p><label class="m-r-5">Candidate ABN :</label><span class="text-black"><?=$candidate->abn;?></span></p>
         </div>
         <div class="col-lg-6">
-          <p><label class="m-r-5">Tax File Number :</label><?=$candidate->taxNumber;?></p>
+          <p><label class="m-r-5">Tax File Number :</label><span class="text-black"><?=$candidate->taxNumber;?></span></p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <p><label class="m-r-5">Address 1 :</label><?=$candidate->address1;?></p>
+          <p><label class="m-r-5">Address 1 :</label><span class="text-black"><?=$candidate->address1;?></span></p>
         </div>
         <div class="col-lg-6">
-          <p><label class="m-r-5">Address 2 :</label><?=$candidate->address2;?></p>
+          <p><label class="m-r-5">Address 2 :</label><span class="text-black"><?=$candidate->address2;?></span></p>
         </div>
       </div>
-      <p><label class="m-r-5">City :</label><?=getCity($candidate->city);?></p>
-      <p><label class="m-r-5">State :</label><?=$candidate->state;?></p>
-      <p><label class="m-r-5">Postal Code :</label><?=$candidate->zipCode;?></p>
+      <p><label class="m-r-5">City :</label><span class="text-black"><?=getCity($candidate->city);?></span></p>
+      <p><label class="m-r-5">State :</label><span class="text-black"><?=$candidate->state;?></span></p>
+      <p><label class="m-r-5">Postal Code :</label><span class="text-black"><?=$candidate->zipCode;?></span></p>
       <p><label class="m-r-5">Speed Test :</label><a href="<?=$candidate->speedtest;?>" target="_blank"><?=$candidate->speedtest;?></a></p>
       <p>
         <label class="m-r-5">Status :</label>
@@ -69,7 +69,7 @@ function getCity($Id){
         </div>
         <?php } ?>
       </p>
-      <p><label class="m-r-5">Key Skills :</label><?=$candidate->keySkills;?></p>
+      <p><label class="m-r-5">Key Skills :</label><span class="text-black"><?=$candidate->keySkills;?></span></p>
       <hr>
       <div class="col-12 row">
         <div class="col-lg-6 row">
@@ -86,7 +86,7 @@ function getCity($Id){
 
       <div class="col-12 row">
         <div class="col-lg-6 row">
-          <p><label class="m-r-5">Cover Letter :</label><br><?=nl2br($candidate->coverLetter);?></p>
+          <p><label class="m-r-5">Cover Letter :</label><br><span class="text-black"><?=nl2br($candidate->coverLetter);?></span></p>
         </div>
         <div class="col-lg-6 row">
             <p><label class="m-r-5"><strong>Other Certificates :</strong></label><br>

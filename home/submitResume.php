@@ -66,7 +66,7 @@ $ptList = position_type()->list();
                                 <div class="form-group">
                                     <label for="username">Tax File Number</label>
                                     <input type="text" class="form-control" name="taxNumber">
-                                    <span class="help-block"><small>For Australia based only</small></span>
+                                    <span class="help-block"><small>For Australian applicants only</small></span>
                                 </div>
                                 </div>
                               </div>
