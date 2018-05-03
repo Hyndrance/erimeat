@@ -1,7 +1,6 @@
 <?php
 $jobFunctionList = job_function()->list("isDeleted='0' order by `option` asc");
 $projectList = projects()->list();
-
 ?>
 
 <div style="position: relative;">
