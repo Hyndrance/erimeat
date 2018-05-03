@@ -49,7 +49,7 @@ function getInterviewTime($email){
                     <td><?=getInterviewDate($row->email); ?></td>
                     <td><?=getInterviewTime($row->email); ?></td>
                     <td>
-                        <a href="?view=hiringApplicant&Id=<?=$row->Id;?>&jobId=<?=$row->jobId;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> View Applicant </a>
+                        <a href="?view=resumeDetail&Id=<?=$row->Id;?>&jobId=<?=$row->jobId;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> View Applicant </a>
                     </td>
                 </tr>
 

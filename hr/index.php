@@ -50,9 +50,9 @@ switch ($view) {
 		$template	= '../include/dashboard.php';
 		break;
 
-	case 'candidateDetail' :
+	case 'candidatesDetail' :
 		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'candidateDetail.php';
+		$content 	= 'candidatesDetail.php';
 		$template	= '../include/dashboard.php';
 		break;
 
@@ -66,12 +66,6 @@ switch ($view) {
 	case 'scheduleInterview' :
 		$currentSession = isset($_SESSION["hr_session"]);
 		$content 	= 'scheduleInterview.php';
-		$template	= '../include/dashboard.php';
-		break;
-
-	case 'hiringApplicant' :
-		$currentSession = isset($_SESSION["hr_session"]);
-		$content 	= 'hiringApplicant.php';
 		$template	= '../include/dashboard.php';
 		break;
 

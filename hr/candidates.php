@@ -51,7 +51,7 @@ function getCity($Id){
                       </div>
                     <?php } ?>
                     </td>
-                    <td><a href="?view=candidateDetail&Id=<?=$row->Id;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> Review</a>
+                    <td><a href="?view=candidatesDetail&Id=<?=$row->Id;?>"  class=" btn btn-success btn-xs tooltips" title="Click To Edit"><span class="fa fa-eye"></span> Review</a>
                     </td>
                 </tr>
 

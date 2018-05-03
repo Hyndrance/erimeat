@@ -99,9 +99,7 @@ function getCity($Id){
       <div class="clearfix"></div>
       <?php if($candidate->isApproved==0){?>
       <div class="col-12 m-t-30">
-          <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#schedule-modal">
-            Set an Interview
-          </button>
+          <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#schedule-modal">Set an Interview</button>
           <button onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$candidate->Id;?>'" class="btn btn-lg btn-default">Request for More Info</button>
           <button class="btn btn-lg btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
           <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$candidate->Id;?>'" class="btn btn-lg btn-danger">Delete</button>

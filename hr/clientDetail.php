@@ -26,24 +26,24 @@ function getJobFunction($Id){
     <div class="row p-t-10 p-b-10">
     <div class="col-12">
       <div class="col-lg-4">
-        <label class="m-r-5">Department: </label><?=$company->department;?>
+        <label class="m-r-5">Department: </label><span class="text-black"><?=$company->department;?></span>
         <br>
-        <i class="fa fa-phone m-r-5"></i><?=$company->phoneNumber;?>
+        <i class="fa fa-phone m-r-5"></i><span class="text-black"><?=$company->phoneNumber;?></span>
       </div>
       <div class="col-lg-4">
-        <label class="m-r-5">Contact Person: </label><?=$company->contactPerson;?><br>
-        <i class="fa fa-mobile-phone m-r-5"></i><?=$company->mobileNumber;?>
+        <label class="m-r-5">Contact Person: </label><span class="text-black"><?=$company->contactPerson;?></span><br>
+        <i class="fa fa-mobile-phone m-r-5"></i><span class="text-black"><?=$company->mobileNumber;?></span>
       </div>
       <div class="col-lg-4">
-        <label class="m-r-5">Email: </label><?=$company->email;?><br>
-        <i class="fa fa-map-marker m-r-5"></i><?=$company->address;?>
+        <label class="m-r-5">Email: </label><span class="text-black"><?=$company->email;?></span><br>
+        <i class="fa fa-map-marker m-r-5"></i><span class="text-black"><?=$company->address;?></span>
 
       </div>
     </div>
     </div>
     <h4 class="m-t-30 m-b-30">Job Category: <?=getJobFunction($company->jobFunctionId);?></h4>
     <hr>
-    <?=nl2br($company->description);?>
+    <span class="text-black"><?=nl2br($company->description);?></span>
               <!-- // foreach ($company as $key => $value) {
               //   echo $key . ": " . $value . "<br>";
               // } -->

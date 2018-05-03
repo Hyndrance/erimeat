@@ -12,19 +12,13 @@ function getJobFunction($Id){
   echo $job->option;
 }
 
-function getJobName($Id){
-  $job = job()->get("Id='$Id'");
-  return $job->position;
-}
-
 function getCity($Id){
   $city = city_option()->get("Id='$Id'");
   echo $city->city;
 }
 ?>
 
-
-<div class="row">
+<div class="container container-fluid">
   <?php if($success){?>
   <div class="alert alert-success alert-dismissible fade in" role="alert">
       <button type="button" class="close" data-dismiss="alert"
@@ -34,104 +28,107 @@ function getCity($Id){
       <?=$success;?>
   </div>
 <?php }?>
-    <div class="col-md-12">
-        <!-- Personal-Information -->
-        <div class="card-box">
-            <h4 class="header-title mt-0 m-b-20">Resume Detail</h4>
-            <div class="panel-body">
-              <div class="text-left">
-                  <p class="text-muted font-13"><strong>Candidate Reference # :</strong>
-                    <span class="m-l-15"><?=$candidate->refNum;?></span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Candidate ABN :</strong>
-                    <span class="m-l-15"><?=$candidate->abn;?></span>
-                  </p>
-                  <p class="text-muted font-13"><strong>First Name :</strong>
-                    <span class="m-l-15"><?=$candidate->firstName;?></span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Last Name :</strong>
-                    <span class="m-l-15"><?=$candidate->lastName;?></span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Email :</strong>
-                    <span class="m-l-15"><?=$candidate->email;?></span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Phone Number :</strong>
-                    <span class="m-l-15"><?=$candidate->phoneNumber;?></span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Address :</strong>
-                    <span class="m-l-15"><?=$candidate->address1;?> <?=$candidate->city;?> <?=$candidate->state;?> <?=$candidate->zipCode;?></span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Speedtest :</strong>
-                    <span class="m-l-15"><a href="<?=$candidate->speedtest;?>" target="_blank"><?=$candidate->speedtest;?></a></span>
-                  </p>
-                  <p>
-                    <label class="text-muted font-13">Status :</label>
-                    <?php if($candidate->isHired==0 && $candidate->isApproved==1){ ?>
-                    <div class=" btn btn-default btn-xs tooltips">
-                      Waiting for Interview Results
-                    </div>
-                    <?php }elseif($candidate->isHired==1 && $candidate->isApproved==1){ ?>
-                    <div class=" btn btn-success btn-xs tooltips">
-                      Hired
-                    </div>
-                    <?php }else{ ?>
-                    <div class=" btn btn-warning btn-xs tooltips">
-                      Available
-                    </div>
-                    <?php } ?>
-                  </p>
-                  <p class="text-muted font-13"><strong>Key Skills :</strong>
-                    <span class="m-l-15"><?=$candidate->keySkills;?></span>
-                  </p>
-                  <br>
-                  <p class="text-muted font-13"><strong>Cover Letter :</strong>
-                    <span class="m-l-15"><?=nl2br($candidate->coverLetter);?></span>
-                  </p>
-                  <br><br>
-                  <p class="text-muted font-13"><strong>Computer Specification :</strong>
-                    <span class="m-l-15">
-                      <?php if($candidate->uploadedSpecs) {?>
-                        <a href="../media/<?=$candidate->uploadedSpecs;?>" target="blank_">Click to view Computer Specification</a>
-                      <?php } ?>
-                    </span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Candidate Resume :</strong>
-                    <span class="m-l-15">
-                      <?php if($candidate->uploadedResume) { ?>
-                        <a href="../media/<?=$candidate->uploadedResume;?>" target="blank_">Click to view Candidate Resume</a>
-                      <?php } ?>
-                    </span>
-                  </p>
-                  <p class="text-muted font-13"><strong>Other Certificates :</strong></br>
-                    <?php foreach($certList as $row){ ?>
-                    <span class="m-l-15"><a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view Other Documents</a></span><br>
-                    <?php }?>
-                  </p>
-              </div>
-            </div>
+  <div class="col-12 m-t-30 m-b-30">
+      <h2 class="text-black"><?=$candidate->firstName;?> <?=$candidate->lastName;?></h2>
+      <p><label class="m-r-5">Email: </label><span class="text-black"><?=$candidate->email;?></span></p>
+      <p><label class="m-r-5">Job Category: </label><span class="text-black"><?=getJobFunction($candidate->jobFunctionId);?></span></p>
+      <p><label class="m-r-5">Phone Number: </label><span class="text-black"><?=$candidate->phoneNumber;?></span></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Candidate ABN :</label><span class="text-black"><?=$candidate->abn;?></span></p>
         </div>
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Tax File Number :</label><span class="text-black"><?=$candidate->taxNumber;?></span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Address 1 :</label><span class="text-black"><?=$candidate->address1;?></span></p>
+        </div>
+        <div class="col-lg-6">
+          <p><label class="m-r-5">Address 2 :</label><span class="text-black"><?=$candidate->address2;?></span></p>
+        </div>
+      </div>
+      <p><label class="m-r-5">City :</label><span class="text-black"><?=getCity($candidate->city);?></span></p>
+      <p><label class="m-r-5">State :</label><span class="text-black"><?=$candidate->state;?></span></p>
+      <p><label class="m-r-5">Postal Code :</label><span class="text-black"><?=$candidate->zipCode;?></span></p>
+      <p><label class="m-r-5">Speed Test :</label><a href="<?=$candidate->speedtest;?>" target="_blank"><?=$candidate->speedtest;?></a></p>
+      <p>
+        <label class="m-r-5">Status :</label>
+        <?php if($candidate->isHired==0 && $candidate->isApproved==1){ ?>
+        <div class=" btn btn-default btn-xs tooltips">
+          Waiting for Interview Results
+        </div>
+        <?php }elseif($candidate->isHired==1 && $candidate->isApproved==1){ ?>
+        <div class=" btn btn-success btn-xs tooltips">
+          Hired
+        </div>
+        <?php }else{ ?>
+        <div class=" btn btn-warning btn-xs tooltips">
+          Available
+        </div>
+        <?php } ?>
+      </p>
+      <p><label class="m-r-5">Key Skills :</label><span class="text-black"><?=$candidate->keySkills;?></span></p>
+      <hr>
+      <div class="col-12 row">
+        <div class="col-lg-6 row">
+          <p><label class="m-r-5"><strong>Computer Specification :</strong></label><br>
+            <?php if($candidate->uploadedSpecs){?>
+              <a href="../media/<?=$candidate->uploadedSpecs;?>" target="blank_">Click to view Computer Specifications</a>
+            <?php } ?>
+          </p>
+        </div>
+        <div class="col-lg-6 row">
+          <p><label class="m-r-5"><strong>Resume :</strong></label><br><a href="../media/<?=$candidate->uploadedResume;?>" target="blank_">Click to view Resume</a></p>
+        </div>
+      </div>
+
+      <div class="col-12 row">
+        <div class="col-lg-6 row">
+          <p><label class="m-r-5">Cover Letter :</label><br><span class="text-black"><?=nl2br($candidate->coverLetter);?></span></p>
+        </div>
+        <div class="col-lg-6 row">
+            <p><label class="m-r-5"><strong>Other Certificates :</strong></label><br>
+              <?php foreach($certList as $row){ ?>
+                <a href="../media/<?=$row->uploadedCerts;?>" target="blank_">Click to view other certificates</a><br>
+              <?php }?>
+            </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
         <!-- Personal-Information -->
-        <div class="card-box">
         <?php if($candidate->isApproved==0){?>
-        <button type="button" class="btn btn-small btn-info waves-effect waves-light" data-toggle="modal" data-target="#schedule-modal">Schedule an Interview</button>
-        <button class="btn btn-small btn-default stepy-finish" onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$candidate->Id;?>'">Request for More Info</button>
-        <button class="btn btn-small btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
-        <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$candidate->Id;?>'" class="btn btn-small btn-danger">Delete</button>
+        <div class="col-12 m-t-30">
+          <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#schedule-modal">Set an Interview</button>
+          <button class="btn btn-lg btn-default" onclick="location.href='process.php?action=denyCandidateResume&Id=<?=$candidate->Id;?>'">Request for More Info</button>
+          <button class="btn btn-lg btn-success" type="button" data-toggle="modal" data-target="#update-information-modal">Update Info</button>
+          <button onclick="location.href='process.php?action=deleteCandidateResume&Id=<?=$candidate->Id;?>'" class="btn btn-lg btn-danger">Delete</button>
+        </div>
         <?php } ?>
         <?php if($candidate->isApproved==1 && $candidate->isHired==0 && $candidate->jobId==0){?>
-        <button onclick="location.href='?view=openJobs&Id=<?=$candidate->Id;?>'" class="btn btn-info" style="width:350px;">
-          Assign Job
-        </button>
+        <div class="col-12 m-t-30">
+          <div class="col-lg-12 text-center">
+            <button onclick="location.href='?view=openJobs&Id=<?=$candidate->Id;?>'" class="btn btn-info" style="width:350px;">
+              Assign Job
+            </button>
+          </div>
+        </div>
         <?php } ?>
         <?php if($candidate->isApproved==1 && $candidate->jobId!=0){?>
-        <button class="btn btn-success" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$candidate->Id;?>&jobId=<?=$candidate->jobId;?>'">
-          Hire
-        </button>
-        <button class="btn btn-danger" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$candidate->Id;?>'">
-          Reject
-        </button>
+        <div class="col-12 m-t-30">
+          <div class="col-lg-6">
+            <button class="btn btn-success" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=approve&Id=<?=$candidate->Id;?>&jobId=<?=$candidate->jobId;?>'">
+              Hire
+            </button>
+          </div>
+          <div class="col-lg-6">
+            <button class="btn btn-danger" style="width:350px;" onclick="location.href='process.php?action=hireApplicant&result=reject&Id=<?=$candidate->Id;?>'">
+              Reject
+            </button>
+          </div>
+        </div>
         <?php } ?>
-      </div>
   </div>
 </div>
 
