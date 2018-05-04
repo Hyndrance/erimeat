@@ -10,10 +10,10 @@ $job = job()->get("Id='$ts->jobId'");
 
 function get_time_difference($record)
 {
-    $workTime = (strtotime("1/1/1980 $record->checkOut") - strtotime("1/1/1980 $record->checkIn")) / 3600;
-    $firstBreak = (strtotime("1/1/1980 $record->breakIn") - strtotime("1/1/1980 $record->breakOut")) / 3600;
-    $secondBreak = (strtotime("1/1/1980 $record->breakIn2") - strtotime("1/1/1980 $record->breakOut2")) / 3600;
-    $lunch = (strtotime("1/1/1980 $record->lunchIn") - strtotime("1/1/1980 $record->lunchOut")) / 3600;
+    $workTime = (strtotime($record->checkOut) - strtotime($record->checkIn)) / 3600;
+    $firstBreak = (strtotime($record->breakIn) - strtotime($record->breakOut)) / 3600;
+    $secondBreak = (strtotime($record->breakIn2) - strtotime($record->breakOut2)) / 3600;
+    $lunch = (strtotime($record->lunchIn) - strtotime($record->lunchOut)) / 3600;
 
     $totalTime = $workTime - ($firstBreak + $secondBreak + $lunch);
 
@@ -71,6 +71,7 @@ function get_time_difference($record)
                         <?php } ?>
                         <?php if($ts->status==2) { ?>
                           <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#dispute-message-modal">View Dispute message</button>
+                            <button class="btn btn-sm btn-primary" onclick="location.href='process.php?action=approveTimesheet&Id=<?=$timesheetId;?>'">Approve</button>
                         <?php } ?>
 
                           </div>
@@ -91,7 +92,7 @@ function get_time_difference($record)
 
                                       <form class="form-horizontal" action="process.php?action=disputeTimesheet&Id=<?=$timesheetId;?>" method="post">
                                         <div class="form-group">
-                                            <label>Reason to despute</label>
+                                            <label>Reason to dispute</label>
                                             <div>
                                                 <textarea required="" name="reason" class="form-control"></textarea>
                                             </div>
