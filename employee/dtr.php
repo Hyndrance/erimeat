@@ -5,7 +5,7 @@ $dtrList = dtr()->list("owner='$user'");
 
 function get_time_difference($record)
 {
-    $workTime = (strtotime("1/1/1980 $record->checkOut") - strtotime("1/1/1980 $record->checkIn")) / 3600;
+    $workTime = (strtotime($record->checkOut) - strtotime($record->checkIn)) / 3600;
     $firstBreak = (strtotime("1/1/1980 $record->breakIn") - strtotime("1/1/1980 $record->breakOut")) / 3600;
     $secondBreak = (strtotime("1/1/1980 $record->breakIn2") - strtotime("1/1/1980 $record->breakOut2")) / 3600;
     $lunch = (strtotime("1/1/1980 $record->lunchIn") - strtotime("1/1/1980 $record->lunchOut")) / 3600;

@@ -7,10 +7,10 @@ $app = dtr()->get("owner='$username' and createDate='$dateNow'");
 // Get to total hours rendered
 function total_time_rendered($record)
 {
-    $workTime = (strtotime("1/1/1980 $record->checkOut") - strtotime("1/1/1980 $record->checkIn")) / 3600;
-    $firstBreak = (strtotime("1/1/1980 $record->breakIn") - strtotime("1/1/1980 $record->breakOut")) / 3600;
-    $secondBreak = (strtotime("1/1/1980 $record->breakIn2") - strtotime("1/1/1980 $record->breakOut2")) / 3600;
-    $lunch = (strtotime("1/1/1980 $record->lunchIn") - strtotime("1/1/1980 $record->lunchOut")) / 3600;
+    $workTime = (strtotime($record->checkOut) - strtotime($record->checkIn)) / 3600;
+    $firstBreak = (strtotime($record->breakIn) - strtotime($record->breakOut)) / 3600;
+    $secondBreak = (strtotime($record->breakIn2) - strtotime($record->breakOut2)) / 3600;
+    $lunch = (strtotime($record->lunchIn) - strtotime($record->lunchOut)) / 3600;
 
     $totalTime = $workTime - ($firstBreak + $secondBreak + $lunch);
     return number_format((float)$totalTime, 2, '.', '');
@@ -18,7 +18,7 @@ function total_time_rendered($record)
 
 // Get time difference of break and lunch
 function time_rendered($timeIn, $timeOut){
-  $result = (strtotime("1/1/1980 $timeIn") - strtotime("1/1/1980 $timeOut")) / 3600;
+  $result = (strtotime($timeIn) - strtotime($timeOut)) / 3600;
   return number_format((float)$result, 2, '.', '');
 }
 
